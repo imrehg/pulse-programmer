@@ -124,13 +124,13 @@ numslots=0
 118		io	line	b		LVDS_77n
 119		io	line	b		LVDS_76p
 120		io	line	b		LVDS_76n
-121		io	line	r		LVDS_75n
-122		io	line	r		LVDS_75p
-123		io	line	r		LVDS_74n
-124		io	line	r		LVDS_74p
-125		io	line	r		LVDS_73n
-126		io	line	r		LVDS_73p
-127		io	line	r		VREF_2B3
-128		io	line	r		
-129		pwr	line	r		GND
 130		pwr	line	r		VCCIO_3
+129		pwr	line	r		GND
+128		io	line	r		
+127		io	line	r		VREF_2B3
+126		io	line	r		LVDS_73p
+125		io	line	r		LVDS_73n
+124		io	line	r		LVDS_74p
+123		io	line	r		LVDS_74n
+122		io	line	r		LVDS_75p
+121		io	line	r		LVDS_75n
