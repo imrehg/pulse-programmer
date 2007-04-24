@@ -1,0 +1,176 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=1000
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070420
+name=
+device=QxE-060-01-x-D-EM2
+refdes=J?
+footprint=
+description="Samtec High-speed Edgemount Connector, Dual Row, 60 position"
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Pos	Net	Label
+1	1	io	line	t		T1
+2	2	io	line	t		T2
+3	3	io	line	t		T3
+4	4	io	line	t		T4
+5	5	io	line	t		T5
+6	6	io	line	t		T6
+7	7	io	line	t		T7
+8	8	io	line	t		T8
+9	9	io	line	t		T9
+10	10	io	line	t		T10
+11	11	io	line	t		T11
+12	12	io	line	t		T12
+13	13	io	line	t		T13
+14	14	io	line	t		T14
+15	15	io	line	t		T15
+16	16	io	line	t		T16
+17	17	io	line	t		T17
+18	18	io	line	t		T18
+19	19	io	line	t		T19
+20	20	io	line	t		T20
+21	21	io	line	t		T21
+22	22	io	line	t		T22
+23	23	io	line	t		T23
+24	24	io	line	t		T24
+25	25	io	line	t		T25
+26	26	io	line	t		T26
+27	27	io	line	t		T27
+28	28	io	line	t		T28
+29	29	io	line	t		T29
+30	30	io	line	t		T30
+31	31	io	line	t		T31
+32	32	io	line	t		T32
+33	33	io	line	t		T33
+34	34	io	line	t		T34
+35	35	io	line	t		T35
+36	36	io	line	t		T36
+37	37	io	line	t		T37
+38	38	io	line	t		T38
+39	39	io	line	t		T39
+40	40	io	line	t		T40
+41	41	io	line	t		T41
+42	42	io	line	t		T42
+43	43	io	line	t		T43
+44	44	io	line	t		T44
+45	45	io	line	t		T45
+46	46	io	line	t		T46
+47	47	io	line	t		T47
+48	48	io	line	t		T48
+49	49	io	line	t		T49
+50	50	io	line	t		T50
+51	51	io	line	t		T51
+52	52	io	line	t		T52
+53	53	io	line	t		T53
+54	54	io	line	t		T54
+55	55	io	line	t		T55
+56	56	io	line	t		T56
+57	57	io	line	t		T57
+58	58	io	line	t		T58
+59	59	io	line	t		T59
+60	60	io	line	t		T60
+61	61	io	line	b		B1
+62	62	io	line	b		B2
+63	63	io	line	b		B3
+64	64	io	line	b		B4
+65	65	io	line	b		B5
+66	66	io	line	b		B6
+67	67	io	line	b		B7
+68	68	io	line	b		B8
+69	69	io	line	b		B9
+70	70	io	line	b		B10
+71	71	io	line	b		B11
+72	72	io	line	b		B12
+73	73	io	line	b		B13
+74	74	io	line	b		B14
+75	75	io	line	b		B15
+76	76	io	line	b		B16
+77	77	io	line	b		B17
+78	78	io	line	b		B18
+79	79	io	line	b		B19
+80	80	io	line	b		B20
+81	81	io	line	b		B21
+82	82	io	line	b		B22
+83	83	io	line	b		B23
+84	84	io	line	b		B24
+85	85	io	line	b		B25
+86	86	io	line	b		B26
+87	87	io	line	b		B27
+88	88	io	line	b		B28
+89	89	io	line	b		B29
+90	90	io	line	b		B30
+91	91	io	line	b		B31
+92	92	io	line	b		B32
+93	93	io	line	b		B33
+94	94	io	line	b		B34
+95	95	io	line	b		B35
+96	96	io	line	b		B36
+97	97	io	line	b		B37
+98	98	io	line	b		B38
+99	99	io	line	b		B39
+100	100	io	line	b		B40
+101	101	io	line	b		B41
+102	102	io	line	b		B42
+103	103	io	line	b		B43
+104	104	io	line	b		B44
+105	105	io	line	b		B45
+106	106	io	line	b		B46
+107	107	io	line	b		B47
+108	108	io	line	b		B48
+109	109	io	line	b		B49
+110	110	io	line	b		B50
+111	111	io	line	b		B51
+112	112	io	line	b		B52
+113	113	io	line	b		B53
+114	114	io	line	b		B54
+115	115	io	line	b		B55
+116	116	io	line	b		B56
+117	117	io	line	b		B57
+118	118	io	line	b		B58
+119	119	io	line	b		B59
+120	120	io	line	b		B60
