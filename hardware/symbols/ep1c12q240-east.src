@@ -24,7 +24,7 @@ version=20070420
 name=
 device=EP1C12Q240
 refdes=U?
-footprint=PQFP-240
+footprint=PQFP240
 description="Altera Cyclone FPGA EP1C12, Package PQFP-240, Eastside"
 documentation=
 author=Paul Pham
@@ -54,43 +54,43 @@ numslots=0
 #pinnr	seq	type	style	posit.	net	label	
 #-----------------------------------------------------
 #Pin	Seq	Type	Style	Position	Net	Label
-11	23	io	line	l		DPCLK1
-12	24	io	line	l		LVDS_20p
-13	25	io	line	l		LVDS_20n
-14	26	io	line	l		LVDS_19p
-15	27	io	line	l		LVDS_19n
-16	28	io	line	l		LVDS_18p
-17	29	io	line	l		LVDS_18n
-18	30	io	line	l		LVDS_17p
-19	31	io	line	l		LVDS_17n
-20	32	io	line	l		LVDS_16p
-21	33	io	line	l		LVDS_16n
-22	34	pwr	line	l		VCCIO_1
-23	35	io	line	l		VREF_1B1
-24	36	io	line	l		nCSO
-25	37	io	line	l		DATA0
-26	38	io	line	l		nCONFIG
-27	39	pwr	line	l		VCCA_PLL1
-28	40	in	clk	l		LVDS_CLK_1p CLK0
-29	41	in	clk	l		LVDS_CLK_1n CLK1
-30	42	pwr	line	l		GNDA_PLL1
-31	43	pwr	line	l		GNDG_PLL1
-32	44	io	line	l		nCEO
-33	45	io	line	l		nCE
-34	46	In	line	l		MSEL0
-35	47	In	line	l		MSEL1
-36	48	io	line	l		DCLK
-37	49	io	line	l		ASDO
-38	50	out	clk	l		PLL1_OUTp
-39	51	io	line	l		PLL1_OUTn
-40	52	pwr	line	l		GND
-41	53	io	line	l		LVDS_7n
-42	54	io	line	l		LVDS_6p
-43	55	io	line	l		LVDS_6n
-44	56	io	line	l		LVDS_5p
-45	57	io	line	l		LVDS_5n
-46	58	io	line	l		LVDS_4p
-47	59	io	line	l		LVDS_4n
-48	60	io	line	l		LVDS_3p
-49	61	io	line	l		LVDS_3n
-50	62	io	line	l		DPCLK0
+170	131	io	line	r		DPCLK4
+169	132	io	line	r		LVDS_54p
+168	133	io	line	r		LVDS_54n
+167	134	io	line	r		LVDS_55p
+166	135	io	line	r		LVDS_55n
+165	136	io	line	r		LVDS_56p
+164	137	io	line	r		LVDS_56n
+163	138	io	line	r		LVDS_57p
+162	139	io	line	r		LVDS_57n
+161	140	io	line	r		LVDS_58p
+160	141	io	line	r		LVDS_58n
+159	142	io	line	r		LVDS_59p
+158	143	io	line	r		LVDS_59n
+157	144	pwr	line	r		VCCIO_3
+156	145	io	line	r		VREF_1B3
+155	146	io	line	r		TDI
+154	147	pwr	line	r		VCCA_PLL2
+153	148	in	clk	r		LVDS_CLK2p CLK2
+152	149	in	clk	r		LVDS_CLK2n CLK3
+151	150	pwr	line	r		GNDA_PLL2
+150	151	pwr	line	r		GNDG_PLL2
+149	152	io	line	r		TDO
+148	153	io	line	r		TMS
+147	154	io	line	r		TCK
+146	155	io	line	r		nSTATUS
+145	156	io	line	r		CONF_DONE
+144	157	out	clk	r		PLL2_OUTp
+143	158	io	line	r		PLL2_OUTn
+142	159	pwr	line	r		GND
+141	160	io	line	r		LVDS_68p
+140	161	io	line	r		LVDS_68n
+139	162	io	line	r		LVDS_69p
+138	163	io	line	r		LVDS_69n
+137	164	io	line	r		LVDS_70p
+136	165	io	line	r		LVDS_70n
+135	166	io	line	r		LVDS_71p
+134	167	io	line	r		LVDS_71n
+133	168	io	line	r		LVDS_72p
+132	169	io	line	r		LVDS_72n
+131	170	io	line	r		DPCLK5
