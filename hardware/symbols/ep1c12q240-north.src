@@ -1,0 +1,136 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=1400
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070420
+name=
+device=EP1C12Q240
+refdes=U?
+footprint=PQFP-240
+description="Altera Cyclone FPGA EP1C12, Package PQFP-240, Northside"
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Position	Net	Label
+1		io	line	l		LVDS_23p / INIT_DONE
+2		io	line	l		LVDS_23n
+3		io	line	l		LVDS_22p / CLKUSR
+4		io	line	l		LVDS_22n
+5		io	line	l		VREF_0B1
+6		io	line	l		
+7		io	line	l		LVDS_21p
+8		io	line	l		LVDS_21n
+9		pwr	line	l		VCCIO_1
+10		pwr	line	l		GND
+240		io	line	t		LVDS_24p / DEV_CLRn
+239		io	line	t		LVDS_24n / DEV_OE
+238		io	line	t		LVDS_25p
+237		io	line	t		LVDS_25n
+236		io	line	t		LVDS_26p
+235		io	line	t		LVDS_26n
+234		io	line	t		LVDS_27p
+233		io	line	t		LVDS_27n
+232		pwr	line	t		GND
+231		pwr	line	t		VCCIO_2
+230		pwr	line	t		GND
+229		pwr	line	t		VCCINT
+228		io	line	t		DPCLK2
+227		io	line	t		VREF_2B2
+226		io	line	t		LVDS_28p
+225		io	line	t		LVDS_28n
+224		io	line	t		LVDS_29p
+223		io	line	t		LVDS_29n
+222		io	line	t		LVDS_30p
+221		pwr	line	t		GND
+220		pwr	line	t		VCCINT
+219		io	line	t		LVDS_31p
+218		io	line	t		LVDS_31n
+217		io	line	t		LVDS_32p
+216		io	line	t		LVDS_32n
+215		io	line	t		LVDS_33p
+214		io	line	t		LVDS_33n
+213		io	line	t		LVDS_34p
+212		pwr	line	t		GND
+211		pwr	line	t		VCCINT
+210		pwr	line	t		GND
+209		pwr	line	t		VCCIO_2
+208		io	line	t		VREF_1B2
+207		io	line	t		LVDS_39p
+206		io	line	t		LVDS_39n
+205		pwr	line	t		GND
+204		pwr	line	t		VCCINT
+203		io	line	t		LVDS_40p
+202		io	line	t		LVDS_40n
+201		io	line	t		LVDS_41p
+200		io	line	t		LVDS_41n
+199		pwr	line	t		GND
+198		pwr	line	t		VCCINT
+197		io	line	t		LVDS_46p
+196		io	line	t		LVDS_46n
+195		io	line	t		
+194		io	line	t		VREF_0B2
+193		io	line	t		DPCLK3
+192		pwr	line	t		GND
+191		pwr	line	t		VCCINT
+190		pwr	line	t		GND
+189		pwr	line	t		VCCIO_2
+188		io	line	t		LVDS_47p
+187		io	line	t		LVDS_47n
+186		io	line	t		LVDS_48p
+185		io	line	t		LVDS_48n
+184		io	line	t		LVDS_49p
+183		io	line	t		LVDS_49n
+182		io	line	t		LVDS_50p
+181		io	line	t		LVDS_50n
+180		io	line	r		LVDS_51p
+179		io	line	r		LVDS_51n
+178		io	line	r		LVDS_52p
+177		io	line	r		LVDS_52n
+176		io	line	r		VREF_0B3
+175		io	line	r		
+174		io	line	r		LVDS_53p
+173		io	line	r		LVDS_53n
+172		pwr	line	r		VCCIO_3
+171		pwr	line	r		GND
