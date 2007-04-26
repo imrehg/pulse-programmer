@@ -1,0 +1,41 @@
+#-*-Makefile-*-
+# Makefile for gEDA/PCB hardware designs
+
+###############################################################################
+# Configurable Targets
+help:
+	@echo
+	@echo "The following targets are available"
+	@echo
+	@echo "  make [help]	prints this message."
+	@echo "  make renum 	renumbers reference designators in all"
+	@echo "                 schematic files in *.sch.renum"
+	@echo "  make netlist	generates netlist from *.sch.renum files"
+	@echo
+	@echo "The following variable modifiers are available:"
+	@echo
+	@echo $(HELP_LOCAL)
+	@echo
+
+clean:
+	rm -rf *.renum.sch *.log
+
+GROOT = /usr/local/geda
+GBIN = $(GROOT)/bin
+GSCHEM = $(GBIN)/gschem
+GRENUM = $(GBIN)/refdes_renum --nocopy
+GNET = $(GBIN)/gnetlist -q
+
+TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
+TARGETS_NET = $(TARGETS:.sch=.net)
+TARGETS_DRC = $(TARGETS:.sch=.drc)
+
+%.renum.sch: %.sch
+	$(GRENUM) $<
+	mv $<.renum $@
+
+%.drc: %.sch
+	$(GNET) -g drc2 -o $@ $<
+
+renum: $(TARGETS_RENUM)
+drc: $(TARGETS_DRC)

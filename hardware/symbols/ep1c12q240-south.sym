@@ -897,4 +897,4 @@ description="Altera Cyclone FPGA EP1C12, Package PQFP-240, Southside"
 T 400 6100 5 10 0 0 0 0 1
 numslots=0
 T 5800 2600 9 24 1 0 0 4 1
-Bottom Quarter
+South Coast
