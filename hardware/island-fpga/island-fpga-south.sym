@@ -1,0 +1,84 @@
+v 20070216 1
+P 800 2000 800 1700 1 0 0
+{
+T 750 1850 5 8 1 1 90 0 1
+pinnumber=1
+T 850 1850 5 8 0 1 90 2 1
+pinseq=1
+T 800 1650 9 8 1 1 90 6 1
+pinlabel=GND_PORT
+T 800 1650 5 8 0 1 90 8 1
+pintype=io
+}
+P 1200 2000 1200 1700 1 0 0
+{
+T 1150 1850 5 8 1 1 90 0 1
+pinnumber=2
+T 1250 1850 5 8 0 1 90 2 1
+pinseq=2
+T 1200 1650 9 8 1 1 90 6 1
+pinlabel=VCCIO_1_PORT
+T 1200 1650 5 8 0 1 90 8 1
+pintype=io
+}
+P 1600 2000 1600 1700 1 0 0
+{
+T 1550 1850 5 8 1 1 90 0 1
+pinnumber=3
+T 1650 1850 5 8 0 1 90 2 1
+pinseq=3
+T 1600 1650 9 8 1 1 90 6 1
+pinlabel=VCCIO_3_PORT
+T 1600 1650 5 8 0 1 90 8 1
+pintype=io
+}
+P 2000 2000 2000 1700 1 0 0
+{
+T 1950 1850 5 8 1 1 90 0 1
+pinnumber=3
+T 2050 1850 5 8 0 1 90 2 1
+pinseq=4
+T 2000 1650 9 8 1 1 90 6 1
+pinlabel=VCCIO_4_PORT
+T 2000 1650 5 8 0 1 90 8 1
+pintype=io
+}
+P 2400 2000 2400 1700 1 0 0
+{
+T 2350 1850 5 8 1 1 90 0 1
+pinnumber=4
+T 2450 1850 5 8 0 1 90 2 1
+pinseq=5
+T 2400 1650 9 8 1 1 90 6 1
+pinlabel=+1.5V_PORT
+T 2400 1650 5 8 0 1 90 8 1
+pintype=io
+}
+P 2800 2000 2800 1700 1 0 0
+{
+T 2750 1850 5 8 1 1 90 0 1
+pinnumber=5
+T 2850 1850 5 8 0 1 90 2 1
+pinseq=6
+T 2800 1650 9 8 1 1 90 6 1
+pinlabel=PLL2_PORT
+T 2800 1650 5 8 0 1 90 8 1
+pintype=io
+}
+B 400 200 2800 1500 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 600 0 8 10 1 1 0 6 1
+refdes=S?
+T 1600 0 9 10 1 0 0 0 1
+FPGA Island South
+T 400 1000 5 10 0 0 0 0 1
+device=ISLAND-FPGA-SOUTH
+T 400 1200 5 10 0 0 0 0 1
+footprint=
+T 400 1400 5 10 0 0 0 0 1
+author=Paul Pham
+T 400 1600 5 10 0 0 0 0 1
+documentation=
+T 400 1800 5 10 0 0 0 0 1
+description="South Coast of FPGA Island, General-Purpose Interface"
+T 400 2000 5 10 0 0 0 0 1
+numslots=0
