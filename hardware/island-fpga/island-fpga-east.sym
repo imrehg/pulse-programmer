@@ -9,6 +9,8 @@ T 450 2900 9 8 1 1 0 0 1
 pinlabel=GND_PORT
 T 450 2900 5 8 0 1 0 2 1
 pintype=pwr
+T 100 2900 5 10 0 0 0 0 1
+netname=GND
 }
 P 100 2500 400 2500 1 0 0
 {
@@ -20,6 +22,8 @@ T 450 2500 9 8 1 1 0 0 1
 pinlabel=+1.5V_PLL_PORT
 T 450 2500 5 8 0 1 0 2 1
 pintype=pwr
+T 100 2500 5 10 0 0 0 0 1
+netname=+1.5V_PLL
 }
 P 100 2100 400 2100 1 0 0
 {
@@ -31,6 +35,8 @@ T 450 2100 9 8 1 1 0 0 1
 pinlabel=+2.5V_PORT
 T 450 2100 5 8 0 1 0 2 1
 pintype=pwr
+T 100 2100 5 10 0 0 0 0 1
+netname=+2.5V
 }
 P 100 1700 400 1700 1 0 0
 {
@@ -42,6 +48,8 @@ T 450 1700 9 8 1 1 0 0 1
 pinlabel=+3.3V_PORT
 T 450 1700 5 8 0 1 0 2 1
 pintype=pwr
+T 100 1700 5 10 0 0 0 0 1
+netname=+3.3V
 }
 P 100 1300 400 1300 1 0 0
 {
@@ -53,6 +61,8 @@ T 450 1300 9 8 1 1 0 0 1
 pinlabel=VCCIO_3_PORT
 T 450 1300 5 8 0 1 0 2 1
 pintype=pwr
+T 100 1300 5 10 0 0 0 0 1
+netname=VCCIO_3
 }
 P 100 900 400 900 1 0 0
 {
@@ -64,6 +74,8 @@ T 450 900 9 8 1 1 0 0 1
 pinlabel=CONF_DONE_PORT
 T 450 900 5 8 0 1 0 2 1
 pintype=out
+T 100 900 5 10 0 0 0 0 1
+netname=CONF_DONE
 }
 P 100 500 400 500 1 0 0
 {
@@ -75,6 +87,8 @@ T 450 500 9 8 1 1 0 0 1
 pinlabel=PLL2_PORT
 T 450 500 5 8 0 1 0 2 1
 pintype=out
+T 100 500 5 10 0 0 0 0 1
+netname=PLL2
 }
 B 400 100 1800 3000 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
 T 2500 100 8 10 1 1 0 6 1

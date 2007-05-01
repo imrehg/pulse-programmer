@@ -9,6 +9,8 @@ T 2150 4500 9 8 1 1 0 6 1
 pinlabel=GND_PORT
 T 2150 4500 5 8 0 1 0 8 1
 pintype=pwr
+T 2500 4500 5 10 0 0 0 0 1
+netname=GND
 }
 P 2500 4100 2200 4100 1 0 0
 {
@@ -20,6 +22,8 @@ T 2150 4100 9 8 1 1 0 6 1
 pinlabel=VCCIO_1_PORT
 T 2150 4100 5 8 0 1 0 8 1
 pintype=pwr
+T 2500 4100 5 10 0 0 0 0 1
+netname=VCCIO_1
 }
 P 2500 3700 2200 3700 1 0 0
 {
@@ -31,6 +35,8 @@ T 2150 3700 9 8 1 1 0 6 1
 pinlabel=VCCIO_2_PORT
 T 2150 3700 5 8 0 1 0 8 1
 pintype=pwr
+T 2500 3700 5 10 0 0 0 0 1
+netname=VCCIO_2
 }
 P 2500 3300 2200 3300 1 0 0
 {
@@ -42,6 +48,8 @@ T 2150 3300 9 8 1 1 0 6 1
 pinlabel=VCCIO_3_PORT
 T 2150 3300 5 8 0 1 0 8 1
 pintype=pwr
+T 2500 3300 5 10 0 0 0 0 1
+netname=VCCIO_3
 }
 P 2500 2900 2200 2900 1 0 0
 {
@@ -53,6 +61,8 @@ T 2150 2900 9 8 1 1 0 6 1
 pinlabel=VCCIO_4_PORT
 T 2150 2900 5 8 0 1 0 8 1
 pintype=pwr
+T 2500 2900 5 10 0 0 0 0 1
+netname=VCCIO_4
 }
 P 2500 2500 2200 2500 1 0 0
 {
@@ -64,6 +74,8 @@ T 2150 2500 9 8 1 1 0 6 1
 pinlabel=+3.3V_PORT
 T 2150 2500 5 8 0 1 0 8 1
 pintype=pwr
+T 2500 2500 5 10 0 0 0 0 1
+netname=+3.3V
 }
 P 2500 2100 2200 2100 1 0 0
 {
@@ -75,6 +87,8 @@ T 2150 2100 9 8 1 1 0 6 1
 pinlabel=+2.5V_PORT
 T 2150 2100 5 8 0 1 0 8 1
 pintype=pwr
+T 2500 2100 5 10 0 0 0 0 1
+netname=+2.5V
 }
 P 2500 1700 2200 1700 1 0 0
 {
@@ -86,6 +100,8 @@ T 2150 1700 9 8 1 1 0 6 1
 pinlabel=+1.5V_PLL_PORT
 T 2150 1700 5 8 0 1 0 8 1
 pintype=pwr
+T 2500 1700 5 10 0 0 0 0 1
+netname=+1.5V_PLL
 }
 P 2500 1300 2200 1300 1 0 0
 {
@@ -97,6 +113,8 @@ T 2150 1300 9 8 1 1 0 6 1
 pinlabel=+1.5V_PORT
 T 2150 1300 5 8 0 1 0 8 1
 pintype=pwr
+T 2500 1300 5 10 0 0 0 0 1
+netname=+1.5V
 }
 P 2500 900 2200 900 1 0 0
 {
@@ -108,6 +126,8 @@ T 2150 900 9 8 1 1 0 6 1
 pinlabel=CONF_DONE_PORT
 T 2150 900 5 8 0 1 0 8 1
 pintype=in
+T 2500 900 5 10 0 0 0 0 1
+netname=CONF_DONE
 }
 P 2500 500 2200 500 1 0 0
 {
@@ -119,6 +139,8 @@ T 2150 500 9 8 1 1 0 6 1
 pinlabel=PLL1_PORT
 T 2150 500 5 8 0 1 0 8 1
 pintype=out
+T 2500 500 5 10 0 0 0 0 1
+netname=PLL1
 }
 B 400 0 1800 4900 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
 T 2500 100 8 10 1 1 0 6 1
