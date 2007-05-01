@@ -1,9 +1,9 @@
 TARGETS = island-fpga.sch
 
-island-fpga.renum.sch: \
-	island-fpga-north.renum.sch \
-	island-fpga-south.renum.sch \
-	island-fpga-east.renum.sch \
-	island-fpga-west.renum.sch \
+island-fpga.sch: \
+	island-fpga-north.sch \
+	island-fpga-south.sch \
+	island-fpga-east.sch \
+	island-fpga-west.sch \
 
 include ../Makefile.common

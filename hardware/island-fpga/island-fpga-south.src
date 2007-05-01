@@ -54,10 +54,12 @@ numslots=0
 #pinnr	seq	type	style	posit.	net	label	
 #-----------------------------------------------------
 #Pin	Seq	Type	Style	Pos	Net	Label
-1		io	line	t		GND_PORT
-2		io	line	t		VCCIO_1_PORT
-3		io	line	t		VCCIO_3_PORT
-3		io	line	t		VCCIO_4_PORT
-4		io	line	t		+1.5V_PORT
-5		io	line	t		PLL2_PORT
+1		pwr	line	t		GND_PORT
+2		pwr	line	t		VCCIO_1_PORT
+3		pwr	line	t		VCCIO_3_PORT
+4		pwr	line	t		VCCIO_4_PORT
+5		pwr	line	t		+1.5V_PORT
+6		pwr	line	t		+2.5V_PORT
+7		pwr	line	t		+3.3V_PORT
+8		clk	line	t		PLL2_PORT
 
