@@ -12,7 +12,7 @@ source=island-fpga-north.sch
 C 49800 42100 1 0 0 island-fpga-south.sym
 {
 T 50400 42100 5 10 1 1 0 6 1
-refdes=S3
+refdes=S4
 T 50200 43100 5 10 0 0 0 0 1
 device=ISLAND-FPGA-SOUTH
 T 53900 42400 5 10 1 1 0 0 1
@@ -47,7 +47,7 @@ N 54200 46700 54200 46500 4
 C 54100 44000 1 0 0 island-fpga-east.sym
 {
 T 56800 44100 5 10 1 1 0 6 1
-refdes=S4
+refdes=S3
 T 54500 47200 5 10 0 0 0 0 1
 device=ISLAND-FPGA-EAST
 T 54500 43900 5 10 1 1 0 0 1
