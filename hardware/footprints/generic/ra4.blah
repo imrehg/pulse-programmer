@@ -1,4 +1,4 @@
-Element["" "Four Resistor Pack" "" "RA4" 10000 10000 3850 18500 0 100 ""]
+Element["" "Four Resistor Pack" "RA4" "RA4" 10000 10000 3850 18500 0 100 ""]
 (
 	Pad[-750     0  750     0 3200 2000 3600 "" "1" "square,edge2"]
 	Pad[-750  5000  750  5000 3200 2000 3600 "" "3" "square,edge2"]
