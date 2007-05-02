@@ -1,9 +1,10 @@
 TARGETS = island-fpga.sch
 
-island-fpga.sch: \
-	island-fpga-north.sch \
-	island-fpga-south.sch \
-	island-fpga-east.sch \
-	island-fpga-west.sch \
+# Dummy targets to remake dependencies
+island-fpga.tgt: \
+	island-fpga-north.tgt \
+	island-fpga-south.tgt \
+	island-fpga-east.tgt \
+	island-fpga-west.tgt \
 
 include ../Makefile.common
