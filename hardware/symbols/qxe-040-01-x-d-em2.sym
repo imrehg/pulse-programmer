@@ -896,27 +896,5 @@ T 400 17600 5 10 0 0 0 0 1
 description="Samtec High-speed Edgemount Connector, Dual Row, 40 position"
 T 400 17800 5 10 0 0 0 0 1
 numslots=0
-P 800 400 800 700 1 0 0
-{
-T 800 400 5 10 0 0 90 0 1
-pintype=pwr
-T 1150 900 5 10 1 1 180 0 1
-pinlabel=BGND
-T 200 550 5 10 1 1 180 6 1
-pinnumber=BGND
-T 800 400 5 10 0 0 90 0 1
-pinseq=0
-}
-P 800 9500 800 9200 1 0 0
-{
-T 800 9500 5 10 0 0 270 0 1
-pintype=pwr
-T 550 9100 5 10 1 1 180 6 1
-pinlabel=TGND
-T 700 9450 5 10 1 1 180 0 1
-pinnumber=TGND
-T 800 9500 5 10 0 0 270 0 1
-pinseq=0
-}
 T 1300 700 8 10 1 1 0 0 1
 value=QxE-040-01-x-D-EM2
