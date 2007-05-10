@@ -1,0 +1,20 @@
+elementdir = "generic"		# where to put generated files
+
+#Tabbed parts
+	type = "tabbed"
+        silkboxwidth = 7.0mm
+        silkboxheight = 9.6mm
+        silkwidth = 10mil
+        silkoffset = 30mil
+	# SOT223
+	tabwidth = 3.6mm
+	tabheight = 2.2mm
+	# distance from pads to tab pad
+	height = 4.00mm
+	# 3 pin specific
+	pins = 3
+	padwidth = 1.2mm
+	padheight = 2.2mm
+	pitch = 2.30mm
+part = "SOT223-3"
+
