@@ -57,6 +57,7 @@ def defattr():
             ["tabheight",0],\
             ["width",0],\
             ["height",0],\
+            ["silkcorner",0],\
             ["drill",0]]
 
 # BGA row names 20 total
@@ -190,11 +191,11 @@ def box(x1, y1, x2, y2, width):
 
 # draw inside box (PRB)
 # draws silkscreen box for SO or QFP type parts with notched pin #1 corner
-def insidebox(x1, y1, x2, y2, width):
+def insidebox(x1, y1, x2, y2, width, corner=1000):
     return silk(x1,y1,x2,y1,width)+\
-           silk(x2,y1,x2,y2+1000,width)+\
-           silk(x2,y2+1000,x2+1000,y2,width)+\
-           silk(x2+1000,y2,x1,y2,width)+\
+           silk(x2,y1,x2,y2+corner,width)+\
+           silk(x2,y2+corner,x2+corner,y2,width)+\
+           silk(x2+corner,y2,x1,y2,width)+\
            silk(x1,y2,x1,y1,width)
 
 def bga(attrlist):
@@ -282,6 +283,7 @@ def qfp(attrlist):
     silkwidth = findattr(attrlist, "silkwidth")
     silkoffset = findattr(attrlist, "silkoffset")
     silkstyle = findattr(attrlist, "silkstyle")
+    silkcorner = findattr(attrlist, "silkcorner")
     ep = findattr(attrlist, "ep")
     if pinshigh==0:
         pinshigh = pins/4
@@ -310,8 +312,8 @@ def qfp(attrlist):
     if silkstyle == "inside":
         x = width/2 - silkoffset
         y = height/2 - silkoffset
-        qfpelt = qfpelt + box(x,y,-x,-y,silkwidth)
-        qfpelt = qfpelt + silk(-x,-y,-(x+3940),-(y+3940),silkwidth)
+        qfpelt = qfpelt + insidebox(x,y,-x,-y,silkwidth,silkcorner)
+        #qfpelt = qfpelt + silk(-x,-y,-(x+3940),-(y+3940),silkwidth)
     elif silkstyle == "outside":
         x = (width+2*padwidth)/2 + silkoffset
         y = (height+2*padwidth)/2 + silkoffset
