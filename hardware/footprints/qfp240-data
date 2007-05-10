@@ -11,6 +11,9 @@ elementdir = "ic"		# where to put generated files
 	height = 32.4 mm
 	padwidth 1.5 mm
 	padheight 0.3 mm
-	silkoffset 0.25 mm 		# inside pads with 1mm clearance 
+	maskclear = 5 mil	# total additional opening: 3 mils from pad to mask, Advanced Circuits Tolerance
+        silkwidth = 10 mil
 	silkstyle = "inside"
+	silkoffset 1 mm 		# inside pads with 1mm clearance 
+        silkcorner 40 mil
 part "QFP240"
