@@ -2,7 +2,6 @@ elementdir = "generic"		# where to put generated files
 
 # 0402, 0603, 0805, 1206 packages for chip resistors, caps, and inductors
 # Entered by Paul Pham
-# 0201, 0402, 0603, ....
 	type "twopad"
 	silkboxheight = 0
 	silkboxwidth = 0
@@ -26,11 +25,17 @@ part "0603"
 	width = 0.85mm
 	padwidth = 0.8mm
 	padheight = 0.8mm
+        silkcustom =
+        ElementLine [0 -2000 0 2000 500]
+        ElementLine [0 0 1000 0 500]
+        silkcustomend
 part "0603_LED"
 
 	width = 0.6mm
 	padwidth = 1.3mm
 	padheight = 1.5mm
+        silkcustom =
+        silkcustomend
 part "0805"
 
 	width = 1.2mm
