@@ -2,3 +2,4 @@ schematics island-fpga.sch
 output-name island-fpga
 elements-dir /home/ppham/sf/svnroot/hardware/footprints
 use-files
+m4-pcbdir /

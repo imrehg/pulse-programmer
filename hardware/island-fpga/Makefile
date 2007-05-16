@@ -6,5 +6,6 @@ island-fpga.tgt: \
 	island-fpga-south.tgt \
 	island-fpga-east.tgt \
 	island-fpga-west.tgt \
+	island-fpga-power.tgt \
 
 include ../Makefile.common
