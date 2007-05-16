@@ -31,35 +31,38 @@
 
 # list of attributes to be defined in file
 def defattr():
-    return [["elementdir",""],
-            ["part",""],\
-            ["type",""],\
-            ["pinshigh", 0],\
-            ["pins",0],\
-            ["rows",0],\
-            ["cols",0],\
-            ["pitch",0],\
-            ["silkoffset",0],\
-            ["silkwidth",0],\
-            ["silkboxwidth",0],\
-            ["silkboxheight",0],\
-            ["silkstyle",""],\
-            ["omitballs",""],\
-            ["paddia",0],\
-            ["dia",0],\
-            ["maskclear",0],\
-            ["polyclear",0],\
-            ["ep",0],\
-            ["rect",0],\
-            ["padwidth",0],\
-            ["padheight",0],\
-            ["tabwidth",0],\
-            ["tabheight",0],\
-            ["width",0],\
-            ["height",0],\
-            ["silkcorner",0],\
-            ["silkpolarity",0],\
-            ["drill",0]]
+    return {
+        "elementdir"   :"",
+        "part"         :"",
+        "type"         :"",
+        "pinshigh"     :0,
+        "pins"         :0,
+        "rows"         :0,
+        "cols"         :0,
+        "pitch"        :0,
+        "silkoffset"   :0,
+        "silkwidth"    :0,
+        "silkboxwidth" :0,
+        "silkboxheight":0,
+        "silkstyle"    :"",
+        "omitballs"    :"",
+        "paddia"       :0,
+        "dia"          :0,
+        "maskclear"    :0,
+        "polyclear"    :0,
+        "ep"           :0,
+        "rect"         :0,
+        "padwidth"     :0,
+        "padheight"    :0,
+        "tabwidth"     :0,
+        "tabheight"    :0,
+        "width"        :0,
+        "height"       :0,
+        "silkcorner"   :0,
+        "silkpolarity" :0,
+        "silkcustom"   :[],
+        "drill"        :0,
+}
 
 # BGA row names 20 total
 rowname = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'J',\
@@ -114,6 +117,10 @@ def expandexpr(inputbuf):
             expanded = expanded + " " +"\""+ ballname(col, row)+"\""
     return expanded
 
+def element(attrlist):
+    desc = findattr(attrlist, "part")
+    return "Element[\"\" \""+desc+"\" \"\" \"\" 0 0 0 0 0 100 \"\"]\n(\n"
+    
 # expand list of balls to omit
 def expandomitlist(omitlist):
     expandedlist = ""
@@ -132,31 +139,25 @@ def expandomitlist(omitlist):
     return expandedlist
     
 def findattr(attrlist, name):
-    for attribute in attrlist:
-        if attribute[0]==name:
-            return attribute[1]
-    print "Attribute %s not found" % name
-    print attrlist
-    return 0
+    if (name in attrlist):
+        return attrlist[name]
+    raise RuntimeError("Attribute not found: ["+str(name)+"]")
 
 def changeattr(attrlist, name, newval):
-    for attribute in attrlist:
-        if attribute[0]==name:
-            attribute[1] = newval
-            return
-    print "Attribute %s not found" % name
-    print attrlist
-    return 0
+    if (name in attrlist.keys()):
+        attrlist[name] = newval
+        return
+    raise RuntimeError("Attribute not found: ["+str(name)+"]")
 
 # Format of pad line:
 # Pad[-17500 -13500 -17500 -7000 2000 1000 3000 "1" "1" 0x00000180]
 # X1 Y1 X2 Y2 Width polyclear mask ....
 def pad(x1, y1, x2, y2, width, clear, mask, pinname, shape):
     if shape=="round":
-        flags = "0x00000000"
+        flags = ""
     else:
-        flags = "0x00000100"
-    return "\tPad[%d %d %d %d %d %d %d \"%s\" \"%s\" %s]\n"\
+        flags = "square"
+    return "\tPad[%d %d %d %d %d %d %d \"%s\" \"%s\" \"%s\"]\n"\
            % (x1, y1, x2, y2, width, clear*2, mask+width, pinname, pinname, flags)
 
 def padctr(x,y,height,width,clear,mask,pinname):
@@ -221,7 +222,7 @@ def bga(attrlist):
     else:
         silkboxx = silkboxwidth/2
         silkboxy = silkboxheight/2
-    bgaelt = "Element[0x00000000 \"\" \"\" \"\" 0 0 0 0 0 100 0x00000000]\n(\n"
+    bgaelt = element(attrlist)
     # silkscreen outline
     bgaelt = bgaelt + box(silkboxx,silkboxy,-silkboxx,-silkboxy,silkwidth)
     # pin 1 indicator 1mm long tick
@@ -271,7 +272,7 @@ def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskcl
     return pads
 
 def qfp(attrlist):
-    qfpelt = "Element[0x00000000 \"\" \"\" \"\" 0 0 0 0 0 100 0x00000000]\n(\n"
+    qfpelt = element(attrlist)
     pins = findattr(attrlist, "pins")
     pinshigh = findattr(attrlist, "pinshigh")
     padwidth = findattr(attrlist, "padwidth")
@@ -340,7 +341,7 @@ def so(attrlist):
         print "Skipping " + findattr(attrlist, "type")
         return ""
     rowpos = (width+padwidth)/2
-    soelt = "Element[0x00000000 \"\" \"\" \"\" 0 0 0 0 0 100 0x00000000]\n(\n"
+    soelt = element(attrlist)
     soelt = soelt + rowofpads([-rowpos,0], pitch, "down", padwidth, padheight, 1, pins/2, maskclear, polyclear)
     soelt = soelt + rowofpads([rowpos,0], pitch, "up", padwidth, padheight, 1+pins/2, pins/2, maskclear, polyclear)
     silkboxheight = max(pitch*(pins-2)/2+padheight+2*silkoffset,silkboxheight)
@@ -369,7 +370,9 @@ def twopad(attrlist):
     silkboxheight = findattr(attrlist, "silkboxheight")
     silkoffset = findattr(attrlist, "silkoffset")
     silkpolarity = findattr(attrlist, "silkpolarity")
-    twopadelt = "Element[0x00000000 \"\" \"\" \"\" 0 0 0 0 0 100 0x00000000]\n(\n"
+    silkcustom = findattr(attrlist, "silkcustom")
+    
+    twopadelt = element(attrlist)
     twopadelt = twopadelt + rowofpads([0,0], width+padwidth, "right", padwidth, padheight, 1, 2, maskclear, polyclear)
     silkx = max((width+2*padwidth)/2 + silkoffset,silkboxwidth/2)
     silky = max(padheight/2 + silkoffset, silkboxheight/2)
@@ -379,6 +382,8 @@ def twopad(attrlist):
         twopadelt = twopadelt + silk(silkx, silky, polx, silky, silkwidth)
         twopadelt = twopadelt + silk(silkx, -silky, polx, -silky, silkwidth)
         twopadelt = twopadelt + silk(polx, -silky, polx, silky, silkwidth)
+    for line in silkcustom:
+        twopadelt += "\t" + str(line) + "\n"
     return twopadelt+")\n"
 
 # SOT223, DDPAK, TO-263, etc
@@ -400,7 +405,7 @@ def tabbed(attrlist):
     silky = totalheight/2 + silkoffset
     taby = -(totalheight-tabheight)/2
     padsy = -(padheight - totalheight)/2
-    tabbedelt = "Element[0x00000000 \"\" \"\" \"\" 0 0 0 0 0 100 0x00000000]\n(\n"
+    tabbedelt = element(attrlist)
     tabbedelt = tabbedelt + rowofpads([0,padsy], pitch, "right", padwidth, padheight, 1, pins, maskclear, polyclear)
     tabbedelt = tabbedelt + padctr(0,taby,tabheight,tabwidth,polyclear,maskclear,str(pins+1))
     tabbedelt = tabbedelt + box(silkx,silky,-silkx,-silky,silkwidth)
@@ -410,10 +415,10 @@ def tabbed(attrlist):
 
 def pin(x,y,dia,drill,name,polyclear,maskclear):
     if name == "1":
-        pinflags = "0x00000100"
+        pinflags = "pin"
     else:
-        pinflags = "0x00000000"
-    return "\tPin[ %d %d %d %d %d %d \"%s\" \"%s\" %s]\n" % (x,y,dia,polyclear*2,maskclear+dia,drill,name,name,pinflags)
+        pinflags = ""
+    return "\tPin[ %d %d %d %d %d %d \"%s\" \"%s\" \"%s\"]\n" % (x,y,dia,polyclear*2,maskclear+dia,drill,name,name,pinflags)
 
 def dip(attrlist):
     pins = findattr(attrlist, "pins")
@@ -426,7 +431,7 @@ def dip(attrlist):
     pitch = findattr(attrlist, "pitch")
     y = -(pins/2-1)*pitch/2
     x = width/2
-    dipelt = "Element[0x00000000 \"\" \"\" \"\" 0 0 0 0 0 100 0x00000000]\n(\n"
+    dipelt = element(attrlist)
     for pinnum in range (1,1+pins/2):
         dipelt = dipelt + pin(-x,y,paddia,drill,str(pinnum),polyclear,maskclear)
         y = y + pitch
@@ -451,7 +456,7 @@ def dih(attrlist):
     pitch = findattr(attrlist, "pitch")
     y = -(pins/2-1)*pitch/2
     x = width/2
-    dipelt = "Element[0x00000000 \"\" \"\" \"\" 0 0 0 0 0 100 0x00000000]\n(\n"
+    dipelt = element(attrlist)
     for pinnum in range (1,1+pins,2):
         dipelt = dipelt + pin(-x,y,paddia,drill,str(pinnum),polyclear,maskclear)
         y = y + pitch
@@ -474,7 +479,7 @@ def sip(attrlist):
     silkwidth = findattr(attrlist, "silkwidth")
     pitch = findattr(attrlist, "pitch")
     y = -(pins-1)*pitch/2
-    sipelt = "Element[0x00000000 \"\" \"\" \"\" 0 0 0 0 0 100 0x00000000]\n(\n"
+    sipelt = element(attrlist)
     for pinnum in range (1,1+pins):
         sipelt = sipelt + pin(0,y,paddia,drill,str(pinnum),polyclear,maskclear)
         y = y + pitch
@@ -546,7 +551,8 @@ else:
 attributes = defattr()
 # main processing loop enter processing elements
 linenum = 1
-while 1:
+multiline = False
+while True:
     validline = 0
     line = in_file.readline()
     linenum = linenum + 1
@@ -561,17 +567,30 @@ while 1:
     line = line.strip()
     if line == "":
         continue
+    if (line.find("silkcustomend") != -1):
+        multiline = False
+        attributes["silkcustom"] = silkcustomlines
+        continue
+    if (multiline):
+        silkcustomlines.append(line)
+        continue
+    if (line.find("silkcustom") != -1):
+        multiline = True
+        silkcustomlines = []
+        continue
     if line.find("clearall")!=-1:
         attributes = defattr()
         continue
-    for attribute in attributes:
-        if line.find(attribute[0])!=-1:
-            attribute[1]=inquotes(line)
-            if not attribute[1]:
-                attribute[1]=str2pcbunits(line)
+    attrlist = attributes.keys()
+    for attribute in attrlist:
+        if (line.find(attribute) == 0):
+            value = inquotes(line)
+            if (value == ""):
+                value = str2pcbunits(line)
+            changeattr(attributes, attribute, value)
             validline = 1
             break
-    if attribute[0] == "part":
+    if attribute == "part":
         filename = findattr(attributes,"elementdir")+"/"+findattr(attributes,"part")
         print "generated %s" % filename
         output_file = open(filename, "w")

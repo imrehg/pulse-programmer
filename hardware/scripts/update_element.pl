@@ -175,7 +175,7 @@ print "OK, looking for instances of elements that match: \"$description\" .....\
 # component that matches the element description
 
 my $state = "normal";
-my ($nextState, $rotation, $line, $x, $y, $x1, $y1, $x2, $y2);
+my ($nextState, $onsolder, $rotation, $line, $x, $y, $x1, $y1, $x2, $y2);
 my $rotationFound;
 
 while (<IN>) {
@@ -184,13 +184,21 @@ while (<IN>) {
 
     if ($state eq "normal") {
 
-	if (/Element\[".*?" "$description" (".*?") ".*?" ([\-0-9]+) ([\-0-9]+)/) {
+	if (/Element\[(".*?") "$description" (".*?") ".*?" ([\-0-9]+) ([\-0-9]+)/) {
 	    # output original element header, this contains coords, refdes,
 	    # value, rotation
     
     	    print OUT $_;
 
 	    print "found $1 \"$description\" at ($2, $3):\n";
+            if ($1 =~ /"onsolder"/) {
+                $onsolder = 1;
+                print " onsolder ";
+            }
+            else {
+                $onsolder = 0;
+            }
+            print "\n";
 	    $rotation = 0;
 	    $rotationFound = 0;
 	    $nextState = "gotoEndofElement";
@@ -248,10 +256,16 @@ while (<IN>) {
 		    ($x2, $y2) = rotatePoint($3, $4, $rotation);
 		    print OUT "\tElementLine [$x1 $y1 $x2 $y2 $5]\n";
 		}
-		elsif ($line =~ /Pad\[([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+) (.*)\]/) {
+		elsif ($line =~ /Pad\[([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+ [\-0-9]+ [\-0-9]+ \".*\" \".*\") \"([\w\,]*)\"\]/) {
 		    ($x1, $y1) = rotatePoint($1, $2, $rotation);
 		    ($x2, $y2) = rotatePoint($3, $4, $rotation);
-		    print OUT "\tPad[$x1 $y1 $x2 $y2 $5]\n";
+
+                    my $flags = $6;
+                    if ($onsolder == 1) {
+                        $flags = "$6,onsolder";
+                    }
+
+		    print OUT "\tPad[$x1 $y1 $x2 $y2 $5 \"$flags\"]\n";
 		}
 	    }
 	    print OUT "\n\t)\n";
