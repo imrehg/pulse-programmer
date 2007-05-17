@@ -5,7 +5,7 @@ elementdir = "generic"		# where to put generated files
         silkboxwidth = 7.0mm
         silkboxheight = 9.6mm
         silkwidth = 10mil
-        silkoffset = 30mil
+        silkoffset = 22.6mil
 	# SOT223
 	tabwidth = 3.6mm
 	tabheight = 2.2mm
