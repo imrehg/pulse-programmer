@@ -59,6 +59,7 @@ def defattr():
         "width"        :0,
         "height"       :0,
         "silkcorner"   :0,
+        "silkslot"     :0,
         "silkpolarity" :0,
         "silkcustom"   :[],
         "drill"        :0,
@@ -184,6 +185,12 @@ def ball(x, y, dia, clear, mask, name):
 # draw silkscreen line
 def silk(x1, y1, x2, y2, width):
     return "\tElementLine [%d %d %d %d %d]\n" % (x1, y1, x2, y2, width)
+
+# draw silkscreen arc
+def arc(x, y, width, radius, start, delta):
+    return "\tElementArc [%d %d %d %d %d %d %d]\n" % \
+           (x, y, radius, radius, start, delta, width)
+
 # draw silkscreen box
 def box(x1, y1, x2, y2, width):
     return silk(x1,y1,x2,y1,width)+\
@@ -199,6 +206,18 @@ def insidebox(x1, y1, x2, y2, width, corner=1000):
            silk(x2,y2+corner,x2+corner,y2,width)+\
            silk(x2+corner,y2,x1,y2,width)+\
            silk(x1,y2,x1,y1,width)
+
+# draws silkscreen box for SO or QFP type parts with slot near pin #1 side
+def slotbox(x1, y1, x2, y2, width, radius=0):
+    if (radius == 0):
+        radius = int(abs(x2 - x1) / 5)
+    midx = (x1 + x2) / 2
+    return silk(x1,y2,midx+radius,y2,width)+\
+           silk(midx-radius,y2,x2,y2,width)+\
+           silk(x2,y1,x2,y2,width)+\
+           silk(x2,y1,x1,y1,width)+\
+           silk(x1,y2,x1,y1,width)+\
+           arc(midx,y2,width,radius,0,180)
 
 def bga(attrlist):
     # definitions needed to generate bga
@@ -336,6 +355,7 @@ def so(attrlist):
     silkoffset = findattr(attrlist, "silkoffset")
     silkboxheight = findattr(attrlist, "silkboxheight")
     silkstyle = findattr(attrlist, "silkstyle")
+    silkslot = findattr(attrlist, "silkslot")
     if pins % 2:
         print "Odd number of pins: that is a problem"
         print "Skipping " + findattr(attrlist, "type")
@@ -344,14 +364,19 @@ def so(attrlist):
     soelt = element(attrlist)
     soelt = soelt + rowofpads([-rowpos,0], pitch, "down", padwidth, padheight, 1, pins/2, maskclear, polyclear)
     soelt = soelt + rowofpads([rowpos,0], pitch, "up", padwidth, padheight, 1+pins/2, pins/2, maskclear, polyclear)
-    silkboxheight = max(pitch*(pins-2)/2+padheight+2*silkoffset,silkboxheight)
+    if (silkstyle != "inside"):
+        silkboxheight = max(pitch*(pins-2)/2+padheight+2*silkoffset,
+                            silkboxheight)
     
     silky = silkboxheight/2
     
     # Inside box with notched corner as submitted in patch by PRB
     if(silkstyle == "inside"):
         silkx = width/2 - silkoffset
-        soelt = soelt + insidebox(silkx,silky,-silkx,-silky,silkwidth)
+        if (silkslot != 0):
+            soelt = soelt + slotbox(silkx,silky,-silkx,-silky,silkwidth)
+        else:
+            soelt = soelt + insidebox(silkx,silky,-silkx,-silky,silkwidth)
     else:
         silkx = width/2 + silkoffset + padwidth
         soelt = soelt + box(silkx,silky,-silkx,-silky,silkwidth)

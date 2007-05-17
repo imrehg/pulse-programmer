@@ -127,7 +127,7 @@ while (<ELEMENT>) {
     if (/Element\[".*?" "(.*?)"/) {
 	$description = $1;
     }
-    elsif (/Pin/ || /ElementLine/ || /Pad/) {
+    elsif (/Pin/ || /ElementLine/ || /Pad/ || /ElementArc/) {
 	push @element, $_; 
 	if (/Pad\[([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+) [\-0-9]+ [\-0-9]+ ".*?" "$pnum"/) {
 	    if (!$pnumFound) {
@@ -255,6 +255,10 @@ while (<IN>) {
 		    ($x1, $y1) = rotatePoint($1, $2, $rotation);
 		    ($x2, $y2) = rotatePoint($3, $4, $rotation);
 		    print OUT "\tElementLine [$x1 $y1 $x2 $y2 $5]\n";
+		}
+		elsif ($line =~ /ElementArc \[([\-0-9]+) ([\-0-9]+) (.*)\]/) {
+		    ($x, $y) = rotatePoint($1, $2, $rotation);
+		    print OUT "\tElementArc [$x $y $3]\n";
 		}
 		elsif ($line =~ /Pad\[([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+ [\-0-9]+ [\-0-9]+ \".*\" \".*\") \"([\w\,]*)\"\]/) {
 		    ($x1, $y1) = rotatePoint($1, $2, $rotation);
