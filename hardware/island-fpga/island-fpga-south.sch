@@ -1010,41 +1010,6 @@ footprint=QxE-040-01-x-D-EM2
 T 45900 42800 5 10 1 1 0 0 1
 value=QSE-040-01-x-D-EM2
 }
-C 47000 40700 1 180 0 busripper-1.sym
-{
-T 47000 41100 5 8 0 0 0 0 1
-device=none
-}
-C 47200 40700 1 180 0 busripper-1.sym
-{
-T 47200 41100 5 8 0 0 0 0 1
-device=none
-}
-C 47400 40700 1 180 0 busripper-1.sym
-{
-T 47400 41100 5 8 0 0 0 0 1
-device=none
-}
-C 47600 40700 1 180 0 busripper-1.sym
-{
-T 47600 41100 5 8 0 0 0 0 1
-device=none
-}
-C 47800 40700 1 180 0 busripper-1.sym
-{
-T 47800 41100 5 8 0 0 0 0 1
-device=none
-}
-C 48000 40700 1 180 0 busripper-1.sym
-{
-T 48000 41100 5 8 0 0 0 0 1
-device=none
-}
-C 48200 40700 1 180 0 busripper-1.sym
-{
-T 48200 41100 5 8 0 0 0 0 1
-device=none
-}
 N 49000 43700 49000 43800 4
 N 54800 42200 54800 42300 4
 C 49200 44300 1 0 0 busripper-1.sym
