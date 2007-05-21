@@ -3,6 +3,8 @@ elementdir = "generic"		# where to put generated files
 # 0402, 0603, 0805, 1206 packages for chip resistors, caps, and inductors
 # Entered by Paul Pham
 	type "twopad"
+        polyclear = 8 mil
+        maskclear = 6 mil
 	silkboxheight = 0
 	silkboxwidth = 0
 	silkoffset 6 mil

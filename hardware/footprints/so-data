@@ -1,8 +1,11 @@
 elementdir = "ic"		# where to put generated files
 
 # SOIC parts
-	pins = 8
 	type "so"
+        polyclear = 8 mil
+        maskclear = 6 mil
+
+	pins = 8
 	width = 5.05mm
 	pitch = 0.65mm
 	padwidth = 1.2mm

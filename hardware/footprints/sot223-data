@@ -2,6 +2,8 @@ elementdir = "generic"		# where to put generated files
 
 #Tabbed parts
 	type = "tabbed"
+        polyclear = 8 mil
+        maskclear = 6 mil
         silkboxwidth = 7.0mm
         silkboxheight = 9.6mm
         silkwidth = 10mil

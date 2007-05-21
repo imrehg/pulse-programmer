@@ -4,8 +4,11 @@ elementdir = "ic"		# where to put generated files
 # Entered by Paul Pham
 # Based on Altera Cyclone Handbook
 # QFP type parts
-	pins 240
 	type "qfp"		# pins must be divisible by 4
+        polyclear = 8 mil
+        maskclear = 6 mil
+
+	pins 240
 	pitch 0.5 mm
 	width = 32.4 mm		# distance inside pins
 	height = 32.4 mm
