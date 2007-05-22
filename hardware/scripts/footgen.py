@@ -184,11 +184,11 @@ def ball(x, y, dia, clear, mask, name):
 
 # draw silkscreen line
 def silk(x1, y1, x2, y2, width):
-    return "\tElementLine [%d %d %d %d %d]\n" % (x1, y1, x2, y2, width)
+    return "\tElementLine[%d %d %d %d %d]\n" % (x1, y1, x2, y2, width)
 
 # draw silkscreen arc
 def arc(x, y, width, radius, start, delta):
-    return "\tElementArc [%d %d %d %d %d %d %d]\n" % \
+    return "\tElementArc[%d %d %d %d %d %d %d]\n" % \
            (x, y, radius, radius, start, delta, width)
 
 # draw silkscreen box

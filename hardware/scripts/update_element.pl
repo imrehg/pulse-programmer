@@ -129,7 +129,7 @@ while (<ELEMENT>) {
     }
     elsif (/Pin/ || /ElementLine/ || /Pad/ || /ElementArc/) {
 	push @element, $_; 
-	if (/Pad\[([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+) [\-0-9]+ [\-0-9]+ ".*?" "$pnum"/) {
+	if (/Pad\[\s*([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+)\s*[\-0-9]+\s*[\-0-9]+\s*".*?" "$pnum"/) {
 	    if (!$pnumFound) {
 		# found pad $pnum - we use this to determine rotation
 		$pad = {x1=>$1, y1=>$2, x2=>$3, y2=>$4, thickness=>$5};
@@ -251,16 +251,16 @@ while (<IN>) {
 		    #print "$1 $2\n"
 		    print OUT "\tPin[$x $y $3]\n";
 		}
-		elsif ($line =~ /ElementLine \[([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+) (.*)\]/) {
+		elsif ($line =~ /ElementLine\s*\[([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+) ([\-0-9]+) (.*)\]/) {
 		    ($x1, $y1) = rotatePoint($1, $2, $rotation);
 		    ($x2, $y2) = rotatePoint($3, $4, $rotation);
-		    print OUT "\tElementLine [$x1 $y1 $x2 $y2 $5]\n";
+		    print OUT "\tElementLine[$x1 $y1 $x2 $y2 $5]\n";
 		}
-		elsif ($line =~ /ElementArc \[([\-0-9]+) ([\-0-9]+) (.*)\]/) {
+		elsif ($line =~ /ElementArc\s*\[([\-0-9]+)\s*([\-0-9]+)\s*(.*)\]/) {
 		    ($x, $y) = rotatePoint($1, $2, $rotation);
-		    print OUT "\tElementArc [$x $y $3]\n";
+		    print OUT "\tElementArc[$x $y $3]\n";
 		}
-		elsif ($line =~ /Pad\[([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+) ([\-0-9]+ [\-0-9]+ [\-0-9]+ \".*\" \".*\") \"([\w\,]*)\"\]/) {
+		elsif ($line =~ /Pad\[\s*([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+\s*[\-0-9]+\s*[\-0-9]+ \".*\" \".*\") \"([\w\,]*)\"\]/) {
 		    ($x1, $y1) = rotatePoint($1, $2, $rotation);
 		    ($x2, $y2) = rotatePoint($3, $4, $rotation);
 
@@ -369,7 +369,7 @@ sub convertPadToBoxCoords($) {
 	$xleft  -= $pad->{thickness}/2;
 	$xright += $pad->{thickness}/2;
     }
-    elsif ($ytop == $ybot) {
+    if ($ytop == $ybot) {
 	# horizontal line
 	$ytop  -= $pad->{thickness}/2;
 	$ybot += $pad->{thickness}/2;
