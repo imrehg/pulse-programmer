@@ -7,6 +7,10 @@ elementdir = "ic"		# where to put generated files
 	type "qfp"		# pins must be divisible by 4
         polyclear = 8 mil
         maskclear = 6 mil
+	maskclear = 6 mil	# total additional opening: 3 mils from pad to mask, Advanced Circuits Tolerance
+        silkwidth = 10 mil
+	silkstyle = "inside"
+	silkoffset 1 mm 		# inside pads with 1mm clearance 
 
 	pins 240
 	pitch 0.5 mm
@@ -14,9 +18,25 @@ elementdir = "ic"		# where to put generated files
 	height = 32.4 mm
 	padwidth 1.5 mm
 	padheight 0.3 mm
-	maskclear = 5 mil	# total additional opening: 3 mils from pad to mask, Advanced Circuits Tolerance
-        silkwidth = 10 mil
-	silkstyle = "inside"
-	silkoffset 1 mm 		# inside pads with 1mm clearance 
         silkcorner 40 mil
-part "QFP240"
+part "PQFP-240"
+
+	pins 100
+        pinshigh 30
+	pitch 0.65 mm
+	width = 13.8 mm		# distance inside pins
+	height = 19.6 mm
+	padwidth 1.6 mm
+	padheight 0.4 mm
+        silkcorner 40 mil
+part "TQFP-100"
+
+	pins 80
+        pinshigh 0
+	pitch 0.65 mm
+	width = 15.6 mm		# distance inside pins
+	height = 15.6 mm
+	padwidth 1.4 mm
+	padheight 0.3 mm
+        silkcorner 40 mil
+part "PQFP-80"

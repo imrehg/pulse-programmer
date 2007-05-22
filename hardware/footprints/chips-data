@@ -8,7 +8,7 @@ elementdir = "generic"		# where to put generated files
 	silkboxheight = 0
 	silkboxwidth = 0
 	silkoffset 6 mil
-	silkwidth = 5 mil
+	silkwidth = 7 mil
 	width 0.250mm
 	padwidth = 0.225mm
 	padheight 0.300mm
