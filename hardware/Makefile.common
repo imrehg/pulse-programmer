@@ -7,10 +7,14 @@ help:
 	@echo
 	@echo "The following targets are available"
 	@echo
-	@echo "  make [help]	prints this message."
-	@echo "  make renum 	renumbers reference designators in all"
-	@echo "                 schematic files in *.sch.renum"
-	@echo "  make netlist	generates netlist from *.sch.renum files"
+	@echo "  make [help]  prints this message."
+	@echo "  make renum   renumbers reference designators in all"
+	@echo "               schematic files in *.sch.renum"
+	@echo "  make net     generates netlist from *.sch.renum files"
+	@echo "  make pcb     generates initial PCB layout from *.sch file"
+	@echo "  make gerber  generates Gerber CAM output from *.pcb file"
+	@echo "  make fab     generates zip file of Gerbers for fabrication"
+	@echo "  make asm     generates zip file of drawings/BOM for assembly"
 	@echo
 	@echo "The following variable modifiers are available:"
 	@echo
@@ -18,24 +22,77 @@ help:
 	@echo
 
 clean:
-	rm -rf *.renum.sch *.log
+	rm -rf *.renum.sch *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
+	rm -rf $(GBR_DIR) *.zip
 
+TOP_SRC_DIR = ~/sf/svnroot/hardware
 GROOT = /usr/local/geda
 GBIN = $(GROOT)/bin
 GSCHEM = $(GBIN)/gschem
 GRENUM = $(GBIN)/refdes_renum --nocopy
 GNET = $(GBIN)/gnetlist -q
+G2PCB = $(GBIN)/gsch2pcb --use-files
+PCB = $(GBIN)/pcb
+PCB_VIEW = $(GBIN)/pcb --
+GBR = $(PCB) -x gerber --verbose --gerberfile $(GBR_PRE)
+GBR_DIR = gerber_cam
+GBR_PRE = $(GBR_DIR)/$(BOARD)
 
 TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
 TARGETS_NET = $(TARGETS:.sch=.net)
 TARGETS_DRC = $(TARGETS:.sch=.drc)
+TARGETS_PCB = $(TARGETS:.sch=.pcb)
+GERBER_FILES = \
+	$(GBR_PRE).back.gbr \
+	$(GBR_PRE).backmask.gbr \
+	$(GBR_PRE).backpaste.gbr \
+	$(GBR_PRE).backsilk.gbr \
+	$(GBR_PRE).front.gbr \
+	$(GBR_PRE).frontmask.gbr \
+	$(GBR_PRE).frontpaste.gbr \
+	$(GBR_PRE).frontsilk.gbr \
+	$(GBR_PRE).outline.gbr \
+	$(GBR_PRE).fab.gbr \
+	$(GBR_PRE).plated-drill.cnc \
+
+# High-speed boards need power/ground inner planes
+GERBER_FILES_HS = $(GERBER_FILES) \
+	$(GBR_PRE).group3.gbr \
+	$(GBR_PRE).group4.gbr \
+
+FAB_ZIP = $(BOARD)-$(REV)-fab.zip
+ASM_ZIP = $(BOARD)-$(REV)-asm.zip
+
+%.tgt: %.sch
+	touch $@
 
 %.renum.sch: %.sch
 	$(GRENUM) $<
 	mv $<.renum $@
 
-%.drc: %.sch
+%.net: %.sch %.tgt
+	$(GNET) -g PCB -o $@ $<
+
+%.drc: %.sch %.tgt
 	$(GNET) -g drc2 -o $@ $<
+
+%.pcb: %.prj %.tgt
+	$(G2PCB) $<
+
+$(GBR_DIR):
+	mkdir -p $@
+
+$(TARGETS_GERBER): $(BOARD).pcb $(GBR_DIR)
+	$(GBR) $<
+
+$(FAB_ZIP): $(TARGETS_GERBER)
+	zip -r $(FAB_ZIP) $(GBR_DIR)
 
 renum: $(TARGETS_RENUM)
 drc: $(TARGETS_DRC)
+pcb: $(TARGETS_PCB)
+net: $(TARGETS_NET)
+gerber: $(TARGETS_GERBER)
+fab: $(FAB_ZIP)
+layout:
+	$(PCB) $(LAYER_COLORS) $(BOARD).pcb
