@@ -60,13 +60,17 @@ sub testDetermineOverlap();
 sub testDetermineRotationWithMaxOverlap();
 
 my $numArgs = $#ARGV + 1;
-if ($numArgs != 3) {
+if ($numArgs < 3) {
     print "usage: ./update_element.pl inputPCBFile elementFile outputPCBFile\n";
     exit;
 }
 my $inputPcbFile = shift;
 my $elementFile = shift;
 my $outputPcbFile = shift;
+my $pnum = 1;            # modify this line to pin 2 if pin 1 is unsuitable
+if ($numArgs == 4) {
+    $pnum = shift;
+}
 
 open IN, $inputPcbFile or die "Can't open input PCB file $_\n";
 open ELEMENT, $elementFile or die "Can't open element file $_\n";
@@ -82,7 +86,6 @@ testDetermineRotationWithMaxOverlap();
 
 my @element = ();
 my $description;
-my $pnum = 1;            # modify this line to pin 2 if pin 1 is unsuitable
 my $pnumFound = 0;
 my @rotatedNewPad = ();
 my $pad;
@@ -139,7 +142,7 @@ while (<ELEMENT>) {
 		$pnumFound = 1;
 	    }
 	}
-	if (/Pin\[([\-0-9]+) ([\-0-9]+) ([\-0-9]+) [\-0-9]+ [\-0-9]+ [\-0-9]+ ".*?" "$pnum"/) {
+	if (/Pin\[\s*([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+)\s*[\-0-9]+\s*[\-0-9]+\s*[\-0-9]+\s*".*?"\s*"$pnum"/) {
 	    if (!$pnumFound) {
 		# found pin $pnum - we use this to determine rotation
 		# note we model pin as a square pad
@@ -246,7 +249,7 @@ while (<IN>) {
 
 	    print OUT "(\n";
 	    foreach $line (@element) {
-		if ($line =~ /Pin\[([\-0-9]+) ([\-0-9]+) (.*)\]/) {
+		if ($line =~ /Pin\[\s*([\-0-9]+)\s*([\-0-9]+)\s*(.*)\]/) {
 		    ($x, $y) = rotatePoint($1, $2, $rotation);
 		    #print "$1 $2\n"
 		    print OUT "\tPin[$x $y $3]\n";

@@ -1,5 +1,5 @@
 BOARD = island-fpga
-REV = 0
+REV = 0b1
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
@@ -23,5 +23,6 @@ LAYER_COLORS = \
 
 # This is a high-speed board
 TARGETS_GERBER = $(GERBER_FILES_HS)
+TARGETS_PS = $(PS_FILES_HS)
 
 include ../Makefile.common
