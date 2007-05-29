@@ -341,6 +341,56 @@ def qfp(attrlist):
         qfpelt = qfpelt + box(x,y,-x,-y,silkwidth)
         qfpelt = qfpelt + silk(-x,-y,-(x+3940),-(y+3940),silkwidth)
     return qfpelt+")\n"
+
+def samtec(attrlist):
+    samelt = element(attrlist)
+    pins = findattr(attrlist, "pins")
+    padwidth = findattr(attrlist, "padwidth")
+    padheight = findattr(attrlist, "padheight")
+    pitch = findattr(attrlist, "pitch")
+    height = findattr(attrlist, "height")
+    polyclear = findattr(attrlist, "polyclear")
+    maskclear = findattr(attrlist, "maskclear")
+    masktent = findattr(attrlist, "masktent")
+    silkwidth = findattr(attrlist, "silkwidth")
+    silkoffset = findattr(attrlist, "silkoffset")
+    silkstyle = findattr(attrlist, "silkstyle")
+    silkcorner = findattr(attrlist, "silkcorner")
+
+    tentpadbase = findattr(attrlist, "tentpadbase")
+    tentpadwidth = findattr(attrlist, "tentpadwidth")
+    tentpadheight = findattr(attrlist, "tentpadheight")
+    bankwidth = findattr(attrlist, "bankwidth")
+    bankpins = findattr(attrlist, "bankpins")
+    mirror = findattr(attrlist, "mirror")
+    holedrill = findattr(attrlist, "holedrill")
+    width = bankwidth * (pins / bankpins)
+    banks = pins / bankpins
+
+    if (pins % bankpins) != 0:
+        raise RuntimeError("Number of pins not a multiple of 20")
+
+    yaxis = 1
+    if (mirror == "yes"):
+        yaxis = -1
+
+    # Base pins with completely exposed pad
+    for i in range(banks):
+        samelt += rowofpads([(bankwidth*i)+(pitch*(bankpins-1)/2),0],\
+                            pitch, "left", padwidth,\
+                            padheight, 1, pins, maskclear, polyclear)
+    # Pad extensions that are partially exposed (soldermask tent)
+    tentpadbase *= yaxis
+    for i in range(banks):
+        samelt += rowofpads([(bankwidth*i)+(pitch*(bankpins-1)/2),\
+                             tentpadbase],\
+                            pitch, "left", tentpadwidth, tentpadheight,\
+                            1, pins, masktent, polyclear)
+
+    # Alignment tab drill guide
+    
+    return samelt+")\n"
+
 # def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskclear, polyclear):
 # uses pins, padwidth, padheight, pitch
 def so(attrlist):
