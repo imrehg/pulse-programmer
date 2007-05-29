@@ -134,7 +134,7 @@ source=island-fpga-north.sch
 N 54200 45700 42700 45700 4
 C 40200 42600 1 0 0 island-fpga-west.sym
 {
-T 42900 42500 5 10 1 1 0 6 1
+T 42700 43700 5 10 1 1 0 6 1
 refdes=S1
 T 40600 47200 5 10 0 0 0 0 1
 device=island-fpga-west
