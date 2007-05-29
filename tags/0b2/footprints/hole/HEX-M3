@@ -1,0 +1,11 @@
+Element(0x0 "hex-standoff-m3" "" "" -169 -210 0 100 0x0)
+(
+   Pin(0 0 165 140 "" "1" 0x09)
+   ElementLine(-57  98   57  98 10)
+   ElementLine(-57 -98   57 -98 10)
+   ElementLine(-57 -98 -114   0 10)
+   ElementLine( 57 -98  114   0 10)
+   ElementLine(-57  98 -114   0 10)
+   ElementLine( 57  98  114   0 10)
+   Mark(0 0)
+)

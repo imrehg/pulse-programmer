@@ -1,0 +1,480 @@
+v 20070216 1
+P 100 8300 400 8300 1 0 0
+{
+T 300 8350 5 8 0 1 0 6 1
+pinnumber=B1
+T 300 8250 5 8 0 1 0 8 1
+pinseq=1
+T 450 8300 9 8 1 1 0 0 1
+pinlabel=B1_PORT
+T 450 8300 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 8100 400 8100 1 0 0
+{
+T 300 8150 5 8 0 1 0 6 1
+pinnumber=B2
+T 300 8050 5 8 0 1 0 8 1
+pinseq=2
+T 450 8100 9 8 1 1 0 0 1
+pinlabel=B2_PORT
+T 450 8100 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 7900 400 7900 1 0 0
+{
+T 300 7950 5 8 0 1 0 6 1
+pinnumber=B3
+T 300 7850 5 8 0 1 0 8 1
+pinseq=3
+T 450 7900 9 8 1 1 0 0 1
+pinlabel=B3_PORT
+T 450 7900 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 7700 400 7700 1 0 0
+{
+T 300 7750 5 8 0 1 0 6 1
+pinnumber=B4
+T 300 7650 5 8 0 1 0 8 1
+pinseq=4
+T 450 7700 9 8 1 1 0 0 1
+pinlabel=B4_PORT
+T 450 7700 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 7500 400 7500 1 0 0
+{
+T 300 7550 5 8 0 1 0 6 1
+pinnumber=B5
+T 300 7450 5 8 0 1 0 8 1
+pinseq=5
+T 450 7500 9 8 1 1 0 0 1
+pinlabel=B5_PORT
+T 450 7500 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 7300 400 7300 1 0 0
+{
+T 300 7350 5 8 0 1 0 6 1
+pinnumber=B6
+T 300 7250 5 8 0 1 0 8 1
+pinseq=6
+T 450 7300 9 8 1 1 0 0 1
+pinlabel=B6_PORT
+T 450 7300 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 7100 400 7100 1 0 0
+{
+T 300 7150 5 8 0 1 0 6 1
+pinnumber=B7
+T 300 7050 5 8 0 1 0 8 1
+pinseq=7
+T 450 7100 9 8 1 1 0 0 1
+pinlabel=B7_PORT
+T 450 7100 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 6900 400 6900 1 0 0
+{
+T 300 6950 5 8 0 1 0 6 1
+pinnumber=B8
+T 300 6850 5 8 0 1 0 8 1
+pinseq=8
+T 450 6900 9 8 1 1 0 0 1
+pinlabel=B8_PORT
+T 450 6900 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 6700 400 6700 1 0 0
+{
+T 300 6750 5 8 0 1 0 6 1
+pinnumber=B9
+T 300 6650 5 8 0 1 0 8 1
+pinseq=9
+T 450 6700 9 8 1 1 0 0 1
+pinlabel=B9_PORT
+T 450 6700 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 6500 400 6500 1 0 0
+{
+T 300 6550 5 8 0 1 0 6 1
+pinnumber=B10
+T 300 6450 5 8 0 1 0 8 1
+pinseq=10
+T 450 6500 9 8 1 1 0 0 1
+pinlabel=B10_PORT
+T 450 6500 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 6300 400 6300 1 0 0
+{
+T 300 6350 5 8 0 1 0 6 1
+pinnumber=B11
+T 300 6250 5 8 0 1 0 8 1
+pinseq=11
+T 450 6300 9 8 1 1 0 0 1
+pinlabel=B11_PORT
+T 450 6300 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 6100 400 6100 1 0 0
+{
+T 300 6150 5 8 0 1 0 6 1
+pinnumber=B12
+T 300 6050 5 8 0 1 0 8 1
+pinseq=12
+T 450 6100 9 8 1 1 0 0 1
+pinlabel=B12_PORT
+T 450 6100 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 5900 400 5900 1 0 0
+{
+T 300 5950 5 8 0 1 0 6 1
+pinnumber=B13
+T 300 5850 5 8 0 1 0 8 1
+pinseq=13
+T 450 5900 9 8 1 1 0 0 1
+pinlabel=B13_PORT
+T 450 5900 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 5700 400 5700 1 0 0
+{
+T 300 5750 5 8 0 1 0 6 1
+pinnumber=B14
+T 300 5650 5 8 0 1 0 8 1
+pinseq=14
+T 450 5700 9 8 1 1 0 0 1
+pinlabel=B14_PORT
+T 450 5700 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 5500 400 5500 1 0 0
+{
+T 300 5550 5 8 0 1 0 6 1
+pinnumber=B15
+T 300 5450 5 8 0 1 0 8 1
+pinseq=15
+T 450 5500 9 8 1 1 0 0 1
+pinlabel=B15_PORT
+T 450 5500 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 5300 400 5300 1 0 0
+{
+T 300 5350 5 8 0 1 0 6 1
+pinnumber=B16
+T 300 5250 5 8 0 1 0 8 1
+pinseq=16
+T 450 5300 9 8 1 1 0 0 1
+pinlabel=B16_PORT
+T 450 5300 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 5100 400 5100 1 0 0
+{
+T 300 5150 5 8 0 1 0 6 1
+pinnumber=B17
+T 300 5050 5 8 0 1 0 8 1
+pinseq=17
+T 450 5100 9 8 1 1 0 0 1
+pinlabel=B17_PORT
+T 450 5100 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 4900 400 4900 1 0 0
+{
+T 300 4950 5 8 0 1 0 6 1
+pinnumber=B18
+T 300 4850 5 8 0 1 0 8 1
+pinseq=18
+T 450 4900 9 8 1 1 0 0 1
+pinlabel=B18_PORT
+T 450 4900 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 4700 400 4700 1 0 0
+{
+T 300 4750 5 8 0 1 0 6 1
+pinnumber=B19
+T 300 4650 5 8 0 1 0 8 1
+pinseq=19
+T 450 4700 9 8 1 1 0 0 1
+pinlabel=B19_PORT
+T 450 4700 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 4500 400 4500 1 0 0
+{
+T 300 4550 5 8 0 1 0 6 1
+pinnumber=B20
+T 300 4450 5 8 0 1 0 8 1
+pinseq=20
+T 450 4500 9 8 1 1 0 0 1
+pinlabel=B20_PORT
+T 450 4500 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 4300 400 4300 1 0 0
+{
+T 300 4350 5 8 0 1 0 6 1
+pinnumber=B21
+T 300 4250 5 8 0 1 0 8 1
+pinseq=21
+T 450 4300 9 8 1 1 0 0 1
+pinlabel=B21_PORT
+T 450 4300 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 4100 400 4100 1 0 0
+{
+T 300 4150 5 8 0 1 0 6 1
+pinnumber=B22
+T 300 4050 5 8 0 1 0 8 1
+pinseq=22
+T 450 4100 9 8 1 1 0 0 1
+pinlabel=B22_PORT
+T 450 4100 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 3900 400 3900 1 0 0
+{
+T 300 3950 5 8 0 1 0 6 1
+pinnumber=B23
+T 300 3850 5 8 0 1 0 8 1
+pinseq=23
+T 450 3900 9 8 1 1 0 0 1
+pinlabel=B23_PORT
+T 450 3900 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 3700 400 3700 1 0 0
+{
+T 300 3750 5 8 0 1 0 6 1
+pinnumber=B24
+T 300 3650 5 8 0 1 0 8 1
+pinseq=24
+T 450 3700 9 8 1 1 0 0 1
+pinlabel=B24_PORT
+T 450 3700 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 3500 400 3500 1 0 0
+{
+T 300 3550 5 8 0 1 0 6 1
+pinnumber=B25
+T 300 3450 5 8 0 1 0 8 1
+pinseq=25
+T 450 3500 9 8 1 1 0 0 1
+pinlabel=B25_PORT
+T 450 3500 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 3300 400 3300 1 0 0
+{
+T 300 3350 5 8 0 1 0 6 1
+pinnumber=B26
+T 300 3250 5 8 0 1 0 8 1
+pinseq=26
+T 450 3300 9 8 1 1 0 0 1
+pinlabel=B26_PORT
+T 450 3300 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 3100 400 3100 1 0 0
+{
+T 300 3150 5 8 0 1 0 6 1
+pinnumber=B27
+T 300 3050 5 8 0 1 0 8 1
+pinseq=27
+T 450 3100 9 8 1 1 0 0 1
+pinlabel=B27_PORT
+T 450 3100 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 2900 400 2900 1 0 0
+{
+T 300 2950 5 8 0 1 0 6 1
+pinnumber=B28
+T 300 2850 5 8 0 1 0 8 1
+pinseq=28
+T 450 2900 9 8 1 1 0 0 1
+pinlabel=B28_PORT
+T 450 2900 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 2700 400 2700 1 0 0
+{
+T 300 2750 5 8 0 1 0 6 1
+pinnumber=B29
+T 300 2650 5 8 0 1 0 8 1
+pinseq=29
+T 450 2700 9 8 1 1 0 0 1
+pinlabel=B29_PORT
+T 450 2700 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 2500 400 2500 1 0 0
+{
+T 300 2550 5 8 0 1 0 6 1
+pinnumber=B30
+T 300 2450 5 8 0 1 0 8 1
+pinseq=30
+T 450 2500 9 8 1 1 0 0 1
+pinlabel=B30_PORT
+T 450 2500 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 2300 400 2300 1 0 0
+{
+T 300 2350 5 8 0 1 0 6 1
+pinnumber=B31
+T 300 2250 5 8 0 1 0 8 1
+pinseq=31
+T 450 2300 9 8 1 1 0 0 1
+pinlabel=B31_PORT
+T 450 2300 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 2100 400 2100 1 0 0
+{
+T 300 2150 5 8 0 1 0 6 1
+pinnumber=B32
+T 300 2050 5 8 0 1 0 8 1
+pinseq=32
+T 450 2100 9 8 1 1 0 0 1
+pinlabel=B32_PORT
+T 450 2100 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 1900 400 1900 1 0 0
+{
+T 300 1950 5 8 0 1 0 6 1
+pinnumber=B33
+T 300 1850 5 8 0 1 0 8 1
+pinseq=33
+T 450 1900 9 8 1 1 0 0 1
+pinlabel=B33_PORT
+T 450 1900 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 1700 400 1700 1 0 0
+{
+T 300 1750 5 8 0 1 0 6 1
+pinnumber=B34
+T 300 1650 5 8 0 1 0 8 1
+pinseq=34
+T 450 1700 9 8 1 1 0 0 1
+pinlabel=B34_PORT
+T 450 1700 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 1500 400 1500 1 0 0
+{
+T 300 1550 5 8 0 1 0 6 1
+pinnumber=B35
+T 300 1450 5 8 0 1 0 8 1
+pinseq=35
+T 450 1500 9 8 1 1 0 0 1
+pinlabel=B35_PORT
+T 450 1500 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 1300 400 1300 1 0 0
+{
+T 300 1350 5 8 0 1 0 6 1
+pinnumber=B36
+T 300 1250 5 8 0 1 0 8 1
+pinseq=36
+T 450 1300 9 8 1 1 0 0 1
+pinlabel=B36_PORT
+T 450 1300 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 1100 400 1100 1 0 0
+{
+T 300 1150 5 8 0 1 0 6 1
+pinnumber=B37
+T 300 1050 5 8 0 1 0 8 1
+pinseq=37
+T 450 1100 9 8 1 1 0 0 1
+pinlabel=B37_PORT
+T 450 1100 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 900 400 900 1 0 0
+{
+T 300 950 5 8 0 1 0 6 1
+pinnumber=B38
+T 300 850 5 8 0 1 0 8 1
+pinseq=38
+T 450 900 9 8 1 1 0 0 1
+pinlabel=B38_PORT
+T 450 900 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 700 400 700 1 0 0
+{
+T 300 750 5 8 0 1 0 6 1
+pinnumber=B39
+T 300 650 5 8 0 1 0 8 1
+pinseq=39
+T 450 700 9 8 1 1 0 0 1
+pinlabel=B39_PORT
+T 450 700 5 8 0 1 0 2 1
+pintype=io
+}
+P 100 500 400 500 1 0 0
+{
+T 300 550 5 8 0 1 0 6 1
+pinnumber=B40
+T 300 450 5 8 0 1 0 8 1
+pinseq=40
+T 450 500 9 8 1 1 0 0 1
+pinlabel=B40_PORT
+T 450 500 5 8 0 1 0 2 1
+pintype=io
+}
+B 400 100 1000 9000 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 1800 8600 8 10 1 1 0 6 1
+refdes=S?
+T 400 9200 9 10 1 0 0 0 1
+LED Test Bottom Side
+T 400 16800 5 10 0 0 0 0 1
+device=island-test-bottom
+T 400 17000 5 10 0 0 0 0 1
+footprint=
+T 400 17200 5 10 0 0 0 0 1
+author=Paul Pham
+T 400 17400 5 10 0 0 0 0 1
+documentation=
+T 400 17600 5 10 0 0 0 0 1
+description="Bottom Side LEDs of Test Island"
+T 400 17800 5 10 0 0 0 0 1
+numslots=0
+P 100 8700 400 8700 1 0 0
+{
+T 300 8750 5 8 0 1 0 6 1
+pinnumber=
+T 300 8650 5 8 0 1 0 8 1
+pinseq=81
+T 450 8700 9 8 1 1 0 0 1
+pinlabel=+2.5V_PORT
+T 450 8700 5 8 0 1 0 2 1
+pintype=pwr
+}
+P 100 8500 400 8500 1 0 0
+{
+T 300 8550 5 8 0 1 0 6 1
+pinnumber=
+T 300 8450 5 8 0 1 0 8 1
+pinseq=82
+T 450 8500 9 8 1 1 0 0 1
+pinlabel=GND_PORT
+T 450 8500 5 8 0 1 0 2 1
+pintype=pwr
+}

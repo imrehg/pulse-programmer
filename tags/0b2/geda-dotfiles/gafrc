@@ -1,0 +1,3 @@
+(component-library "/home/ppham/sf/svnroot/hardware/symbols")
+(component-library "/home/ppham/sf/svnroot/hardware/island-fpga")
+(source-library "/home/ppham/sf/svnroot/hardware/island-fpga")
