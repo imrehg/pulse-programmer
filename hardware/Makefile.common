@@ -76,10 +76,6 @@ PS_FILES = \
 	$(PS_PRE).backassembly.ps \
 	$(PS_PRE).fab.ps \
 
-PS_FILES_HS = $(PS_FILES) \
-	$(PS_PRE).group3.ps \
-	$(PS_PRE).group4.ps \
-
 PDF_FILES = $(PS_FILES:.ps=.pdf)
 TARGETS_PDF = $(TARGETS_PS:.ps=.pdf)
 
@@ -88,8 +84,16 @@ GERBER_FILES_HS = $(GERBER_FILES) \
 	$(GBR_PRE).group3.gbr \
 	$(GBR_PRE).group4.gbr \
 
+PS_FILES_HS = $(PS_FILES) \
+	$(PS_PRE).group3.ps \
+	$(PS_PRE).group4.ps \
+
 FAB_ZIP = $(BOARD)-$(REV)-fab.zip
 ASM_ZIP = $(BOARD)-$(REV)-asm.zip
+FAB_DIR = $(BOARD)-$(REV)-fabrication
+ASM_DIR = $(BOARD)-$(REV)-assembly
+
+TARGETS_BOM = $(BOARD)-$(REV).bom $(BOARD)-$(REV).xy
 
 %.tgt: %.sch
 	touch $@
@@ -110,6 +114,10 @@ ASM_ZIP = $(BOARD)-$(REV)-asm.zip
 %.pcb: %.prj %.tgt
 	$(G2PCB) $<
 
+%.bom %.xy: %.pcb
+	$(PCB) -x bom --bomfile $(BOARD)-$(REV).bom --xyfile $(BOARD)-$(REV).xy \
+		$<
+
 $(GBR_DIR):
 	mkdir -p $@
 
@@ -118,6 +126,12 @@ $(TARGETS_GERBER): $(BOARD).pcb $(GBR_DIR)
 
 $(FAB_ZIP): $(TARGETS_GERBER)
 	zip -r $(FAB_ZIP) $(GBR_DIR)
+
+$(ASM_ZIP): $(TARGETS_BOM) $(TARGETS_PDF)
+	mkdir -p $(ASM_DIR)
+	cp $(TARGETS_BOM) $(ASM_DIR)/
+	cp $(PS_PRE).*assembly.pdf $(ASM_DIR)/
+	zip -r $(ASM_ZIP) $(ASM_DIR)
 
 $(PS_DIR):
 	mkdir -p $@
@@ -131,7 +145,9 @@ pcb: $(TARGETS_PCB)
 net: $(TARGETS_NET)
 gerber: $(TARGETS_GERBER)
 fab: $(FAB_ZIP)
+asm: $(ASM_ZIP)
 layout:
 	$(PCB) $(LAYER_COLORS) $(BOARD).pcb
 ps: $(TARGETS_PS)
 pdf: $(TARGETS_PDF)
+bom: $(TARGETS_BOM)
