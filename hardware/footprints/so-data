@@ -16,3 +16,14 @@ elementdir = "ic"		# where to put generated files
 	silkstyle = "inside"
         silkslot = "yes"
 part "TSSOP-8"
+
+	pins = 8
+	width = 140 mils
+	pitch = 50 mils
+	padheight = 24 mils
+	padwidth = 80 mils
+	silkoffset = 15 mils
+	silkboxheight = 0.2in
+	silkwidth = 10 mils
+	silkstyle = "inside"
+part "SO-8"
