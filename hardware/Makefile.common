@@ -25,7 +25,8 @@ help:
 
 clean:
 	rm -rf *.renum.sch *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
-	rm -rf $(GBR_DIR) *.zip
+	rm -rf $(GBR_DIR) $(PS_DIR) *.zip $(TARGETS_BOM)
+	rm -rf $(FAB_ZIP) $(ASM_ZIP) $(FAB_DIR) $(ASM_DIR)
 
 TOP_SRC_DIR = ~/sf/svnroot/hardware
 GROOT = /usr/local/geda
@@ -42,6 +43,7 @@ GBR_PRE = $(GBR_DIR)/$(BOARD)-$(REV)
 PS_DIR = postscript
 PS_PRE = $(PS_DIR)/$(BOARD)-$(REV)
 
+SVNROOT = https://pulse-sequencer.svn.sf.net/svnroot/pulse-sequencer
 TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
 TARGETS_NET = $(TARGETS:.sch=.net)
 TARGETS_DRC = $(TARGETS:.sch=.drc)
@@ -113,8 +115,9 @@ TARGETS_BOM = $(BOARD)-$(REV).bom $(BOARD)-$(REV).xy
 
 %.pcb: %.prj %.tgt
 	$(G2PCB) $<
+	touch $@ # If no new elements are added, touch to update timestamp
 
-%.bom %.xy: %.pcb
+$(TARGETS_BOM): $(BOARD).pcb
 	$(PCB) -x bom --bomfile $(BOARD)-$(REV).bom --xyfile $(BOARD)-$(REV).xy \
 		$<
 
@@ -151,3 +154,6 @@ layout:
 ps: $(TARGETS_PS)
 pdf: $(TARGETS_PDF)
 bom: $(TARGETS_BOM)
+tag:
+	svn cp -m "Tagging of $(board) revision $(REV)."\
+		$(SVNROOT)/hardware $(SVNROOT)/tags/$(BOARD)-$(REV)
