@@ -1,5 +1,5 @@
 BOARD = island-fpga
-REV = 0b2
+REV = 0b3
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies

@@ -1,0 +1,25 @@
+elementdir = "connector"		# where to put generated files
+
+# Samtec connector parts
+	type "samtec"
+        polyclear = 8 mil
+        maskclear = 0 mil
+
+	pins = 40
+        mirror = "no"
+	pitch = 31.5mil
+	padwidth = 12mil
+	padheight = 60mil
+        tentpadheight = 45mil
+        masktent = 5 mil
+        bankwidth = 787.5mil
+        bankpins = 20
+	silkwidth = 10 mils
+part "QSE-040-01-x-D-EM2"
+        mirror = "yes"
+part "QTE-040-01-x-D-EM2"
+        mirror = "no"
+        pins = 20
+part "QSE-020-01-x-D-EM2"
+        mirror = "yes"
+part "QTE-020-01-x-D-EM2"

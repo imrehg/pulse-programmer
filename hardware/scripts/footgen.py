@@ -63,6 +63,11 @@ def defattr():
         "silkpolarity" :0,
         "silkcustom"   :[],
         "drill"        :0,
+        "masktent"     :0,
+        "tentpadheight":0,
+        "bankwidth"    :0,
+        "bankpins"     :0,
+        "mirror"       :0,
 }
 
 # BGA row names 20 total
@@ -153,15 +158,20 @@ def changeattr(attrlist, name, newval):
 # Format of pad line:
 # Pad[-17500 -13500 -17500 -7000 2000 1000 3000 "1" "1" 0x00000180]
 # X1 Y1 X2 Y2 Width polyclear mask ....
-def pad(x1, y1, x2, y2, width, clear, mask, pinname, shape):
+def pad(x1, y1, x2, y2, width, clear, mask, pinname, shape, tent=False,
+        onsolder=False):
     if shape=="round":
         flags = ""
     else:
         flags = "square"
-    return "\tPad[%d %d %d %d %d %d %d \"%s\" \"%s\" \"%s\"]\n"\
-           % (x1, y1, x2, y2, width, clear*2, mask+width, pinname, pinname, flags)
+    if (onsolder):
+        flags += ",onsolder"
+    if (not tent):
+        mask += width
+    return "\tPad[%d %d %d %d %d %d %d \"\" \"%s\" \"%s\"]\n"\
+           % (x1, y1, x2, y2, width, clear*2, mask, pinname, flags)
 
-def padctr(x,y,height,width,clear,mask,pinname):
+def padctr(x,y,height,width,clear,mask,pinname,tent,onsolder):
     linewidth = min(height,width)
     linelength = abs(height-width)
     if height>width:
@@ -176,7 +186,7 @@ def padctr(x,y,height,width,clear,mask,pinname):
         x2 = x + linelength/2
         y1 = y
         y2 = y
-    return pad(x1,y1,x2,y2,linewidth,clear,mask,pinname,"square")        
+    return pad(x1,y1,x2,y2,linewidth,clear,mask,pinname,"square",tent,onsolder)
 
 # ball is a zero length round pad
 def ball(x, y, dia, clear, mask, name):
@@ -261,32 +271,40 @@ def bga(attrlist):
 # draw a row of square pads
 # pos is center position
 # whichway can be up down left right
-def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskclear, polyclear):
+def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskclear, polyclear, prefix="", tent=False, onsolder=False):
     pads = ""
     rowlen = pitch * (numpads - 1)
     if whichway == "down":
         x = pos[0]
         y = pos[1] - rowlen/2
         for padnum in range (startnum, startnum+numpads):
-            pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,str(padnum))
+            pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,\
+                                 prefix + str(padnum), \
+                                 tent=tent, onsolder=onsolder)
             y = y + pitch
     elif whichway == "up":
         x = pos[0]
         y = pos[1] + rowlen/2
         for padnum in range (startnum, startnum+numpads):
-            pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,str(padnum))
+            pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,\
+                                 prefix + str(padnum), \
+                                 tent=tent, onsolder=onsolder)
             y = y - pitch
     elif whichway == "right":
         x = pos[0] - rowlen/2
         y = pos[1]
         for padnum in range (startnum, startnum+numpads):
-            pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,str(padnum))
+            pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,\
+                                 prefix + str(padnum), \
+                                 tent=tent, onsolder=onsolder)
             x = x + pitch
     elif whichway == "left":
         x = pos[0] + rowlen/2
         y = pos[1]
         for padnum in range (startnum, startnum+numpads):
-            pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,str(padnum))
+            pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,\
+                                 prefix + str(padnum), \
+                                 tent=tent, onsolder=onsolder)
             x = x - pitch
     return pads
 
@@ -353,19 +371,14 @@ def samtec(attrlist):
     maskclear = findattr(attrlist, "maskclear")
     masktent = findattr(attrlist, "masktent")
     silkwidth = findattr(attrlist, "silkwidth")
-    silkoffset = findattr(attrlist, "silkoffset")
-    silkstyle = findattr(attrlist, "silkstyle")
-    silkcorner = findattr(attrlist, "silkcorner")
 
-    tentpadbase = findattr(attrlist, "tentpadbase")
-    tentpadwidth = findattr(attrlist, "tentpadwidth")
     tentpadheight = findattr(attrlist, "tentpadheight")
     bankwidth = findattr(attrlist, "bankwidth")
     bankpins = findattr(attrlist, "bankpins")
     mirror = findattr(attrlist, "mirror")
-    holedrill = findattr(attrlist, "holedrill")
     width = bankwidth * (pins / bankpins)
     banks = pins / bankpins
+    tentpadbase = -(padheight/2) - (tentpadheight/2)
 
     if (pins % bankpins) != 0:
         raise RuntimeError("Number of pins not a multiple of 20")
@@ -374,20 +387,60 @@ def samtec(attrlist):
     if (mirror == "yes"):
         yaxis = -1
 
+    tentpadheight += (padwidth - masktent)
+
     # Base pins with completely exposed pad
     for i in range(banks):
-        samelt += rowofpads([(bankwidth*i)+(pitch*(bankpins-1)/2),0],\
-                            pitch, "left", padwidth,\
-                            padheight, 1, pins, maskclear, polyclear)
+        startpin = (i*bankpins)+1
+        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),0],\
+                            pitch, "left", padwidth, padheight,\
+                            startpin, bankpins, \
+                            maskclear, polyclear, prefix="T")
+        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),0],\
+                            pitch, "left", padwidth, padheight,\
+                            startpin, bankpins, \
+                            maskclear, polyclear, prefix="T", onsolder=True)
     # Pad extensions that are partially exposed (soldermask tent)
     tentpadbase *= yaxis
     for i in range(banks):
-        samelt += rowofpads([(bankwidth*i)+(pitch*(bankpins-1)/2),\
-                             tentpadbase],\
-                            pitch, "left", tentpadwidth, tentpadheight,\
-                            1, pins, masktent, polyclear)
+        startpin = (i*bankpins)+1
+        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),\
+                             tentpadbase], \
+                            pitch, "left", padwidth, tentpadheight,\
+                            startpin, bankpins, masktent, \
+                            polyclear, prefix="T", tent=True)
+        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),\
+                             tentpadbase], \
+                            pitch, "left", padwidth, tentpadheight,\
+                            startpin, bankpins, masktent, \
+                            polyclear, prefix="T", tent=True, onsolder=True)
+
+    # Plated edge ground pad
+    edgestart = -10600
+    edgeend = edgestart + (78750*banks) + 2250
+    edgey = yaxis * 6500
+    samelt += pad(edgestart, edgey, edgeend, edgey, 1000, polyclear, maskclear,
+                  "TGND", shape="square")
+    samelt += pad(edgestart, edgey, edgeend, edgey, 1000, polyclear, maskclear,
+                  "BGND", shape="square", onsolder=True)
 
     # Alignment tab drill guide
+    holedrill = 4300
+    tabx = -15450
+    taby = [-9350 * yaxis, -4050 * yaxis, 1250 * yaxis]
+    for i in range(3):
+        samelt += pin(tabx, taby[i], holedrill, holedrill, "", polyclear,
+                      maskclear, ishole = True)
+    # Silkscreen lines
+    silky1 = yaxis * 6000
+    silky2 = yaxis * -6500
+    samelt += silk(-13000, silky1, -13000, silky2, silkwidth)
+    samelt += silk(-31000, silky1, -31000, silky2, silkwidth)
+
+    silkstart = (bankwidth * (banks-1)) + 79000
+    silkend = silkstart + 12000
+    samelt += silk(silkstart, silky1, silkstart, silky2, silkwidth)
+    samelt += silk(silkend, silky1, silkend, silky2, silkwidth)
     
     return samelt+")\n"
 
@@ -488,12 +541,16 @@ def tabbed(attrlist):
 #  Pin[17500 -24000 6400 2000 6400 3500 "" "1" 0x00000001]
 # x,y,paddia,polyclear,maskclear,drill,name,name,flags
 
-def pin(x,y,dia,drill,name,polyclear,maskclear):
+def pin(x,y,dia,drill,name,polyclear,maskclear,ishole=False):
     if name == "1":
         pinflags = "pin"
     else:
         pinflags = ""
-    return "\tPin[ %d %d %d %d %d %d \"%s\" \"%s\" \"%s\"]\n" % (x,y,dia,polyclear*2,maskclear+dia,drill,name,name,pinflags)
+    if (ishole):
+        if (pinflags != ""):
+            pinflags += ","
+        pinflags += "hole"
+    return "\tPin[ %d %d %d %d %d %d \"\" \"%s\" \"%s\"]\n" % (x,y,dia,polyclear*2,maskclear+dia,drill,name,pinflags)
 
 def dip(attrlist):
     pins = findattr(attrlist, "pins")
@@ -582,6 +639,8 @@ def genpart(attributes):
         return dih(attributes)
     elif parttype == 'sip':
         return sip(attributes)
+    elif parttype == 'samtec':
+        return samtec(attributes)
     else:
         print "Unknown type "+parttype
     print ""

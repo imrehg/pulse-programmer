@@ -27,6 +27,7 @@ clean:
 	rm -rf *.renum.sch *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
 	rm -rf $(GBR_DIR) $(PS_DIR) *.zip $(TARGETS_BOM)
 	rm -rf $(FAB_ZIP) $(ASM_ZIP) $(FAB_DIR) $(ASM_DIR)
+	rm -rf *.pcb.bak* *.pcb-
 
 TOP_SRC_DIR = ~/sf/svnroot/hardware
 GROOT = /usr/local/geda
@@ -155,5 +156,5 @@ ps: $(TARGETS_PS)
 pdf: $(TARGETS_PDF)
 bom: $(TARGETS_BOM)
 tag:
-	svn cp -m "Tagging of $(board) revision $(REV)."\
+	svn cp -m "Tagging of $(BOARD) revision $(REV)."\
 		$(SVNROOT)/hardware $(SVNROOT)/tags/$(BOARD)-$(REV)
