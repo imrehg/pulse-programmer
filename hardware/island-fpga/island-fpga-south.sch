@@ -1006,7 +1006,7 @@ C 47600 43800 1 270 0 qxe-040-01-x-d-em2.sym
 T 48200 42500 5 10 1 1 0 6 1
 refdes=J2
 T 64400 43400 5 10 0 0 270 0 1
-footprint=QxE-040-01-x-D-EM2
+footprint=QSE-040-01-x-D-EM2
 T 45900 42800 5 10 1 1 0 0 1
 value=QSE-040-01-x-D-EM2
 }
