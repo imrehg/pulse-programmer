@@ -378,7 +378,9 @@ def samtec(attrlist):
     mirror = findattr(attrlist, "mirror")
     width = bankwidth * (pins / bankpins)
     banks = pins / bankpins
+    overlap = 150 # 4 mil overlap to consider separate copper connected
     tentpadbase = -(padheight/2) - (tentpadheight/2)
+    padbase = -(overlap/2)
 
     if (pins % bankpins) != 0:
         raise RuntimeError("Number of pins not a multiple of 20")
@@ -387,19 +389,24 @@ def samtec(attrlist):
     if (mirror == "yes"):
         yaxis = -1
 
+    # Compensate pad extension height with the mask tent
     tentpadheight += (padwidth - masktent)
+    padbase *= yaxis
+    padheight += overlap
 
     # Base pins with completely exposed pad
     for i in range(banks):
         startpin = (i*bankpins)+1
-        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),0],\
+        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),
+                             padbase],\
                             pitch, "left", padwidth, padheight,\
                             startpin, bankpins, \
                             maskclear, polyclear, prefix="T")
-        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),0],\
+        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),
+                             padbase],\
                             pitch, "left", padwidth, padheight,\
                             startpin, bankpins, \
-                            maskclear, polyclear, prefix="T", onsolder=True)
+                            maskclear, polyclear, prefix="B", onsolder=True)
     # Pad extensions that are partially exposed (soldermask tent)
     tentpadbase *= yaxis
     for i in range(banks):
@@ -413,7 +420,7 @@ def samtec(attrlist):
                              tentpadbase], \
                             pitch, "left", padwidth, tentpadheight,\
                             startpin, bankpins, masktent, \
-                            polyclear, prefix="T", tent=True, onsolder=True)
+                            polyclear, prefix="B", tent=True, onsolder=True)
 
     # Plated edge ground pad
     edgestart = -10600
