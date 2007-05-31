@@ -459,7 +459,7 @@ numslots=0
 P 100 8700 400 8700 1 0 0
 {
 T 300 8750 5 8 0 1 0 6 1
-pinnumber=
+pinnumber=1
 T 300 8650 5 8 0 1 0 8 1
 pinseq=81
 T 450 8700 9 8 1 1 0 0 1
@@ -470,7 +470,7 @@ pintype=pwr
 P 100 8500 400 8500 1 0 0
 {
 T 300 8550 5 8 0 1 0 6 1
-pinnumber=
+pinnumber=2
 T 300 8450 5 8 0 1 0 8 1
 pinseq=82
 T 450 8500 9 8 1 1 0 0 1
