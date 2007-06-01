@@ -1,0 +1,160 @@
+#-*-Makefile-*-
+# Makefile for gEDA/PCB hardware designs
+
+###############################################################################
+# Configurable Targets
+help:
+	@echo
+	@echo "The following targets are available"
+	@echo
+	@echo "  make [help]  prints this message."
+	@echo "  make renum   renumbers reference designators in all"
+	@echo "               schematic files in *.sch.renum"
+	@echo "  make net     generates netlist from *.sch.renum files"
+	@echo "  make pcb     generates initial PCB layout from *.sch file"
+	@echo "  make gerber  generates Gerber CAM output from *.pcb file"
+	@echo "  make fab     generates zip file of Gerbers for fabrication"
+	@echo "  make asm     generates zip file of drawings/BOM for assembly"
+	@echo "  make ps      generates Postscript layer plots"
+	@echo "  make pdf     generates PDF layer plots"
+	@echo
+	@echo "The following variable modifiers are available:"
+	@echo
+	@echo $(HELP_LOCAL)
+	@echo
+
+clean:
+	rm -rf *.renum.sch *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
+	rm -rf $(GBR_DIR) $(PS_DIR) *.zip $(TARGETS_BOM)
+	rm -rf $(FAB_ZIP) $(ASM_ZIP) $(FAB_DIR) $(ASM_DIR)
+	rm -rf *.pcb.bak* *.pcb-
+
+TOP_SRC_DIR = ~/sf/svnroot/hardware
+GROOT = /usr/local/geda
+GBIN = $(GROOT)/bin
+GSCHEM = $(GBIN)/gschem
+GRENUM = $(GBIN)/refdes_renum --nocopy
+GNET = $(GBIN)/gnetlist -q
+G2PCB = $(GBIN)/gsch2pcb --use-files
+PCB = $(GBIN)/pcb
+PCB_VIEW = $(GBIN)/pcb --
+GBR = $(PCB) -x gerber --verbose --gerberfile $(GBR_PRE)
+GBR_DIR = gerber_cam
+GBR_PRE = $(GBR_DIR)/$(BOARD)-$(REV)
+PS_DIR = postscript
+PS_PRE = $(PS_DIR)/$(BOARD)-$(REV)
+
+SVNROOT = https://pulse-sequencer.svn.sf.net/svnroot/pulse-sequencer
+TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
+TARGETS_NET = $(TARGETS:.sch=.net)
+TARGETS_DRC = $(TARGETS:.sch=.drc)
+TARGETS_PCB = $(TARGETS:.sch=.pcb)
+GERBER_FILES = \
+	$(GBR_PRE).back.gbr \
+	$(GBR_PRE).backmask.gbr \
+	$(GBR_PRE).backpaste.gbr \
+	$(GBR_PRE).backsilk.gbr \
+	$(GBR_PRE).front.gbr \
+	$(GBR_PRE).frontmask.gbr \
+	$(GBR_PRE).frontpaste.gbr \
+	$(GBR_PRE).frontsilk.gbr \
+	$(GBR_PRE).outline.gbr \
+	$(GBR_PRE).fab.gbr \
+	$(GBR_PRE).plated-drill.cnc \
+	$(GBR_PRE).unplated-drill.cnc \
+
+PS_FILES = \
+	$(PS_PRE).front.ps \
+	$(PS_PRE).back.ps \
+	$(PS_PRE).outline.ps \
+	$(PS_PRE).frontmask.ps \
+	$(PS_PRE).backmask.ps \
+	$(PS_PRE).plated-drill.ps \
+	$(PS_PRE).unplated-drill.ps \
+	$(PS_PRE).frontsilk.ps \
+	$(PS_PRE).backsilk.ps \
+	$(PS_PRE).frontpaste.ps \
+	$(PS_PRE).backpaste.ps \
+	$(PS_PRE).frontassembly.ps \
+	$(PS_PRE).backassembly.ps \
+	$(PS_PRE).fab.ps \
+
+PDF_FILES = $(PS_FILES:.ps=.pdf)
+TARGETS_PDF = $(TARGETS_PS:.ps=.pdf)
+
+# High-speed boards need power/ground inner planes
+GERBER_FILES_HS = $(GERBER_FILES) \
+	$(GBR_PRE).group3.gbr \
+	$(GBR_PRE).group4.gbr \
+
+PS_FILES_HS = $(PS_FILES) \
+	$(PS_PRE).group3.ps \
+	$(PS_PRE).group4.ps \
+
+FAB_ZIP = $(BOARD)-$(REV)-fab.zip
+ASM_ZIP = $(BOARD)-$(REV)-asm.zip
+FAB_DIR = $(BOARD)-$(REV)-fabrication
+ASM_DIR = $(BOARD)-$(REV)-assembly
+
+TARGETS_BOM = $(BOARD)-$(REV).bom $(BOARD)-$(REV).xy
+
+%.tgt: %.sch
+	touch $@
+
+%.renum.sch: %.sch
+	$(GRENUM) $<
+	mv $<.renum $@
+
+%.pdf: %.ps
+	ps2pdf $< $@
+
+%.net: %.sch %.tgt
+	$(GNET) -g PCB -o $@ $<
+
+%.drc: %.sch %.tgt
+	$(GNET) -g drc2 -o $@ $<
+
+%.pcb: %.prj %.tgt
+	$(G2PCB) $<
+	touch $@ # If no new elements are added, touch to update timestamp
+
+$(TARGETS_BOM): $(BOARD).pcb
+	$(PCB) -x bom --bomfile $(BOARD)-$(REV).bom --xyfile $(BOARD)-$(REV).xy \
+		$<
+
+$(GBR_DIR):
+	mkdir -p $@
+
+$(TARGETS_GERBER): $(BOARD).pcb $(GBR_DIR)
+	$(GBR) $<
+
+$(FAB_ZIP): $(TARGETS_GERBER)
+	zip -r $(FAB_ZIP) $(GBR_DIR)
+
+$(ASM_ZIP): $(TARGETS_BOM) $(TARGETS_PDF)
+	mkdir -p $(ASM_DIR)
+	cp $(TARGETS_BOM) $(ASM_DIR)/
+	cp $(PS_PRE).*assembly.pdf $(ASM_DIR)/
+	zip -r $(ASM_ZIP) $(ASM_DIR)
+
+$(PS_DIR):
+	mkdir -p $@
+
+$(TARGETS_PS): $(BOARD).pcb $(PS_DIR)
+	$(PCB) -x ps --psfile $(PS_PRE) --align-marks --outline --ps-color --media Letter --scale 1.0 --multi-file $<
+
+renum: $(TARGETS_RENUM)
+drc: $(TARGETS_DRC)
+pcb: $(TARGETS_PCB)
+net: $(TARGETS_NET)
+gerber: $(TARGETS_GERBER)
+fab: $(FAB_ZIP)
+asm: $(ASM_ZIP)
+layout:
+	$(PCB) $(LAYER_COLORS) $(BOARD).pcb
+ps: $(TARGETS_PS)
+pdf: $(TARGETS_PDF)
+bom: $(TARGETS_BOM)
+tag:
+	svn cp -m "Tagging of $(BOARD) revision $(REV)."\
+		$(SVNROOT)/hardware $(SVNROOT)/tags/$(BOARD)-$(REV)

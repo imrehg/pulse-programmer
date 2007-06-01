@@ -1,0 +1,5 @@
+schematics island-test.sch
+output-name island-test
+elements-dir /home/ppham/sf/svnroot/hardware/footprints
+use-files
+m4-pcbdir /
