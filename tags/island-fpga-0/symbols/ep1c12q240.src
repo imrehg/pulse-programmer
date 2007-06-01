@@ -1,0 +1,296 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=1400
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070420
+name=
+device=EP1C12Q240
+refdes=U?
+footprint=PQFP-240
+description=Altera FPGA
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Position	Net	Label
+1	1	io	line	l		LVDS_23p INIT_DONE
+2	2	io	line	l		LVDS_23n
+3	3	io	line	l		LVDS_22p CLKUSR
+4	4	io	line	l		LVDS_22n
+5	5	io	line	l		VREF_0B1
+6	6	io	line	l		
+7	7	io	line	l		LVDS_21p
+8	8	io	line	l		LVDS_21n
+9	9	pwr	line	l		VCCIO_1
+10	10	pwr	line	l		GND
+11	11	io	line	l		DPCLK1
+12	12	io	line	l		LVDS_20p
+13	13	io	line	l		LVDS_20n
+14	14	io	line	l		LVDS_19p
+15	15	io	line	l		LVDS_19n
+16	16	io	line	l		LVDS_18p
+17	17	io	line	l		LVDS_18n
+18	18	io	line	l		LVDS_17p
+19	19	io	line	l		LVDS_17n
+20	20	io	line	l		LVDS_16p
+21	21	io	line	l		LVDS_16n
+22	22	pwr	line	l		VCCIO_1
+23	23	io	line	l		VREF_1B1
+24	24	io	line	l		nCSO
+25	25	io	line	l		DATA0
+26	26	io	line	l		nCONFIG
+27	27	pwr	line	l		VCCA_PLL1
+28	28	in	clk	l		LVDSCLK_1p CLK0
+29	29	in	clk	l		LVDSCLK_1n CLK1
+30	30	pwr	line	l		GNDA_PLL1
+31	31	pwr	line	l		GNDG_PLL1
+32	32	io	line	l		nCEO
+33	33	io	line	l		nCE
+34	34	In	line	l		MSEL0
+35	35	In	line	l		MSEL1
+36	36	io	line	l		DCLK
+37	37	io	line	l		ASDO
+38	38	out	clk	l		PLL1_OUTp
+39	39	io	line	l		PLL1_OUTn
+40	40	pwr	line	l		GND
+41	41	io	line	l		LVDS_7n
+42	42	io	line	l		LVDS_6p
+43	43	io	line	l		LVDS_6n
+44	44	io	line	l		LVDS5p
+45	45	io	line	l		LVDS5n
+46	46	io	line	l		LVDS4p
+47	47	io	line	l		LVDS4n
+48	48	io	line	l		LVDS3p
+49	49	io	line	l		LVDS3n
+50	50	io	line	l		DPCLK0
+51	51	pwr	line	l		VCCIO1
+52	52	pwr	line	l		GND
+53	53	io	line	l		LVDS2p
+54	54	io	line	l		LVDS2n
+55	55	io	line	l		VREF2B1
+56	56	io	line	l		
+57	57	io	line	l		LVDS1p
+58	58	io	line	l		LVDS1n
+59	59	io	line	l		LVDS0p
+60	60	io	line	l		LVDS0n
+61	61	io	line	b		LVDS102p
+62	62	io	line	b		LVDS102n
+63	63	io	line	b		LVDS101p
+64	64	io	line	b		LVDS101n
+65	65	io	line	b		LVDS100p
+66	66	io	line	b		LVDS100n
+67	67	io	line	b		LVDS99p
+68	68	io	line	b		LVDS99n
+69	69	pwr	line	b		GND
+70	70	pwr	line	b		VCCIO4
+71	71	pwr	line	b		GND
+72	72	pwr	line	b		VCCINT
+73	73	io	line	b		DPCLK7
+74	74	io	line	b		VREF2B4
+75	75	io	line	b		LVDS98p
+76	76	io	line	b		LVDS98n
+77	77	io	line	b		LVDS97p
+78	78	io	line	b		LVDS97n
+79	79	io	line	b		LVDS96p
+80	80	pwr	line	b		GND
+81	81	pwr	line	b		VCCINT
+82	82	io	line	b		LVDS95p
+83	83	io	line	b		LVDS95n
+84	84	io	line	b		LVDS94p
+85	85	io	line	b		LVDS94n
+86	86	io	line	b		LVDS93p
+87	87	io	line	b		LVDS93n
+88	88	io	line	b		LVDS92p
+89	89	pwr	line	b		GND
+90	90	pwr	line	b		VCCINT
+91	91	pwr	line	b		GND
+92	92	pwr	line	b		VCCIO4
+93	93	io	line	b		VREF1B4
+94	94	io	line	b		LVDS87p
+95	95	io	line	b		LVDS87n
+96	96	pwr	line	b		GND
+97	97	pwr	line	b		VCCINT
+98	98	io	line	b		LVDS86p
+99	99	io	line	b		LVDS86n
+100	100	io	line	b		LVDS85p
+101	101	io	line	b		LVDS85n
+102	102	pwr	line	b		GND
+103	103	pwr	line	b		VCCINT
+104	104	io	line	b		LVDS80p
+105	105	io	line	b		LVDS80n
+106	106	io	line	b		
+107	107	io	line	b		VREF0B4
+108	108	io	line	b		DPCLK6
+109	109	pwr	line	b		GND
+110	110	pwr	line	b		VCCINT
+111	111	pwr	line	b		GND
+112	112	pwr	line	b		VCCIO4
+113	113	io	line	b		LVDS79p
+114	114	io	line	b		LVDS79n
+115	115	io	line	b		LVDS78p
+116	116	io	line	b		LVDS78n
+117	117	io	line	b		LVDS77p
+118	118	io	line	b		LVDS77n
+119	119	io	line	b		LVDS76p
+120	120	io	line	b		LVDS76n
+121	180	io	line	r		LVDS75n
+122	179	io	line	r		LVDS75p
+123	178	io	line	r		LVDS74n
+124	177	io	line	r		LVDS74p
+125	176	io	line	r		LVDS73n
+126	175	io	line	r		LVDS73p
+127	174	io	line	r		VREF2B3
+128	173	io	line	r		
+129	172	pwr	line	r		GND
+130	171	pwr	line	r		VCCIO3
+131	170	io	line	r		DPCLK5
+132	169	io	line	r		LVDS72n
+133	168	io	line	r		LVDS72p
+134	167	io	line	r		LVDS71n
+135	166	io	line	r		LVDS71p
+136	165	io	line	r		LVDS70n
+137	164	io	line	r		LVDS70p
+138	163	io	line	r		LVDS69n
+139	162	io	line	r		LVDS69p
+140	161	io	line	r		LVDS68n
+141	160	io	line	r		LVDS68p
+142	159	pwr	line	r		GND
+143	158	io	line	r		PLL2_OUTn
+144	157	out	clk	r		PLL2_OUTp
+145	156	io	line	r		CONF_DONE
+146	155	io	line	r		nSTATUS
+147	154	io	line	r		TCK
+148	153	io	line	r		TMS
+149	152	io	line	r		TDO
+150	151	pwr	line	r		GNDG_PLL2
+151	150	pwr	line	r		GNDA_PLL2
+152	149	in	clk	r		LVDSCLK2n CLK3
+153	148	in	clk	r		LVDSCLK2p CLK2
+154	147	pwr	line	r		VCCA_PLL2
+155	146	io	line	r		TDI
+156	145	io	line	r		VREF1B3
+157	144	pwr	line	r		VCCIO3
+158	143	io	line	r		LVDS59n
+159	142	io	line	r		LVDS59p
+160	141	io	line	r		LVDS58n
+161	140	io	line	r		LVDS58p
+162	139	io	line	r		LVDS57n
+163	138	io	line	r		LVDS57p
+164	137	io	line	r		LVDS56n
+165	136	io	line	r		LVDS56p
+166	135	io	line	r		LVDS55n
+167	134	io	line	r		LVDS55p
+168	133	io	line	r		LVDS54n
+169	132	io	line	r		LVDS54p
+170	131	io	line	r		DPCLK4
+171	130	pwr	line	r		GND
+172	129	pwr	line	r		VCCIO3
+173	128	io	line	r		LVDS53n
+174	127	io	line	r		LVDS53p
+175	126	io	line	r		
+176	125	io	line	r		VREF0B3
+177	124	io	line	r		LVDS52n
+178	123	io	line	r		LVDS52p
+179	122	io	line	r		LVDS51n
+180	121	io	line	r		LVDS51p
+181	181	io	line	t		LVDS50n
+182	182	io	line	t		LVDS50p
+183	183	io	line	t		LVDS49n
+184	184	io	line	t		LVDS49p
+185	185	io	line	t		LVDS48n
+186	186	io	line	t		LVDS48p
+187	187	io	line	t		LVDS47n
+188	188	io	line	t		LVDS47p
+189	189	pwr	line	t		VCCIO2
+190	190	pwr	line	t		GND
+191	191	pwr	line	t		VCCINT
+192	192	pwr	line	t		GND
+193	193	io	line	t		DPCLK3
+194	194	io	line	t		VREF0B2
+195	195	io	line	t		
+196	196	io	line	t		LVDS46n
+197	197	io	line	t		LVDS46p
+198	198	pwr	line	t		VCCINT
+199	199	pwr	line	t		GND
+200	200	io	line	t		LVDS41n
+201	201	io	line	t		LVDS41p
+202	202	io	line	t		LVDS40n
+203	203	io	line	t		LVDS40p
+204	204	pwr	line	t		VCCINT
+205	205	pwr	line	t		GND
+206	206	io	line	t		LVDS39n
+207	207	io	line	t		LVDS39p
+208	208	io	line	t		VREF1B2
+209	209	pwr	line	t		VCCIO2
+210	210	pwr	line	t		GND
+211	211	pwr	line	t		VCCINT
+212	212	pwr	line	t		GND
+213	213	io	line	t		LVDS34p
+214	214	io	line	t		LVDS33n
+215	215	io	line	t		LVDS33p
+216	216	io	line	t		LVDS32n
+217	217	io	line	t		LVDS32p
+218	218	io	line	t		LVDS31n
+219	219	io	line	t		LVDS31p
+220	220	pwr	line	t		VCCINT
+221	221	pwr	line	t		GND
+222	222	io	line	t		LVDS30p
+223	223	io	line	t		LVDS29n
+224	224	io	line	t		LVDS29p
+225	225	io	line	t		LVDS28n
+226	226	io	line	t		LVDS28p
+227	227	io	line	t		VREF2B2
+228	228	io	line	t		DPCLK2
+229	229	pwr	line	t		VCCINT
+230	230	pwr	line	t		GND
+231	231	pwr	line	t		VCCIO2
+232	232	pwr	line	t		GND
+233	233	io	line	t		LVDS27n
+234	234	io	line	t		LVDS27p
+235	235	io	line	t		LVDS26n
+236	236	io	line	t		LVDS26p
+237	237	io	line	t		LVDS25n
+238	238	io	line	t		LVDS25p
+239	239	io	line	t		LVDS24n DEV_OE
+240	240	io	line	t		LVDS24p DEV_CLRn

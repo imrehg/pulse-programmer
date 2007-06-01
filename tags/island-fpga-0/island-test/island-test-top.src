@@ -1,0 +1,96 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=1000
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070420
+name=LED Test Top Side
+device=island-test-top
+refdes=S?
+footprint=
+description="Top Side LEDs of Test Island"
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Pos	Net	Label
+T1	41	io	line	r		T1_PORT
+T2	42	io	line	r		T2_PORT
+T3	43	io	line	r		T3_PORT
+T4	44	io	line	r		T4_PORT
+T5	45	io	line	r		T5_PORT
+T6	46	io	line	r		T6_PORT
+T7	47	io	line	r		T7_PORT
+T8	48	io	line	r		T8_PORT
+T9	49	io	line	r		T9_PORT
+T10	50	io	line	r		T10_PORT
+T11	51	io	line	r		T11_PORT
+T12	52	io	line	r		T12_PORT
+T13	53	io	line	r		T13_PORT
+T14	54	io	line	r		T14_PORT
+T15	55	io	line	r		T15_PORT
+T16	56	io	line	r		T16_PORT
+T17	57	io	line	r		T17_PORT
+T18	58	io	line	r		T18_PORT
+T19	59	io	line	r		T19_PORT
+T20	60	io	line	r		T20_PORT
+T21	61	io	line	r		T21_PORT
+T22	62	io	line	r		T22_PORT
+T23	63	io	line	r		T23_PORT
+T24	64	io	line	r		T24_PORT
+T25	65	io	line	r		T25_PORT
+T26	66	io	line	r		T26_PORT
+T27	67	io	line	r		T27_PORT
+T28	68	io	line	r		T28_PORT
+T29	69	io	line	r		T29_PORT
+T30	70	io	line	r		T30_PORT
+T31	71	io	line	r		T31_PORT
+T32	72	io	line	r		T32_PORT
+T33	73	io	line	r		T33_PORT
+T34	74	io	line	r		T34_PORT
+T35	75	io	line	r		T35_PORT
+T36	76	io	line	r		T36_PORT
+T37	77	io	line	r		T37_PORT
+T38	78	io	line	r		T38_PORT
+T39	79	io	line	r		T39_PORT
+T40	80	io	line	r		T40_PORT
