@@ -68,6 +68,10 @@ def defattr():
         "bankwidth"    :0,
         "bankpins"     :0,
         "mirror"       :0,
+        "tabx"         :0,
+        "edgey"        :0,
+        "edgex"        :0,
+        "edgewidth"        :0,
 }
 
 # BGA row names 20 total
@@ -376,6 +380,10 @@ def samtec(attrlist):
     bankwidth = findattr(attrlist, "bankwidth")
     bankpins = findattr(attrlist, "bankpins")
     mirror = findattr(attrlist, "mirror")
+    tabx = findattr(attrlist, "tabx")
+    edgey = findattr(attrlist, "edgey")
+    edgex = findattr(attrlist, "edgex")
+    edgewidth = findattr(attrlist, "edgewidth")
     width = bankwidth * (pins / bankpins)
     banks = pins / bankpins
     overlap = 150 # 4 mil overlap to consider separate copper connected
@@ -392,7 +400,9 @@ def samtec(attrlist):
     # Compensate pad extension height with the mask tent
     tentpadheight += (padwidth - masktent)
     padbase *= yaxis
+    edgey = yaxis * ((padheight/2) + edgey)
     padheight += overlap
+    tabx = -tabx # distance from pin 1 left to alignment tab
 
     # Base pins with completely exposed pad
     for i in range(banks):
@@ -423,9 +433,8 @@ def samtec(attrlist):
                             polyclear, prefix="B", tent=True, onsolder=True)
 
     # Plated edge ground pad
-    edgestart = -10600
-    edgeend = edgestart + (78750*banks) + 2250
-    edgey = yaxis * 6500
+    edgestart = -edgex
+    edgeend = edgestart + (78750*banks) + edgewidth
     samelt += pad(edgestart, edgey, edgeend, edgey, 1000, polyclear, maskclear,
                   "TGND", shape="square")
     samelt += pad(edgestart, edgey, edgeend, edgey, 1000, polyclear, maskclear,
@@ -433,7 +442,6 @@ def samtec(attrlist):
 
     # Alignment tab drill guide
     holedrill = 4300
-    tabx = -15450
     taby = [-9350 * yaxis, -4050 * yaxis, 1250 * yaxis]
     for i in range(3):
         samelt += pin(tabx, taby[i], holedrill, holedrill, "", polyclear,
