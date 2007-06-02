@@ -449,7 +449,7 @@ def samtec(attrlist):
     # Silkscreen lines
     silky1 = yaxis * 6000
     silky2 = yaxis * -6500
-    samelt += silk(-13000, silky1, -13000, silky2, silkwidth)
+    samelt += silk(tabx + 2450, silky1, tabx + 2450, silky2, silkwidth)
     samelt += silk(-31000, silky1, -31000, silky2, silkwidth)
 
     silkstart = (bankwidth * (banks-1)) + 79000

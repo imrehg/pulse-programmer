@@ -28,8 +28,8 @@ part "0603"
 	padwidth = 0.8mm
 	padheight = 0.8mm
         silkcustom =
-        ElementLine [0 -2000 0 2000 500]
-        ElementLine [0 0 1000 0 500]
+        ElementLine [0 -2000 0 2000 700]
+        ElementLine [0 0 1000 0 700]
         silkcustomend
 part "0603_LED"
 
