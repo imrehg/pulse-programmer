@@ -1,5 +1,5 @@
 # release: pcb 20070208
-# date:    Tue Jun 12 16:52:26 2007
+# date:    Tue Jun 12 17:01:48 2007
 # user:    ppham (ppham,U-NEOVICTORIAN\Paul T. Pham,S-1-5-21-1083071216-315547407-1799152704-1006)
 # host:    neovictorian
 
@@ -11,7 +11,7 @@ PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[800 400 700 700 1500 750]
 Flags(0x00000000000010de)
-Groups("4,5:3:2,s:1,c:6")
+Groups("2,s:1,c:6:4,5:3")
 Styles["Signal,700,3000,1500,800:Power,2500,6000,3500,1000:Fat,4000,3500,2000,1000:Skinny,800,3600,2000,1000"]
 
 Symbol(' ' 18)
