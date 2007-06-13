@@ -1,5 +1,0 @@
-schematics island-memory.sch
-output-name island-memory
-elements-dir /home/ppham/sf/svnroot/hardware/footprints
-use-files
-m4-pcbdir /
