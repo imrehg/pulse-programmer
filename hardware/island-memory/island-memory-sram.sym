@@ -602,9 +602,9 @@ pinnumber=46
 T 300 2350 5 8 0 1 0 8 1
 pinseq=46
 T 450 2400 9 8 1 1 0 0 1
-pinlabel=\_ADV\_
+pinlabel=\_ADSC\_
 T 450 2400 5 8 0 1 0 2 1
 pintype=in
 T 100 2400 5 10 0 0 0 0 1
-netname=nADV
+netname=nADSC
 }
