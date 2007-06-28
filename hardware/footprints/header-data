@@ -1,0 +1,19 @@
+elementdir = "connector"		# where to put generated files
+
+# IDC header connector parts
+	type "so"
+        polyclear = 8 mil
+        maskclear = 6 mil
+	width = 30 mils
+	pitch = 100 mils
+	padwidth = 145 mils
+	padheight = 50 mils
+	silkwidth = 10 mils
+	silkstyle = "outside"
+	silkoffset = 10 mils
+
+	pins = 20
+part "HEADER10x2_SMT"
+
+	pins = 18
+part "HEADER9x2_SMT"
