@@ -26,8 +26,8 @@ help:
 clean:
 	rm -rf *.renum.sch *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
 	rm -rf $(GBR_DIR) $(PS_DIR) *.zip $(TARGETS_BOM)
-	rm -rf $(FAB_ZIP) $(ASM_ZIP) $(FAB_DIR) $(ASM_DIR)
-	rm -rf *.pcb.bak* *.pcb-
+	rm -rf $(FAB_ZIP)* $(ASM_ZIP)* $(FAB_DIR) $(ASM_DIR)
+	rm -rf *.pcb.bak* *.pcb- *.cmd *.net $(BOARD)-$(REV)
 
 TOP_SRC_DIR = ~/sf/svnroot/hardware
 GROOT = /usr/local/geda
@@ -118,6 +118,12 @@ TARGETS_BOM = $(BOARD)-$(REV).bom $(BOARD)-$(REV).xy
 	$(G2PCB) $<
 	touch $@ # If no new elements are added, touch to update timestamp
 
+%.zip.md5: %.zip
+	md5sum $< >> $@
+
+%.bz2.md5: %.bz2
+	md5sum $< >> $@
+
 $(TARGETS_BOM): $(BOARD).pcb
 	$(PCB) -x bom --bomfile $(BOARD)-$(REV).bom --xyfile $(BOARD)-$(REV).xy \
 		$<
@@ -137,6 +143,10 @@ $(ASM_ZIP): $(TARGETS_BOM) $(TARGETS_PDF)
 	cp $(PS_PRE).*assembly.pdf $(ASM_DIR)/
 	zip -r $(ASM_ZIP) $(ASM_DIR)
 
+$(BOARD)-$(REV).zip:
+	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)
+	zip -r $@ $(BOARD)-$(REV)
+
 $(PS_DIR):
 	mkdir -p $@
 
@@ -148,8 +158,8 @@ drc: $(TARGETS_DRC)
 pcb: $(TARGETS_PCB)
 net: $(TARGETS_NET)
 gerber: $(TARGETS_GERBER)
-fab: $(FAB_ZIP)
-asm: $(ASM_ZIP)
+fab: $(FAB_ZIP) $(FAB_ZIP).md5
+asm: $(ASM_ZIP) $(ASM_ZIP).md5
 layout:
 	$(PCB) $(LAYER_COLORS) $(BOARD).pcb
 ps: $(TARGETS_PS)
@@ -157,4 +167,8 @@ pdf: $(TARGETS_PDF)
 bom: $(TARGETS_BOM)
 tag:
 	svn cp -m "Tagging of $(BOARD) revision $(REV)."\
-		$(SVNROOT)/hardware $(SVNROOT)/tags/$(BOARD)-$(REV)
+		$(SVNROOT)/hardware/$(BOARD) $(SVNROOT)/tags/$(BOARD)-$(REV)
+untag:
+	svn rm -m "Undo tagging of $(BOARD) revision $(REV)."\
+		$(SVNROOT)/tags/$(BOARD)-$(REV)
+export: $(BOARD)-$(REV).zip $(BOARD)-$(REV).zip.md5
