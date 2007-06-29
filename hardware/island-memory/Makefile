@@ -1,5 +1,5 @@
 BOARD = island-memory
-REV = 0b2
+REV = 0
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
