@@ -1,10 +1,10 @@
-BOARD = island-memory
-REV = 0
+BOARD = face-ethernet
+REV = 0b1
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
-island-memory.tgt: \
-	island-memory-sram.tgt \
+face-ethernet.tgt: \
+	face-ethernet-phy.tgt \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \

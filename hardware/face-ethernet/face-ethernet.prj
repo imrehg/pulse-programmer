@@ -1,0 +1,5 @@
+schematics face-ethernet.sch
+output-name face-ethernet
+elements-dir ../footprints
+use-files
+m4-pcbdir /
