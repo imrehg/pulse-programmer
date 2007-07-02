@@ -1,0 +1,32 @@
+gEDA/gnetlist version 20060906
+gEDA/gnetlist comes with ABSOLUTELY NO WARRANTY; see COPYING for more details.
+This is free software, and you are welcome to redistribute it under certain
+conditions; please see the COPYING file for more details.
+
+Remember to check that your schematic has no errors using the drc2 backend.
+You can do it running 'gnetlist -g drc2 your_schematic.sch -o drc_output.txt'
+and seeing the contents of the file drc_output.txt.
+
+Read system-gafrc file [/etc/gEDA/system-gafrc]
+Read ~/.gEDA/gafrc file [/home/jkumph/.gEDA/gafrc]
+Did not find optional local gafrc file [/home/jkumph/Projects/pulse-sequencer/hardware/island-gp/gafrc]
+Read system-gnetlistrc file [/etc/gEDA/system-gnetlistrc]
+Read ~/.gEDA/gnetlistrc file [/home/jkumph/.gEDA/gnetlistrc]
+Did not find optional local gnetlistrc file [/home/jkumph/Projects/pulse-sequencer/hardware/island-gp/gnetlistrc]
+Did not find specified /home/jkumph/Projects/pulse-sequencer/hardware/island-gp/gafrc file [/home/jkumph/Projects/pulse-sequencer/hardware/island-gp/gafrc]
+Found an improper attribute: _footprint=_
+Found an improper attribute: _documentation=_
+Found an improper attribute: _footprint=_
+Found an improper attribute: _documentation=_
+Found an improper attribute: _footprint=_
+Found an improper attribute: _documentation=_
+Opened file [/home/jkumph/Projects/pulse-sequencer/hardware/island-gp/island-gp.sch]
+Found an improper attribute: _footprint=_
+Found an improper attribute: _documentation=_
+Found an improper attribute: _footprint=_
+Found an improper attribute: _documentation=_
+Found an improper attribute: _footprint=_
+Found an improper attribute: _documentation=_
+Read init scm file [/usr/share/gEDA/scheme/gnetlist.scm]
+Read gsch2pcb scm file [/usr/share/gEDA/scheme/gnet-gsch2pcb.scm]
+Read scm file [gnet-gsch2pcb-tmp.scm]
