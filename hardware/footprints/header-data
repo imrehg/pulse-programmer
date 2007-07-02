@@ -11,6 +11,7 @@ elementdir = "connector"		# where to put generated files
 	silkwidth = 10 mils
 	silkstyle = "outside"
 	silkoffset = 10 mils
+        headernum = "yes"
 
 	pins = 20
 part "HEADER10x2_SMT"
@@ -20,3 +21,14 @@ part "HEADER9x2_SMT"
 
 	pins = 34
 part "HEADER17x2_SMT"
+
+        type = "dip"
+        drill = 42 mils
+        paddia = 62 mils
+        width = 100 mils
+        silkslot = "yes"
+
+        pins = 20
+part "HEADER10x2"
+        pins = 10
+part "HEADER5x2"

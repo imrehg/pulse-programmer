@@ -27,3 +27,19 @@ part "TSSOP-8"
 	silkwidth = 10 mils
 	silkstyle = "inside"
 part "SO-8"
+
+	pins = 4
+	width = 2.2mm
+	pitch = 5.1mm
+	padheight = 1.8mm
+	padwidth = 2mm
+        silkslot = "no"
+        silkcorner = "yes"
+	silkoffset = 15 mils
+	silkboxheight = 6mm
+	silkwidth = 10 mils
+	silkstyle = "outside"
+        silkcustom =
+        ElementArc[-12500 -14000 300 300 0 360 700]
+        silkcustomend
+part "XTAL"
