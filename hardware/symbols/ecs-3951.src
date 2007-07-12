@@ -54,7 +54,7 @@ numslots=0
 #pinnr	seq	type	style	posit.	net	label	
 #-----------------------------------------------------
 #Pin	Seq	Type	Style	Pos	Net	Label
-1	1	oe	line	r		\_OE\_
+1	1	in	line	r		\_OE\_
 4	4	pwr	line	l		VCC
 2	2	pwr	line	l		GND
-3	3	clk	line	r		OUT
+3	3	out	line	r		OUT
