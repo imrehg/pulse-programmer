@@ -201,3 +201,91 @@ T 400 6400 5 10 0 0 0 0 1
 description="Ethernet side of West Face"
 T 400 6600 5 10 0 0 0 0 1
 numslots=0
+P 100 2600 400 2600 1 0 0
+{
+T 300 2650 5 8 1 1 0 6 1
+pinnumber=18
+T 300 2550 5 8 0 1 0 8 1
+pinseq=18
+T 450 2600 9 8 1 1 0 0 1
+pinlabel=RJ45_1
+T 450 2600 5 8 0 1 0 2 1
+pintype=out
+}
+P 100 2300 400 2300 1 0 0
+{
+T 300 2350 5 8 1 1 0 6 1
+pinnumber=19
+T 300 2250 5 8 0 1 0 8 1
+pinseq=19
+T 450 2300 9 8 1 1 0 0 1
+pinlabel=RJ45_2
+T 450 2300 5 8 0 1 0 2 1
+pintype=out
+}
+P 100 2000 400 2000 1 0 0
+{
+T 300 2050 5 8 1 1 0 6 1
+pinnumber=20
+T 300 1950 5 8 0 1 0 8 1
+pinseq=20
+T 450 2000 9 8 1 1 0 0 1
+pinlabel=RJ45_3
+T 450 2000 5 8 0 1 0 2 1
+pintype=out
+}
+P 100 1700 400 1700 1 0 0
+{
+T 300 1750 5 8 1 1 0 6 1
+pinnumber=21
+T 300 1650 5 8 0 1 0 8 1
+pinseq=21
+T 450 1700 9 8 1 1 0 0 1
+pinlabel=RJ45_4
+T 450 1700 5 8 0 1 0 2 1
+pintype=out
+}
+P 100 1400 400 1400 1 0 0
+{
+T 300 1450 5 8 1 1 0 6 1
+pinnumber=22
+T 300 1350 5 8 0 1 0 8 1
+pinseq=22
+T 450 1400 9 8 1 1 0 0 1
+pinlabel=RJ45_5
+T 450 1400 5 8 0 1 0 2 1
+pintype=out
+}
+P 100 1100 400 1100 1 0 0
+{
+T 300 1150 5 8 1 1 0 6 1
+pinnumber=23
+T 300 1050 5 8 0 1 0 8 1
+pinseq=23
+T 450 1100 9 8 1 1 0 0 1
+pinlabel=RJ45_6
+T 450 1100 5 8 0 1 0 2 1
+pintype=out
+}
+P 100 800 400 800 1 0 0
+{
+T 300 850 5 8 1 1 0 6 1
+pinnumber=24
+T 300 750 5 8 0 1 0 8 1
+pinseq=24
+T 450 800 9 8 1 1 0 0 1
+pinlabel=RJ45_7
+T 450 800 5 8 0 1 0 2 1
+pintype=out
+}
+P 100 500 400 500 1 0 0
+{
+T 300 550 5 8 1 1 0 6 1
+pinnumber=25
+T 300 450 5 8 0 1 0 8 1
+pinseq=25
+T 450 500 9 8 1 1 0 0 1
+pinlabel=RJ45_8
+T 450 500 5 8 0 1 0 2 1
+pintype=out
+}
