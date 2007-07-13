@@ -71,7 +71,8 @@ def defattr():
         "tabx"         :0,
         "edgey"        :0,
         "edgex"        :0,
-        "edgewidth"        :0,
+        "edgewidth"    :0,
+        "headernum"    :0,
 }
 
 # BGA row names 20 total
@@ -270,7 +271,7 @@ def bga(attrlist):
                 x = xoff + (pitch*col)
                 y = yoff + (pitch*row)
                 bgaelt = bgaelt + ball(x, y, balldia, polyclear, maskclear, ballname(col,row))
-    return bgaelt+")\n"
+    return bgaelt
 
 # draw a row of square pads
 # pos is center position
@@ -362,7 +363,7 @@ def qfp(attrlist):
         y = (height+2*padwidth)/2 + silkoffset
         qfpelt = qfpelt + box(x,y,-x,-y,silkwidth)
         qfpelt = qfpelt + silk(-x,-y,-(x+3940),-(y+3940),silkwidth)
-    return qfpelt+")\n"
+    return qfpelt
 
 def samtec(attrlist):
     samelt = element(attrlist)
@@ -457,7 +458,7 @@ def samtec(attrlist):
     samelt += silk(silkstart, silky1, silkstart, silky2, silkwidth)
     samelt += silk(silkend, silky1, silkend, silky2, silkwidth)
     
-    return samelt+")\n"
+    return samelt
 
 # def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskclear, polyclear):
 # uses pins, padwidth, padheight, pitch
@@ -491,7 +492,7 @@ def so(attrlist):
     # Inside box with notched corner as submitted in patch by PRB
     if(silkstyle == "inside"):
         silkx = width/2 - silkoffset
-        if (silkslot != 0):
+        if (silkslot == "yes"):
             soelt = soelt + slotbox(silkx,silky,-silkx,-silky,silkwidth)
         else:
             soelt = soelt + insidebox(silkx,silky,-silkx,-silky,silkwidth)
@@ -500,7 +501,7 @@ def so(attrlist):
         soelt = soelt + box(silkx,silky,-silkx,-silky,silkwidth)
         soelt = soelt + silk(0,-silky+2000,-2000,-silky,silkwidth)
         soelt = soelt + silk(0,-silky+2000,2000,-silky,silkwidth)
-    return soelt+")\n"
+    return soelt
 
 def twopad(attrlist):
     width = findattr(attrlist, "width")
@@ -513,7 +514,6 @@ def twopad(attrlist):
     silkboxheight = findattr(attrlist, "silkboxheight")
     silkoffset = findattr(attrlist, "silkoffset")
     silkpolarity = findattr(attrlist, "silkpolarity")
-    silkcustom = findattr(attrlist, "silkcustom")
     
     twopadelt = element(attrlist)
     twopadelt = twopadelt + rowofpads([0,0], width+padwidth, "right", padwidth, padheight, 1, 2, maskclear, polyclear)
@@ -525,9 +525,7 @@ def twopad(attrlist):
         twopadelt = twopadelt + silk(silkx, silky, polx, silky, silkwidth)
         twopadelt = twopadelt + silk(silkx, -silky, polx, -silky, silkwidth)
         twopadelt = twopadelt + silk(polx, -silky, polx, silky, silkwidth)
-    for line in silkcustom:
-        twopadelt += "\t" + str(line) + "\n"
-    return twopadelt+")\n"
+    return twopadelt
 
 # SOT223, DDPAK, TO-263, etc
 def tabbed(attrlist):
@@ -552,7 +550,7 @@ def tabbed(attrlist):
     tabbedelt = tabbedelt + rowofpads([0,padsy], pitch, "right", padwidth, padheight, 1, pins, maskclear, polyclear)
     tabbedelt = tabbedelt + padctr(0,taby,tabheight,tabwidth,polyclear,maskclear,str(pins+1))
     tabbedelt = tabbedelt + box(silkx,silky,-silkx,-silky,silkwidth)
-    return tabbedelt+")\n"
+    return tabbedelt
 #  Pin[17500 -24000 6400 2000 6400 3500 "" "1" 0x00000001]
 # x,y,paddia,polyclear,maskclear,drill,name,name,flags
 
@@ -576,21 +574,37 @@ def dip(attrlist):
     maskclear = findattr(attrlist, "maskclear")
     silkwidth = findattr(attrlist, "silkwidth")
     pitch = findattr(attrlist, "pitch")
+    silkslot = findattr(attrlist, "silkslot")
+    headernum = findattr(attrlist, "headernum")
     y = -(pins/2-1)*pitch/2
     x = width/2
     dipelt = element(attrlist)
-    for pinnum in range (1,1+pins/2):
-        dipelt = dipelt + pin(-x,y,paddia,drill,str(pinnum),polyclear,maskclear)
-        y = y + pitch
-    y = y - pitch
-    for pinnum in range (1+pins/2, pins+1):
-        dipelt = dipelt + pin(x,y,paddia,drill,str(pinnum),polyclear,maskclear)
+    if (headernum == "yes"):
+        for pinnum in range(1,(pins/2)+1):
+            num = 2*pinnum - 1
+            dipelt = dipelt + pin(-x,y,paddia,drill,str(num),
+                                  polyclear,maskclear)
+            num = 2*pinnum
+            dipelt = dipelt + pin(x,y,paddia,drill,str(num),
+                                  polyclear,maskclear)
+            y = y + pitch
+    else:
+        for pinnum in range (1,1+pins/2):
+            dipelt = dipelt + pin(-x,y,paddia,drill,str(pinnum),
+                                  polyclear,maskclear)
+            y = y + pitch
         y = y - pitch
+        for pinnum in range (1+pins/2, pins+1):
+            dipelt = dipelt + pin(x,y,paddia,drill,str(pinnum),
+                                  polyclear,maskclear)
+            y = y - pitch
     silky = pins*pitch/4
     silkx = (width+pitch)/2
     dipelt = dipelt + box(silkx,silky,-silkx,-silky,silkwidth)
     dipelt = dipelt + box(-silkx,-silky,-silkx+pitch,-silky+pitch,silkwidth)
-    return dipelt+")\n"
+    if (silkslot == "yes"):
+        dipelt = dipelt + box(-silkx,-10000,-silkx-2500,10000,silkwidth)
+    return dipelt
 
 def dih(attrlist):
     pins = findattr(attrlist, "pins")
@@ -615,7 +629,7 @@ def dih(attrlist):
     silkx = (width+pitch)/2
     dipelt = dipelt + box(silkx,silky,-silkx,-silky,silkwidth)
     dipelt = dipelt + box(-silkx,-silky,-silkx+pitch,-silky+pitch,silkwidth)
-    return dipelt+")\n"
+    return dipelt
 
 def sip(attrlist):
     pins = findattr(attrlist, "pins")
@@ -634,32 +648,36 @@ def sip(attrlist):
     silkx = pitch/2
     sipelt = sipelt + box(silkx,silky,-silkx,-silky,silkwidth)
     sipelt = sipelt + box(-silkx,-silky,-silkx+pitch,-silky+pitch,silkwidth)
-    return sipelt+")\n"
+    return sipelt
 
 def genpart(attributes):
     parttype = findattr(attributes, "type")
+    silkcustom = findattr(attributes, "silkcustom")
+    newpart = ""
     if parttype=='bga':
-        return bga(attributes)
+        newpart = bga(attributes)
     elif parttype=='qfp':
-        return qfp(attributes)
+        newpart = qfp(attributes)
     elif parttype=='so':
-        return so(attributes)
+        newpart = so(attributes)
     elif parttype=='twopad':
-        return twopad(attributes)
+        newpart = twopad(attributes)
     elif parttype=='tabbed':
-        return tabbed(attributes)
+        newpart = tabbed(attributes)
     elif parttype == 'dip':
-        return dip(attributes)
+        newpart = dip(attributes)
     elif parttype == 'dih':
-        return dih(attributes)
+        newpart = dih(attributes)
     elif parttype == 'sip':
-        return sip(attributes)
+        newpart = sip(attributes)
     elif parttype == 'samtec':
-        return samtec(attributes)
+        newpart = samtec(attributes)
     else:
         print "Unknown type "+parttype
-    print ""
-    return ""                                                                                                           
+    for line in silkcustom:
+        newpart += "\t" + str(line) + "\n"
+    newpart +=")\n"        
+    return newpart                                                                                                          
 
 def inquotes(origstring):
     quotepos = re.search("\".*\"", origstring)
