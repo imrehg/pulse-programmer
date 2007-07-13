@@ -43,3 +43,27 @@ part "SO-8"
         ElementArc[-12500 -14000 300 300 0 360 700]
         silkcustomend
 part "XTAL"
+
+	pins = 6
+	width = 170 mils
+	pitch = 100 mils
+	padheight = 50 mils
+	padwidth = 45 mils
+        silkslot = "yes"
+        silkcorner = "no"
+	silkoffset = 15 mils
+        silkcustom =
+        ElementArc[0 -8000 1000 1000 0 360 700]
+        ElementArc[-5000 -8000 1000 1000 0 360 700]
+        ElementArc[5000 -8000 1000 1000 0 360 700]
+        silkcustomend
+part "TF-6"
+
+	pins = 16
+	width = 300 mils
+	pitch = 50 mils
+	padheight = 25 mils
+	padwidth = 60 mils
+        silkcustom =
+        silkcustomend
+part "H1260NL"
