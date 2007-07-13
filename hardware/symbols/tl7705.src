@@ -55,10 +55,10 @@ numslots=0
 #-----------------------------------------------------
 #Pin	Seq	Type	Style	Pos	Net	Label
 2		in	line	l		\_RESIN\_
-6		in	line	l		SENSE
-1		pwr	line	l		VCC
-5		in	line	l		CT
-3		in	line	r		RST
-7		in	line	r		\_RESET\_
-8		pwr	line	r		GND
-4		in	line	r		REF
+7		in	line	l		SENSE
+8		pwr	line	l		VCC
+3		in	line	l		CT
+6		in	line	r		RST
+5		in	line	r		\_RESET\_
+4		pwr	line	r		GND
+1		in	line	r		REF
