@@ -1,0 +1,5 @@
+schematics face-ethernet.sch
+output-name face-ethernet
+elements-dir /home/ppham/sf/svnroot/hardware/footprints
+use-files
+m4-pcbdir /
