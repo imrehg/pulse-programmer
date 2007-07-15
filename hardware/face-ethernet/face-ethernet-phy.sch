@@ -112,6 +112,8 @@ T 54600 43000 5 10 0 0 0 0 1
 device=Oscillator
 T 54200 41400 5 10 0 0 0 0 1
 footprint=XTAL
+T 54200 42700 5 10 1 1 0 0 1
+value=CB3-3C-25.0000-T
 }
 C 50400 50200 1 0 0 resistor-1.sym
 {

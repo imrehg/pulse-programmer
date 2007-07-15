@@ -1,5 +1,5 @@
 BOARD = face-ethernet
-REV = 0b3
+REV = 0
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
