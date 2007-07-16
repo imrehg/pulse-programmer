@@ -21,11 +21,11 @@ pinwidthhorizontal=400
 # if you have a device with slots, you'll have to use slot= and slotdef=
 # use comment= if there are special information you want to add
 version=20070420
-name=TPIC2810
-device=TPIC2810
+name=PCA9554PW
+device=PCA9554PW
 refdes=U?
-footprint=SOP-16
-description="I2C Open-Drain LED Driver"
+footprint=TSSOP-16
+description="I2C General-Purpose Expander"
 documentation=
 author=Paul Pham
 numslots=0
@@ -54,19 +54,19 @@ numslots=0
 #pinnr	seq	type	style	posit.	net	label	
 #-----------------------------------------------------
 #Pin	Seq	Type	Style	Pos	Net	Label
-15		in	line	l		SCL
-2		in	line	l		SDA
-8		in	line	l		\_G\_
-9		in	line	l		A0
-10		in	line	l		A1
-7		in	line	l		A2
-1		pwr	line	l		VCC
-16		pwr	line	l		GND
-3		out	line	r		DRAIN0
-4		out	line	r		DRAIN1
-5		out	line	r		DRAIN2
-6		out	line	r		DRAIN3
-11		out	line	r		DRAIN4
-12		out	line	r		DRAIN5
-13		out	line	r		DRAIN6
-14		out	line	r		DRAIN7
+14		in	line	l		SCL
+15		io	line	l		SDA
+13		in	line	l		\_INT\_
+1		in	line	l		A0
+2		in	line	l		A1
+3		in	line	l		A2
+16		pwr	line	l		VDD
+8		pwr	line	l		VSS
+4		io	line	r		IO0
+5		io	line	r		IO1
+6		io	line	r		IO2
+7		io	line	r		IO3
+9		io	line	r		IO4
+10		io	line	r		IO5
+11		io	line	r		IO6
+12		io	line	r		IO7
