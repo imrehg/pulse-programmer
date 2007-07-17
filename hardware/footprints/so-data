@@ -6,16 +6,30 @@ elementdir = "ic"		# where to put generated files
         maskclear = 6 mil
 
 	pins = 8
-	width = 5.05mm
-	pitch = 0.65mm
-	padwidth = 1.2mm
-	padheight = 0.27mm
-	silkoffset = 0.85mm
-	silkboxheight = 2.6mm
+	width = 5.05 mm
+	pitch = 0.65 mm
+	padwidth = 1.2 mm
+	padheight = 0.27 mm
+	silkoffset = 0.85 mm
+	silkboxheight = 2.6 mm
 	silkwidth = 10 mils
 	silkstyle = "inside"
         silkslot = "yes"
 part "TSSOP-8"
+        width = 4.19 mm
+        padwidth = 1.78 mm
+        padheight = 0.42 mm
+	silkboxheight = 5.4 mm
+        pins = 16
+part "TSSOP-16"
+
+	pins = 16
+	width = 111 mils
+	pitch = 50 mils
+	silkboxheight = 10 mm
+	padwidth = 2.45 mm
+	padheight = 0.76 mm
+part "SOP-16"
 
 	pins = 8
 	width = 140 mils
