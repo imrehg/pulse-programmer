@@ -1,5 +1,5 @@
 BOARD = face-i2c
-REV = 0b1
+REV = 0
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
@@ -13,7 +13,7 @@ LAYER_COLORS = \
 	--layer-color-5 "\#408040" \
 
 # This is a high-speed board
-TARGETS_GERBER = $(GERBER_FILES_HS)
-TARGETS_PS = $(PS_FILES_HS)
+TARGETS_GERBER = $(GERBER_FILES_HS_FRONT)
+TARGETS_PS = $(PS_FILES_HS_FRONT)
 
 include ../Makefile.common
