@@ -49,11 +49,10 @@ TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
 TARGETS_NET = $(TARGETS:.sch=.net)
 TARGETS_DRC = $(TARGETS:.sch=.drc)
 TARGETS_PCB = $(TARGETS:.sch=.pcb)
-GERBER_FILES = \
+
+GERBER_FILES_FRONT = \
 	$(GBR_PRE).back.gbr \
 	$(GBR_PRE).backmask.gbr \
-	$(GBR_PRE).backpaste.gbr \
-	$(GBR_PRE).backsilk.gbr \
 	$(GBR_PRE).front.gbr \
 	$(GBR_PRE).frontmask.gbr \
 	$(GBR_PRE).frontpaste.gbr \
@@ -63,7 +62,11 @@ GERBER_FILES = \
 	$(GBR_PRE).plated-drill.cnc \
 	$(GBR_PRE).unplated-drill.cnc \
 
-PS_FILES = \
+GERBER_FILES = $(GERBER_FILES_FRONT) \
+	$(GBR_PRE).backpaste.gbr \
+	$(GBR_PRE).backsilk.gbr \
+
+PS_FILES_FRONT = \
 	$(PS_PRE).front.ps \
 	$(PS_PRE).back.ps \
 	$(PS_PRE).outline.ps \
@@ -72,12 +75,16 @@ PS_FILES = \
 	$(PS_PRE).plated-drill.ps \
 	$(PS_PRE).unplated-drill.ps \
 	$(PS_PRE).frontsilk.ps \
-	$(PS_PRE).backsilk.ps \
 	$(PS_PRE).frontpaste.ps \
-	$(PS_PRE).backpaste.ps \
 	$(PS_PRE).frontassembly.ps \
-	$(PS_PRE).backassembly.ps \
 	$(PS_PRE).fab.ps \
+
+PS_FILES_BACK = \
+	$(PS_PRE).backsilk.ps \
+	$(PS_PRE).backpaste.ps \
+	$(PS_PRE).backassembly.ps \
+
+PS_FILES = $(PS_FILES_FRONT) $(PS_FILES_BACK)
 
 PDF_FILES = $(PS_FILES:.ps=.pdf)
 TARGETS_PDF = $(TARGETS_PS:.ps=.pdf)
@@ -87,7 +94,15 @@ GERBER_FILES_HS = $(GERBER_FILES) \
 	$(GBR_PRE).group3.gbr \
 	$(GBR_PRE).group4.gbr \
 
+GERBER_FILES_HS_FRONT = $(GERBER_FILES_FRONT) \
+	$(GBR_PRE).group3.gbr \
+	$(GBR_PRE).group4.gbr \
+
 PS_FILES_HS = $(PS_FILES) \
+	$(PS_PRE).group3.ps \
+	$(PS_PRE).group4.ps \
+
+PS_FILES_HS_FRONT = $(PS_FILES_FRONT) \
 	$(PS_PRE).group3.ps \
 	$(PS_PRE).group4.ps \
 
