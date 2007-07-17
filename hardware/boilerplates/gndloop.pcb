@@ -794,8 +794,8 @@ Symbol('~' 12)
 	SymbolLine(15 35 20 35 8)
 	SymbolLine(20 35 25 30 8)
 )
-Via[6000 7600 6270 2000 0 4700 "" "thermal(5X,6X)"]
-Via[22100 7600 6270 2000 0 4700 "" "thermal(5X,6X)"]
+Via[6000 7600 7700 2000 0 4700 "" "thermal(5X,6X)"]
+Via[22100 7600 7700 2000 0 4700 "" "thermal(5X,6X)"]
 Layer(1 "component")
 (
 	Text[10150 5300 0 78 "GND" ""]
