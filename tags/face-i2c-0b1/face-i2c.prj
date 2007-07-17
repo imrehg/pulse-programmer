@@ -1,0 +1,5 @@
+schematics face-i2c.sch
+output-name face-i2c
+elements-dir ../footprints
+use-files
+m4-pcbdir /
