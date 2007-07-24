@@ -1,0 +1,10 @@
+Element(0x0 "GND-LOOP" "" "" -169 -210 0 100 0x0)
+(
+   Pin(0 0 77 47 "" "1" 0x00)
+   Pin(300 0 77 47 "" "1" 0x00)
+   ElementLine(-50  50  350  50 10)
+   ElementLine(-50 -50  350 -50 10)
+   ElementLine(-50 -50  -50  50 10)
+   ElementLine(350 -50  350  50 10)
+   Mark(0 0)
+)
