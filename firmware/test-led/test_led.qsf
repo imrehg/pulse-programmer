@@ -1,0 +1,202 @@
+# Copyright (C) 1991-2007 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		test_led_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name DEVICE EP1C12Q240C6
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name TOP_LEVEL_ENTITY test_led
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 7.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "17:18:03  JULY 05, 2007"
+set_global_assignment -name LAST_QUARTUS_VERSION 7.0
+set_global_assignment -name DEVICE_FILTER_PACKAGE PQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 240
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_global_assignment -name RESERVE_ASDO_AFTER_CONFIGURATION "AS INPUT TRI-STATED"
+set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_location_assignment PIN_1 -to INIT_DONE
+set_location_assignment PIN_2 -to LVDS23n
+set_location_assignment PIN_3 -to LVDS22p
+set_location_assignment PIN_4 -to LVDS22n
+set_location_assignment PIN_5 -to VREF0B1
+set_location_assignment PIN_6 -to PIN_6
+set_location_assignment PIN_7 -to LVDS21p
+set_location_assignment PIN_8 -to LVDS21n
+set_location_assignment PIN_11 -to DPCLK1
+set_location_assignment PIN_12 -to LVDS20p
+set_location_assignment PIN_13 -to LVDS20n
+set_location_assignment PIN_14 -to LVDS19p
+set_location_assignment PIN_15 -to LVDS19n
+set_location_assignment PIN_16 -to LVDS18p
+set_location_assignment PIN_17 -to LVDS18n
+set_location_assignment PIN_18 -to LVDS17p
+set_location_assignment PIN_19 -to LVDS17n
+set_location_assignment PIN_20 -to LVDS16p
+set_location_assignment PIN_21 -to LVDS16n
+set_location_assignment PIN_23 -to VREF1B1
+set_location_assignment PIN_28 -to CLK0
+set_location_assignment PIN_29 -to CLK1
+set_location_assignment PIN_38 -to PLL1_OUTp
+set_location_assignment PIN_39 -to PLL1_OUTn
+set_location_assignment PIN_41 -to LVDS7n
+set_location_assignment PIN_42 -to LVDS6p
+set_location_assignment PIN_43 -to LVDS6n
+set_location_assignment PIN_44 -to LVDS5p
+set_location_assignment PIN_45 -to LVDS5n
+set_location_assignment PIN_46 -to LVDS4p
+set_location_assignment PIN_47 -to LVDS4n
+set_location_assignment PIN_48 -to LVDS3p
+set_location_assignment PIN_49 -to LVDS3n
+set_location_assignment PIN_50 -to DPCLK0
+set_location_assignment PIN_53 -to LVDS2p
+set_location_assignment PIN_54 -to LVDS2n
+set_location_assignment PIN_56 -to PIN_56
+set_location_assignment PIN_57 -to LVDS1p
+set_location_assignment PIN_58 -to LVDS1n
+set_location_assignment PIN_59 -to LVDS0p
+set_location_assignment PIN_60 -to LVDS0n
+set_location_assignment PIN_61 -to LVDS102p
+set_location_assignment PIN_62 -to LVDS102n
+set_location_assignment PIN_63 -to LVDS101p
+set_location_assignment PIN_64 -to LVDS101n
+set_location_assignment PIN_65 -to LVDS100p
+set_location_assignment PIN_66 -to LVDS100n
+set_location_assignment PIN_67 -to LVDS99p
+set_location_assignment PIN_68 -to LVDS99n
+set_location_assignment PIN_73 -to DPCLK7
+set_location_assignment PIN_75 -to LVDS98p
+set_location_assignment PIN_76 -to LVDS98n
+set_location_assignment PIN_77 -to LVDS97p
+set_location_assignment PIN_78 -to LVDS97n
+set_location_assignment PIN_79 -to LVDS96p
+set_location_assignment PIN_82 -to LVDS95p
+set_location_assignment PIN_83 -to LVDS95n
+set_location_assignment PIN_84 -to LVDS94p
+set_location_assignment PIN_85 -to LVDS94n
+set_location_assignment PIN_86 -to LVDS93p
+set_location_assignment PIN_87 -to LVDS93n
+set_location_assignment PIN_88 -to LVDS92p
+set_location_assignment PIN_94 -to LVDS87p
+set_location_assignment PIN_95 -to LVDS87n
+set_location_assignment PIN_98 -to LVDS86p
+set_location_assignment PIN_99 -to LVDS86n
+set_location_assignment PIN_100 -to LVDS85p
+set_location_assignment PIN_101 -to LVDS85n
+set_location_assignment PIN_104 -to LVDS80p
+set_location_assignment PIN_105 -to LVDS80n
+set_location_assignment PIN_106 -to PIN_106
+set_location_assignment PIN_108 -to DPCLK6
+set_location_assignment PIN_113 -to LVDS79p
+set_location_assignment PIN_114 -to LVDS79n
+set_location_assignment PIN_115 -to LVDS78p
+set_location_assignment PIN_116 -to LVDS78n
+set_location_assignment PIN_117 -to LVDS77p
+set_location_assignment PIN_118 -to LVDS77n
+set_location_assignment PIN_119 -to LVDS76p
+set_location_assignment PIN_120 -to LVDS76n
+set_location_assignment PIN_121 -to LVDS75n
+set_location_assignment PIN_122 -to LVDS75p
+set_location_assignment PIN_123 -to LVDS74n
+set_location_assignment PIN_124 -to LVDS74p
+set_location_assignment PIN_125 -to LVDS73n
+set_location_assignment PIN_126 -to LVDS73p
+set_location_assignment PIN_128 -to PIN_128
+set_location_assignment PIN_131 -to DPCLK5
+set_location_assignment PIN_132 -to LVDS72n
+set_location_assignment PIN_133 -to LVDS72p
+set_location_assignment PIN_134 -to LVDS71n
+set_location_assignment PIN_135 -to LVDS71p
+set_location_assignment PIN_136 -to LVDS70n
+set_location_assignment PIN_137 -to LVDS70p
+set_location_assignment PIN_138 -to LVDS69n
+set_location_assignment PIN_139 -to LVDS69p
+set_location_assignment PIN_140 -to LVDS68n
+set_location_assignment PIN_141 -to LVDS68p
+set_location_assignment PIN_143 -to PLL2_OUTn
+set_location_assignment PIN_144 -to PLL2_OUTp
+set_location_assignment PIN_152 -to CLK3
+set_location_assignment PIN_153 -to CLK2
+set_location_assignment PIN_158 -to LVDS59n
+set_location_assignment PIN_159 -to LVDS59p
+set_location_assignment PIN_160 -to LVDS58n
+set_location_assignment PIN_161 -to LVDS58p
+set_location_assignment PIN_162 -to LVDS57n
+set_location_assignment PIN_163 -to LVDS57p
+set_location_assignment PIN_164 -to LVDS56n
+set_location_assignment PIN_165 -to LVDS56p
+set_location_assignment PIN_166 -to LVDS55n
+set_location_assignment PIN_167 -to LVDS55p
+set_location_assignment PIN_168 -to LVDS54n
+set_location_assignment PIN_169 -to LVDS54p
+set_location_assignment PIN_170 -to DPCLK4
+set_location_assignment PIN_173 -to LVDS53n
+set_location_assignment PIN_174 -to LVDS53p
+set_location_assignment PIN_175 -to PIN_175
+set_location_assignment PIN_177 -to LVDS52n
+set_location_assignment PIN_178 -to LVDS52p
+set_location_assignment PIN_179 -to LVDS51n
+set_location_assignment PIN_180 -to LVDS51p
+set_location_assignment PIN_181 -to LVDS50n
+set_location_assignment PIN_182 -to LVDS50p
+set_location_assignment PIN_183 -to LVDS49n
+set_location_assignment PIN_184 -to LVDS49p
+set_location_assignment PIN_185 -to LVDS48n
+set_location_assignment PIN_186 -to LVDS48p
+set_location_assignment PIN_187 -to LVDS47n
+set_location_assignment PIN_188 -to LVDS47p
+set_location_assignment PIN_193 -to DPCLK3
+set_location_assignment PIN_195 -to PIN_195
+set_location_assignment PIN_196 -to LVDS46n
+set_location_assignment PIN_197 -to LVDS46p
+set_location_assignment PIN_200 -to LVDS41n
+set_location_assignment PIN_201 -to LVDS41p
+set_location_assignment PIN_202 -to LVDS40n
+set_location_assignment PIN_203 -to LVDS40p
+set_location_assignment PIN_206 -to LVDS39n
+set_location_assignment PIN_207 -to LVDS39p
+set_location_assignment PIN_213 -to LVDS34p
+set_location_assignment PIN_214 -to LVDS33n
+set_location_assignment PIN_215 -to LVDS33p
+set_location_assignment PIN_216 -to LVDS32n
+set_location_assignment PIN_217 -to LVDS32p
+set_location_assignment PIN_218 -to LVDS31n
+set_location_assignment PIN_219 -to LVDS31p
+set_location_assignment PIN_222 -to LVDS30p
+set_location_assignment PIN_223 -to LVDS29n
+set_location_assignment PIN_224 -to LVDS29p
+set_location_assignment PIN_225 -to LVDS28n
+set_location_assignment PIN_226 -to LVDS28p
+set_location_assignment PIN_228 -to DPCLK2
+set_location_assignment PIN_240 -to LVDS24p
+set_location_assignment PIN_234 -to LVDS27p
+set_location_assignment PIN_233 -to LVDS27n
+set_location_assignment PIN_235 -to LVDS26n
+set_location_assignment PIN_236 -to LVDS26p
+set_location_assignment PIN_237 -to LVDS25n
+set_location_assignment PIN_238 -to LVDS25p
+set_location_assignment PIN_239 -to LVDS24n
+set_global_assignment -name VHDL_FILE test_led.vhd
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"

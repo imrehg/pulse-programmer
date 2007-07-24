@@ -1,0 +1,299 @@
+ -- Copyright (C) 1991-2007 Altera Corporation
+ -- Your use of Altera Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Altera Program License 
+ -- Subscription Agreement, Altera MegaCore Function License 
+ -- Agreement, or other applicable license agreement, including, 
+ -- without limitation, that your use is for the sole purpose of 
+ -- programming logic devices manufactured by Altera and sold by 
+ -- Altera or its authorized distributors.  Please refer to the 
+ -- applicable agreement for further details.
+ -- 
+ -- This is a Quartus II output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus II input file. This file cannot be used
+ -- to make Quartus II pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus II help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.5V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --					Bank 1:		2.5V
+ --					Bank 2:		2.5V
+ --					Bank 3:		2.5V
+ --					Bank 4:		2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --					It can also be used to report unused dedicated pins. The connection
+ --					on the board for unused dedicated pins depends on whether this will
+ --					be used in a future design. One example is device migration. When
+ --					using device migration, refer to the device pin-tables. If it is a
+ --					GND pin in the pin table or if it will not be used in a future design
+ --					for another purpose the it MUST be connected to GND. If it is an unused
+ --					dedicated pin, then it can be connected to a valid signal on the board
+ --					(low, high, or toggling) if that signal is required for a different
+ --					revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --					This pin should be connected to GND. It may also be connected  to a
+ --					valid signal  on the board  (low, high, or toggling)  if that signal
+ --					is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   This pin can either be left unconnected or
+ --           	    connected to GND.  Connecting this pin to GND will improve the
+ --           	    device's immunity to noise.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ ---------------------------------------------------------------------------------
+
+Quartus II Version 7.0 Build 33 02/05/2007 SJ Web Edition
+CHIP  "test_led"  ASSIGNED TO AN: EP1C12Q240C6
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+INIT_DONE                    : 1         : output : 2.5 V             :         : 1         : Y              
+LVDS23n                      : 2         : output : 2.5 V             :         : 1         : Y              
+LVDS22p                      : 3         : output : 2.5 V             :         : 1         : Y              
+LVDS22n                      : 4         : output : 2.5 V             :         : 1         : Y              
+VREF0B1                      : 5         : output : 2.5 V             :         : 1         : Y              
+PIN_6                        : 6         : output : 2.5 V             :         : 1         : Y              
+LVDS21p                      : 7         : output : 2.5 V             :         : 1         : Y              
+LVDS21n                      : 8         : output : 2.5 V             :         : 1         : Y              
+VCCIO1                       : 9         : power  :                   : 2.5V    : 1         :                
+GND                          : 10        : gnd    :                   :         :           :                
+DPCLK1                       : 11        : output : 2.5 V             :         : 1         : Y              
+LVDS20p                      : 12        : output : 2.5 V             :         : 1         : Y              
+LVDS20n                      : 13        : output : 2.5 V             :         : 1         : Y              
+LVDS19p                      : 14        : output : 2.5 V             :         : 1         : Y              
+LVDS19n                      : 15        : output : 2.5 V             :         : 1         : Y              
+LVDS18p                      : 16        : output : 2.5 V             :         : 1         : Y              
+LVDS18n                      : 17        : output : 2.5 V             :         : 1         : Y              
+LVDS17p                      : 18        : output : 2.5 V             :         : 1         : Y              
+LVDS17n                      : 19        : output : 2.5 V             :         : 1         : Y              
+LVDS16p                      : 20        : output : 2.5 V             :         : 1         : Y              
+LVDS16n                      : 21        : output : 2.5 V             :         : 1         : Y              
+VCCIO1                       : 22        : power  :                   : 2.5V    : 1         :                
+VREF1B1                      : 23        : output : 2.5 V             :         : 1         : Y              
+~nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 24        : input  : 2.5 V             :         : 1         : N              
+DATA0                        : 25        : input  :                   :         : 1         :                
+nCONFIG                      : 26        :        :                   :         : 1         :                
+VCCA_PLL1                    : 27        : power  :                   : 1.5V    :           :                
+CLK0                         : 28        : input  : 2.5 V             :         : 1         : Y              
+CLK1                         : 29        : input  : 2.5 V             :         : 1         : Y              
+GNDA_PLL1                    : 30        : gnd    :                   :         :           :                
+GNDG_PLL1                    : 31        : gnd    :                   :         :           :                
+nCEO                         : 32        :        :                   :         : 1         :                
+nCE                          : 33        :        :                   :         : 1         :                
+MSEL0                        : 34        :        :                   :         : 1         :                
+MSEL1                        : 35        :        :                   :         : 1         :                
+DCLK                         : 36        : bidir  :                   :         : 1         :                
+~ASDO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 37        : input  : 2.5 V             :         : 1         : N              
+PLL1_OUTp                    : 38        : output : 2.5 V             :         : 1         : Y              
+PLL1_OUTn                    : 39        : output : 2.5 V             :         : 1         : Y              
+GND                          : 40        : gnd    :                   :         :           :                
+LVDS7n                       : 41        : output : 2.5 V             :         : 1         : Y              
+LVDS6p                       : 42        : output : 2.5 V             :         : 1         : Y              
+LVDS6n                       : 43        : output : 2.5 V             :         : 1         : Y              
+LVDS5p                       : 44        : output : 2.5 V             :         : 1         : Y              
+LVDS5n                       : 45        : output : 2.5 V             :         : 1         : Y              
+LVDS4p                       : 46        : output : 2.5 V             :         : 1         : Y              
+LVDS4n                       : 47        : output : 2.5 V             :         : 1         : Y              
+LVDS3p                       : 48        : output : 2.5 V             :         : 1         : Y              
+LVDS3n                       : 49        : output : 2.5 V             :         : 1         : Y              
+DPCLK0                       : 50        : output : 2.5 V             :         : 1         : Y              
+VCCIO1                       : 51        : power  :                   : 2.5V    : 1         :                
+GND                          : 52        : gnd    :                   :         :           :                
+LVDS2p                       : 53        : output : 2.5 V             :         : 1         : Y              
+LVDS2n                       : 54        : output : 2.5 V             :         : 1         : Y              
+RESERVED_INPUT               : 55        :        :                   :         : 1         :                
+PIN_56                       : 56        : output : 2.5 V             :         : 1         : Y              
+LVDS1p                       : 57        : output : 2.5 V             :         : 1         : Y              
+LVDS1n                       : 58        : output : 2.5 V             :         : 1         : Y              
+LVDS0p                       : 59        : output : 2.5 V             :         : 1         : Y              
+LVDS0n                       : 60        : output : 2.5 V             :         : 1         : Y              
+LVDS102p                     : 61        : output : 2.5 V             :         : 4         : Y              
+LVDS102n                     : 62        : output : 2.5 V             :         : 4         : Y              
+LVDS101p                     : 63        : output : 2.5 V             :         : 4         : Y              
+LVDS101n                     : 64        : output : 2.5 V             :         : 4         : Y              
+LVDS100p                     : 65        : output : 2.5 V             :         : 4         : Y              
+LVDS100n                     : 66        : output : 2.5 V             :         : 4         : Y              
+LVDS99p                      : 67        : output : 2.5 V             :         : 4         : Y              
+LVDS99n                      : 68        : output : 2.5 V             :         : 4         : Y              
+GND                          : 69        : gnd    :                   :         :           :                
+VCCIO4                       : 70        : power  :                   : 2.5V    : 4         :                
+GND                          : 71        : gnd    :                   :         :           :                
+VCCINT                       : 72        : power  :                   : 1.5V    :           :                
+DPCLK7                       : 73        : output : 2.5 V             :         : 4         : Y              
+ASDO                         : 74        : output : 2.5 V             :         : 4         : N              
+LVDS98p                      : 75        : output : 2.5 V             :         : 4         : Y              
+LVDS98n                      : 76        : output : 2.5 V             :         : 4         : Y              
+LVDS97p                      : 77        : output : 2.5 V             :         : 4         : Y              
+LVDS97n                      : 78        : output : 2.5 V             :         : 4         : Y              
+LVDS96p                      : 79        : output : 2.5 V             :         : 4         : Y              
+GND                          : 80        : gnd    :                   :         :           :                
+VCCINT                       : 81        : power  :                   : 1.5V    :           :                
+LVDS95p                      : 82        : output : 2.5 V             :         : 4         : Y              
+LVDS95n                      : 83        : output : 2.5 V             :         : 4         : Y              
+LVDS94p                      : 84        : output : 2.5 V             :         : 4         : Y              
+LVDS94n                      : 85        : output : 2.5 V             :         : 4         : Y              
+LVDS93p                      : 86        : output : 2.5 V             :         : 4         : Y              
+LVDS93n                      : 87        : output : 2.5 V             :         : 4         : Y              
+LVDS92p                      : 88        : output : 2.5 V             :         : 4         : Y              
+GND                          : 89        : gnd    :                   :         :           :                
+VCCINT                       : 90        : power  :                   : 1.5V    :           :                
+GND                          : 91        : gnd    :                   :         :           :                
+VCCIO4                       : 92        : power  :                   : 2.5V    : 4         :                
+RESERVED_INPUT               : 93        :        :                   :         : 4         :                
+LVDS87p                      : 94        : output : 2.5 V             :         : 4         : Y              
+LVDS87n                      : 95        : output : 2.5 V             :         : 4         : Y              
+GND                          : 96        : gnd    :                   :         :           :                
+VCCINT                       : 97        : power  :                   : 1.5V    :           :                
+LVDS86p                      : 98        : output : 2.5 V             :         : 4         : Y              
+LVDS86n                      : 99        : output : 2.5 V             :         : 4         : Y              
+LVDS85p                      : 100       : output : 2.5 V             :         : 4         : Y              
+LVDS85n                      : 101       : output : 2.5 V             :         : 4         : Y              
+GND                          : 102       : gnd    :                   :         :           :                
+VCCINT                       : 103       : power  :                   : 1.5V    :           :                
+LVDS80p                      : 104       : output : 2.5 V             :         : 4         : Y              
+LVDS80n                      : 105       : output : 2.5 V             :         : 4         : Y              
+PIN_106                      : 106       : output : 2.5 V             :         : 4         : Y              
+RESERVED_INPUT               : 107       :        :                   :         : 4         :                
+DPCLK6                       : 108       : output : 2.5 V             :         : 4         : Y              
+GND                          : 109       : gnd    :                   :         :           :                
+VCCINT                       : 110       : power  :                   : 1.5V    :           :                
+GND                          : 111       : gnd    :                   :         :           :                
+VCCIO4                       : 112       : power  :                   : 2.5V    : 4         :                
+LVDS79p                      : 113       : output : 2.5 V             :         : 4         : Y              
+LVDS79n                      : 114       : output : 2.5 V             :         : 4         : Y              
+LVDS78p                      : 115       : output : 2.5 V             :         : 4         : Y              
+LVDS78n                      : 116       : output : 2.5 V             :         : 4         : Y              
+LVDS77p                      : 117       : output : 2.5 V             :         : 4         : Y              
+LVDS77n                      : 118       : output : 2.5 V             :         : 4         : Y              
+LVDS76p                      : 119       : output : 2.5 V             :         : 4         : Y              
+LVDS76n                      : 120       : output : 2.5 V             :         : 4         : Y              
+LVDS75n                      : 121       : output : 2.5 V             :         : 3         : Y              
+LVDS75p                      : 122       : output : 2.5 V             :         : 3         : Y              
+LVDS74n                      : 123       : output : 2.5 V             :         : 3         : Y              
+LVDS74p                      : 124       : output : 2.5 V             :         : 3         : Y              
+LVDS73n                      : 125       : output : 2.5 V             :         : 3         : Y              
+LVDS73p                      : 126       : output : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : 127       :        :                   :         : 3         :                
+PIN_128                      : 128       : output : 2.5 V             :         : 3         : Y              
+GND                          : 129       : gnd    :                   :         :           :                
+VCCIO3                       : 130       : power  :                   : 2.5V    : 3         :                
+DPCLK5                       : 131       : output : 2.5 V             :         : 3         : Y              
+LVDS72n                      : 132       : output : 2.5 V             :         : 3         : Y              
+LVDS72p                      : 133       : output : 2.5 V             :         : 3         : Y              
+LVDS71n                      : 134       : output : 2.5 V             :         : 3         : Y              
+LVDS71p                      : 135       : output : 2.5 V             :         : 3         : Y              
+LVDS70n                      : 136       : output : 2.5 V             :         : 3         : Y              
+LVDS70p                      : 137       : output : 2.5 V             :         : 3         : Y              
+LVDS69n                      : 138       : output : 2.5 V             :         : 3         : Y              
+LVDS69p                      : 139       : output : 2.5 V             :         : 3         : Y              
+LVDS68n                      : 140       : output : 2.5 V             :         : 3         : Y              
+LVDS68p                      : 141       : output : 2.5 V             :         : 3         : Y              
+GND                          : 142       : gnd    :                   :         :           :                
+PLL2_OUTn                    : 143       : output : 2.5 V             :         : 3         : Y              
+PLL2_OUTp                    : 144       : output : 2.5 V             :         : 3         : Y              
+CONF_DONE                    : 145       :        :                   :         : 3         :                
+nSTATUS                      : 146       :        :                   :         : 3         :                
+TCK                          : 147       : input  :                   :         : 3         :                
+TMS                          : 148       : input  :                   :         : 3         :                
+TDO                          : 149       : output :                   :         : 3         :                
+GNDG_PLL2                    : 150       : gnd    :                   :         :           :                
+GNDA_PLL2                    : 151       : gnd    :                   :         :           :                
+CLK3                         : 152       : input  : 2.5 V             :         : 3         : Y              
+CLK2                         : 153       : input  : 2.5 V             :         : 3         : Y              
+VCCA_PLL2                    : 154       : power  :                   : 1.5V    :           :                
+TDI                          : 155       : input  :                   :         : 3         :                
+RESERVED_INPUT               : 156       :        :                   :         : 3         :                
+VCCIO3                       : 157       : power  :                   : 2.5V    : 3         :                
+LVDS59n                      : 158       : output : 2.5 V             :         : 3         : Y              
+LVDS59p                      : 159       : output : 2.5 V             :         : 3         : Y              
+LVDS58n                      : 160       : output : 2.5 V             :         : 3         : Y              
+LVDS58p                      : 161       : output : 2.5 V             :         : 3         : Y              
+LVDS57n                      : 162       : output : 2.5 V             :         : 3         : Y              
+LVDS57p                      : 163       : output : 2.5 V             :         : 3         : Y              
+LVDS56n                      : 164       : output : 2.5 V             :         : 3         : Y              
+LVDS56p                      : 165       : output : 2.5 V             :         : 3         : Y              
+LVDS55n                      : 166       : output : 2.5 V             :         : 3         : Y              
+LVDS55p                      : 167       : output : 2.5 V             :         : 3         : Y              
+LVDS54n                      : 168       : output : 2.5 V             :         : 3         : Y              
+LVDS54p                      : 169       : output : 2.5 V             :         : 3         : Y              
+DPCLK4                       : 170       : output : 2.5 V             :         : 3         : Y              
+GND                          : 171       : gnd    :                   :         :           :                
+VCCIO3                       : 172       : power  :                   : 2.5V    : 3         :                
+LVDS53n                      : 173       : output : 2.5 V             :         : 3         : Y              
+LVDS53p                      : 174       : output : 2.5 V             :         : 3         : Y              
+PIN_175                      : 175       : output : 2.5 V             :         : 3         : Y              
+RESERVED_INPUT               : 176       :        :                   :         : 3         :                
+LVDS52n                      : 177       : output : 2.5 V             :         : 3         : Y              
+LVDS52p                      : 178       : output : 2.5 V             :         : 3         : Y              
+LVDS51n                      : 179       : output : 2.5 V             :         : 3         : Y              
+LVDS51p                      : 180       : output : 2.5 V             :         : 3         : Y              
+LVDS50n                      : 181       : output : 2.5 V             :         : 2         : Y              
+LVDS50p                      : 182       : output : 2.5 V             :         : 2         : Y              
+LVDS49n                      : 183       : output : 2.5 V             :         : 2         : Y              
+LVDS49p                      : 184       : output : 2.5 V             :         : 2         : Y              
+LVDS48n                      : 185       : output : 2.5 V             :         : 2         : Y              
+LVDS48p                      : 186       : output : 2.5 V             :         : 2         : Y              
+LVDS47n                      : 187       : output : 2.5 V             :         : 2         : Y              
+LVDS47p                      : 188       : output : 2.5 V             :         : 2         : Y              
+VCCIO2                       : 189       : power  :                   : 2.5V    : 2         :                
+GND                          : 190       : gnd    :                   :         :           :                
+VCCINT                       : 191       : power  :                   : 1.5V    :           :                
+GND                          : 192       : gnd    :                   :         :           :                
+DPCLK3                       : 193       : output : 2.5 V             :         : 2         : Y              
+RESERVED_INPUT               : 194       :        :                   :         : 2         :                
+PIN_195                      : 195       : output : 2.5 V             :         : 2         : Y              
+LVDS46n                      : 196       : output : 2.5 V             :         : 2         : Y              
+LVDS46p                      : 197       : output : 2.5 V             :         : 2         : Y              
+VCCINT                       : 198       : power  :                   : 1.5V    :           :                
+GND                          : 199       : gnd    :                   :         :           :                
+LVDS41n                      : 200       : output : 2.5 V             :         : 2         : Y              
+LVDS41p                      : 201       : output : 2.5 V             :         : 2         : Y              
+LVDS40n                      : 202       : output : 2.5 V             :         : 2         : Y              
+LVDS40p                      : 203       : output : 2.5 V             :         : 2         : Y              
+VCCINT                       : 204       : power  :                   : 1.5V    :           :                
+GND                          : 205       : gnd    :                   :         :           :                
+LVDS39n                      : 206       : output : 2.5 V             :         : 2         : Y              
+LVDS39p                      : 207       : output : 2.5 V             :         : 2         : Y              
+nCSO                         : 208       : output : 2.5 V             :         : 2         : N              
+VCCIO2                       : 209       : power  :                   : 2.5V    : 2         :                
+GND                          : 210       : gnd    :                   :         :           :                
+VCCINT                       : 211       : power  :                   : 1.5V    :           :                
+GND                          : 212       : gnd    :                   :         :           :                
+LVDS34p                      : 213       : output : 2.5 V             :         : 2         : Y              
+LVDS33n                      : 214       : output : 2.5 V             :         : 2         : Y              
+LVDS33p                      : 215       : output : 2.5 V             :         : 2         : Y              
+LVDS32n                      : 216       : output : 2.5 V             :         : 2         : Y              
+LVDS32p                      : 217       : output : 2.5 V             :         : 2         : Y              
+LVDS31n                      : 218       : output : 2.5 V             :         : 2         : Y              
+LVDS31p                      : 219       : output : 2.5 V             :         : 2         : Y              
+VCCINT                       : 220       : power  :                   : 1.5V    :           :                
+GND                          : 221       : gnd    :                   :         :           :                
+LVDS30p                      : 222       : output : 2.5 V             :         : 2         : Y              
+LVDS29n                      : 223       : output : 2.5 V             :         : 2         : Y              
+LVDS29p                      : 224       : output : 2.5 V             :         : 2         : Y              
+LVDS28n                      : 225       : output : 2.5 V             :         : 2         : Y              
+LVDS28p                      : 226       : output : 2.5 V             :         : 2         : Y              
+RESERVED_INPUT               : 227       :        :                   :         : 2         :                
+DPCLK2                       : 228       : output : 2.5 V             :         : 2         : Y              
+VCCINT                       : 229       : power  :                   : 1.5V    :           :                
+GND                          : 230       : gnd    :                   :         :           :                
+VCCIO2                       : 231       : power  :                   : 2.5V    : 2         :                
+GND                          : 232       : gnd    :                   :         :           :                
+LVDS27n                      : 233       : output : 2.5 V             :         : 2         : Y              
+LVDS27p                      : 234       : output : 2.5 V             :         : 2         : Y              
+LVDS26n                      : 235       : output : 2.5 V             :         : 2         : Y              
+LVDS26p                      : 236       : output : 2.5 V             :         : 2         : Y              
+LVDS25n                      : 237       : output : 2.5 V             :         : 2         : Y              
+LVDS25p                      : 238       : output : 2.5 V             :         : 2         : Y              
+LVDS24n                      : 239       : output : 2.5 V             :         : 2         : Y              
+LVDS24p                      : 240       : output : 2.5 V             :         : 2         : Y              
