@@ -30,5 +30,7 @@ part "HEADER17x2_SMT"
 
         pins = 20
 part "HEADER10x2"
+        pins = 16
+part "HEADER8x2"
         pins = 10
 part "HEADER5x2"
