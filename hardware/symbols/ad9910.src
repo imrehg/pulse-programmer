@@ -1,0 +1,156 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=9000
+pinwidthvertical=300
+pinwidthhorizontal=300
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070730
+name=
+device=AD9910
+refdes=U?
+footprint=TQFP-100
+description=Analog Devices 9910 DDS
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Position	Net	Label
+1		pas	line	l		NC
+2		in	line	l		PLL_LOOP_FILTER
+3		pwr	line	l		AVDD (1.8V)
+4		pwr	line	l		AGND
+5		pwr	line	l		AGND
+6		pwr	line	l		AVDD (1.8V)
+7		in	clk	l		SYNC_IN+
+8		in	clk	l		SYNC_IN-
+9		out	line	l		SYNC_OUT+
+10		out	line	l		SYNC_OUT-
+11		pwr	line	l		DVDD_I/O (3.3V)
+12		out	line	l		SYNC_SMP_ERR
+13		pwr	line	l		DGND
+14		in	line	l		MASTER_RESET
+15		pwr	line	l		DVDD_I/O (3.3V)
+16		pwr	line	l		DGND
+17		pwr	line	l		DVDD (1.8V)
+18		in	line	l		EXT_PWR_DWN
+19		out	line	l		PLL_LOCK
+20		pas	line	l		NC
+21		pwr	line	l		DVDD_I/O (3.3V)
+22		pwr	line	l		DGND
+23		pwr	line	l		DVDD (1.8V)
+24		out	line	l		RAM_SWP_OVR
+25		in	line	l		D15
+26		in	line	b		D14
+27		in	line	b		D13
+28		pwr	line	b		DVDD_I/O (3.3V)
+29		pwr	line	b		DGND
+30		pwr	line	b		DVDD (1.8V)
+31		in	line	b		D12
+32		in	line	b		D11
+33		in	line	b		D10
+34		in	line	b		D9
+35		in	line	b		D8
+36		in	line	b		D7
+37		in	line	b		D6
+38		in	line	b		D5
+39		in	line	b		D4
+40		out	line	b		PDCLK
+41		in	line	b		TxENABLE
+42		in	line	b		D3
+43		in	line	b		D2
+44		in	line	b		D1
+45		pwr	line	b		DVDD_I/O (3.3V)
+46		pwr	line	b		DGND
+47		pwr	line	b		DVDD (1.8V)
+48		in	line	b		D0
+49		in	line	b		F1
+50		in	line	b		F0
+75		pwr	line	r		AVDD (3.3V)
+74		pwr	line	r		AVDD (3.3V)
+73		pwr	line	r		AGND
+72		pas	line	r		NC
+71		in	line	r		I/O_RESET
+70		in	dot	r		\_CS\_
+69		in	clk	r		SCLK
+68		out	line	r		SDO
+67		io	line	r		SDIO
+66		pwr	line	r		DVDD_I/O (3.3V)
+65		pwr	line	r		DGND
+64		pwr	line	r		DVDD (1.8V)
+63		in	line	r		DRHOLD
+62		in	line	r		DRCTL
+61		out	line	r		DROVER
+60		in	line	r		OSK
+59		in	line	r		I/O_UPDATE
+58		pwr	line	r		DGND
+57		pwr	line	r		DVDD (1.8V)
+56		pwr	line	r		DVDD_I/O (3.3V)
+55		out	line	r		SYNC_CLK
+54		in	line	r		PROFILE0
+53		in	line	r		PROFILE1
+52		in	line	r		PROFILE2
+51		pwr	line	r		DGND
+100		pas	line	t		NC
+99		pas	line	t		NC
+98		pas	line	t		NC
+97		pas	line	t		NC
+96		pwr	line	t		AGND
+95		in	line	t		XTAL_SEL
+94		out	line	t		REFCLK_OUT
+93		pas	line	t		NC
+92		pwr	line	t		AVDD (1.8V)
+91		in	clk	t		\_REF_CLK\_
+90		in	clk	t		REF_CLK
+89		pwr	line	t		AVDD (1.8V)
+88		pwr	line	t		AGND
+87		pas	line	t		NC
+86		pas	line	t		NC
+85		pwr	line	t		AGND
+84		out	line	t		DAC_RSET
+83		pwr	line	t		AVDD (3.3V)
+82		pwr	line	t		AGND
+81		out	line	t		IOUT
+80		out	line	t		\_IOUT\_
+79		pwr	line	t		AGND
+78		pwr	line	t		AGND
+77		pwr	line	t		AVDD (3.3V)
+76		pwr	line	t		AVDD (3.3V)
