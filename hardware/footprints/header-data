@@ -34,3 +34,20 @@ part "HEADER10x2"
 part "HEADER8x2"
         pins = 10
 part "HEADER5x2"
+
+        type = "edgecard"
+        padwidth = 50 mils
+        padheight = 275 mils
+        bankpins = 18
+        bankpinstwo = 31
+        banksep = 200 mils
+        height = 500 mils
+part "EDGECARD49x2"
+
+        type = "edgecard"
+        edgedip = "yes"
+        silkheight = 368 mils
+        paddia = 60 mils
+        drill = 42 mils
+        height = 200 mils
+part "EDGEHEADER49x2"
