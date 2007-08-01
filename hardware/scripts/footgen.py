@@ -73,6 +73,10 @@ def defattr():
         "edgex"        :0,
         "edgewidth"    :0,
         "headernum"    :0,
+        "bankpinstwo"  :0,
+        "banksep"      :0,
+        "edgedip"      :0,
+        "silkheight"   :0,
 }
 
 # BGA row names 20 total
@@ -364,6 +368,76 @@ def qfp(attrlist):
         qfpelt = qfpelt + box(x,y,-x,-y,silkwidth)
         qfpelt = qfpelt + silk(-x,-y,-(x+3940),-(y+3940),silkwidth)
     return qfpelt
+
+def edgecard(attrlist):
+    edgeelt = element(attrlist)
+    bankpins1 = findattr(attrlist, "bankpins")
+    bankpins2 = findattr(attrlist, "bankpinstwo")
+    banksep = findattr(attrlist, "banksep")
+    padwidth = findattr(attrlist, "padwidth")
+    padheight = findattr(attrlist, "padheight")
+    pitch = findattr(attrlist, "pitch")
+    height = findattr(attrlist, "height")
+    polyclear = findattr(attrlist, "polyclear")
+    maskclear = findattr(attrlist, "maskclear")
+    silkwidth = findattr(attrlist, "silkwidth")
+    edgedip = findattr(attrlist, "edgedip")
+    paddia = findattr(attrlist, "paddia")
+    drill = findattr(attrlist, "drill")
+    silkheight = findattr(attrlist, "silkheight")
+    startpin = 1
+    startx = 0
+    
+    for bankpins in [bankpins1, bankpins2]:
+        if (edgedip == "yes"):
+            x = startx
+            pn = startpin
+            for pinnum in range(bankpins):
+              edgeelt = edgeelt + pin(x,0,paddia,drill,"T"+str(pn),
+                                  polyclear,maskclear)
+              edgeelt = edgeelt + pin(x,height,paddia,drill,"B"+str(pn),
+                                  polyclear,maskclear)
+              pn += 1
+              x += pitch
+        else:
+            edgeelt += rowofpads([startx + (pitch*(bankpins-1)/2), 0],\
+                                 pitch, "left", padwidth, padheight,\
+                                 startpin, bankpins, \
+                                 maskclear, polyclear, prefix="T")
+            edgeelt += rowofpads([startx + (pitch*(bankpins-1)/2), 0],\
+                                 pitch, "left", padwidth, padheight,\
+                                 startpin, bankpins, \
+                                 maskclear, polyclear, prefix="B", onsolder=True)
+        startpin += bankpins
+        startx += banksep + (pitch*(bankpins+1))
+
+    if (edgedip == "yes"):
+        edgeelt += box(-pitch, -(silkheight - height)/2,
+                       pitch*(bankpins1+bankpins2+1)+banksep,
+                       (silkheight + height)/2, silkwidth)
+    else:
+        edgeelt += silk(-pitch, -padheight/2, -pitch,
+                        -(padheight/2)+height, silkwidth)
+        edgeelt += silk(-pitch, -padheight/2, pitch*(bankpins1), -padheight/2,
+                       silkwidth)
+        
+        edgeelt += silk(pitch*(bankpins1), -padheight/2, pitch*(bankpins1),
+                       -(padheight/2)+height, silkwidth)
+        edgeelt += silk(pitch*(bankpins1)+banksep, -padheight/2,
+                       pitch*(bankpins1)+banksep, -(padheight/2)+height,
+                       silkwidth)
+        
+        edgeelt += silk(pitch*(bankpins1)+banksep, -padheight/2,
+                        banksep+(pitch*(bankpins1+bankpins2+1)), -padheight/2,
+                        silkwidth)
+        edgeelt += silk(-pitch, -(padheight/2)+height,
+                        banksep + (pitch*(bankpins1+bankpins2+2)),
+                        -(padheight/2)+height, silkwidth)
+        edgeelt += silk(banksep+(pitch*(bankpins1+bankpins2+1)),
+                        -(padheight/2),
+                        banksep+(pitch*(bankpins1+bankpins2+1)),
+                        -(padheight/2)+height, silkwidth)
+    return edgeelt
 
 def samtec(attrlist):
     samelt = element(attrlist)
@@ -672,6 +746,8 @@ def genpart(attributes):
         newpart = sip(attributes)
     elif parttype == 'samtec':
         newpart = samtec(attributes)
+    elif parttype == 'edgecard':
+        newpart = edgecard(attributes)
     else:
         print "Unknown type "+parttype
     for line in silkcustom:
