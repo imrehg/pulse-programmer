@@ -1,0 +1,104 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=6000
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070802
+name=
+device=AD9517
+refdes=U?
+footprint=LFCSP-48_EP
+description=Analog Devices 9517 Clock Distributor
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Position	Net	Label
+1		out	line	l		REFMON
+2		out	line	l		LD
+3		pwr	line	l		VCP
+4		out	line	l		CP
+5		out	line	l		STATUS
+6		in	line	l		REF_SEL
+7		in	dot	l		\_SYNC\_
+8		in	line	l		LF
+9		pas	line	l		BYPASS
+10		pwr	line	l		VS
+11		in	clk	l		CLK
+12		in	clk	l		\_CLK\_
+13		in	line	b		SCLK
+14		in	dot	b		\_CS\_
+15		out	line	b		SDO
+16		io	line	b		SDIO
+17		in	dot	b		\_RESET\_
+18		in	dot	b		\_PD\_
+19		out	line	b		OUT2
+20		out	line	b		\_OUT2\_
+21		pwr	line	b		VS_LVPECL
+22		out	line	b		OUT3
+23		out	line	b		\_OUT3\_
+24		pwr	line	b		VS
+36		pwr	line	r		VS
+35		out	line	r		OUT4
+34		out	line	r		\_OUT4\_
+33		out	line	r		OUT5
+32		out	line	r		\_OUT5\_
+31		pwr	line	r		VS
+30		pwr	line	r		VS
+29		out	line	r		\_OUT7\_
+28		out	line	r		OUT7
+27		out	line	r		\_OUT6\_
+26		out	line	r		OUT6
+25		pwr	line	r		VS
+48		in	clk	t		REFIN / REF1
+47		in	clk	t		\_REFIN\_ / REF2
+46		pas	line	t		CPRSET
+45		pwr	line	t		VS
+44		pas	line	t		RSET
+43		pwr	line	t		VS
+42		out	line	t		OUT0
+41		out	line	t		\_OUT0\_
+40		pwr	line	t		VS_LVPECL
+39		out	line	t		OUT1
+38		out	line	t		\_OUT1\_
+37		pwr	line	t		VS
