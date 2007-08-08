@@ -29,11 +29,18 @@ part "HEADER17x2_SMT"
         silkslot = "yes"
 
         pins = 20
+        silkboxheight = 1.288 in
+        silkboxwidth = 338 mils
 part "HEADER10x2"
+        silkboxheight = 1.088 in
         pins = 16
 part "HEADER8x2"
         pins = 10
+        silkboxheight = 788 mils
 part "HEADER5x2"
+        pins = 34
+        silkboxheight = 1.988 in
+part "HEADER17x2"
 
         type = "edgecard"
         padwidth = 50 mils

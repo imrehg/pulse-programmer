@@ -27,16 +27,30 @@ part "PQFP-240"
 	width = 13.8 mm		# distance inside pins
 	height = 19.6 mm
 	padwidth 1.6 mm
-	padheight 0.4 mm
+	padheight 0.3 mm
         silkcorner 40 mil
 part "TQFP-100"
 
-	pins 80
+	pins 100
         pinshigh 0
+        pitch = 0.5 mm
+	width = 13.8 mm		# distance inside pins
+	height = 13.8 mm
+	padwidth 1.6 mm
+        ep = 5 mm
+part "TQFP-100_EP"
+
+	pins 80
 	pitch 0.65 mm
 	width = 15.6 mm		# distance inside pins
 	height = 15.6 mm
 	padwidth 1.4 mm
-	padheight 0.3 mm
-        silkcorner 40 mil
+        ep = 0 mm
 part "PQFP-80"
+
+	pins 48
+	pitch 0.65 mm
+	width = 15.6 mm		# distance inside pins
+	height = 15.6 mm
+	padwidth 1.4 mm
+part "LFCSP-48"
