@@ -1,0 +1,130 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=1500
+pinwidthvertical=400
+pinwidthhorizontal=400
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070420
+name=LVDS Subsheet
+device=island-east-lvds
+refdes=S?
+footprint=
+description="LVDS side of East Island"
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Pos	Net	Label
+1		pwr	line	l		+3.3V
+2		pwr	line	l		GND
+3		in	line	l		BA0
+4		in	line	l		BA1
+5		in	line	l		BA2
+6		in	line	l		BA3
+7		in	line	l		BA4
+8		in	line	l		PSEN
+9		in	line	l		PS0
+10		in	line	l		PS1
+11		in	line	l		WRB
+12		in	line	l		UPD
+13		in	line	l		A0
+14		in	line	l		A1
+15		in	line	l		A2
+16		in	line	l		A3
+17		in	line	l		A4
+18		in	line	l		A5
+19		in	line	l		D0
+20		in	line	l		D1
+21		in	line	l		D2
+22		in	line	l		D3
+23		in	line	l		D4
+24		in	line	l		D5
+25		in	line	l		D6
+26		in	line	l		D7
+27		out	line	r		BA0+
+28		out	line	r		BA0-
+29		out	line	r		BA1+
+30		out	line	r		BA1-
+31		out	line	r		BA2+
+32		out	line	r		BA2-
+33		out	line	r		BA3+
+34		out	line	r		BA3-
+35		out	line	r		BA4+
+36		out	line	r		BA4-
+37		out	line	r		PSEN+
+38		out	line	r		PSEN-
+39		out	line	r		PS0+
+40		out	line	r		PS0-
+41		out	line	r		PS1+
+42		out	line	r		PS1-
+43		out	line	r		WRB+
+44		out	line	r		WRB-
+45		out	line	r		UPD+
+46		out	line	r		UPD-
+47		out	line	r		A0+
+48		out	line	r		A0-
+49		out	line	r		A1+
+50		out	line	r		A1-
+51		out	line	r		A2+
+52		out	line	r		A2-
+53		out	line	r		A3+
+54		out	line	r		A3-
+55		out	line	r		A4+
+56		out	line	r		A4-
+57		out	line	r		A5+
+58		out	line	r		A5-
+59		out	line	r		D0+
+60		out	line	r		D0-
+61		out	line	r		D1+
+62		out	line	r		D1-
+63		out	line	r		D2+
+64		out	line	r		D2-
+65		out	line	r		D3+
+66		out	line	r		D3-
+67		out	line	r		D4+
+68		out	line	r		D4-
+69		out	line	r		D5+
+70		out	line	r		D5-
+71		out	line	r		D6+
+72		out	line	r		D6-
+73		out	line	r		D7+
+74		out	line	r		D7-

@@ -1,0 +1,338 @@
+v 20070216 1
+C 40000 40000 0 0 0 title-B.sym
+C 41500 49900 1 0 0 input-1.sym
+{
+T 41600 50200 5 10 0 0 0 0 1
+device=OUTPUT
+T 42400 49900 5 10 1 1 0 0 1
+refdes=BA0-
+}
+C 41500 49500 1 0 0 input-1.sym
+{
+T 41600 49800 5 10 0 0 0 0 1
+device=OUTPUT
+T 42400 49500 5 10 1 1 0 0 1
+refdes=BA0+
+}
+C 41500 49100 1 0 0 input-1.sym
+{
+T 41600 49400 5 10 0 0 0 0 1
+device=OUTPUT
+T 42400 49100 5 10 1 1 0 0 1
+refdes=BA1+
+}
+C 41500 48700 1 0 0 input-1.sym
+{
+T 41600 49000 5 10 0 0 0 0 1
+device=OUTPUT
+T 42400 48700 5 10 1 1 0 0 1
+refdes=BA1-
+}
+C 41500 48300 1 0 0 input-1.sym
+{
+T 41600 48600 5 10 0 0 0 0 1
+device=OUTPUT
+T 42400 48300 5 10 1 1 0 0 1
+refdes=BA2-
+}
+C 41500 47900 1 0 0 input-1.sym
+{
+T 41600 48200 5 10 0 0 0 0 1
+device=OUTPUT
+T 42400 47900 5 10 1 1 0 0 1
+refdes=BA2+
+}
+C 41500 47500 1 0 0 input-1.sym
+{
+T 41600 47800 5 10 0 0 0 0 1
+device=OUTPUT
+T 42400 47500 5 10 1 1 0 0 1
+refdes=BA3+
+}
+C 41500 47100 1 0 0 input-1.sym
+{
+T 41600 47400 5 10 0 0 0 0 1
+device=OUTPUT
+T 42400 47100 5 10 1 1 0 0 1
+refdes=BA3-
+}
+C 41600 45700 1 0 0 input-1.sym
+{
+T 41700 46000 5 10 0 0 0 0 1
+device=OUTPUT
+T 42500 45700 5 10 1 1 0 0 1
+refdes=BA4-
+}
+C 41600 45300 1 0 0 input-1.sym
+{
+T 41700 45600 5 10 0 0 0 0 1
+device=OUTPUT
+T 42500 45300 5 10 1 1 0 0 1
+refdes=BA4+
+}
+C 41600 44900 1 0 0 input-1.sym
+{
+T 41700 45200 5 10 0 0 0 0 1
+device=OUTPUT
+T 42500 44900 5 10 1 1 0 0 1
+refdes=PSEN+
+}
+C 41600 44500 1 0 0 input-1.sym
+{
+T 41700 44800 5 10 0 0 0 0 1
+device=OUTPUT
+T 42500 44500 5 10 1 1 0 0 1
+refdes=PSEN-
+}
+C 41600 44100 1 0 0 input-1.sym
+{
+T 41700 44400 5 10 0 0 0 0 1
+device=OUTPUT
+T 42500 44100 5 10 1 1 0 0 1
+refdes=PS0-
+}
+C 41600 43700 1 0 0 input-1.sym
+{
+T 41700 44000 5 10 0 0 0 0 1
+device=OUTPUT
+T 42500 43700 5 10 1 1 0 0 1
+refdes=PS0+
+}
+C 41600 42900 1 0 0 input-1.sym
+{
+T 41700 43200 5 10 0 0 0 0 1
+device=OUTPUT
+T 42500 42900 5 10 1 1 0 0 1
+refdes=PS1-
+}
+C 41600 43300 1 0 0 input-1.sym
+{
+T 41700 43600 5 10 0 0 0 0 1
+device=OUTPUT
+T 42500 43300 5 10 1 1 0 0 1
+refdes=PS1+
+}
+C 47200 49900 1 0 0 input-1.sym
+{
+T 47300 50200 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 49900 5 10 1 1 0 0 1
+refdes=WRB-
+}
+C 47200 49500 1 0 0 input-1.sym
+{
+T 47300 49800 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 49500 5 10 1 1 0 0 1
+refdes=WRB+
+}
+C 47200 49100 1 0 0 input-1.sym
+{
+T 47300 49400 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 49100 5 10 1 1 0 0 1
+refdes=UPD+
+}
+C 47200 48700 1 0 0 input-1.sym
+{
+T 47300 49000 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 48700 5 10 1 1 0 0 1
+refdes=UPD-
+}
+C 47200 48300 1 0 0 input-1.sym
+{
+T 47300 48600 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 48300 5 10 1 1 0 0 1
+refdes=A0-
+}
+C 47200 47900 1 0 0 input-1.sym
+{
+T 47300 48200 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 47900 5 10 1 1 0 0 1
+refdes=A0+
+}
+C 47200 47500 1 0 0 input-1.sym
+{
+T 47300 47800 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 47500 5 10 1 1 0 0 1
+refdes=A1+
+}
+C 47200 47100 1 0 0 input-1.sym
+{
+T 47300 47400 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 47100 5 10 1 1 0 0 1
+refdes=A1-
+}
+C 47200 45700 1 0 0 input-1.sym
+{
+T 47300 46000 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 45700 5 10 1 1 0 0 1
+refdes=A2-
+}
+C 47200 44900 1 0 0 input-1.sym
+{
+T 47300 45200 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 44900 5 10 1 1 0 0 1
+refdes=A3+
+}
+C 47200 45300 1 0 0 input-1.sym
+{
+T 47300 45600 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 45300 5 10 1 1 0 0 1
+refdes=A2+
+}
+C 47200 44500 1 0 0 input-1.sym
+{
+T 47300 44800 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 44500 5 10 1 1 0 0 1
+refdes=A3-
+}
+C 47200 44100 1 0 0 input-1.sym
+{
+T 47300 44400 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 44100 5 10 1 1 0 0 1
+refdes=A4-
+}
+C 47200 43700 1 0 0 input-1.sym
+{
+T 47300 44000 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 43700 5 10 1 1 0 0 1
+refdes=A4+
+}
+C 47200 43300 1 0 0 input-1.sym
+{
+T 47300 43600 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 43300 5 10 1 1 0 0 1
+refdes=A5+
+}
+C 47200 42900 1 0 0 input-1.sym
+{
+T 47300 43200 5 10 0 0 0 0 1
+device=OUTPUT
+T 48100 42900 5 10 1 1 0 0 1
+refdes=A5-
+}
+C 52700 49900 1 0 0 input-1.sym
+{
+T 52800 50200 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 49900 5 10 1 1 0 0 1
+refdes=D0-
+}
+C 52700 49500 1 0 0 input-1.sym
+{
+T 52800 49800 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 49500 5 10 1 1 0 0 1
+refdes=D0+
+}
+C 52700 49100 1 0 0 input-1.sym
+{
+T 52800 49400 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 49100 5 10 1 1 0 0 1
+refdes=D1+
+}
+C 52700 48700 1 0 0 input-1.sym
+{
+T 52800 49000 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 48700 5 10 1 1 0 0 1
+refdes=D1-
+}
+C 52700 48300 1 0 0 input-1.sym
+{
+T 52800 48600 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 48300 5 10 1 1 0 0 1
+refdes=D2-
+}
+C 52700 47900 1 0 0 input-1.sym
+{
+T 52800 48200 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 47900 5 10 1 1 0 0 1
+refdes=D2+
+}
+C 52700 47500 1 0 0 input-1.sym
+{
+T 52800 47800 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 47500 5 10 1 1 0 0 1
+refdes=D3+
+}
+C 52700 47100 1 0 0 input-1.sym
+{
+T 52800 47400 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 47100 5 10 1 1 0 0 1
+refdes=D3-
+}
+C 52700 45700 1 0 0 input-1.sym
+{
+T 52800 46000 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 45700 5 10 1 1 0 0 1
+refdes=D4-
+}
+C 52700 45300 1 0 0 input-1.sym
+{
+T 52800 45600 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 45300 5 10 1 1 0 0 1
+refdes=D4+
+}
+C 52700 44900 1 0 0 input-1.sym
+{
+T 52800 45200 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 44900 5 10 1 1 0 0 1
+refdes=D5+
+}
+C 52700 44500 1 0 0 input-1.sym
+{
+T 52800 44800 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 44500 5 10 1 1 0 0 1
+refdes=D5-
+}
+C 52700 44100 1 0 0 input-1.sym
+{
+T 52800 44400 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 44100 5 10 1 1 0 0 1
+refdes=D6-
+}
+C 52700 43700 1 0 0 input-1.sym
+{
+T 52800 44000 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 43700 5 10 1 1 0 0 1
+refdes=D6+
+}
+C 52700 43300 1 0 0 input-1.sym
+{
+T 52800 43600 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 43300 5 10 1 1 0 0 1
+refdes=D7+
+}
+C 52700 42900 1 0 0 input-1.sym
+{
+T 52800 43200 5 10 0 0 0 0 1
+device=OUTPUT
+T 53600 42900 5 10 1 1 0 0 1
+refdes=D7-
+}
