@@ -32,6 +32,9 @@ part "HEADER17x2_SMT"
         silkboxheight = 1.288 in
         silkboxwidth = 338 mils
 part "HEADER10x2"
+        pins = 24
+        silkboxheight = 1.488 in
+part "HEADER12x2"
         silkboxheight = 1.088 in
         pins = 16
 part "HEADER8x2"
