@@ -1,0 +1,5 @@
+schematics face-lvds.sch
+output-name face-lvds
+elements-dir ../footprints
+use-files
+m4-pcbdir /
