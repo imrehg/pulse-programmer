@@ -1,0 +1,5 @@
+schematics far-lvds.sch
+output-name far-lvds
+elements-dir ../footprints
+use-files
+m4-pcbdir /
