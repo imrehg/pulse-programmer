@@ -15,7 +15,7 @@ LAYER_COLORS = \
 	--layer-color-7 "\#408040" \
 
 # This is a high-speed board
-TARGETS_GERBER = $(GERBER_FILES_HS)
-TARGETS_PS = $(PS_FILES_HS)
+TARGETS_GERBER = $(GERBER_FILES_HS_FRONT)
+TARGETS_PS = $(PS_FILES_HS_FRONT)
 
 include ../Makefile.common
