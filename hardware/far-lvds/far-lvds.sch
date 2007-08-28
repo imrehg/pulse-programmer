@@ -211,6 +211,8 @@ T 48300 49100 5 10 0 0 0 0 1
 device=ds90lv048
 T 48300 49300 5 10 0 0 0 0 1
 footprint=TSSOP-16
+T 48300 45000 5 10 1 1 0 0 1
+value=DS90LV048
 }
 C 56800 50900 1 180 0 coax.sym
 {
@@ -218,6 +220,8 @@ T 56500 50100 5 10 1 1 0 0 1
 refdes=J8
 T 55800 50100 5 10 0 0 0 0 1
 footprint=BNC_VERT
+T 56000 50800 5 10 1 1 0 0 1
+value=73131-5013
 }
 C 56200 49600 1 0 0 gnd-1.sym
 {
@@ -231,6 +235,8 @@ T 56500 47800 5 10 1 1 0 0 1
 refdes=J7
 T 55800 47800 5 10 0 0 0 0 1
 footprint=BNC_VERT
+T 55900 48600 5 10 1 1 0 0 1
+value=73131-5013
 }
 C 56200 47300 1 0 0 gnd-1.sym
 {
@@ -244,6 +250,8 @@ T 56300 45400 5 10 1 1 0 0 1
 refdes=J6
 T 55600 45400 5 10 0 0 0 0 1
 footprint=BNC_VERT
+T 55900 46200 5 10 1 1 0 0 1
+value=73131-5013
 }
 C 56000 44900 1 0 0 gnd-1.sym
 {
@@ -342,7 +350,7 @@ refdes=R2
 T 45600 48300 5 10 0 0 0 0 1
 footprint=0402
 T 45600 48300 5 10 1 1 0 0 1
-value=174
+value=174k
 }
 C 45600 47300 1 90 0 resistor-1.sym
 {
@@ -353,7 +361,7 @@ refdes=R4
 T 45600 47300 5 10 0 0 0 0 1
 footprint=0402
 T 45600 47400 5 10 1 1 0 0 1
-value=100
+value=100k
 }
 C 46000 47500 1 270 1 cap-small.sym
 {
@@ -403,7 +411,7 @@ refdes=R6
 T 45700 46000 5 10 0 0 0 0 1
 footprint=0402
 T 45700 46000 5 10 1 1 0 0 1
-value=174
+value=174k
 }
 C 45700 45000 1 90 0 resistor-1.sym
 {
@@ -414,7 +422,7 @@ refdes=R8
 T 45700 45000 5 10 0 0 0 0 1
 footprint=0402
 T 45700 45100 5 10 1 1 0 0 1
-value=100
+value=100k
 }
 C 46100 45200 1 270 1 cap-small.sym
 {
@@ -464,7 +472,7 @@ refdes=R10
 T 46100 43700 5 10 0 0 0 0 1
 footprint=0402
 T 46100 43700 5 10 1 1 0 0 1
-value=174
+value=174k
 }
 C 46100 42700 1 90 0 resistor-1.sym
 {
@@ -475,7 +483,7 @@ refdes=R12
 T 46100 42700 5 10 0 0 0 0 1
 footprint=0402
 T 46100 42800 5 10 1 1 0 0 1
-value=100
+value=100k
 }
 C 46500 42900 1 270 1 cap-small.sym
 {
@@ -525,6 +533,8 @@ T 54900 44600 5 10 1 1 0 0 1
 refdes=J5
 T 55300 46700 5 10 0 0 0 0 1
 footprint=BNC_VERT
+T 53600 44300 5 10 1 1 0 0 1
+value=73131-5013
 }
 C 54600 44100 1 0 0 gnd-1.sym
 {
@@ -563,7 +573,7 @@ refdes=R14
 T 45600 41400 5 10 0 0 0 0 1
 footprint=0402
 T 45600 41400 5 10 1 1 0 0 1
-value=174
+value=174k
 }
 C 45600 40400 1 90 0 resistor-1.sym
 {
@@ -574,7 +584,7 @@ refdes=R16
 T 45600 40400 5 10 0 0 0 0 1
 footprint=0402
 T 45600 40500 5 10 1 1 0 0 1
-value=100
+value=100k
 }
 C 46000 40600 1 270 1 cap-small.sym
 {
@@ -717,6 +727,8 @@ T 52500 50600 5 10 0 0 0 0 1
 device=74ABT125CSC
 T 52500 50800 5 10 0 0 0 0 1
 footprint=TSSOP-14
+T 52500 45500 5 10 1 1 0 0 1
+value=74ABT125CSC
 }
 C 48800 43200 1 0 0 inductor-1.sym
 {
@@ -738,7 +750,7 @@ refdes=U4
 T 50100 43900 5 10 0 0 0 0 1
 device=Oscillator
 T 50100 43700 5 10 1 1 0 0 1
-value=ZSR330
+value=MIC5201-3.3YS TR
 T 49700 42300 5 10 0 0 0 0 1
 footprint=SOT223-3
 }
