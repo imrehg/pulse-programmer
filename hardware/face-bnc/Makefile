@@ -4,6 +4,11 @@ TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
 face-bnc.tgt: \
+	face-bnc-buffers1.tgt \
+	face-bnc-buffers2.tgt \
+	face-bnc-buffers3.tgt \
+	face-bnc-glue.tgt \
+	face-bnc-jacks.tgt \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \

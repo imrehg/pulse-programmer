@@ -237,7 +237,7 @@ pinnumber=23
 T 300 1450 5 8 0 1 0 8 1
 pinseq=22
 T 450 1500 9 8 1 1 0 0 1
-pinlabel=TTL_IN_0
+pinlabel=TTL_IN0
 T 450 1500 5 8 0 1 0 2 1
 pintype=out
 }
@@ -248,7 +248,7 @@ pinnumber=24
 T 300 1150 5 8 0 1 0 8 1
 pinseq=23
 T 450 1200 9 8 1 1 0 0 1
-pinlabel=TTL_IN_1
+pinlabel=TTL_IN1
 T 450 1200 5 8 0 1 0 2 1
 pintype=out
 }
@@ -259,7 +259,7 @@ pinnumber=25
 T 300 850 5 8 0 1 0 8 1
 pinseq=24
 T 450 900 9 8 1 1 0 0 1
-pinlabel=TTL_IN_2
+pinlabel=TTL_IN2
 T 450 900 5 8 0 1 0 2 1
 pintype=out
 }
@@ -270,7 +270,7 @@ pinnumber=26
 T 300 550 5 8 0 1 0 8 1
 pinseq=25
 T 450 600 9 8 1 1 0 0 1
-pinlabel=TTL_IN_3
+pinlabel=TTL_IN3
 T 450 600 5 8 0 1 0 2 1
 pintype=out
 }
@@ -512,7 +512,7 @@ pinnumber=47
 T 2500 1450 5 8 0 1 0 2 1
 pinseq=47
 T 2350 1500 9 8 1 1 0 6 1
-pinlabel=TTL_IN_4
+pinlabel=TTL_IN4
 T 2350 1500 5 8 0 1 0 8 1
 pintype=out
 }
@@ -523,7 +523,7 @@ pinnumber=48
 T 2500 1150 5 8 0 1 0 2 1
 pinseq=48
 T 2350 1200 9 8 1 1 0 6 1
-pinlabel=TTL_IN_5
+pinlabel=TTL_IN5
 T 2350 1200 5 8 0 1 0 8 1
 pintype=out
 }
@@ -534,7 +534,7 @@ pinnumber=49
 T 2500 850 5 8 0 1 0 2 1
 pinseq=49
 T 2350 900 9 8 1 1 0 6 1
-pinlabel=TTL_IN_6
+pinlabel=TTL_IN6
 T 2350 900 5 8 0 1 0 8 1
 pintype=out
 }
@@ -545,7 +545,7 @@ pinnumber=50
 T 2500 550 5 8 0 1 0 2 1
 pinseq=50
 T 2350 600 9 8 1 1 0 6 1
-pinlabel=TTL_IN_7
+pinlabel=TTL_IN7
 T 2350 600 5 8 0 1 0 8 1
 pintype=out
 }

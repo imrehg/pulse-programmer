@@ -1,0 +1,74 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=2000
+pinwidthvertical=200
+pinwidthhorizontal=200
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070420
+name=Input Buffers Subsheet
+device=face-bnc-buffers-in
+refdes=S?
+footprint=
+description="Input Buffers of BNC Face"
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Pos	Net	Label
+1		in	line	l		IN0
+2		in	line	l		IN1
+3		in	line	l		IN2
+4		in	line	l		IN3
+5		in	line	l		IN4
+6		in	line	l		IN5
+7		in	line	l		IN6
+8		in	line	l		IN7
+25		out	line	r		TI0
+26		out	line	r		TI1
+27		out	line	r		TI2
+28		out	line	r		TI3
+29		out	line	r		TI4
+30		out	line	r		TI5
+31		out	line	r		TI6
+32		out	line	r		TI7
+50		in	line	t		+5V
+51		in	line	t		GND

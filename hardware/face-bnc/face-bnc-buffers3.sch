@@ -9,7 +9,7 @@ face-bnc-buffers3.sch
 T 50000 40100 9 10 1 0 0 0 1
 4
 T 51500 40100 9 10 1 0 0 0 1
-?
+6
 T 53000 40700 9 10 1 0 0 0 1
 http://local-box.org
 T 54000 40400 9 10 1 0 0 0 1
@@ -19,7 +19,7 @@ Paul T. Pham
 C 43700 45500 1 0 0 74abt125csc.sym
 {
 T 43900 49100 5 10 1 1 0 6 1
-refdes=U?
+refdes=U1
 T 44100 50500 5 10 0 0 0 0 1
 device=74ABT125CSC
 T 44100 50700 5 10 0 0 0 0 1
@@ -35,7 +35,7 @@ netname=GND
 C 44900 49100 1 0 1 cap-small.sym
 {
 T 44700 48880 5 10 1 1 0 0 1
-refdes=C?
+refdes=C4
 T 44500 49580 5 10 0 0 180 2 1
 device=Cap Small
 T 45100 49100 5 10 1 1 0 6 1
@@ -160,7 +160,7 @@ C 41600 48800 1 90 0 resistor-1.sym
 T 41200 49100 5 10 0 0 90 0 1
 device=RESISTOR
 T 41300 48900 5 10 1 1 270 0 1
-refdes=R?
+refdes=R1
 T 41600 48800 5 10 0 0 0 0 1
 footprint=0402
 T 41800 48900 5 10 1 1 90 0 1
@@ -177,7 +177,7 @@ C 41600 46900 1 90 0 resistor-1.sym
 T 41200 47200 5 10 0 0 90 0 1
 device=RESISTOR
 T 41300 47000 5 10 1 1 270 0 1
-refdes=R?
+refdes=R2
 T 41600 46900 5 10 0 0 0 0 1
 footprint=0402
 T 41800 47000 5 10 1 1 90 0 1
@@ -194,7 +194,7 @@ C 41600 45100 1 90 0 resistor-1.sym
 T 41200 45400 5 10 0 0 90 0 1
 device=RESISTOR
 T 41300 45200 5 10 1 1 270 0 1
-refdes=R?
+refdes=R3
 T 41600 45100 5 10 0 0 0 0 1
 footprint=0402
 T 41800 45200 5 10 1 1 90 0 1
@@ -211,7 +211,7 @@ C 41600 43400 1 90 0 resistor-1.sym
 T 41200 43700 5 10 0 0 90 0 1
 device=RESISTOR
 T 41300 43500 5 10 1 1 270 0 1
-refdes=R?
+refdes=R4
 T 41600 43400 5 10 0 0 0 0 1
 footprint=0402
 T 41800 43500 5 10 1 1 90 0 1
@@ -236,7 +236,7 @@ N 43000 46100 43800 46100 4
 C 49500 45600 1 0 0 74abt125csc.sym
 {
 T 49700 49200 5 10 1 1 0 6 1
-refdes=U?
+refdes=U2
 T 49900 50600 5 10 0 0 0 0 1
 device=74ABT125CSC
 T 49900 50800 5 10 0 0 0 0 1
@@ -252,7 +252,7 @@ netname=GND
 C 50700 49200 1 0 1 cap-small.sym
 {
 T 50500 48980 5 10 1 1 0 0 1
-refdes=C?
+refdes=C5
 T 50300 49680 5 10 0 0 180 2 1
 device=Cap Small
 T 50900 49200 5 10 1 1 0 6 1
@@ -352,7 +352,7 @@ C 47400 48900 1 90 0 resistor-1.sym
 T 47000 49200 5 10 0 0 90 0 1
 device=RESISTOR
 T 47100 49000 5 10 1 1 270 0 1
-refdes=R?
+refdes=R5
 T 47400 48900 5 10 0 0 0 0 1
 footprint=0402
 T 47600 49000 5 10 1 1 90 0 1
@@ -369,7 +369,7 @@ C 47400 47000 1 90 0 resistor-1.sym
 T 47000 47300 5 10 0 0 90 0 1
 device=RESISTOR
 T 47100 47100 5 10 1 1 270 0 1
-refdes=R?
+refdes=R6
 T 47400 47000 5 10 0 0 0 0 1
 footprint=0402
 T 47600 47100 5 10 1 1 90 0 1
@@ -386,7 +386,7 @@ C 47400 45200 1 90 0 resistor-1.sym
 T 47000 45500 5 10 0 0 90 0 1
 device=RESISTOR
 T 47100 45300 5 10 1 1 270 0 1
-refdes=R?
+refdes=R7
 T 47400 45200 5 10 0 0 0 0 1
 footprint=0402
 T 47600 45300 5 10 1 1 90 0 1
@@ -403,7 +403,7 @@ C 47400 43500 1 90 0 resistor-1.sym
 T 47000 43800 5 10 0 0 90 0 1
 device=RESISTOR
 T 47100 43600 5 10 1 1 270 0 1
-refdes=R?
+refdes=R8
 T 47400 43500 5 10 0 0 0 0 1
 footprint=0402
 T 47600 43600 5 10 1 1 90 0 1
