@@ -30,12 +30,12 @@ clean:
 	rm -rf *.pcb.bak* *.pcb- *.cmd *.net $(BOARD)-$(REV)
 
 TOP_SRC_DIR = ~/sf/svnroot/hardware
-GROOT = /usr/local/geda
+GROOT = /usr/local
 GBIN = $(GROOT)/bin
 GSCHEM = $(GBIN)/gschem
 GRENUM = $(GBIN)/refdes_renum --nocopy
-GNET = $(GBIN)/gnetlist -q
-G2PCB = $(GBIN)/gsch2pcb --use-files
+GNET = /usr/bin/gnetlist -q
+G2PCB = gsch2pcb --use-files
 PCB = $(GBIN)/pcb
 PCB_VIEW = $(GBIN)/pcb --
 GBR = $(PCB) -x gerber --verbose --gerberfile $(GBR_PRE)

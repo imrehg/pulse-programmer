@@ -1,0 +1,16 @@
+v 20060906 1
+C 67400 79200 1 0 0 led-small.sym
+{
+T 67600 79400 5 10 1 1 0 0 1
+refdes=D?
+T 67500 79800 5 10 0 0 0 0 1
+device=LED
+}
+C 61800 78700 1 0 0 connector2-1.sym
+{
+T 62000 79700 5 10 0 0 0 0 1
+device=CONNECTOR_2
+T 61800 79500 5 10 1 1 0 0 1
+refdes=CONN?
+}
+C 60400 64600 0 0 0 title-C.sym
