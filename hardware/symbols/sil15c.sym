@@ -130,7 +130,7 @@ footprint=keyed-sip11
 T 1100 6300 5 10 0 0 0 0 1
 author=Muir Kumph
 T 1100 6500 5 10 0 0 0 0 1
-documentation=
+documentation="http://rocky.digikey.com/WebLib/Artesyn Technologies/Web Data/SIL15C.pdf"
 T 1100 6700 5 10 0 0 0 0 1
 description="Artesyn DC-DC converter"
 T 1100 6900 5 10 0 0 0 0 1
