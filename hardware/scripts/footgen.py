@@ -416,23 +416,30 @@ def edgecard(attrlist):
                        pitch*(bankpins1+bankpins2+1)+banksep,
                        (silkheight + height)/2, silkwidth)
     else:
+        # Left edge
         edgeelt += silk(-pitch, -padheight/2, -pitch,
                         -(padheight/2)+height, silkwidth)
+        # Bottom left edge
         edgeelt += silk(-pitch, -padheight/2, pitch*(bankpins1), -padheight/2,
                        silkwidth)
-        
+
+        # Middle left edge
         edgeelt += silk(pitch*(bankpins1), -padheight/2, pitch*(bankpins1),
                        -(padheight/2)+height, silkwidth)
+        # Middle right edge
         edgeelt += silk(pitch*(bankpins1)+banksep, -padheight/2,
                        pitch*(bankpins1)+banksep, -(padheight/2)+height,
                        silkwidth)
-        
+
+        # Bottom right edge
         edgeelt += silk(pitch*(bankpins1)+banksep, -padheight/2,
                         banksep+(pitch*(bankpins1+bankpins2+1)), -padheight/2,
                         silkwidth)
+        # Top edge
         edgeelt += silk(-pitch, -(padheight/2)+height,
-                        banksep + (pitch*(bankpins1+bankpins2+2)),
+                        banksep + (pitch*(bankpins1+bankpins2+1)),
                         -(padheight/2)+height, silkwidth)
+        # Right edge
         edgeelt += silk(banksep+(pitch*(bankpins1+bankpins2+1)),
                         -(padheight/2),
                         banksep+(pitch*(bankpins1+bankpins2+1)),
@@ -650,6 +657,8 @@ def dip(attrlist):
     pitch = findattr(attrlist, "pitch")
     silkslot = findattr(attrlist, "silkslot")
     headernum = findattr(attrlist, "headernum")
+    silkboxwidth = findattr(attrlist, "silkboxwidth")
+    silkboxheight = findattr(attrlist, "silkboxheight")
     y = -(pins/2-1)*pitch/2
     x = width/2
     dipelt = element(attrlist)
@@ -672,10 +681,19 @@ def dip(attrlist):
             dipelt = dipelt + pin(x,y,paddia,drill,str(pinnum),
                                   polyclear,maskclear)
             y = y - pitch
-    silky = pins*pitch/4
-    silkx = (width+pitch)/2
+
+    if (silkboxheight == 0):
+        silky = pins*pitch/4
+    else:
+        silky = silkboxheight / 2
+
+    if (silkboxwidth == 0):
+        silkx = (width+pitch)/2
+    else:
+        silkx = silkboxwidth / 2
+        
     dipelt = dipelt + box(silkx,silky,-silkx,-silky,silkwidth)
-    dipelt = dipelt + box(-silkx,-silky,-silkx+pitch,-silky+pitch,silkwidth)
+#    dipelt = dipelt + box(-silkx,-silky,-silkx+pitch,-silky+pitch,silkwidth)
     if (silkslot == "yes"):
         dipelt = dipelt + box(-silkx,-10000,-silkx-2500,10000,silkwidth)
     return dipelt
