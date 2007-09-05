@@ -8,8 +8,8 @@ help:
 	@echo "The following targets are available"
 	@echo
 	@echo "  make [help]  prints this message."
-	@echo "  make renum   renumbers reference designators in all"
-	@echo "               schematic files in *.sch.renum"
+	@echo "  make schem   opens main schematic sheet for editing"
+	@echo "  make layout  opens PCB layout for editing with layer colors"
 	@echo "  make net     generates netlist from *.sch.renum files"
 	@echo "  make pcb     generates initial PCB layout from *.sch file"
 	@echo "  make gerber  generates Gerber CAM output from *.pcb file"
@@ -17,6 +17,7 @@ help:
 	@echo "  make asm     generates zip file of drawings/BOM for assembly"
 	@echo "  make ps      generates Postscript layer plots"
 	@echo "  make pdf     generates PDF layer plots"
+	@echo "  make schemps generates Postscript from schematic sheets"
 	@echo
 	@echo "The following variable modifiers are available:"
 	@echo
@@ -26,29 +27,37 @@ help:
 clean:
 	rm -rf *.renum.sch *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
 	rm -rf $(GBR_DIR) $(PS_DIR) *.zip $(TARGETS_BOM)
-	rm -rf $(FAB_ZIP)* $(ASM_ZIP)* $(FAB_DIR) $(ASM_DIR)
+	rm -rf $(FAB_ZIP)* $(ASM_ZIP)* $(SCH_ZIP)*
+	rm -rf $(FAB_DIR) $(ASM_DIR) $(SCH_DIR)
 	rm -rf *.pcb.bak* *.pcb- *.cmd *.net $(BOARD)-$(REV)
 
+ifndef GROOT
+$(error 'Define GROOT to the path such that $GROOT/bin contains gEDA binaries.')
+endif
+
 TOP_SRC_DIR = ~/sf/svnroot/hardware
-GROOT = /usr/local
 GBIN = $(GROOT)/bin
-GSCHEM = $(GBIN)/gschem
+GSCM_DIR = $(GROOT)/share/gEDA/scheme
+GSCHEM = $(GBIN)/gschem -r ../geda-dotfiles/gafrc 
 GRENUM = $(GBIN)/refdes_renum --nocopy
-GNET = /usr/bin/gnetlist -q
+GNET = $(GBIN)/gnetlist -q
 G2PCB = gsch2pcb --use-files
 PCB = $(GBIN)/pcb
-PCB_VIEW = $(GBIN)/pcb --
 GBR = $(PCB) -x gerber --verbose --gerberfile $(GBR_PRE)
 GBR_DIR = gerber_cam
 GBR_PRE = $(GBR_DIR)/$(BOARD)-$(REV)
 PS_DIR = postscript
 PS_PRE = $(PS_DIR)/$(BOARD)-$(REV)
+GSCHEMRC = gschemrc
 
 SVNROOT = https://pulse-sequencer.svn.sf.net/svnroot/pulse-sequencer
 TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
 TARGETS_NET = $(TARGETS:.sch=.net)
 TARGETS_DRC = $(TARGETS:.sch=.drc)
 TARGETS_PCB = $(TARGETS:.sch=.pcb)
+TARGETS_SCHEM = $(SCHEM_FILES:.sch=.tgt)
+SCHEMPS_FILES = $(SCHEM_FILES:.sch=.ps)
+TARGETS_SCHEMPS = $(foreach file, $(SCHEMPS_FILES), $(SCH_DIR)/$(file))
 
 GERBER_FILES_FRONT = \
 	$(GBR_PRE).back.gbr \
@@ -108,8 +117,10 @@ PS_FILES_HS_FRONT = $(PS_FILES_FRONT) \
 
 FAB_ZIP = $(BOARD)-$(REV)-fab.zip
 ASM_ZIP = $(BOARD)-$(REV)-asm.zip
+SCH_ZIP = $(BOARD)-$(REV)-sch.zip
 FAB_DIR = $(BOARD)-$(REV)-fabrication
 ASM_DIR = $(BOARD)-$(REV)-assembly
+SCH_DIR = $(BOARD)-$(REV)-schematics
 
 TARGETS_BOM = $(BOARD)-$(REV).bom $(BOARD)-$(REV).xy
 
@@ -119,6 +130,9 @@ TARGETS_BOM = $(BOARD)-$(REV).bom $(BOARD)-$(REV).xy
 %.renum.sch: %.sch
 	$(GRENUM) $<
 	mv $<.renum $@
+
+$(SCH_DIR)/%.ps: %.sch
+	$(GSCHEM) -p -o $@ -s ../scripts/print.scm $<
 
 %.pdf: %.ps
 	ps2pdf $< $@
@@ -146,8 +160,14 @@ $(TARGETS_BOM): $(BOARD).pcb
 $(GBR_DIR):
 	mkdir -p $@
 
+$(SCH_DIR):
+	mkdir -p $@
+
 $(TARGETS_GERBER): $(BOARD).pcb $(GBR_DIR)
 	$(GBR) $<
+
+$(SCH_ZIP): $(TARGETS_SCHEMPS)
+	zip -r $(SCH_ZIP) $(SCH_DIR)
 
 $(FAB_ZIP): $(TARGETS_GERBER)
 	zip -r $(FAB_ZIP) $(GBR_DIR)
@@ -158,6 +178,8 @@ $(ASM_ZIP): $(TARGETS_BOM) $(TARGETS_PDF)
 	cp $(PS_PRE).*assembly.pdf $(ASM_DIR)/
 	zip -r $(ASM_ZIP) $(ASM_DIR)
 
+$(BOARD).tgt: $(TARGETS_SCHEM)
+
 $(BOARD)-$(REV).zip:
 	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)
 	zip -r $@ $(BOARD)-$(REV)
@@ -165,8 +187,13 @@ $(BOARD)-$(REV).zip:
 $(PS_DIR):
 	mkdir -p $@
 
+$(TARGETS_SCHEMPS): $(SCH_DIR)
+
 $(TARGETS_PS): $(BOARD).pcb $(PS_DIR)
 	$(PCB) -x ps --psfile $(PS_PRE) --align-marks --outline --ps-color --media Letter --scale 1.0 --multi-file $<
+
+$(GSCHEMRC): ../geda-dotfiles/$(GSCHEMRC)
+	ln -s $< $@
 
 renum: $(TARGETS_RENUM)
 drc: $(TARGETS_DRC)
@@ -175,6 +202,9 @@ net: $(TARGETS_NET)
 gerber: $(TARGETS_GERBER)
 fab: $(FAB_ZIP) $(FAB_ZIP).md5
 asm: $(ASM_ZIP) $(ASM_ZIP).md5
+schemps: $(SCH_ZIP) $(SCH_ZIP).md5
+schem: $(GSCHEMRC)
+	$(GSCHEM) $(BOARD).sch
 layout:
 	$(PCB) $(LAYER_COLORS) $(BOARD).pcb
 ps: $(TARGETS_PS)
@@ -187,3 +217,4 @@ untag:
 	svn rm -m "Undo tagging of $(BOARD) revision $(REV)."\
 		$(SVNROOT)/tags/$(BOARD)-$(REV)
 export: $(BOARD)-$(REV).zip $(BOARD)-$(REV).zip.md5
+
