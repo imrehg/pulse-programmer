@@ -1,3 +1,7 @@
 (load (string-append gedadata "/usr/local/geda/share/gEDA/scheme/auto-uref.scm")) ; load the autonumbering script
 (add-hook! add-component-hook auto-uref)       ; autonumber when adding a component
 (add-hook! copy-component-hook auto-uref)      ; autonumber when copying a component
+(output-color "disabled") ; enable color Postscript output
+(log-window "later") ; disable log on startup
+(output-color-background 16 "white" "null" "255 255 255" 0 0 0)
+
