@@ -229,3 +229,19 @@ device=ISLAND-FPGA-NORTH
 T 47300 49600 5 10 1 1 0 0 1
 source=island-fpga-power.sch
 }
+T 50000 40400 9 10 1 0 0 0 1
+island-fpga.sch
+T 51500 40100 9 10 1 0 0 0 1
+6
+T 53000 40700 9 10 1 0 0 0 1
+http://local-box.org
+T 54000 40400 9 10 1 0 0 0 1
+A
+T 54000 40100 9 10 1 0 0 0 1
+Paul T. Pham
+T 50000 40700 9 10 1 0 0 0 3
+Pulse Programmer
+FPGA Island
+Top-Level Sheet
+T 50000 40100 9 10 1 0 0 0 1
+1

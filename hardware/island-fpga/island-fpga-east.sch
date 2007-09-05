@@ -672,12 +672,6 @@ C 45100 44900 1 90 0 gnd-1.sym
 T 44900 44700 5 10 1 1 0 0 1
 netname=GND
 }
-T 54000 40400 9 10 1 0 0 0 1
-Initial
-T 54000 40100 9 10 1 0 0 0 1
-Paul Pham
-T 50100 40700 9 14 1 0 0 0 1
-FPGA Island, East Coast, Altera Cyclone EP1C12Q240
 C 51600 43700 1 0 0 in-1.sym
 {
 T 51600 44000 5 10 0 0 0 0 1
@@ -1368,3 +1362,19 @@ N 52200 43300 53500 43300 4
 T 53600 43200 5 10 1 1 0 0 1
 netname=+3.3V
 }
+T 50000 40400 9 10 1 0 0 0 1
+island-fpga.sch
+T 51500 40100 9 10 1 0 0 0 1
+6
+T 53000 40700 9 10 1 0 0 0 1
+http://local-box.org
+T 54000 40400 9 10 1 0 0 0 1
+A
+T 54000 40100 9 10 1 0 0 0 1
+Paul T. Pham
+T 50000 40700 9 10 1 0 0 0 3
+Pulse Programmer
+FPGA Island
+East Coast Subsheet
+T 50000 40100 9 10 1 0 0 0 1
+4

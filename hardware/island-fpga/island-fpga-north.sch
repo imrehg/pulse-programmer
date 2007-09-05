@@ -11,12 +11,6 @@ footprint=QFP240
 T 41200 47500 5 10 0 0 0 0 1
 device=EP1C12Q240
 }
-T 54000 40100 9 10 1 0 0 0 1
-Paul Pham
-T 54000 40400 9 10 1 0 0 0 1
-Initial
-T 50100 40700 9 14 1 0 0 0 1
-FPGA Island, North Coast, Altera Cyclone EP1C12Q240
 C 50800 45500 1 0 0 cap-small.sym
 {
 T 51320 46200 5 10 1 1 90 6 1
@@ -1139,3 +1133,19 @@ T 47200 48100 5 8 0 0 0 0 1
 device=none
 }
 N 52200 50000 52200 49900 4
+T 50000 40400 9 10 1 0 0 0 1
+island-fpga-north.sch
+T 51500 40100 9 10 1 0 0 0 1
+6
+T 53000 40700 9 10 1 0 0 0 1
+http://local-box.org
+T 54000 40400 9 10 1 0 0 0 1
+A
+T 54000 40100 9 10 1 0 0 0 1
+Paul T. Pham
+T 50000 40700 9 10 1 0 0 0 3
+Pulse Programmer
+FPGA Island
+North Coast Subsheet
+T 50000 40100 9 10 1 0 0 0 1
+3

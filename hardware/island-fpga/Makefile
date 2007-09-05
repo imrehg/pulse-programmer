@@ -1,14 +1,13 @@
 BOARD = island-fpga
-REV = 0
+REV = Ab1
 TARGETS = $(BOARD).sch
 
-# Dummy targets to remake dependencies
-island-fpga.tgt: \
-	island-fpga-north.tgt \
-	island-fpga-south.tgt \
-	island-fpga-east.tgt \
-	island-fpga-west.tgt \
-	island-fpga-power.tgt \
+SCHEM_FILES = \
+	island-fpga-north.sch \
+	island-fpga-south.sch \
+	island-fpga-east.sch \
+	island-fpga-west.sch \
+	island-fpga-power.sch \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
