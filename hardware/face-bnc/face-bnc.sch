@@ -59,7 +59,7 @@ T 55500 49100 9 10 1 0 0 0 1
 Power Loop
 C 44400 49100 1 90 1 face-bnc-buffers-in.sym
 {
-T 41300 47700 5 10 1 1 270 8 1
+T 41300 48900 5 10 1 1 0 8 1
 refdes=S5
 T 39400 48700 5 10 0 0 270 2 1
 device=face-bnc-buffers-in
@@ -106,7 +106,7 @@ N 43500 47700 43500 47600 4
 N 43800 47700 43800 47600 4
 C 55300 45000 1 90 0 face-bnc-jacks.sym
 {
-T 46500 45700 5 10 1 1 90 6 1
+T 41100 47200 5 10 1 1 180 6 1
 refdes=S3
 T 41100 43600 5 10 0 0 90 0 1
 device=face-bnc-jacks
@@ -115,7 +115,7 @@ source=face-bnc-jacks.sch
 }
 C 54600 43100 1 90 0 face-bnc-buffers-out.sym
 {
-T 46600 45000 5 10 1 1 90 6 1
+T 41200 44900 5 10 1 1 180 6 1
 refdes=S1
 T 41600 43500 5 10 0 0 90 0 1
 device=face-bnc-buffers-out

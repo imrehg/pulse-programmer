@@ -4,10 +4,8 @@ TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
 SCHEM_FILES = \
-	face-bnc-buffers1.sch \
-	face-bnc-buffers2.sch \
-	face-bnc-buffers3.sch \
-	face-bnc-glue.sch \
+	face-bnc-buffers-in.sch \
+	face-bnc-buffers-out.sch \
 	face-bnc-jacks.sch \
 
 LAYER_COLORS = \
