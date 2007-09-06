@@ -265,7 +265,7 @@ pinnumber=23
 T 1800 8550 5 8 0 1 180 8 1
 pinseq=23
 T 1650 8500 5 8 1 1 0 6 1
-pinlabel=+5V
+pinlabel=+12V
 T 1650 8500 5 8 0 1 180 2 1
 pintype=in
 }

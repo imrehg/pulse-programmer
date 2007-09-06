@@ -1,12 +1,12 @@
 # release: pcb 20070208
-# date:    Wed Aug 22 17:35:08 2007
+# date:    Thu Sep  6 15:17:41 2007
 # user:    ppham (ppham,U-NEOVICTORIAN\Paul T. Pham,S-1-5-21-1083071216-315547407-1799152704-1006)
 # host:    neovictorian
 
 PCB["" 670000 270000]
 
 Grid[50.000000 0 0 1]
-Cursor[0 125000 6.000000]
+Cursor[0 145000 6.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[800 400 700 700 1500 750]
@@ -802,20 +802,20 @@ Via[85050 212800 3000 1600 0 1500 "" "thermal(3X)"]
 Via[89950 212800 3000 1600 0 1500 "" "thermal(1X,2X)"]
 Via[603650 23450 3000 1600 0 1500 "" "thermal(1X)"]
 Via[603750 15700 3000 1600 0 1500 "" "thermal(5X)"]
-Via[583150 103650 6000 2000 0 3500 "" "thermal(1X,2X)"]
+Via[583150 103650 6000 2000 0 3500 "" "thermal(2X,5X)"]
 Via[286750 202300 6000 2000 0 3500 "" "thermal(3X)"]
 Via[141400 200350 6000 2000 0 3500 "" "thermal(3X)"]
 Via[162650 200400 6000 2000 0 3500 "" "thermal(1X,2X)"]
 Via[294650 202350 6000 2000 0 3500 "" "thermal(1X,2X)"]
-Via[461650 103650 6000 2000 0 3500 "" "thermal(1X,2X)"]
-Via[340200 103450 6000 2000 0 3500 "" "thermal(1X,2X)"]
+Via[461650 103650 6000 2000 0 3500 "" "thermal(2X,5X)"]
+Via[340200 103450 6000 2000 0 3500 "" "thermal(2X,5X)"]
 Via[649250 100350 6000 2000 0 3500 "" "thermal(5X)"]
-Via[219200 103450 6000 2000 0 3500 "" "thermal(1X,2X)"]
+Via[219200 103450 6000 2000 0 3500 "" "thermal(2X,5X)"]
 Via[118900 15750 3000 1600 0 1500 "" "thermal(5X)"]
 Via[118800 23500 3000 1600 0 1500 "" "thermal(1X)"]
 Via[63100 203550 6000 2000 0 3500 "" "thermal(1X,2X)"]
 Via[37250 203600 6000 2000 0 3500 "" "thermal(3X)"]
-Via[98300 103750 6000 2000 0 3500 "" "thermal(1X,2X)"]
+Via[98300 103750 6000 2000 0 3500 "" "thermal(2X,5X)"]
 Via[182700 74350 6000 2000 0 3500 "" "thermal(1X)"]
 Via[253750 37450 6000 2000 0 3500 "" "thermal(1X)"]
 Via[253650 57450 6000 2000 0 3500 "" "thermal(5X)"]
@@ -846,14 +846,24 @@ Via[574800 212750 3000 1600 0 1500 "" "thermal(1X,2X)"]
 Via[135750 74400 6000 2000 0 3500 "" "thermal(5X)"]
 Via[23100 89750 6000 2000 0 3500 "" "thermal(5X)"]
 Via[23250 70350 6000 2000 0 3500 "" "thermal(1X)"]
+Via[68300 103750 6000 2000 0 3500 "" "thermal(1X)"]
+Via[38350 103750 6000 2000 0 3500 "" "thermal(1X)"]
+Via[159150 103750 6000 2000 0 3500 "" "thermal(1X)"]
+Via[189150 103700 6000 2000 0 3500 "" "thermal(1X)"]
+Via[280250 103550 6000 2000 0 3500 "" "thermal(1X)"]
+Via[310250 103550 6000 2000 0 3500 "" "thermal(1X)"]
+Via[401650 103550 6000 2000 0 3500 "" "thermal(1X)"]
+Via[431650 103550 6000 2000 0 3500 "" "thermal(1X)"]
+Via[523200 103700 6000 2000 0 3500 "" "thermal(1X)"]
+Via[553150 103700 6000 2000 0 3500 "" "thermal(1X)"]
 
-Element["" "TF-6" "T1" "TTWB-1-A" 38300 107750 8750 -20850 0 100 ""]
+Element["" "TF-6" "T1" "TTWB-1-B" 38300 107750 8750 -20850 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -867,13 +877,13 @@ Element["" "TF-6" "T1" "TTWB-1-A" 38300 107750 8750 -20850 0 100 ""]
 
 	)
 
-Element["" "TF-6" "T2" "TTWB-1-A" 68300 107750 7350 -21250 0 100 ""]
+Element["" "TF-6" "T2" "TTWB-1-B" 68300 107750 7350 -21250 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -887,14 +897,14 @@ Element["" "TF-6" "T2" "TTWB-1-A" 68300 107750 7350 -21250 0 100 ""]
 
 	)
 
-Element["onsolder" "MOLEX2" "J12" "22-27-2021" 15050 49400 18800 1700 0 100 "auto"]
+Element["onsolder" "JUMPER2" "J14" "640452-2" 21850 221950 26050 -9700 2 100 "auto"]
 (
-	Pin[0 0 6200 1600 6800 4700 "1" "1" "square,edge2,thermal(1X)"]
-	Pin[10000 0 6200 1600 6800 4700 "2" "2" "edge2,thermal(5X)"]
-	ElementLine [15000 5000 15000 -5000 1000]
-	ElementLine [-5000 5000 -5000 -5000 1000]
-	ElementLine [-5000 -5000 15000 -5000 1000]
-	ElementLine [-5000 5000 15000 5000 1000]
+	Pin[0 0 6200 1600 6800 4700 "" "1" "square"]
+	Pin[10000 0 6200 1600 6800 4700 "" "2" "thermal(3X)"]
+	ElementLine [15000 10000 15000 -10000 1000]
+	ElementLine [-5000 10000 -5000 -10000 1000]
+	ElementLine [-5000 -10000 15000 -10000 1000]
+	ElementLine [-5000 10000 15000 10000 1000]
 
 	)
 
@@ -930,7 +940,7 @@ Element["" "TF-6" "T3" "TTWB-1-B" 98300 107750 8100 -20850 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1018,10 +1028,10 @@ Element["" "0603" "C18" "1u" 124300 19600 3100 4100 1 100 ""]
 
 	)
 
-Element["onsolder" "MOLEX2" "J8" "22-27-2021" 11800 191100 19250 2200 0 100 "auto"]
+Element["onsolder" "MOLEX2" "J8" "22-27-2021" 11800 191100 22200 -4850 2 100 "auto"]
 (
 	Pin[0 0 6200 1600 6800 4700 "1" "1" "square,edge2,thermal(1X,2X)"]
-	Pin[10000 0 6200 1600 6800 4700 "2" "2" "edge2,thermal(3X)"]
+	Pin[10000 0 6200 1600 6800 4700 "2" "2" "edge2"]
 	ElementLine [15000 5000 15000 -5000 1000]
 	ElementLine [-5000 5000 -5000 -5000 1000]
 	ElementLine [-5000 -5000 15000 -5000 1000]
@@ -1072,7 +1082,7 @@ Element["" "TF-6" "T4" "TTWB-1-B" 128600 107750 8300 -20800 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1307,13 +1317,13 @@ Element["" "6032" "C17" "10u" 124100 47400 8200 4050 1 100 ""]
 
 	)
 
-Element["" "TF-6" "T5" "TTWB-1-A" 159150 107550 8750 -20850 0 100 ""]
+Element["" "TF-6" "T5" "TTWB-1-B" 159150 107550 8750 -20850 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1327,13 +1337,13 @@ Element["" "TF-6" "T5" "TTWB-1-A" 159150 107550 8750 -20850 0 100 ""]
 
 	)
 
-Element["" "TF-6" "T6" "TTWB-1-A" 189150 107550 7350 -21250 0 100 ""]
+Element["" "TF-6" "T6" "TTWB-1-B" 189150 107550 7350 -21250 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1353,7 +1363,7 @@ Element["" "TF-6" "T7" "TTWB-1-B" 219150 107550 8100 -20850 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1409,7 +1419,7 @@ Element["" "TF-6" "T8" "TTWB-1-B" 249450 107550 8300 -20800 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1486,13 +1496,13 @@ Element["" "6032" "C19" "10u" 244950 47200 8200 4050 1 100 ""]
 
 	)
 
-Element["" "TF-6" "T9" "TTWB-1-A" 280200 107550 8750 -20850 0 100 ""]
+Element["" "TF-6" "T9" "TTWB-1-B" 280200 107550 8750 -20850 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1506,13 +1516,13 @@ Element["" "TF-6" "T9" "TTWB-1-A" 280200 107550 8750 -20850 0 100 ""]
 
 	)
 
-Element["" "TF-6" "T10" "TTWB-1-A" 310200 107550 7350 -21250 0 100 ""]
+Element["" "TF-6" "T10" "TTWB-1-B" 310200 107550 7350 -21250 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1532,7 +1542,7 @@ Element["" "TF-6" "T12" "TTWB-1-B" 340200 107550 8100 -20850 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1588,7 +1598,7 @@ Element["" "TF-6" "T15" "TTWB-1-B" 370500 107550 8300 -20800 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1665,13 +1675,13 @@ Element["" "6032" "C21" "10u" 366000 47200 8200 4050 1 100 ""]
 
 	)
 
-Element["" "TF-6" "T11" "TTWB-1-A" 401650 107700 8750 -20850 0 100 ""]
+Element["" "TF-6" "T11" "TTWB-1-B" 401650 107700 8750 -20850 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1685,13 +1695,13 @@ Element["" "TF-6" "T11" "TTWB-1-A" 401650 107700 8750 -20850 0 100 ""]
 
 	)
 
-Element["" "TF-6" "T13" "TTWB-1-A" 431650 107700 7350 -21250 0 100 ""]
+Element["" "TF-6" "T13" "TTWB-1-B" 431650 107700 7350 -21250 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1711,7 +1721,7 @@ Element["" "TF-6" "T14" "TTWB-1-B" 461650 107700 8100 -20850 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1767,7 +1777,7 @@ Element["" "TF-6" "T20" "TTWB-1-B" 491950 107700 8300 -20800 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1844,13 +1854,13 @@ Element["" "6032" "C24" "10u" 487450 47350 8200 4050 1 100 ""]
 
 	)
 
-Element["" "TF-6" "T16" "TTWB-1-A" 523150 107700 8750 -20850 0 100 ""]
+Element["" "TF-6" "T16" "TTWB-1-B" 523150 107700 8750 -20850 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1864,13 +1874,13 @@ Element["" "TF-6" "T16" "TTWB-1-A" 523150 107700 8750 -20850 0 100 ""]
 
 	)
 
-Element["" "TF-6" "T17" "TTWB-1-A" 553150 107700 7350 -21250 0 100 ""]
+Element["" "TF-6" "T17" "TTWB-1-B" 553150 107700 7350 -21250 0 100 ""]
 (
 	Pad[-10250 10750 -9750 10750 4500 1600 5100 "1" "1" "square"]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1890,7 +1900,7 @@ Element["" "TF-6" "T18" "TTWB-1-B" 583150 107700 8100 -20850 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -1946,7 +1956,7 @@ Element["" "TF-6" "T19" "TTWB-1-B" 613450 107700 8300 -20800 0 100 ""]
 	Pad[-250 10750 250 10750 4500 1600 5100 "" "2" "square"]
 	Pad[9750 10750 10250 10750 4500 1600 5100 "3" "3" "square,edge2"]
 	Pad[9750 -10750 10250 -10750 4500 1600 5100 "4" "4" "square,edge2"]
-	Pad[-250 -10750 250 -10750 4500 1600 5100 "" "5" "square"]
+	Pad[-250 -10750 250 -10750 4500 1600 5100 "5" "5" "square"]
 	Pad[-10250 -10750 -9750 -10750 4500 1600 5100 "6" "6" "square"]
 	ElementLine [-12000 0 -14000 -2000 1000]
 	ElementLine [-12000 0 -14000 2000 1000]
@@ -2005,6 +2015,28 @@ Element["" "6032" "C15" "10u" 13750 79800 -3950 -23650 0 100 ""]
 	ElementLine [-7441 -15560 -7441 15560 700]
 	ElementLine [-7441 15560 7441 15560 700]
 	ElementLine [7441 -15560 7441 15560 700]
+
+	)
+
+Element["onsolder" "MOLEX2" "J12" "22-27-2021" 138500 133750 10600 -12600 2 100 "auto"]
+(
+	Pin[0 0 6200 1600 6800 4700 "1" "1" "square,edge2,thermal(1X)"]
+	Pin[10000 0 6200 1600 6800 4700 "2" "2" "edge2"]
+	ElementLine [15000 5000 15000 -5000 1000]
+	ElementLine [-5000 5000 -5000 -5000 1000]
+	ElementLine [-5000 -5000 15000 -5000 1000]
+	ElementLine [-5000 5000 15000 5000 1000]
+
+	)
+
+Element["onsolder" "JUMPER2" "J13" "640452-2" 148600 158900 -1550 10850 2 100 "auto"]
+(
+	Pin[0 0 6200 1600 6800 4700 "" "1" "square"]
+	Pin[-10000 0 6200 1600 6800 4700 "" "2" "thermal(5X)"]
+	ElementLine [-15000 -10000 -15000 10000 1000]
+	ElementLine [5000 -10000 5000 10000 1000]
+	ElementLine [-15000 10000 5000 10000 1000]
+	ElementLine [-15000 -10000 5000 -10000 1000]
 
 	)
 Layer(1 "component")
@@ -2804,6 +2836,18 @@ Layer(1 "component")
 	Line[529100 224550 567550 224550 700 1600 ""]
 	Line[23100 89750 14400 89750 2500 2000 ""]
 	Line[23250 70350 14150 70350 2500 2000 ""]
+	Line[553150 103700 553150 97900 2500 2000 ""]
+	Line[523200 103700 523200 97850 2500 2000 ""]
+	Line[431650 103550 431650 97050 2500 2000 ""]
+	Line[401650 103550 401650 97850 2500 2000 ""]
+	Line[310250 103550 310250 97850 2500 2000 ""]
+	Line[280250 103550 280250 96900 2500 2000 ""]
+	Line[189150 103700 189150 98050 2500 2000 ""]
+	Line[159150 103750 159150 97150 2500 2000 ""]
+	Line[68300 103750 68300 96950 2500 2000 ""]
+	Line[38350 103750 38350 97600 2500 2000 ""]
+	Line[21800 191100 21800 222250 2500 2000 ""]
+	Line[148500 133750 148500 158600 2500 2000 ""]
 )
 Layer(2 "solder")
 (
@@ -2833,7 +2877,7 @@ Layer(5 "CGND")
 		[500 6000] [665500 6000] [665500 179350] [500 179350] 
 	)
 )
-Layer(6 "+5V")
+Layer(6 "+12V")
 (
 	Polygon("clearpoly")
 	(
@@ -2852,7 +2896,7 @@ Layer(8 "unused")
 )
 Layer(9 "unused")
 (
-	Text[321600 243200 0 100 "Paul T. Pham, August 2007" ""]
+	Text[321600 243200 0 100 "Paul T. Pham, September 2007" ""]
 	Text[4150 159400 1 80 "CHASSIS GND" ""]
 	Text[588650 226700 0 100 "GND" ""]
 	Text[241250 243000 0 100 "http://local-box.org" ""]
@@ -2880,7 +2924,7 @@ NetList()
 		Connect("C13-2")
 		Connect("J6-1")
 		Connect("J6-2")
-		Connect("J8-2")
+		Connect("J14-2")
 		Connect("U1-1")
 		Connect("U1-4")
 		Connect("U2-1")
@@ -2892,7 +2936,7 @@ NetList()
 		Connect("U5-1")
 		Connect("U5-4")
 	)
-	Net("+5V" "(unknown)")
+	Net("+12V" "(unknown)")
 	(
 		Connect("C14-1")
 		Connect("C15-1")
@@ -2907,12 +2951,17 @@ NetList()
 		Connect("C24-1")
 		Connect("C25-2")
 		Connect("C26-2")
-		Connect("J12-2")
+		Connect("J13-2")
 		Connect("J15-1")
 		Connect("J15-2")
+		Connect("T3-5")
 		Connect("T4-5")
+		Connect("T7-5")
 		Connect("T8-5")
+		Connect("T12-5")
+		Connect("T14-5")
 		Connect("T15-5")
+		Connect("T18-5")
 		Connect("T19-5")
 		Connect("T20-5")
 	)
@@ -2991,11 +3040,16 @@ NetList()
 		Connect("J4-24")
 		Connect("J8-1")
 		Connect("J12-1")
-		Connect("T3-5")
-		Connect("T7-5")
-		Connect("T12-5")
-		Connect("T14-5")
-		Connect("T18-5")
+		Connect("T1-5")
+		Connect("T2-5")
+		Connect("T5-5")
+		Connect("T6-5")
+		Connect("T9-5")
+		Connect("T10-5")
+		Connect("T11-5")
+		Connect("T13-5")
+		Connect("T16-5")
+		Connect("T17-5")
 		Connect("U1-5")
 		Connect("U1-8")
 		Connect("U2-5")
@@ -3007,504 +3061,514 @@ NetList()
 		Connect("U5-5")
 		Connect("U5-8")
 	)
-	Net("S1/unnamed_net21" "(unknown)")
+	Net("S1/unnamed_net22" "(unknown)")
 	(
 		Connect("T9-1")
 		Connect("U3-16")
 	)
-	Net("S1/unnamed_net22" "(unknown)")
+	Net("S1/unnamed_net23" "(unknown)")
 	(
 		Connect("T9-3")
 		Connect("U3-15")
 	)
-	Net("S1/unnamed_net23" "(unknown)")
+	Net("S1/unnamed_net24" "(unknown)")
 	(
 		Connect("T10-1")
 		Connect("U3-14")
 	)
-	Net("S1/unnamed_net24" "(unknown)")
+	Net("S1/unnamed_net25" "(unknown)")
 	(
 		Connect("T10-3")
 		Connect("U3-13")
 	)
-	Net("S1/unnamed_net25" "(unknown)")
+	Net("S1/unnamed_net26" "(unknown)")
 	(
 		Connect("T12-1")
 		Connect("U3-12")
 	)
-	Net("S1/unnamed_net26" "(unknown)")
+	Net("S1/unnamed_net27" "(unknown)")
 	(
 		Connect("T12-3")
 		Connect("U3-11")
 	)
-	Net("S1/unnamed_net27" "(unknown)")
+	Net("S1/unnamed_net28" "(unknown)")
 	(
 		Connect("T15-1")
 		Connect("U3-10")
 	)
-	Net("S1/unnamed_net28" "(unknown)")
+	Net("S1/unnamed_net29" "(unknown)")
 	(
 		Connect("T15-3")
 		Connect("U3-9")
 	)
-	Net("S1/unnamed_net33" "(unknown)")
+	Net("S1/unnamed_net34" "(unknown)")
 	(
 		Connect("T11-1")
 		Connect("U4-16")
 	)
-	Net("S1/unnamed_net34" "(unknown)")
+	Net("S1/unnamed_net35" "(unknown)")
 	(
 		Connect("T11-3")
 		Connect("U4-15")
 	)
-	Net("S1/unnamed_net35" "(unknown)")
+	Net("S1/unnamed_net36" "(unknown)")
 	(
 		Connect("T13-1")
 		Connect("U4-14")
 	)
-	Net("S1/unnamed_net36" "(unknown)")
+	Net("S1/unnamed_net37" "(unknown)")
 	(
 		Connect("T13-3")
 		Connect("U4-13")
 	)
-	Net("S1/unnamed_net37" "(unknown)")
+	Net("S1/unnamed_net38" "(unknown)")
 	(
 		Connect("T14-1")
 		Connect("U4-12")
 	)
-	Net("S1/unnamed_net38" "(unknown)")
+	Net("S1/unnamed_net39" "(unknown)")
 	(
 		Connect("T14-3")
 		Connect("U4-11")
 	)
-	Net("S1/unnamed_net39" "(unknown)")
+	Net("S1/unnamed_net40" "(unknown)")
 	(
 		Connect("T20-1")
 		Connect("U4-10")
 	)
-	Net("S1/unnamed_net40" "(unknown)")
+	Net("S1/unnamed_net41" "(unknown)")
 	(
 		Connect("T20-3")
 		Connect("U4-9")
 	)
-	Net("S1/unnamed_net45" "(unknown)")
+	Net("S1/unnamed_net46" "(unknown)")
 	(
 		Connect("T16-1")
 		Connect("U5-16")
 	)
-	Net("S1/unnamed_net46" "(unknown)")
+	Net("S1/unnamed_net47" "(unknown)")
 	(
 		Connect("T16-3")
 		Connect("U5-15")
 	)
-	Net("S1/unnamed_net47" "(unknown)")
+	Net("S1/unnamed_net48" "(unknown)")
 	(
 		Connect("T17-1")
 		Connect("U5-14")
 	)
-	Net("S1/unnamed_net48" "(unknown)")
+	Net("S1/unnamed_net49" "(unknown)")
 	(
 		Connect("T17-3")
 		Connect("U5-13")
 	)
-	Net("S1/unnamed_net49" "(unknown)")
+	Net("S1/unnamed_net50" "(unknown)")
 	(
 		Connect("T18-1")
 		Connect("U5-12")
 	)
-	Net("S1/unnamed_net50" "(unknown)")
+	Net("S1/unnamed_net51" "(unknown)")
 	(
 		Connect("T18-3")
 		Connect("U5-11")
 	)
-	Net("S1/unnamed_net51" "(unknown)")
+	Net("S1/unnamed_net52" "(unknown)")
 	(
 		Connect("T19-1")
 		Connect("U5-10")
 	)
-	Net("S1/unnamed_net52" "(unknown)")
+	Net("S1/unnamed_net53" "(unknown)")
 	(
 		Connect("T19-3")
 		Connect("U5-9")
 	)
-	Net("S1/unnamed_net57" "(unknown)")
+	Net("S1/unnamed_net58" "(unknown)")
 	(
 		Connect("T1-1")
 		Connect("U1-16")
 	)
-	Net("S1/unnamed_net58" "(unknown)")
+	Net("S1/unnamed_net59" "(unknown)")
 	(
 		Connect("T1-3")
 		Connect("U1-15")
 	)
-	Net("S1/unnamed_net59" "(unknown)")
+	Net("S1/unnamed_net60" "(unknown)")
 	(
 		Connect("T2-1")
 		Connect("U1-14")
 	)
-	Net("S1/unnamed_net60" "(unknown)")
+	Net("S1/unnamed_net61" "(unknown)")
 	(
 		Connect("T2-3")
 		Connect("U1-13")
 	)
-	Net("S1/unnamed_net61" "(unknown)")
+	Net("S1/unnamed_net62" "(unknown)")
 	(
 		Connect("T3-1")
 		Connect("U1-12")
 	)
-	Net("S1/unnamed_net62" "(unknown)")
+	Net("S1/unnamed_net63" "(unknown)")
 	(
 		Connect("T3-3")
 		Connect("U1-11")
 	)
-	Net("S1/unnamed_net63" "(unknown)")
+	Net("S1/unnamed_net64" "(unknown)")
 	(
 		Connect("T4-1")
 		Connect("U1-10")
 	)
-	Net("S1/unnamed_net64" "(unknown)")
+	Net("S1/unnamed_net65" "(unknown)")
 	(
 		Connect("T4-3")
 		Connect("U1-9")
 	)
-	Net("S1/unnamed_net69" "(unknown)")
+	Net("S1/unnamed_net70" "(unknown)")
 	(
 		Connect("T5-1")
 		Connect("U2-16")
 	)
-	Net("S1/unnamed_net70" "(unknown)")
+	Net("S1/unnamed_net71" "(unknown)")
 	(
 		Connect("T5-3")
 		Connect("U2-15")
 	)
-	Net("S1/unnamed_net71" "(unknown)")
+	Net("S1/unnamed_net72" "(unknown)")
 	(
 		Connect("T6-1")
 		Connect("U2-14")
 	)
-	Net("S1/unnamed_net72" "(unknown)")
+	Net("S1/unnamed_net73" "(unknown)")
 	(
 		Connect("T6-3")
 		Connect("U2-13")
 	)
-	Net("S1/unnamed_net73" "(unknown)")
+	Net("S1/unnamed_net74" "(unknown)")
 	(
 		Connect("T7-1")
 		Connect("U2-12")
 	)
-	Net("S1/unnamed_net74" "(unknown)")
+	Net("S1/unnamed_net75" "(unknown)")
 	(
 		Connect("T7-3")
 		Connect("U2-11")
 	)
-	Net("S1/unnamed_net75" "(unknown)")
+	Net("S1/unnamed_net76" "(unknown)")
 	(
 		Connect("T8-1")
 		Connect("U2-10")
 	)
-	Net("S1/unnamed_net76" "(unknown)")
+	Net("S1/unnamed_net77" "(unknown)")
 	(
 		Connect("T8-3")
 		Connect("U2-9")
 	)
-	Net("S1/unnamed_net81" "(unknown)")
-	(
-		Connect("J2-6")
-		Connect("T1-4")
-	)
 	Net("S1/unnamed_net82" "(unknown)")
-	(
-		Connect("J2-3")
-		Connect("T1-6")
-	)
-	Net("S1/unnamed_net83" "(unknown)")
-	(
-		Connect("J2-7")
-		Connect("T2-4")
-	)
-	Net("S1/unnamed_net84" "(unknown)")
-	(
-		Connect("J2-8")
-		Connect("T2-6")
-	)
-	Net("S1/unnamed_net85" "(unknown)")
-	(
-		Connect("J5-6")
-		Connect("T5-4")
-	)
-	Net("S1/unnamed_net86" "(unknown)")
-	(
-		Connect("J5-3")
-		Connect("T5-6")
-	)
-	Net("S1/unnamed_net87" "(unknown)")
-	(
-		Connect("J5-7")
-		Connect("T6-4")
-	)
-	Net("S1/unnamed_net88" "(unknown)")
-	(
-		Connect("J5-8")
-		Connect("T6-6")
-	)
-	Net("S1/unnamed_net89" "(unknown)")
-	(
-		Connect("J9-7")
-		Connect("T10-4")
-	)
-	Net("S1/unnamed_net90" "(unknown)")
-	(
-		Connect("J9-8")
-		Connect("T10-6")
-	)
-	Net("S1/unnamed_net91" "(unknown)")
-	(
-		Connect("J9-6")
-		Connect("T9-4")
-	)
-	Net("S1/unnamed_net92" "(unknown)")
-	(
-		Connect("J9-3")
-		Connect("T9-6")
-	)
-	Net("S1/unnamed_net93" "(unknown)")
 	(
 		Connect("J2-1")
 		Connect("T4-4")
 	)
-	Net("S1/unnamed_net94" "(unknown)")
+	Net("S1/unnamed_net83" "(unknown)")
 	(
 		Connect("J2-2")
 		Connect("T4-6")
 	)
-	Net("S1/unnamed_net95" "(unknown)")
+	Net("S1/unnamed_net84" "(unknown)")
+	(
+		Connect("J2-3")
+		Connect("T1-6")
+	)
+	Net("S1/unnamed_net85" "(unknown)")
 	(
 		Connect("J2-4")
 		Connect("T3-4")
 	)
-	Net("S1/unnamed_net96" "(unknown)")
+	Net("S1/unnamed_net86" "(unknown)")
 	(
 		Connect("J2-5")
 		Connect("T3-6")
 	)
-	Net("S1/unnamed_net97" "(unknown)")
+	Net("S1/unnamed_net87" "(unknown)")
+	(
+		Connect("J2-6")
+		Connect("T1-4")
+	)
+	Net("S1/unnamed_net88" "(unknown)")
+	(
+		Connect("J2-7")
+		Connect("T2-4")
+	)
+	Net("S1/unnamed_net89" "(unknown)")
+	(
+		Connect("J2-8")
+		Connect("T2-6")
+	)
+	Net("S1/unnamed_net90" "(unknown)")
 	(
 		Connect("J5-1")
 		Connect("T8-4")
 	)
-	Net("S1/unnamed_net98" "(unknown)")
+	Net("S1/unnamed_net91" "(unknown)")
 	(
 		Connect("J5-2")
 		Connect("T8-6")
 	)
-	Net("S1/unnamed_net99" "(unknown)")
+	Net("S1/unnamed_net92" "(unknown)")
+	(
+		Connect("J5-3")
+		Connect("T5-6")
+	)
+	Net("S1/unnamed_net93" "(unknown)")
 	(
 		Connect("J5-4")
 		Connect("T7-4")
 	)
-	Net("S1/unnamed_net100" "(unknown)")
+	Net("S1/unnamed_net94" "(unknown)")
 	(
 		Connect("J5-5")
 		Connect("T7-6")
 	)
-	Net("S1/unnamed_net101" "(unknown)")
+	Net("S1/unnamed_net95" "(unknown)")
+	(
+		Connect("J5-6")
+		Connect("T5-4")
+	)
+	Net("S1/unnamed_net96" "(unknown)")
+	(
+		Connect("J5-7")
+		Connect("T6-4")
+	)
+	Net("S1/unnamed_net97" "(unknown)")
+	(
+		Connect("J5-8")
+		Connect("T6-6")
+	)
+	Net("S1/unnamed_net98" "(unknown)")
 	(
 		Connect("J9-1")
 		Connect("T15-4")
 	)
-	Net("S1/unnamed_net102" "(unknown)")
+	Net("S1/unnamed_net99" "(unknown)")
 	(
 		Connect("J9-2")
 		Connect("T15-6")
 	)
-	Net("S1/unnamed_net103" "(unknown)")
+	Net("S1/unnamed_net100" "(unknown)")
+	(
+		Connect("J9-3")
+		Connect("T9-6")
+	)
+	Net("S1/unnamed_net101" "(unknown)")
 	(
 		Connect("J9-4")
 		Connect("T12-4")
 	)
-	Net("S1/unnamed_net104" "(unknown)")
+	Net("S1/unnamed_net102" "(unknown)")
 	(
 		Connect("J9-5")
 		Connect("T12-6")
 	)
+	Net("S1/unnamed_net103" "(unknown)")
+	(
+		Connect("J9-6")
+		Connect("T9-4")
+	)
+	Net("S1/unnamed_net104" "(unknown)")
+	(
+		Connect("J9-7")
+		Connect("T10-4")
+	)
 	Net("S1/unnamed_net105" "(unknown)")
 	(
-		Connect("J10-6")
-		Connect("T11-4")
+		Connect("J9-8")
+		Connect("T10-6")
 	)
 	Net("S1/unnamed_net106" "(unknown)")
-	(
-		Connect("J10-3")
-		Connect("T11-6")
-	)
-	Net("S1/unnamed_net107" "(unknown)")
-	(
-		Connect("J10-7")
-		Connect("T13-4")
-	)
-	Net("S1/unnamed_net108" "(unknown)")
-	(
-		Connect("J10-8")
-		Connect("T13-6")
-	)
-	Net("S1/unnamed_net109" "(unknown)")
-	(
-		Connect("J11-6")
-		Connect("T16-4")
-	)
-	Net("S1/unnamed_net110" "(unknown)")
-	(
-		Connect("J11-3")
-		Connect("T16-6")
-	)
-	Net("S1/unnamed_net111" "(unknown)")
-	(
-		Connect("J11-7")
-		Connect("T17-4")
-	)
-	Net("S1/unnamed_net112" "(unknown)")
-	(
-		Connect("J11-8")
-		Connect("T17-6")
-	)
-	Net("S1/unnamed_net113" "(unknown)")
 	(
 		Connect("J10-1")
 		Connect("T20-4")
 	)
-	Net("S1/unnamed_net114" "(unknown)")
+	Net("S1/unnamed_net107" "(unknown)")
 	(
 		Connect("J10-2")
 		Connect("T20-6")
 	)
-	Net("S1/unnamed_net115" "(unknown)")
+	Net("S1/unnamed_net108" "(unknown)")
+	(
+		Connect("J10-3")
+		Connect("T11-6")
+	)
+	Net("S1/unnamed_net109" "(unknown)")
 	(
 		Connect("J10-4")
 		Connect("T14-4")
 	)
-	Net("S1/unnamed_net116" "(unknown)")
+	Net("S1/unnamed_net110" "(unknown)")
 	(
 		Connect("J10-5")
 		Connect("T14-6")
 	)
-	Net("S1/unnamed_net117" "(unknown)")
+	Net("S1/unnamed_net111" "(unknown)")
+	(
+		Connect("J10-6")
+		Connect("T11-4")
+	)
+	Net("S1/unnamed_net112" "(unknown)")
+	(
+		Connect("J10-7")
+		Connect("T13-4")
+	)
+	Net("S1/unnamed_net113" "(unknown)")
+	(
+		Connect("J10-8")
+		Connect("T13-6")
+	)
+	Net("S1/unnamed_net114" "(unknown)")
 	(
 		Connect("J11-1")
 		Connect("T19-4")
 	)
-	Net("S1/unnamed_net118" "(unknown)")
+	Net("S1/unnamed_net115" "(unknown)")
 	(
 		Connect("J11-2")
 		Connect("T19-6")
 	)
-	Net("S1/unnamed_net119" "(unknown)")
+	Net("S1/unnamed_net116" "(unknown)")
+	(
+		Connect("J11-3")
+		Connect("T16-6")
+	)
+	Net("S1/unnamed_net117" "(unknown)")
 	(
 		Connect("J11-4")
 		Connect("T18-4")
 	)
-	Net("S1/unnamed_net120" "(unknown)")
+	Net("S1/unnamed_net118" "(unknown)")
 	(
 		Connect("J11-5")
 		Connect("T18-6")
 	)
+	Net("S1/unnamed_net119" "(unknown)")
+	(
+		Connect("J11-6")
+		Connect("T16-4")
+	)
+	Net("S1/unnamed_net120" "(unknown)")
+	(
+		Connect("J11-7")
+		Connect("T17-4")
+	)
+	Net("S1/unnamed_net121" "(unknown)")
+	(
+		Connect("J11-8")
+		Connect("T17-6")
+	)
 	Net("unnamed_net1" "(unknown)")
+	(
+		Connect("J8-2")
+		Connect("J14-1")
+	)
+	Net("unnamed_net2" "(unknown)")
 	(
 		Connect("J4-17")
 		Connect("U1-6")
 	)
-	Net("unnamed_net2" "(unknown)")
+	Net("unnamed_net3" "(unknown)")
 	(
 		Connect("J4-15")
 		Connect("U1-7")
 	)
-	Net("unnamed_net3" "(unknown)")
+	Net("unnamed_net4" "(unknown)")
 	(
 		Connect("J4-13")
 		Connect("U2-2")
 	)
-	Net("unnamed_net4" "(unknown)")
+	Net("unnamed_net5" "(unknown)")
 	(
 		Connect("J4-11")
 		Connect("U2-3")
 	)
-	Net("unnamed_net5" "(unknown)")
+	Net("unnamed_net6" "(unknown)")
 	(
 		Connect("J4-9")
 		Connect("U2-6")
 	)
-	Net("unnamed_net6" "(unknown)")
+	Net("unnamed_net7" "(unknown)")
 	(
 		Connect("J4-7")
 		Connect("U2-7")
 	)
-	Net("unnamed_net7" "(unknown)")
+	Net("unnamed_net8" "(unknown)")
 	(
 		Connect("J4-5")
 		Connect("U3-2")
 	)
-	Net("unnamed_net8" "(unknown)")
+	Net("unnamed_net9" "(unknown)")
 	(
 		Connect("J4-3")
 		Connect("U3-3")
 	)
-	Net("unnamed_net9" "(unknown)")
+	Net("unnamed_net10" "(unknown)")
 	(
 		Connect("J1-21")
 		Connect("U3-6")
 	)
-	Net("unnamed_net10" "(unknown)")
+	Net("unnamed_net11" "(unknown)")
 	(
 		Connect("J1-19")
 		Connect("U3-7")
 	)
-	Net("unnamed_net11" "(unknown)")
+	Net("unnamed_net12" "(unknown)")
 	(
 		Connect("J1-17")
 		Connect("U4-2")
 	)
-	Net("unnamed_net12" "(unknown)")
+	Net("unnamed_net13" "(unknown)")
 	(
 		Connect("J1-15")
 		Connect("U4-3")
 	)
-	Net("unnamed_net13" "(unknown)")
+	Net("unnamed_net14" "(unknown)")
 	(
 		Connect("J1-13")
 		Connect("U4-6")
 	)
-	Net("unnamed_net14" "(unknown)")
+	Net("unnamed_net15" "(unknown)")
 	(
 		Connect("J1-11")
 		Connect("U4-7")
 	)
-	Net("unnamed_net15" "(unknown)")
+	Net("unnamed_net16" "(unknown)")
 	(
 		Connect("J1-9")
 		Connect("U5-2")
 	)
-	Net("unnamed_net16" "(unknown)")
+	Net("unnamed_net17" "(unknown)")
 	(
 		Connect("J1-7")
 		Connect("U5-3")
 	)
-	Net("unnamed_net17" "(unknown)")
+	Net("unnamed_net18" "(unknown)")
 	(
 		Connect("J1-5")
 		Connect("U5-6")
 	)
-	Net("unnamed_net18" "(unknown)")
+	Net("unnamed_net19" "(unknown)")
 	(
 		Connect("J1-3")
 		Connect("U5-7")
 	)
-	Net("unnamed_net19" "(unknown)")
+	Net("unnamed_net20" "(unknown)")
 	(
 		Connect("J4-19")
 		Connect("U1-3")
 	)
-	Net("unnamed_net20" "(unknown)")
+	Net("unnamed_net21" "(unknown)")
 	(
 		Connect("J4-21")
 		Connect("U1-2")
+	)
+	Net("unnamed_net122" "(unknown)")
+	(
+		Connect("J12-2")
+		Connect("J13-1")
 	)
 )

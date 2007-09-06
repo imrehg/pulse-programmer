@@ -1,10 +1,9 @@
 BOARD = face-lvds
-REV = 0b3
+REV = 0b4
 TARGETS = $(BOARD).sch
 
-# Dummy targets to remake dependencies
-face-lvds.tgt: \
-	face-lvds-xmit.tgt
+SCHEM_FILES = \
+	face-lvds-xmit.sch
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
