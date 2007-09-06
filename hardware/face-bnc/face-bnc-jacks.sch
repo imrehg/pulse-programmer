@@ -7,9 +7,9 @@ Connector Subsheet
 T 50000 40400 9 10 1 0 0 0 1
 face-bnc-jacks.sch
 T 50000 40100 9 10 1 0 0 0 1
-6
+4
 T 51500 40100 9 10 1 0 0 0 1
-6
+4
 T 53000 40700 9 10 1 0 0 0 1
 http://local-box.org
 T 54000 40400 9 10 1 0 0 0 1

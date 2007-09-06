@@ -3,12 +3,12 @@ REV = 0b1
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
-face-bnc.tgt: \
-	face-bnc-buffers1.tgt \
-	face-bnc-buffers2.tgt \
-	face-bnc-buffers3.tgt \
-	face-bnc-glue.tgt \
-	face-bnc-jacks.tgt \
+SCHEM_FILES = \
+	face-bnc-buffers1.sch \
+	face-bnc-buffers2.sch \
+	face-bnc-buffers3.sch \
+	face-bnc-glue.sch \
+	face-bnc-jacks.sch \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
