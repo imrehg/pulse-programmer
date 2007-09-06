@@ -32,13 +32,13 @@ clean:
 	rm -rf *.pcb.bak* *.pcb- *.cmd *.net $(BOARD)-$(REV)
 
 ifndef GROOT
-$(error 'Define GROOT to the path such that $GROOT/bin contains gEDA binaries.')
+$(error 'Define GROOT to the path such that \$GROOT/bin contains gEDA binaries.')
 endif
 
 TOP_SRC_DIR = ~/sf/svnroot/hardware
 GBIN = $(GROOT)/bin
 GSCM_DIR = $(GROOT)/share/gEDA/scheme
-GSCHEM = $(GBIN)/gschem -r ../geda-dotfiles/gafrc 
+GSCHEM = $(GBIN)/gschem 
 GRENUM = $(GBIN)/refdes_renum --nocopy
 GNET = $(GBIN)/gnetlist -q
 G2PCB = gsch2pcb --use-files
@@ -49,6 +49,8 @@ GBR_PRE = $(GBR_DIR)/$(BOARD)-$(REV)
 PS_DIR = postscript
 PS_PRE = $(PS_DIR)/$(BOARD)-$(REV)
 GSCHEMRC = gschemrc
+GAFRC = gafrc
+GNETLISTRC = gnetlistrc
 
 SVNROOT = https://pulse-sequencer.svn.sf.net/svnroot/pulse-sequencer
 TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
@@ -195,15 +197,21 @@ $(TARGETS_PS): $(BOARD).pcb $(PS_DIR)
 $(GSCHEMRC): ../geda-dotfiles/$(GSCHEMRC)
 	ln -s $< $@
 
+$(GAFRC): ../geda-dotfiles/$(GAFRC)
+	ln -s $< $@
+
+$(GNETLISTRC): ../geda-dotfiles/$(GNETLISTRC)
+	ln -s $< $@
+
 renum: $(TARGETS_RENUM)
 drc: $(TARGETS_DRC)
 pcb: $(TARGETS_PCB)
-net: $(TARGETS_NET)
+net: $(TARGETS_NET) $(GNETLISTRC)
 gerber: $(TARGETS_GERBER)
 fab: $(FAB_ZIP) $(FAB_ZIP).md5
 asm: $(ASM_ZIP) $(ASM_ZIP).md5
 schemps: $(SCH_ZIP) $(SCH_ZIP).md5
-schem: $(GSCHEMRC)
+schem: $(GSCHEMRC) $(GAFRC)
 	$(GSCHEM) $(BOARD).sch
 layout:
 	$(PCB) $(LAYER_COLORS) $(BOARD).pcb
