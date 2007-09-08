@@ -2,8 +2,7 @@ BOARD = island-gp
 REV = 0b1
 TARGETS = $(BOARD).sch
 
-# Dummy targets to remake dependencies
-island-gp.tgt: 
+SCHEM_FILES = \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
