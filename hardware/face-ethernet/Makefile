@@ -2,9 +2,8 @@ BOARD = face-ethernet
 REV = Ab1
 TARGETS = $(BOARD).sch
 
-# Dummy targets to remake dependencies
-face-ethernet.tgt: \
-	face-ethernet-phy.tgt \
+SCHEM_FILES = \
+	face-ethernet-phy.sch \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
