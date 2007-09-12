@@ -1,0 +1,89 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=2500
+pinwidthvertical=300
+pinwidthhorizontal=300
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070904
+name=PCK9446
+device=PCK9446
+refdes=U?
+footprint=LQFP-32
+description="Philips Clock Fanout Buffer"
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Pos	Net	Label
+1		in	line	l		CLK_SEL
+2		pwr	line	l		VCC
+3		in	line	l		CLK0
+4		in	line	l		CLK1
+5		in	line	l		FSELA
+6		in	line	l		FSELB
+7		in	line	l		FSELC
+8		pwr	line	l		GND
+9		pwr	line	b		VCCC
+10		out	line	b		QC0
+11		pwr	line	b		GND
+12		out	line	b		QC1
+13		pwr	line	b		VCCC
+14		out	line	b		QC2
+15		pwr	line	b		GND
+16		out	line	b		QC3
+24		pwr	line	r		GND
+23		out	line	r		QB0
+22		pwr	line	r		VCCB
+21		out	line	r		QB1
+20		pwr	line	r		GND
+19		out	line	r		QB2
+18		pwr	line	r		VCCB
+17		pwr	line	r		VCCC
+32		in	line	t		MR/\_OE\_
+31		pwr	line	t		GND
+30		out	line	t		QA0
+29		pwr	line	t		VCCA
+28		out	line	t		QA1
+27		pwr	line	t		GND
+26		out	line	t		QA2
+25		pwr	line	t		VCCA
+
