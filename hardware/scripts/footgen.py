@@ -280,13 +280,19 @@ def bga(attrlist):
 # draw a row of square pads
 # pos is center position
 # whichway can be up down left right
-def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskclear, polyclear, prefix="", tent=False, onsolder=False):
+def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads,
+              maskclear, polyclear, prefix="", tent=False, onsolder=False,
+              headernum=False):
     pads = ""
     rowlen = pitch * (numpads - 1)
+    step = 1
+    if (headernum == True):
+        step = 2
+        rowlen = pitch * ((numpads/2) - 1)
     if whichway == "down":
         x = pos[0]
         y = pos[1] - rowlen/2
-        for padnum in range (startnum, startnum+numpads):
+        for padnum in range (startnum, startnum+numpads, step):
             pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,\
                                  prefix + str(padnum), \
                                  tent=tent, onsolder=onsolder)
@@ -294,7 +300,7 @@ def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskcl
     elif whichway == "up":
         x = pos[0]
         y = pos[1] + rowlen/2
-        for padnum in range (startnum, startnum+numpads):
+        for padnum in range (startnum, startnum+numpads, step):
             pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,\
                                  prefix + str(padnum), \
                                  tent=tent, onsolder=onsolder)
@@ -302,7 +308,7 @@ def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskcl
     elif whichway == "right":
         x = pos[0] - rowlen/2
         y = pos[1]
-        for padnum in range (startnum, startnum+numpads):
+        for padnum in range (startnum, startnum+numpads, step):
             pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,\
                                  prefix + str(padnum), \
                                  tent=tent, onsolder=onsolder)
@@ -310,7 +316,7 @@ def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskcl
     elif whichway == "left":
         x = pos[0] + rowlen/2
         y = pos[1]
-        for padnum in range (startnum, startnum+numpads):
+        for padnum in range (startnum, startnum+numpads, step):
             pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,\
                                  prefix + str(padnum), \
                                  tent=tent, onsolder=onsolder)
@@ -341,22 +347,29 @@ def qfp(attrlist):
         pinswide = (pins-2*pinshigh)/2
     if pinshigh:
         # draw left side
-        qfpelt = qfpelt + rowofpads([-(width+padwidth)/2,0], pitch, "down", padwidth,\
-                                    padheight, 1, pinshigh, maskclear, polyclear)
+        qfpelt = qfpelt + \
+                 rowofpads([-(width+padwidth)/2,0], pitch, "down", padwidth,\
+                           padheight, 1, pinshigh, maskclear, polyclear)
         # draw right side
-        qfpelt = qfpelt + rowofpads([(width+padwidth)/2,0], pitch, "up", padwidth,\
-                                    padheight, pinshigh+pinswide+1, pinshigh,\
-                                    maskclear, polyclear)
+        qfpelt = qfpelt + \
+                 rowofpads([(width+padwidth)/2,0], pitch, "up", padwidth,\
+                           padheight, pinshigh+pinswide+1, pinshigh,\
+                           maskclear, polyclear)
     if pinswide:
         # draw bottom
-        qfpelt = qfpelt + rowofpads([0,(height+padwidth)/2], pitch, "right", padheight,\
-                                    padwidth, pinshigh+1, pinswide, maskclear, polyclear)
+        qfpelt = qfpelt + \
+                 rowofpads([0,(height+padwidth)/2], pitch, "right", padheight,\
+                           padwidth, pinshigh+1, pinswide, \
+                           maskclear, polyclear)
         # draw top
-        qfpelt = qfpelt + rowofpads([0,-(height+padwidth)/2], pitch, "left", padheight,\
-                                    padwidth, 2*pinshigh+pinswide+1, pinswide, maskclear, polyclear)
+        qfpelt = qfpelt + \
+                 rowofpads([0,-(height+padwidth)/2], pitch, "left", padheight,\
+                           padwidth, 2*pinshigh+pinswide+1, pinswide, \
+                           maskclear, polyclear)
     # exposed pad packages:
     if ep:
-        qfpelt =qfpelt + pad(0,0,0,0,ep,polyclear,maskclear,str(pins+1),"square")
+        qfpelt = qfpelt + \
+                 pad(0,0,0,0,ep,polyclear,maskclear,str(pins+1),"square")
     if silkstyle == "inside":
         x = width/2 - silkoffset
         y = height/2 - silkoffset
@@ -556,14 +569,28 @@ def so(attrlist):
     silkboxheight = findattr(attrlist, "silkboxheight")
     silkstyle = findattr(attrlist, "silkstyle")
     silkslot = findattr(attrlist, "silkslot")
+    headernum = findattr(attrlist, "headernum")
     if pins % 2:
         print "Odd number of pins: that is a problem"
         print "Skipping " + findattr(attrlist, "type")
         return ""
     rowpos = (width+padwidth)/2
     soelt = element(attrlist)
-    soelt = soelt + rowofpads([-rowpos,0], pitch, "down", padwidth, padheight, 1, pins/2, maskclear, polyclear)
-    soelt = soelt + rowofpads([rowpos,0], pitch, "up", padwidth, padheight, 1+pins/2, pins/2, maskclear, polyclear)
+    if (headernum == "yes"):
+        soelt = soelt + \
+                rowofpads([-rowpos,0], pitch, "down", padwidth, padheight,
+                          1, pins, maskclear, polyclear, headernum = True)
+        soelt = soelt + \
+                rowofpads([rowpos,0], pitch, "up", padwidth, padheight,
+                          2, pins, maskclear, polyclear, headernum = True)
+    else:
+        soelt = soelt + \
+                rowofpads([-rowpos,0], pitch, "down", padwidth, padheight,
+                          1, pins/2, maskclear, polyclear)
+        soelt = soelt + \
+                rowofpads([rowpos,0], pitch, "up", padwidth, padheight,
+                          1+pins/2, pins/2, maskclear, polyclear)
+
     if (silkstyle != "inside"):
         silkboxheight = max(pitch*(pins-2)/2+padheight+2*silkoffset,
                             silkboxheight)

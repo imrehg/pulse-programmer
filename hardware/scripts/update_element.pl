@@ -254,7 +254,7 @@ while (<IN>) {
 		    #print "$1 $2\n"
 		    print OUT "\tPin[$x $y $3]\n";
 		}
-		elsif ($line =~ /ElementLine\s*\[([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+) ([\-0-9]+) (.*)\]/) {
+		elsif ($line =~ /ElementLine\s*\[([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+)\s*([\-0-9]+)\s*(.*)\]/) {
 		    ($x1, $y1) = rotatePoint($1, $2, $rotation);
 		    ($x2, $y2) = rotatePoint($3, $4, $rotation);
 		    print OUT "\tElementLine[$x1 $y1 $x2 $y2 $5]\n";
