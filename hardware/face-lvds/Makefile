@@ -1,9 +1,8 @@
 BOARD = face-lvds
-REV = 0b4
+REV = 0b5
 TARGETS = $(BOARD).sch
 
 SCHEM_FILES = \
-	face-lvds-xmit.sch
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
@@ -15,8 +14,8 @@ LAYER_COLORS = \
 	--layer-color-7 "\#408040" \
 
 # This is a high-speed board
-TARGETS_GERBER = $(GERBER_FILES_HS)
-TARGETS_PS = $(PS_FILES_HS)
+TARGETS_GERBER = $(GERBER_FILES_HS_FRONT)
+TARGETS_PS = $(PS_FILES_HS_FRONT)
 
 include ../Makefile.common
 
