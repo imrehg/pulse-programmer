@@ -48,9 +48,11 @@ part "TQFP-100_EP"
         ep = 0 mm
 part "PQFP-80"
 
-	pins 48
-	pitch 0.65 mm
-	width = 15.6 mm		# distance inside pins
-	height = 15.6 mm
-	padwidth 1.4 mm
-part "LFCSP-48"
+	pins 28
+        lccnum = "yes"
+	pitch = 50 mils
+	width = 366 mils	# distance inside pins
+	height = 366 mils
+	padwidth = 80 mils
+	padheight = 24 mils
+part "PLCC-28"
