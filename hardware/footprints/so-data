@@ -22,6 +22,15 @@ part "TSSOP-8"
 	silkboxheight = 5.4 mm
         pins = 16
 part "TSSOP-16"
+        width = 4.40 mm
+	silkboxheight = 5.0 mm
+        pins = 14
+part "TSSOP-14"
+	pitch = 0.50 mm
+        width = 6.10 mm
+	silkboxheight = 14.0 mm
+        pins = 48
+part "TSSOP-48"
 
 	pins = 16
 	width = 111 mils
