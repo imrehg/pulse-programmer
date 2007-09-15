@@ -77,6 +77,9 @@ def defattr():
         "banksep"      :0,
         "edgedip"      :0,
         "silkheight"   :0,
+        "receptm"      :0,
+        "receptb"      :0,
+        "lccnum"       :0,
 }
 
 # BGA row names 20 total
@@ -282,7 +285,7 @@ def bga(attrlist):
 # whichway can be up down left right
 def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads,
               maskclear, polyclear, prefix="", tent=False, onsolder=False,
-              headernum=False):
+              headernum=False, lccnum=False):
     pads = ""
     rowlen = pitch * (numpads - 1)
     step = 1
@@ -317,6 +320,9 @@ def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads,
         x = pos[0] + rowlen/2
         y = pos[1]
         for padnum in range (startnum, startnum+numpads, step):
+            if (lccnum):
+                if (padnum > (numpads * 4)):
+                    padnum = padnum % (numpads * 4)
             pads = pads + padctr(x,y,padheight,padlen,polyclear,maskclear,\
                                  prefix + str(padnum), \
                                  tent=tent, onsolder=onsolder)
@@ -338,6 +344,7 @@ def qfp(attrlist):
     silkoffset = findattr(attrlist, "silkoffset")
     silkstyle = findattr(attrlist, "silkstyle")
     silkcorner = findattr(attrlist, "silkcorner")
+    lccnum = findattr(attrlist, "lccnum")
     ep = findattr(attrlist, "ep")
     if pinshigh==0:
         pinshigh = pins/4
@@ -346,26 +353,37 @@ def qfp(attrlist):
     else:
         pinswide = (pins-2*pinshigh)/2
     if pinshigh:
+        left_start = 1
+        right_start = pinshigh+pinswide+1
+        if (lccnum == "yes"):
+            left_start += (pinshigh/2) + 1
+            right_start += (pinshigh/2) + 1
         # draw left side
         qfpelt = qfpelt + \
                  rowofpads([-(width+padwidth)/2,0], pitch, "down", padwidth,\
-                           padheight, 1, pinshigh, maskclear, polyclear)
+                           padheight, left_start, pinshigh, \
+                           maskclear, polyclear)
         # draw right side
         qfpelt = qfpelt + \
                  rowofpads([(width+padwidth)/2,0], pitch, "up", padwidth,\
-                           padheight, pinshigh+pinswide+1, pinshigh,\
+                           padheight, right_start, pinshigh,\
                            maskclear, polyclear)
     if pinswide:
+        top_start = pinshigh + 1
+        bottom_start = (2 * pinshigh) + pinswide + 1
+        if (lccnum == "yes"):
+            top_start += (pinshigh/2) + 1
+            bottom_start += (pinshigh/2) + 1
         # draw bottom
         qfpelt = qfpelt + \
                  rowofpads([0,(height+padwidth)/2], pitch, "right", padheight,\
-                           padwidth, pinshigh+1, pinswide, \
+                           padwidth, top_start, pinswide, \
                            maskclear, polyclear)
         # draw top
         qfpelt = qfpelt + \
                  rowofpads([0,-(height+padwidth)/2], pitch, "left", padheight,\
-                           padwidth, 2*pinshigh+pinswide+1, pinswide, \
-                           maskclear, polyclear)
+                           padwidth, bottom_start, pinswide, \
+                           maskclear, polyclear, lccnum = (lccnum =="yes"))
     # exposed pad packages:
     if ep:
         qfpelt = qfpelt + \
@@ -570,6 +588,8 @@ def so(attrlist):
     silkstyle = findattr(attrlist, "silkstyle")
     silkslot = findattr(attrlist, "silkslot")
     headernum = findattr(attrlist, "headernum")
+    receptm = findattr(attrlist, "receptm")
+    receptb = findattr(attrlist, "receptb")
     if pins % 2:
         print "Odd number of pins: that is a problem"
         print "Skipping " + findattr(attrlist, "type")
@@ -606,6 +626,12 @@ def so(attrlist):
             soelt = soelt + insidebox(silkx,silky,-silkx,-silky,silkwidth)
     else:
         silkx = width/2 + silkoffset + padwidth
+        if (headernum == "yes"):
+            silky = ((pins / 4) * receptm) + receptb
+            if (silkslot == "yes"):
+                soelt = soelt + box(-silkx,-10000,-silkx-2500,10000,silkwidth)
+
+        
         soelt = soelt + box(silkx,silky,-silkx,-silky,silkwidth)
         soelt = soelt + silk(0,-silky+2000,-2000,-silky,silkwidth)
         soelt = soelt + silk(0,-silky+2000,2000,-silky,silkwidth)
