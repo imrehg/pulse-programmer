@@ -4,6 +4,7 @@ TARGETS = $(BOARD).sch
 
 SCHEM_FILES = \
 	island-west-lvds.sch \
+	island-west-clock.sch \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
