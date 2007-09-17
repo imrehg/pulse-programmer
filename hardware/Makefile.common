@@ -51,7 +51,9 @@ PS_PRE = $(PS_DIR)/$(BOARD)-$(REV)
 GSCHEMRC = gschemrc
 GAFRC = gafrc
 GNETLISTRC = gnetlistrc
+RC_FILES = $(GSCHEMRC) $(GAFRC) $(GNETLISTRC)
 
+SCHEM_FILES += $(BOARD).sch
 SVNROOT = https://pulse-sequencer.svn.sf.net/svnroot/pulse-sequencer
 TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
 TARGETS_NET = $(TARGETS:.sch=.net)
@@ -204,20 +206,20 @@ $(GNETLISTRC): ../geda-dotfiles/$(GNETLISTRC)
 	ln -s $< $@
 
 renum: $(TARGETS_RENUM)
-drc: $(TARGETS_DRC)
-pcb: $(TARGETS_PCB)
-net: $(TARGETS_NET) $(GNETLISTRC)
-gerber: $(TARGETS_GERBER)
-fab: $(FAB_ZIP) $(FAB_ZIP).md5
-asm: $(ASM_ZIP) $(ASM_ZIP).md5
-schemps: $(SCH_ZIP) $(SCH_ZIP).md5
+drc: $(RC_FILES) $(TARGETS_DRC)
+pcb: $(RC_FILES) $(TARGETS_PCB) net
+net: $(RC_FILES) $(TARGETS_NET)
+gerber: $(RC_FILES) $(TARGETS_GERBER)
+fab: $(RC_FILES) $(FAB_ZIP) $(FAB_ZIP).md5
+asm: $(RC_FILES) $(ASM_ZIP) $(ASM_ZIP).md5
+schemps: $(RC_FILES) $(SCH_ZIP) $(SCH_ZIP).md5
 schem: $(GSCHEMRC) $(GAFRC)
 	$(GSCHEM) $(BOARD).sch
-layout:
+layout: $(RC_FILES)
 	$(PCB) $(LAYER_COLORS) $(BOARD).pcb
-ps: $(TARGETS_PS)
-pdf: $(TARGETS_PDF)
-bom: $(TARGETS_BOM)
+ps: $(RC_FILES) $(TARGETS_PS)
+pdf: $(RC_FILES) $(TARGETS_PDF)
+bom: $(RC_FILES) $(TARGETS_BOM)
 tag:
 	svn cp -m "Tagging of $(BOARD) revision $(REV)."\
 		$(SVNROOT)/hardware/$(BOARD) $(SVNROOT)/tags/$(BOARD)-$(REV)

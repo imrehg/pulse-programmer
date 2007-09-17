@@ -1,9 +1,11 @@
-BOARD = face-i2c
-REV = Ab1
+BOARD = face-out
+REV = 0b1
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
-face-i2c.tgt: \
+SCHEM_FILES = \
+	face-out-buffers.sch \
+	face-out-jacks.sch \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
@@ -13,7 +15,7 @@ LAYER_COLORS = \
 	--layer-color-5 "\#408040" \
 
 # This is a high-speed board
-TARGETS_GERBER = $(GERBER_FILES_HS_FRONT)
-TARGETS_PS = $(PS_FILES_HS_FRONT)
+TARGETS_GERBER = $(GERBER_FILES_HS)
+TARGETS_PS = $(PS_FILES_HS)
 
 include ../Makefile.common

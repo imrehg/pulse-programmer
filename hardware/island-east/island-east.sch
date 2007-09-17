@@ -650,5 +650,7 @@ C 46200 40200 1 0 0 island-east-glue.sym
 T 48700 50000 5 10 1 1 0 6 1
 refdes=S?
 T 46600 53000 5 10 0 0 0 0 1
-device=island-east-ad9517
+device=island-east-glue
+T 48900 50200 5 10 1 1 270 0 1
+source=island-east-glue.sch
 }

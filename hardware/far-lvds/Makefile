@@ -2,8 +2,8 @@ BOARD = far-lvds
 REV = 0b2
 TARGETS = $(BOARD).sch
 
-# Dummy targets to remake dependencies
-far-lvds.tgt: \
+SCHEM_FILES = \
+	far-lvds-gal.sch \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \

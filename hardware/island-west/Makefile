@@ -1,9 +1,9 @@
 BOARD = island-west
-REV = 0
+REV = Ab1
 TARGETS = $(BOARD).sch
 
-# Dummy targets to remake dependencies
-island-west.tgt: \
+SCHEM_FILES = \
+	island-west-lvds.sch \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
