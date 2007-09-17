@@ -1,0 +1,142 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=2000
+pinwidthvertical=200
+pinwidthhorizontal=200
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070917
+name=Output Buffers Subsheet
+device=face-out-buffers
+refdes=S?
+footprint=
+description="Buffers of BNC Output Face"
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Pos	Net	Label
+1		in	line	l		TO0
+2		in	line	l		TO1
+3		in	line	l		TO2
+4		in	line	l		TO3
+5		in	line	l		TO4
+6		in	line	l		TO5
+7		in	line	l		TO6
+8		in	line	l		TO7
+9		in	line	l		TO8
+10		in	line	l		TO9
+11		in	line	l		TO10
+12		in	line	l		TO11
+13		in	line	l		TO12
+14		in	line	l		TO13
+15		in	line	l		TO14
+16		in	line	l		TO15
+17		in	line	l		TO16
+18		in	line	l		TO17
+19		in	line	l		TO18
+20		in	line	l		TO19
+21		in	line	l		TO20
+22		in	line	l		TO21
+23		in	line	l		TO22
+24		in	line	l		TO23
+67		in	line	l		TO24
+68		in	line	l		TO25
+69		in	line	l		TO26
+70		in	line	l		TO27
+71		in	line	l		TO28
+72		in	line	l		TO29
+73		in	line	l		TO30
+74		in	line	l		TO31
+75		in	line	l		TO32
+76		in	line	l		TO33
+77		in	line	l		TO34
+78		in	line	l		TO35
+79		in	line	l		TO36
+80		in	line	l		TO37
+81		in	line	l		TO38
+82		in	line	l		TO39
+83		in	line	l		TO40
+84		in	line	l		TO41
+25		out	line	r		OUT0
+26		out	line	r		OUT1
+27		out	line	r		OUT2
+28		out	line	r		OUT3
+29		out	line	r		OUT4
+30		out	line	r		OUT5
+31		out	line	r		OUT6
+32		out	line	r		OUT7
+33		out	line	r		OUT8
+34		out	line	r		OUT9
+35		out	line	r		OUT10
+36		out	line	r		OUT11
+37		out	line	r		OUT12
+38		out	line	r		OUT13
+39		out	line	r		OUT14
+40		out	line	r		OUT15
+41		out	line	r		OUT16
+42		out	line	r		OUT17
+43		out	line	r		OUT18
+44		out	line	r		OUT19
+45		out	line	r		OUT20
+46		out	line	r		OUT21
+47		out	line	r		OUT22
+48		out	line	r		OUT23
+52		out	line	r		OUT24
+53		out	line	r		OUT25
+54		out	line	r		OUT26
+55		out	line	r		OUT27
+56		out	line	r		OUT28
+57		out	line	r		OUT29
+58		out	line	r		OUT30
+59		out	line	r		OUT31
+60		out	line	r		OUT32
+61		out	line	r		OUT33
+62		out	line	r		OUT34
+63		out	line	r		OUT35
+64		out	line	r		OUT36
+65		out	line	r		OUT37
+66		out	line	r		OUT38
+85		out	line	r		OUT39
+86		out	line	r		OUT40
+87		out	line	r		OUT41
+50		in	line	t		+5V
+51		in	line	t		GND

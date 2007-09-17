@@ -1,0 +1,107 @@
+# This is the template file for creating symbols with tragesym
+# every line starting with '#' is a comment line.
+
+[options]
+# wordswap swaps labels if the pin is on the right side an looks like this:
+#   "PB1 (CLK)". That's useful for micro controller port labels
+# rotate_labels rotates the pintext of top and bottom pins
+#   this is useful for large symbols like FPGAs with more than 100 pins
+# sort_labels will sort the pins by it's labels
+#   useful for address ports, busses, ...
+wordswap=yes
+rotate_labels=yes
+sort_labels=no
+generate_pinseq=yes
+sym_width=2000
+pinwidthvertical=200
+pinwidthhorizontal=200
+
+[geda_attr]
+# name will be printed in the top of the symbol
+# if you have a device with slots, you'll have to use slot= and slotdef=
+# use comment= if there are special information you want to add
+version=20070917
+name=BNC Subsheet
+device=face-out-jacks
+refdes=S?
+footprint=
+description="Connector Jacks of BNC Output Face"
+documentation=
+author=Paul Pham
+numslots=0
+#slot=1
+#slotdef=1:
+#slotdef=2:
+#slotdef=3:
+#slotdef=4:
+#comment=
+#comment=
+#comment=
+
+[pins]
+# tabseparated list of pin descriptions
+# ----------------------------------------
+# pinnr is the physical number of the pin
+# seq is the pinseq= attribute, leave it blank if it doesn't matter
+# type can be (in, out, io, oc, oe, pas, tp, tri, clk, pwr)
+# style can be (line,dot,clk,dotclk,none). none if only want to add a net
+# posit. can be (l,r,t,b) or empty for nets
+# net specifies the name of the net. Vcc or GND for example.
+# label represents the pinlabel.
+#	negation lines can be added with "\_" example: \_enable\_ 
+#	if you want to write a "\" use "\\" as escape sequence
+#-----------------------------------------------------
+#pinnr	seq	type	style	posit.	net	label	
+#-----------------------------------------------------
+#Pin	Seq	Type	Style	Pos	Net	Label
+1		in	line	l		TTL_OUT0
+2		in	line	l		TTL_OUT1
+3		in	line	l		TTL_OUT2
+4		in	line	l		TTL_OUT3
+5		in	line	l		TTL_OUT4
+6		in	line	l		TTL_OUT5
+7		in	line	l		TTL_OUT6
+8		in	line	l		TTL_OUT7
+9		in	line	l		TTL_OUT8
+10		in	line	l		TTL_OUT9
+11		in	line	l		TTL_OUT10
+12		in	line	l		TTL_OUT11
+13		in	line	l		TTL_OUT12
+14		in	line	l		TTL_OUT13
+15		in	line	l		TTL_OUT14
+16		in	line	l		TTL_OUT15
+17		in	line	l		TTL_OUT16
+18		in	line	l		TTL_OUT17
+19		in	line	l		TTL_OUT18
+20		in	line	l		TTL_OUT19
+21		in	line	l		TTL_OUT20
+23		out	line	l		TTL_IN_0
+24		out	line	l		TTL_IN_1
+25		out	line	l		TTL_IN_2
+26		out	line	l		TTL_IN_3
+22		in	line	r		TTL_OUT21
+27		in	line	r		TTL_OUT22
+28		in	line	r		TTL_OUT23
+29		in	line	r		TTL_OUT24
+30		in	line	r		TTL_OUT25
+31		in	line	r		TTL_OUT26
+32		in	line	r		TTL_OUT27
+33		in	line	r		TTL_OUT28
+34		in	line	r		TTL_OUT29
+35		in	line	r		TTL_OUT30
+36		in	line	r		TTL_OUT31
+37		in	line	r		TTL_OUT32
+38		in	line	r		TTL_OUT33
+39		in	line	r		TTL_OUT34
+40		in	line	r		TTL_OUT35
+41		in	line	r		TTL_OUT36
+42		in	line	r		TTL_OUT37
+43		in	line	r		TTL_OUT38
+44		in	line	r		TTL_OUT39
+45		in	line	r		TTL_OUT40
+46		in	line	r		TTL_OUT41
+47		out	line	r		TTL_IN_4
+48		out	line	r		TTL_IN_5
+49		out	line	r		TTL_IN_6
+50		out	line	r		TTL_IN_7
+51		in	line	t		GND
