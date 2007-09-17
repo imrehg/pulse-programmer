@@ -56,3 +56,12 @@ part "PQFP-80"
 	padwidth = 80 mils
 	padheight = 24 mils
 part "PLCC-28"
+
+	pins 32
+        lccnum = "no"
+	pitch = 0.8 mm
+	width = 7.6 mm	# distance inside pins
+	height = 7.6 mm
+	padwidth = 1.4 mm
+	padheight = 0.4 mm
+part "LQFP-32"
