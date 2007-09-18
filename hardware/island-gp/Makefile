@@ -1,5 +1,5 @@
 BOARD = island-gp
-REV = 0b1
+REV = 0
 TARGETS = $(BOARD).sch
 
 SCHEM_FILES = \
