@@ -1,0 +1,5 @@
+schematics island-gp.sch
+output-name island-gp
+elements-dir ../footprints
+use-files
+m4-pcbdir /
