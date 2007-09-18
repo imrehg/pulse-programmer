@@ -12,7 +12,7 @@ elementdir = "ic"		# where to put generated files
 	silkstyle = "inside"
 	silkoffset 1 mm 		# inside pads with 1mm clearance 
 
-	pins 240
+	pins = 240
 	pitch 0.5 mm
 	width = 32.4 mm		# distance inside pins
 	height = 32.4 mm
@@ -21,7 +21,7 @@ elementdir = "ic"		# where to put generated files
         silkcorner 40 mil
 part "PQFP-240"
 
-	pins 100
+	pins = 100
         pinshigh 30
 	pitch 0.65 mm
 	width = 13.8 mm		# distance inside pins
@@ -31,7 +31,7 @@ part "PQFP-240"
         silkcorner 40 mil
 part "TQFP-100"
 
-	pins 100
+	pins = 100
         pinshigh 0
         pitch = 0.5 mm
 	width = 13.8 mm		# distance inside pins
@@ -40,7 +40,7 @@ part "TQFP-100"
         ep = 5 mm
 part "TQFP-100_EP"
 
-	pins 80
+	pins = 80
 	pitch 0.65 mm
 	width = 15.6 mm		# distance inside pins
 	height = 15.6 mm
@@ -48,7 +48,7 @@ part "TQFP-100_EP"
         ep = 0 mm
 part "PQFP-80"
 
-	pins 28
+	pins = 28
         lccnum = "yes"
 	pitch = 50 mils
 	width = 366 mils	# distance inside pins
@@ -57,7 +57,7 @@ part "PQFP-80"
 	padheight = 24 mils
 part "PLCC-28"
 
-	pins 32
+	pins = 32
         lccnum = "no"
 	pitch = 0.8 mm
 	width = 7.6 mm	# distance inside pins
@@ -65,3 +65,12 @@ part "PLCC-28"
 	padwidth = 1.4 mm
 	padheight = 0.4 mm
 part "LQFP-32"
+
+        pins = 32
+        silkstyle = "outside"
+        pitch = 0.5 mm
+        width = 4.2 mm
+        height = 4.2 mm
+        padwidth = 1.0 mm
+        padheight = 0.3 mm
+part "QFN-32"
