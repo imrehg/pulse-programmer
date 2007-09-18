@@ -986,4 +986,6 @@ T 51800 50200 5 10 1 1 0 6 1
 refdes=S1
 T 51500 50700 5 10 0 0 0 0 1
 device=island-west-lvds
+T 51500 43900 5 10 1 1 0 0 1
+source=island-west-lvds.sch
 }
