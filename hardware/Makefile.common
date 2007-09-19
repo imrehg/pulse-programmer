@@ -56,9 +56,9 @@ RC_FILES = $(GSCHEMRC) $(GAFRC) $(GNETLISTRC)
 SCHEM_FILES += $(BOARD).sch
 SVNROOT = https://pulse-sequencer.svn.sf.net/svnroot/pulse-sequencer
 TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
-TARGETS_NET = $(TARGETS:.sch=.net)
-TARGETS_DRC = $(TARGETS:.sch=.drc)
-TARGETS_PCB = $(TARGETS:.sch=.pcb)
+TARGETS_NET = $(BOARD).net
+TARGETS_DRC = $(BOARD).drc
+TARGETS_PCB = $(BOARD).pcb
 TARGETS_SCHEM = $(SCHEM_FILES:.sch=.tgt)
 SCHEMPS_FILES = $(SCHEM_FILES:.sch=.ps)
 TARGETS_SCHEMPS = $(foreach file, $(SCHEMPS_FILES), $(SCH_DIR)/$(file))
@@ -128,9 +128,6 @@ SCH_DIR = $(BOARD)-$(REV)-schematics
 
 TARGETS_BOM = $(BOARD)-$(REV).bom $(BOARD)-$(REV).xy
 
-%.tgt: %.sch
-	touch $@
-
 %.renum.sch: %.sch
 	$(GRENUM) $<
 	mv $<.renum $@
@@ -141,13 +138,13 @@ $(SCH_DIR)/%.ps: %.sch
 %.pdf: %.ps
 	ps2pdf $< $@
 
-%.net: %.sch %.tgt
-	$(GNET) -g PCB -o $@ $<
+$(BOARD).net: $(SCHEM_FILES)
+	$(GNET) -g PCB -o $@ $(BOARD).sch
 
-%.drc: %.sch %.tgt
-	$(GNET) -g drc2 -o $@ $<
+$(BOARD).drc: $(SCHEM_FILES)
+	$(GNET) -g drc2 -o $@ $(BOARD).sch
 
-%.pcb: %.prj %.tgt
+$(BOARD).pcb: $(BOARD).prj $(SCHEM_FILES)
 	$(G2PCB) $<
 	touch $@ # If no new elements are added, touch to update timestamp
 
@@ -181,8 +178,6 @@ $(ASM_ZIP): $(TARGETS_BOM) $(TARGETS_PDF)
 	cp $(TARGETS_BOM) $(ASM_DIR)/
 	cp $(PS_PRE).*assembly.pdf $(ASM_DIR)/
 	zip -r $(ASM_ZIP) $(ASM_DIR)
-
-$(BOARD).tgt: $(TARGETS_SCHEM)
 
 $(BOARD)-$(REV).zip:
 	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)
