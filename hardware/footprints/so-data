@@ -27,8 +27,9 @@ part "TSSOP-16"
         pins = 14
 part "TSSOP-14"
 	pitch = 0.50 mm
-        width = 6.10 mm
-	silkboxheight = 14.0 mm
+	padheight = 0.27 mm
+        width = 6.40 mm
+	silkboxheight = 12.6 mm
         pins = 48
 part "TSSOP-48"
 

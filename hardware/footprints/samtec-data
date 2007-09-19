@@ -2,7 +2,7 @@ elementdir = "connector"		# where to put generated files
 
 # Samtec connector parts
 	type "samtec"
-        polyclear = 8 mil
+        polyclear = 10 mil
         maskclear = 0 mil
 
 	padheight = 60 mils
