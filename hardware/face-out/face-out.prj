@@ -1,5 +1,5 @@
-schematics face-bnc.sch
-output-name face-bnc
+schematics face-out.sch
+output-name face-out
 elements-dir ../footprints
 use-files
 m4-pcbdir /
