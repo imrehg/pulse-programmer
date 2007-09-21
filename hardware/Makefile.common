@@ -179,6 +179,10 @@ $(ASM_ZIP): $(TARGETS_BOM) $(TARGETS_PDF)
 	cp $(PS_PRE).*assembly.pdf $(ASM_DIR)/
 	zip -r $(ASM_ZIP) $(ASM_DIR)
 
+$(BOARD)-$(REV).bz2:
+	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)
+	tar cvf - $(BOARD)-$(REV) | bzip2 > $@
+
 $(BOARD)-$(REV).zip:
 	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)
 	zip -r $@ $(BOARD)-$(REV)
@@ -221,5 +225,5 @@ tag:
 untag:
 	svn rm -m "Undo tagging of $(BOARD) revision $(REV)."\
 		$(SVNROOT)/tags/$(BOARD)-$(REV)
-export: $(BOARD)-$(REV).zip $(BOARD)-$(REV).zip.md5
+export: $(BOARD)-$(REV).bz2 $(BOARD)-$(REV).bz2.md5
 
