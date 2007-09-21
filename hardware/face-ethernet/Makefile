@@ -1,5 +1,5 @@
 BOARD = face-ethernet
-REV = Ab1
+REV = A
 TARGETS = $(BOARD).sch
 
 SCHEM_FILES = \

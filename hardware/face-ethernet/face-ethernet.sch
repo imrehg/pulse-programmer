@@ -582,6 +582,8 @@ T 52900 46400 5 10 0 0 0 0 1
 device=LED
 T 52800 45800 5 10 0 0 0 0 1
 footprint=0603_LED
+T 52800 45800 5 10 0 0 0 0 1
+value=LNJ808K8SRA
 }
 C 53700 46400 1 180 0 led-small.sym
 {
@@ -591,6 +593,8 @@ T 53600 45800 5 10 0 0 180 0 1
 device=LED
 T 53700 46400 5 10 0 0 180 0 1
 footprint=0603_LED
+T 53700 46400 5 10 1 1 0 0 1
+value=LNJ808K8SRA
 }
 C 52800 45400 1 0 0 led-small.sym
 {
@@ -600,6 +604,8 @@ T 52900 46000 5 10 0 0 0 0 1
 device=LED
 T 52800 45400 5 10 0 0 0 0 1
 footprint=0603_LED
+T 52800 45400 5 10 0 1 0 0 1
+value=LNJ808K8SRA
 }
 C 52800 45000 1 0 0 led-small.sym
 {
@@ -609,6 +615,8 @@ T 52900 45600 5 10 0 0 0 0 1
 device=LED
 T 52800 45000 5 10 0 0 0 0 1
 footprint=0603_LED
+T 52800 45000 5 10 0 1 0 0 1
+value=LNJ808K8SRA
 }
 C 52800 44600 1 0 0 led-small.sym
 {
@@ -618,6 +626,8 @@ T 52900 45200 5 10 0 0 0 0 1
 device=LED
 T 52800 44600 5 10 0 0 0 0 1
 footprint=0603_LED
+T 52800 44600 5 10 0 1 0 0 1
+value=LNJ808K8SRA
 }
 C 55200 46200 1 0 0 resistor-1.sym
 {
@@ -626,7 +636,7 @@ device=RESISTOR
 T 56000 46400 5 10 1 1 0 0 1
 refdes=R6
 T 55200 46100 5 10 1 1 0 0 1
-value=1k
+value=300
 T 55200 46200 5 10 0 0 0 0 1
 footprint=0402
 }
@@ -642,7 +652,7 @@ device=RESISTOR
 T 56000 46000 5 10 1 1 0 0 1
 refdes=R7
 T 55200 45700 5 10 1 1 0 0 1
-value=1k
+value=300
 T 55200 45800 5 10 0 0 0 0 1
 footprint=0402
 }
@@ -653,7 +663,7 @@ device=RESISTOR
 T 56000 45600 5 10 1 1 0 0 1
 refdes=R8
 T 55200 45300 5 10 1 1 0 0 1
-value=1k
+value=300
 T 55200 45400 5 10 0 0 0 0 1
 footprint=0402
 }
@@ -664,7 +674,7 @@ device=RESISTOR
 T 56000 45200 5 10 1 1 0 0 1
 refdes=R9
 T 55200 44900 5 10 1 1 0 0 1
-value=1k
+value=300
 T 55200 45000 5 10 0 0 0 0 1
 footprint=0402
 }
@@ -675,7 +685,7 @@ device=RESISTOR
 T 56000 44800 5 10 1 1 0 0 1
 refdes=R10
 T 55200 44500 5 10 1 1 0 0 1
-value=1k
+value=300
 T 55200 44600 5 10 0 0 0 0 1
 footprint=0402
 }
