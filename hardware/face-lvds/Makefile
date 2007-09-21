@@ -1,5 +1,5 @@
 BOARD = face-lvds
-REV = 0b5
+REV = 0
 TARGETS = $(BOARD).sch
 
 SCHEM_FILES = \
