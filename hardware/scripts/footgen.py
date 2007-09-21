@@ -392,12 +392,10 @@ def qfp(attrlist):
         x = width/2 - silkoffset
         y = height/2 - silkoffset
         qfpelt = qfpelt + insidebox(x,y,-x,-y,silkwidth,silkcorner)
-        #qfpelt = qfpelt + silk(-x,-y,-(x+3940),-(y+3940),silkwidth)
     elif silkstyle == "outside":
         x = (width+2*padwidth)/2 + silkoffset
         y = (height+2*padwidth)/2 + silkoffset
-        qfpelt = qfpelt + box(x,y,-x,-y,silkwidth)
-        qfpelt = qfpelt + silk(-x,-y,-(x+3940),-(y+3940),silkwidth)
+        qfpelt = qfpelt + insidebox(x,y,-x,-y,silkwidth,silkcorner)
     return qfpelt
 
 def edgecard(attrlist):
