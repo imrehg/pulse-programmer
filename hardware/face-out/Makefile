@@ -5,7 +5,6 @@ TARGETS = $(BOARD).sch
 # Dummy targets to remake dependencies
 SCHEM_FILES = \
 	face-out-buffers.sch \
-	face-out-jacks.sch \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \

@@ -138,5 +138,5 @@ numslots=0
 85		out	line	r		OUT39
 86		out	line	r		OUT40
 87		out	line	r		OUT41
-50		in	line	t		+5V
-51		in	line	t		GND
+50		pwr	line	t		+5V
+51		pwr	line	t		GND
