@@ -8,16 +8,18 @@ help:
 	@echo "The following targets are available"
 	@echo
 	@echo "  make [help]  prints this message."
-	@echo "  make schem   opens main schematic sheet for editing"
-	@echo "  make layout  opens PCB layout for editing with layer colors"
+	@echo "  make sch     opens main schematic sheet for editing"
+	@echo "  make drc     runs schematic design rule check"
 	@echo "  make net     generates netlist from *.sch.renum files"
 	@echo "  make pcb     generates initial PCB layout from *.sch file"
+	@echo "  make layout  opens PCB layout for editing with layer colors"
 	@echo "  make gerber  generates Gerber CAM output from *.pcb file"
 	@echo "  make fab     generates zip file of Gerbers for fabrication"
 	@echo "  make asm     generates zip file of drawings/BOM for assembly"
+	@echo "  make pcbpdf  generates zip file of all PCB drawings in PDF"
 	@echo "  make ps      generates Postscript layer plots"
 	@echo "  make pdf     generates PDF layer plots"
-	@echo "  make schemps generates Postscript from schematic sheets"
+	@echo "  make schpdf  generates Postscript from schematic sheets"
 	@echo
 	@echo "The following variable modifiers are available:"
 	@echo
@@ -27,7 +29,10 @@ help:
 clean:
 	rm -rf *.renum.sch *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
 	rm -rf $(GBR_DIR) $(PS_DIR) *.zip $(TARGETS_BOM)
-	rm -rf $(FAB_ZIP)* $(ASM_ZIP)* $(SCH_ZIP)*
+	rm -rf $(FAB_ZIP) $(FAB_ZIP).md5
+	rm -rf $(ASM_ZIP) $(ASM_ZIP).md5
+	rm -rf $(SCH_ZIP) $(SCH_ZIP).md5
+	rm -rf $(PCB_ZIP) $(PCB_ZIP).md5
 	rm -rf $(FAB_DIR) $(ASM_DIR) $(SCH_DIR)
 	rm -rf *.pcb.bak* *.pcb- *.cmd *.net $(BOARD)-$(REV)
 
@@ -61,67 +66,83 @@ TARGETS_DRC = $(BOARD).drc
 TARGETS_PCB = $(BOARD).pcb
 TARGETS_SCHEM = $(SCHEM_FILES:.sch=.tgt)
 SCHEMPS_FILES = $(SCHEM_FILES:.sch=.ps)
-TARGETS_SCHEMPS = $(foreach file, $(SCHEMPS_FILES), $(SCH_DIR)/$(file))
+TARGETS_SCHEMPDF = $(foreach file, $(SCHEMPDF_FILES), $(SCH_DIR)/$(file))
 
-GERBER_FILES_FRONT = \
-	$(GBR_PRE).back.gbr \
-	$(GBR_PRE).backmask.gbr \
-	$(GBR_PRE).front.gbr \
-	$(GBR_PRE).frontmask.gbr \
-	$(GBR_PRE).frontpaste.gbr \
-	$(GBR_PRE).frontsilk.gbr \
-	$(GBR_PRE).outline.gbr \
-	$(GBR_PRE).fab.gbr \
-	$(GBR_PRE).plated-drill.cnc \
-	$(GBR_PRE).unplated-drill.cnc \
+TARGETS_FRONT = \
+	back \
+	backmask \
+	front \
+	frontmask \
+	frontpaste \
+	frontsilk \
+	outline \
+	fab \
 
-GERBER_FILES = $(GERBER_FILES_FRONT) \
-	$(GBR_PRE).backpaste.gbr \
-	$(GBR_PRE).backsilk.gbr \
+TARGETS_BACK = \
+	backpaste \
+	backsilk \
+
+TARGETS_PLATED = \
+	plated-drill \
+
+TARGETS_UNPLATED = \
+	unplated-drill \
+
+# Inner planes for high-speed boards are always layer groups 4 and 5.
+TARGETS_HS = \
+	group3 \
+	group4 \
+
+GBR_FILES_FRONT = \
+	$(foreach file, $(TARGETS_FRONT), $(GBR_PRE).$(file).gbr) \
+	$(foreach file, $(TARGETS_PLATED), $(GBR_PRE).$(file).cnc) \
+
+GBR_FILES_BACK = \
+	$(foreach file, $(TARGETS_BACK), $(GBR_PRE).$(file).gbr) \
+
+GBR_FILES_UNPLATED = \
+	$(foreach file, $(TARGETS_UNPLATED), $(GBR_PRE).$(file).cnc) \
+
+GBR_FILES_PLATED = $(GBR_FILES_FRONT) $(GBR_FILES_BACK)
+
+GBR_FILES = $(GBR_FILES_PLATED) $(GBR_FILES_UNPLATED)
+
+TARGETS_ASSEMBLY_FRONT = \
+	frontassembly \
+
+TARGETS_ASSEMBLY_BACK = \
+	backassembly \
 
 PS_FILES_FRONT = \
-	$(PS_PRE).front.ps \
-	$(PS_PRE).back.ps \
-	$(PS_PRE).outline.ps \
-	$(PS_PRE).frontmask.ps \
-	$(PS_PRE).backmask.ps \
-	$(PS_PRE).plated-drill.ps \
-	$(PS_PRE).unplated-drill.ps \
-	$(PS_PRE).frontsilk.ps \
-	$(PS_PRE).frontpaste.ps \
-	$(PS_PRE).frontassembly.ps \
-	$(PS_PRE).fab.ps \
+	$(foreach file, $(TARGETS_FRONT), $(PS_PRE).$(file).ps) \
+	$(foreach file, $(TARGETS_PLATED), $(PS_PRE).$(file).ps) \
+	$(foreach file, $(TARGETS_ASSEMBLY_FRONT), $(PS_PRE).$(file).ps) \
+
+PS_FILES_UNPLATED = \
+	$(foreach file, $(TARGETS_UNPLATED), $(PS_PRE).$(file).ps) \
 
 PS_FILES_BACK = \
-	$(PS_PRE).backsilk.ps \
-	$(PS_PRE).backpaste.ps \
-	$(PS_PRE).backassembly.ps \
+	$(foreach file, $(TARGETS_BACK), $(PS_PRE).$(file).ps) \
+	$(foreach file, $(TARGETS_ASSEMBLY_BACK), $(PS_PRE).$(file).ps) \
 
-PS_FILES = $(PS_FILES_FRONT) $(PS_FILES_BACK)
+PS_FILES_PLATED = $(PS_FILES_FRONT) $(PS_FILES_BACK)
+
+PS_FILES = $(PS_FILES_PLATED) $(PS_FILES_UNPLATED)
 
 PDF_FILES = $(PS_FILES:.ps=.pdf)
 TARGETS_PDF = $(TARGETS_PS:.ps=.pdf)
 
 # High-speed boards need power/ground inner planes
-GERBER_FILES_HS = $(GERBER_FILES) \
-	$(GBR_PRE).group3.gbr \
-	$(GBR_PRE).group4.gbr \
+GERBER_FILES_HS = \
+	$(foreach file, $(TARGETS_HS), $(GBR_PRE).$(file).gbr) \
 
-GERBER_FILES_HS_FRONT = $(GERBER_FILES_FRONT) \
-	$(GBR_PRE).group3.gbr \
-	$(GBR_PRE).group4.gbr \
-
-PS_FILES_HS = $(PS_FILES) \
-	$(PS_PRE).group3.ps \
-	$(PS_PRE).group4.ps \
-
-PS_FILES_HS_FRONT = $(PS_FILES_FRONT) \
-	$(PS_PRE).group3.ps \
-	$(PS_PRE).group4.ps \
+PS_FILES_HS = \
+	$(foreach file, $(TARGETS_HS), $(PS_PRE).$(file).ps) \
 
 FAB_ZIP = $(BOARD)-$(REV)-fab.zip
 ASM_ZIP = $(BOARD)-$(REV)-asm.zip
 SCH_ZIP = $(BOARD)-$(REV)-sch.zip
+PCB_ZIP = $(BOARD)-$(REV)-pcb.zip
 FAB_DIR = $(BOARD)-$(REV)-fabrication
 ASM_DIR = $(BOARD)-$(REV)-assembly
 SCH_DIR = $(BOARD)-$(REV)-schematics
@@ -211,8 +232,9 @@ net: $(RC_FILES) $(TARGETS_NET)
 gerber: $(RC_FILES) $(TARGETS_GERBER)
 fab: $(RC_FILES) $(FAB_ZIP) $(FAB_ZIP).md5
 asm: $(RC_FILES) $(ASM_ZIP) $(ASM_ZIP).md5
-schemps: $(RC_FILES) $(SCH_ZIP) $(SCH_ZIP).md5
-schem: $(GSCHEMRC) $(GAFRC)
+schpdf: $(RC_FILES) $(SCH_ZIP) $(SCH_ZIP).md5
+pcbpdf: $(RC_FILES) $(PCB_ZIP) $(PCB_ZIP).md5
+sch: $(GSCHEMRC) $(GAFRC)
 	$(GSCHEM) $(BOARD).sch
 layout: $(RC_FILES)
 	$(PCB) $(LAYER_COLORS) $(BOARD).pcb
