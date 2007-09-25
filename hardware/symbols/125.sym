@@ -168,3 +168,5 @@ T 400 5800 5 10 0 0 0 0 1
 description="Fairchild Quad TTl Buffer"
 T 400 6000 5 10 0 0 0 0 1
 numslots=0
+T 1200 100 8 10 1 1 0 0 1
+device=125
