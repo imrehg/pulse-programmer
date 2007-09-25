@@ -162,11 +162,11 @@ $(BOARD).pcb: $(BOARD).prj $(SCHEM_FILES)
 	$(G2PCB) $<
 	touch $@ # If no new elements are added, touch to update timestamp
 
-%.zip.md5: %.zip
+%.md5: %
 	md5sum $< >> $@
 
-%.bz2.md5: %.bz2
-	md5sum $< >> $@
+#%.tar.bz2.md5: %.bz2
+#	md5sum $< >> $@
 
 $(TARGETS_BOM): $(BOARD).pcb
 	$(PCB) -x bom --bomfile $(BOARD)-$(REV).bom --xyfile $(BOARD)-$(REV).xy \
@@ -199,7 +199,7 @@ $(ASM_ZIP): $(TARGETS_BOM) $(TARGETS_PDF)
 	cp $(PS_PRE).*assembly.pdf $(ASM_DIR)/
 	zip -r $(ASM_ZIP) $(ASM_DIR)
 
-$(BOARD)-$(REV).bz2:
+$(BOARD)-$(REV).tar.bz2:
 	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)
 	tar cvf - $(BOARD)-$(REV) | bzip2 > $@
 
@@ -243,5 +243,5 @@ tag:
 untag:
 	svn rm -m "Undo tagging of $(BOARD) revision $(REV)."\
 		$(SVNROOT)/tags/$(BOARD)-$(REV)
-export: $(BOARD)-$(REV).bz2 $(BOARD)-$(REV).bz2.md5
+export: $(BOARD)-$(REV).tar.bz2 $(BOARD)-$(REV).tar.bz2.md5
 
