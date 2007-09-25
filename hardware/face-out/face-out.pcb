@@ -1239,7 +1239,7 @@ Element["onsolder" "0402" "R30" "49.9" 889300 141050 6000 2450 0 100 "auto"]
 
 	)
 
-Element["onsolder" "TSSOP-48" "U3" "unknown" 934200 120350 3550 -32050 2 100 "auto"]
+Element["onsolder" "TSSOP-48" "U3" "SN74ABTH16244" 934200 120350 3550 -32050 2 100 "auto"]
 (
 	Pad[-19074 22643 -13130 22643 1063 1600 1663 "\\_1OE\\_" "1" "onsolder,square"]
 	Pad[-19074 20674 -13130 20674 1063 1600 1663 "1Y1" "2" "onsolder,square"]
