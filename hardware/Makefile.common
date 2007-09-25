@@ -10,7 +10,7 @@ help:
 	@echo "  make [help]  prints this message."
 	@echo "  make sch     opens main schematic sheet for editing"
 	@echo "  make drc     runs schematic design rule check"
-	@echo "  make net     generates netlist from *.sch.renum files"
+	@echo "  make net     generates netlist from .sch files"
 	@echo "  make pcb     generates initial PCB layout from *.sch file"
 	@echo "  make layout  opens PCB layout for editing with layer colors"
 	@echo "  make gerber  generates Gerber CAM output from *.pcb file"
@@ -27,13 +27,13 @@ help:
 	@echo
 
 clean:
-	rm -rf *.renum.sch *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
-	rm -rf $(GBR_DIR) $(PS_DIR) *.zip $(TARGETS_BOM)
+	rm -rf *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
+	rm -rf *.zip $(TARGETS_BOM)
 	rm -rf $(FAB_ZIP) $(FAB_ZIP).md5
 	rm -rf $(ASM_ZIP) $(ASM_ZIP).md5
 	rm -rf $(SCH_ZIP) $(SCH_ZIP).md5
 	rm -rf $(PCB_ZIP) $(PCB_ZIP).md5
-	rm -rf $(FAB_DIR) $(ASM_DIR) $(SCH_DIR)
+	rm -rf $(FAB_DIR) $(ASM_DIR) $(SCH_DIR) $(PCB_DIR)
 	rm -rf *.pcb.bak* *.pcb- *.cmd *.net $(BOARD)-$(REV)
 
 ifndef GROOT
@@ -44,15 +44,12 @@ TOP_SRC_DIR = ~/sf/svnroot/hardware
 GBIN = $(GROOT)/bin
 GSCM_DIR = $(GROOT)/share/gEDA/scheme
 GSCHEM = $(GBIN)/gschem 
-GRENUM = $(GBIN)/refdes_renum --nocopy
 GNET = $(GBIN)/gnetlist -q
 G2PCB = gsch2pcb --use-files
 PCB = $(GBIN)/pcb
 GBR = $(PCB) -x gerber --verbose --gerberfile $(GBR_PRE)
-GBR_DIR = gerber_cam
-GBR_PRE = $(GBR_DIR)/$(BOARD)-$(REV)
-PS_DIR = postscript
-PS_PRE = $(PS_DIR)/$(BOARD)-$(REV)
+GBR_PRE = $(FAB_DIR)/$(BOARD)-$(REV)
+PS_PRE = $(PCB_DIR)/$(BOARD)-$(REV)
 GSCHEMRC = gschemrc
 GAFRC = gafrc
 GNETLISTRC = gnetlistrc
@@ -60,13 +57,12 @@ RC_FILES = $(GSCHEMRC) $(GAFRC) $(GNETLISTRC)
 
 SCHEM_FILES += $(BOARD).sch
 SVNROOT = https://pulse-sequencer.svn.sf.net/svnroot/pulse-sequencer
-TARGETS_RENUM = $(TARGETS:.sch=.renum.sch)
 TARGETS_NET = $(BOARD).net
 TARGETS_DRC = $(BOARD).drc
 TARGETS_PCB = $(BOARD).pcb
-TARGETS_SCHEM = $(SCHEM_FILES:.sch=.tgt)
-SCHEMPS_FILES = $(SCHEM_FILES:.sch=.ps)
-TARGETS_SCHEMPDF = $(foreach file, $(SCHEMPDF_FILES), $(SCH_DIR)/$(file))
+TARGETS_PCBPDF = $(TARGETS_PS:.ps=.pdf)
+TARGETS_SCHPS = $(foreach file, $(SCHEM_FILES:.sch=.ps), $(SCH_DIR)/$(file))
+TARGETS_SCHPDF = $(TARGETS_SCHPS:.ps=.pdf)
 
 TARGETS_FRONT = \
 	back \
@@ -143,15 +139,12 @@ FAB_ZIP = $(BOARD)-$(REV)-fab.zip
 ASM_ZIP = $(BOARD)-$(REV)-asm.zip
 SCH_ZIP = $(BOARD)-$(REV)-sch.zip
 PCB_ZIP = $(BOARD)-$(REV)-pcb.zip
-FAB_DIR = $(BOARD)-$(REV)-fabrication
-ASM_DIR = $(BOARD)-$(REV)-assembly
-SCH_DIR = $(BOARD)-$(REV)-schematics
+FAB_DIR = $(BOARD)-$(REV)-fab
+ASM_DIR = $(BOARD)-$(REV)-asm
+SCH_DIR = $(BOARD)-$(REV)-sch
+PCB_DIR = $(BOARD)-$(REV)-pcb
 
 TARGETS_BOM = $(BOARD)-$(REV).bom $(BOARD)-$(REV).xy
-
-%.renum.sch: %.sch
-	$(GRENUM) $<
-	mv $<.renum $@
 
 $(SCH_DIR)/%.ps: %.sch
 	$(GSCHEM) -p -o $@ -s ../scripts/print.scm $<
@@ -179,20 +172,26 @@ $(TARGETS_BOM): $(BOARD).pcb
 	$(PCB) -x bom --bomfile $(BOARD)-$(REV).bom --xyfile $(BOARD)-$(REV).xy \
 		$<
 
-$(GBR_DIR):
+$(FAB_DIR):
 	mkdir -p $@
 
 $(SCH_DIR):
 	mkdir -p $@
 
-$(TARGETS_GERBER): $(BOARD).pcb $(GBR_DIR)
+$(PCB_DIR):
+	mkdir -p $@
+
+$(TARGETS_GERBER): $(BOARD).pcb $(FAB_DIR)
 	$(GBR) $<
 
-$(SCH_ZIP): $(TARGETS_SCHEMPS)
+$(SCH_ZIP): $(TARGETS_SCHPDF)
 	zip -r $(SCH_ZIP) $(SCH_DIR)
 
+$(PCB_ZIP): $(TARGETS_PCBPDF)
+	zip -r $(PCB_ZIP) $(PCB_DIR)
+
 $(FAB_ZIP): $(TARGETS_GERBER)
-	zip -r $(FAB_ZIP) $(GBR_DIR)
+	zip -r $(FAB_ZIP) $(FAB_DIR)
 
 $(ASM_ZIP): $(TARGETS_BOM) $(TARGETS_PDF)
 	mkdir -p $(ASM_DIR)
@@ -208,12 +207,10 @@ $(BOARD)-$(REV).zip:
 	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)
 	zip -r $@ $(BOARD)-$(REV)
 
-$(PS_DIR):
-	mkdir -p $@
+$(TARGETS_SCHPDF): $(SCH_DIR)
+$(TARGETS_PCBPDF): $(PCB_DIR)
 
-$(TARGETS_SCHEMPS): $(SCH_DIR)
-
-$(TARGETS_PS): $(BOARD).pcb $(PS_DIR)
+$(TARGETS_PS): $(BOARD).pcb $(PCB_DIR)
 	$(PCB) -x ps --psfile $(PS_PRE) --align-marks --outline --ps-color --media Letter --scale 1.0 --multi-file $<
 
 $(GSCHEMRC): ../geda-dotfiles/$(GSCHEMRC)
@@ -225,7 +222,6 @@ $(GAFRC): ../geda-dotfiles/$(GAFRC)
 $(GNETLISTRC): ../geda-dotfiles/$(GNETLISTRC)
 	ln -s $< $@
 
-renum: $(TARGETS_RENUM)
 drc: $(RC_FILES) $(TARGETS_DRC)
 pcb: $(RC_FILES) $(TARGETS_PCB) net
 net: $(RC_FILES) $(TARGETS_NET)
