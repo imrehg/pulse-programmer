@@ -1,5 +1,5 @@
 BOARD = face-out
-REV = 0b1
+REV = 0
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
