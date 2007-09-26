@@ -1,0 +1,5 @@
+schematics face-in.sch
+output-name face-in
+elements-dir ../footprints
+use-files
+m4-pcbdir /
