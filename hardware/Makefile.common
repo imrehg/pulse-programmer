@@ -164,11 +164,6 @@ ifdef IS_HS
 	TARGETS_PS += $(PS_FILES_HS)
 endif
 
-TARGETS_GERBER = $(GBR_FILES_FRONT) $(GBR_FILES_UNPLATED) $(GBR_FILES_HS)
-TARGETS_PS = $(PS_FILES_FRONT) $(PS_FILES_UNPLATED) $(PS_FILES_HS)
-
-
-
 $(SCH_DIR)/%.ps: %.sch
 	$(GSCHEM) -p -o $@ -s ../scripts/print.scm $<
 
