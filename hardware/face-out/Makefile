@@ -1,5 +1,5 @@
 BOARD = face-out
-REV = 0
+REV = Ab1
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
@@ -13,8 +13,8 @@ LAYER_COLORS = \
 	--layer-color-4 "\#ff0000" \
 	--layer-color-5 "\#408040" \
 
-# This is a high-speed board without unplated holes
-TARGETS_GERBER = $(GBR_FILES_PLATED) $(GBR_FILES_HS)
-TARGETS_PS = $(PS_FILES_PLATED) $(PS_FILES_HS)
+# This is a high-speed board without only plated holes
+IS_FRONT_ONLY = 1
+IS_HS = 1
 
 include ../Makefile.common
