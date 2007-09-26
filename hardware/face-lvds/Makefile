@@ -1,5 +1,5 @@
 BOARD = face-lvds
-REV = 0
+REV = Ab1
 TARGETS = $(BOARD).sch
 
 SCHEM_FILES = \
@@ -13,9 +13,10 @@ LAYER_COLORS = \
 	--layer-color-6 "\#0000cc" \
 	--layer-color-7 "\#408040" \
 
-# This is a high-speed board
-TARGETS_GERBER = $(GERBER_FILES_HS_FRONT)
-TARGETS_PS = $(PS_FILES_HS_FRONT)
+# This is a high-speed board with both plated/unplated through-holes.
+IS_FRONT_ONLY = 1
+IS_UNPLATED = 1
+IS_HS = 1
 
 include ../Makefile.common
 
