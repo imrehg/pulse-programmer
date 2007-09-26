@@ -13,8 +13,9 @@ LAYER_COLORS = \
 	--layer-color-4 "\#808080" \
 	--layer-color-5 "\#408040" \
 
-# This is a high-speed board
-TARGETS_GERBER = $(GERBER_FILES_HS)
-TARGETS_PS = $(PS_FILES_HS)
+# This is a high-speed board with both plated/unplated through-holes.
+IS_FRONT_ONLY = 1
+IS_UNPLATED = 1
+IS_HS = 1
 
 include ../Makefile.common
