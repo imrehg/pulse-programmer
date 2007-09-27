@@ -28,7 +28,7 @@ help:
 
 clean:
 	rm -rf *.log *.drc *.tgt *~ *.log *.stackdump PCB.*
-	rm -rf *.zip $(TARGETS_BOM)
+	rm -rf *.zip $(TARGETS_BOM) *.bz2 *.bz2.md5
 	rm -rf $(FAB_ZIP) $(FAB_ZIP).md5
 	rm -rf $(ASM_ZIP) $(ASM_ZIP).md5
 	rm -rf $(SCH_ZIP) $(SCH_ZIP).md5
