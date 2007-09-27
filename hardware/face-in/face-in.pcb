@@ -1,5 +1,5 @@
 # release: pcb 20070208
-# date:    Tue Sep 25 13:06:31 2007
+# date:    Thu Sep 27 14:49:12 2007
 # user:    ppham (ppham,U-NEOVICTORIAN\Paul T. Pham,S-1-5-21-1083071216-315547407-1799152704-1006)
 # host:    neovictorian
 
@@ -1633,7 +1633,7 @@ Layer(7 "unused")
 	Text[130200 192000 0 100 "http://local-box.org" ""]
 	Text[129750 177550 0 100 "BNC Input Face" ""]
 	Text[129450 185100 0 100 "Pulse Programmer" ""]
-	Text[124950 211150 0 100 "Paul T. Pham, Sep 2007" ""]
+	Text[124950 211150 0 100 "Paul T. Pham, 9/2007" ""]
 )
 NetList()
 (
