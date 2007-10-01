@@ -218,8 +218,11 @@ $(ASM_ZIP): $(TARGETS_BOM) $(TARGETS_PDF)
 	zip -r $(ASM_ZIP) $(ASM_DIR)
 
 $(BOARD)-$(REV).tar.bz2:
-	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)
+	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)-export
+	mkdir -p $(BOARD)-$(REV)
+	cp -prv $(BOARD)-$(REV)-export/{footprints,symbols,$(BOARD),Makefile.common,scripts} $(BOARD)-$(REV)/
 	tar cvf - $(BOARD)-$(REV) | bzip2 > $@
+	rm -rf $(BOARD)-$(REV)-export
 
 $(BOARD)-$(REV).zip:
 	svn export $(SVNROOT)/hardware $(BOARD)-$(REV)
