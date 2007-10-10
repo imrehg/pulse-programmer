@@ -1,5 +1,5 @@
 BOARD = far-lvds
-REV = 0b3
+REV = 0
 TARGETS = $(BOARD).sch
 
 SCHEM_FILES = \
