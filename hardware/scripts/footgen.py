@@ -80,6 +80,7 @@ def defattr():
         "receptm"      :0,
         "receptb"      :0,
         "lccnum"       :0,
+        "pinkey"       :0,
 }
 
 # BGA row names 20 total
@@ -781,16 +782,32 @@ def sip(attrlist):
     polyclear = findattr(attrlist, "polyclear")
     maskclear = findattr(attrlist, "maskclear")
     silkwidth = findattr(attrlist, "silkwidth")
+    pinkey = findattr(attrlist, "pinkey")
+    silkboxwidth = findattr(attrlist, "silkboxwidth")
+    silkboxheight = findattr(attrlist, "silkboxheight")
     pitch = findattr(attrlist, "pitch")
     y = -(pins-1)*pitch/2
     sipelt = element(attrlist)
     for pinnum in range (1,1+pins):
         sipelt = sipelt + pin(0,y,paddia,drill,str(pinnum),polyclear,maskclear)
-        y = y + pitch
-    silky = pins*pitch/2
-    silkx = pitch/2
+        if ((pinkey == "yes") and (pinnum == pins)):
+            y = y + (pitch*1.5)
+        else:
+            y = y + pitch
+
+    if (silkboxheight == 0):
+        silky = pins*pitch/2
+    else:
+        silky = silkboxheight / 2
+
+    if (silkboxwidth == 0):
+        silkx = pitch/2
+    else:
+        silkx = silkboxwidth / 2
+        
     sipelt = sipelt + box(silkx,silky,-silkx,-silky,silkwidth)
     sipelt = sipelt + box(-silkx,-silky,-silkx+pitch,-silky+pitch,silkwidth)
+
     return sipelt
 
 def genpart(attributes):
