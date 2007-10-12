@@ -790,7 +790,7 @@ def sip(attrlist):
     sipelt = element(attrlist)
     for pinnum in range (1,1+pins):
         sipelt = sipelt + pin(0,y,paddia,drill,str(pinnum),polyclear,maskclear)
-        if ((pinkey == "yes") and (pinnum == pins)):
+        if ((pinkey == "yes") and (pinnum == pins - 1)):
             y = y + (pitch*1.5)
         else:
             y = y + pitch
