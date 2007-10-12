@@ -1,0 +1,20 @@
+elementdir = "ic"		# where to put generated files
+
+# adj 2.2-8.5V DC-DC regulator from powertrends/TI 
+	type "sip"
+        polyclear = 8 mil
+        maskclear = 6 mil
+	pitch = 100 mils
+	silkwidth = 10 mils
+	drill = 30 mils
+	paddia = 60 mils
+	pins = 12
+	pinkey = "no"
+part "PT6302A"
+
+# adj 0.9-5V DC-DC regulator from artesyn
+	
+	drill = 30 mils
+	pins = 11
+	pinkey = "yes"
+part "SIL15C"
