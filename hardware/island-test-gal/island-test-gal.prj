@@ -1,0 +1,5 @@
+schematics island-test-gal.sch
+output-name island-test-gal
+elements-dir ../footprints
+use-files
+m4-pcbdir /
