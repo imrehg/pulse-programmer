@@ -600,14 +600,14 @@ def so(attrlist):
                 rowofpads([-rowpos,0], pitch, "down", padwidth, padheight,
                           1, pins, maskclear, polyclear, headernum = True)
         soelt = soelt + \
-                rowofpads([rowpos,0], pitch, "up", padwidth, padheight,
+                rowofpads([rowpos,0], pitch, "down", padwidth, padheight,
                           2, pins, maskclear, polyclear, headernum = True)
     else:
         soelt = soelt + \
                 rowofpads([-rowpos,0], pitch, "down", padwidth, padheight,
                           1, pins/2, maskclear, polyclear)
         soelt = soelt + \
-                rowofpads([rowpos,0], pitch, "up", padwidth, padheight,
+                rowofpads([rowpos,0], pitch, "down", padwidth, padheight,
                           1+pins/2, pins/2, maskclear, polyclear)
 
     if (silkstyle != "inside"):
