@@ -14,9 +14,8 @@ LAYER_COLORS = \
 	--layer-color-5 "\#0000ff" \
 	--layer-color-6 "\#408040" \
 
-# This is a high-speed board with both plated/unplated through-holes.
+# This is a high-speed board with only plated through-holes.
 IS_FRONT_ONLY = 1
-IS_UNPLATED = 1
 IS_HS = 1
 
 include ../Makefile.common
