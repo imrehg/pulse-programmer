@@ -1,0 +1,260 @@
+v 20070216 1
+P 100 5800 400 5800 1 0 0
+{
+T 300 5850 5 8 1 1 0 6 1
+pinnumber=2
+T 300 5750 5 8 0 1 0 8 1
+pinseq=1
+T 450 5800 9 8 1 1 0 0 1
+pinlabel=DO18
+T 450 5800 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 5500 400 5500 1 0 0
+{
+T 300 5550 5 8 1 1 0 6 1
+pinnumber=3
+T 300 5450 5 8 0 1 0 8 1
+pinseq=2
+T 450 5500 9 8 1 1 0 0 1
+pinlabel=DO17
+T 450 5500 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 5200 400 5200 1 0 0
+{
+T 300 5250 5 8 1 1 0 6 1
+pinnumber=4
+T 300 5150 5 8 0 1 0 8 1
+pinseq=3
+T 450 5200 9 8 1 1 0 0 1
+pinlabel=DO16
+T 450 5200 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 4900 400 4900 1 0 0
+{
+T 300 4950 5 8 1 1 0 6 1
+pinnumber=5
+T 300 4850 5 8 0 1 0 8 1
+pinseq=4
+T 450 4900 9 8 1 1 0 0 1
+pinlabel=DO15
+T 450 4900 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 4600 400 4600 1 0 0
+{
+T 300 4650 5 8 1 1 0 6 1
+pinnumber=6
+T 300 4550 5 8 0 1 0 8 1
+pinseq=5
+T 450 4600 9 8 1 1 0 0 1
+pinlabel=DO14
+T 450 4600 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 4300 400 4300 1 0 0
+{
+T 300 4350 5 8 1 1 0 6 1
+pinnumber=7
+T 300 4250 5 8 0 1 0 8 1
+pinseq=6
+T 450 4300 9 8 1 1 0 0 1
+pinlabel=DO13
+T 450 4300 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 4000 400 4000 1 0 0
+{
+T 300 4050 5 8 1 1 0 6 1
+pinnumber=8
+T 300 3950 5 8 0 1 0 8 1
+pinseq=7
+T 450 4000 9 8 1 1 0 0 1
+pinlabel=DO12
+T 450 4000 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 3700 400 3700 1 0 0
+{
+T 300 3750 5 8 1 1 0 6 1
+pinnumber=9
+T 300 3650 5 8 0 1 0 8 1
+pinseq=8
+T 450 3700 9 8 1 1 0 0 1
+pinlabel=DO11
+T 450 3700 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 3400 400 3400 1 0 0
+{
+T 300 3450 5 8 1 1 0 6 1
+pinnumber=10
+T 300 3350 5 8 0 1 0 8 1
+pinseq=9
+T 450 3400 9 8 1 1 0 0 1
+pinlabel=DO10
+T 450 3400 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 3100 400 3100 1 0 0
+{
+T 300 3150 5 8 1 1 0 6 1
+pinnumber=11
+T 300 3050 5 8 0 1 0 8 1
+pinseq=10
+T 450 3100 9 8 1 1 0 0 1
+pinlabel=DO9
+T 450 3100 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 2800 400 2800 1 0 0
+{
+T 300 2850 5 8 1 1 0 6 1
+pinnumber=12
+T 300 2750 5 8 0 1 0 8 1
+pinseq=11
+T 450 2800 9 8 1 1 0 0 1
+pinlabel=DO8
+T 450 2800 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 2500 400 2500 1 0 0
+{
+T 300 2550 5 8 1 1 0 6 1
+pinnumber=13
+T 300 2450 5 8 0 1 0 8 1
+pinseq=12
+T 450 2500 9 8 1 1 0 0 1
+pinlabel=DO7
+T 450 2500 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 2200 400 2200 1 0 0
+{
+T 300 2250 5 8 1 1 0 6 1
+pinnumber=14
+T 300 2150 5 8 0 1 0 8 1
+pinseq=13
+T 450 2200 9 8 1 1 0 0 1
+pinlabel=DO6
+T 450 2200 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 1900 400 1900 1 0 0
+{
+T 300 1950 5 8 1 1 0 6 1
+pinnumber=15
+T 300 1850 5 8 0 1 0 8 1
+pinseq=14
+T 450 1900 9 8 1 1 0 0 1
+pinlabel=DO5
+T 450 1900 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 1600 400 1600 1 0 0
+{
+T 300 1650 5 8 1 1 0 6 1
+pinnumber=16
+T 300 1550 5 8 0 1 0 8 1
+pinseq=15
+T 450 1600 9 8 1 1 0 0 1
+pinlabel=DO4
+T 450 1600 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 1300 400 1300 1 0 0
+{
+T 300 1350 5 8 1 1 0 6 1
+pinnumber=17
+T 300 1250 5 8 0 1 0 8 1
+pinseq=16
+T 450 1300 9 8 1 1 0 0 1
+pinlabel=DO3
+T 450 1300 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 1000 400 1000 1 0 0
+{
+T 300 1050 5 8 1 1 0 6 1
+pinnumber=18
+T 300 950 5 8 0 1 0 8 1
+pinseq=17
+T 450 1000 9 8 1 1 0 0 1
+pinlabel=DO2
+T 450 1000 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 700 400 700 1 0 0
+{
+T 300 750 5 8 1 1 0 6 1
+pinnumber=19
+T 300 650 5 8 0 1 0 8 1
+pinseq=18
+T 450 700 9 8 1 1 0 0 1
+pinlabel=DO1
+T 450 700 5 8 0 1 0 2 1
+pintype=in
+}
+P 100 400 400 400 1 0 0
+{
+T 300 450 5 8 1 1 0 6 1
+pinnumber=20
+T 300 350 5 8 0 1 0 8 1
+pinseq=19
+T 450 400 9 8 1 1 0 0 1
+pinlabel=DO0
+T 450 400 5 8 0 1 0 2 1
+pintype=in
+}
+P 1700 5800 1400 5800 1 0 0
+{
+T 1500 5850 5 8 1 1 0 0 1
+pinnumber=21
+T 1500 5750 5 8 0 1 0 2 1
+pinseq=20
+T 1350 5800 9 8 1 1 0 6 1
+pinlabel=+3.3V
+T 1350 5800 5 8 0 1 0 8 1
+pintype=in
+}
+P 1700 5500 1400 5500 1 0 0
+{
+T 1500 5550 5 8 1 1 0 0 1
+pinnumber=22
+T 1500 5450 5 8 0 1 0 2 1
+pinseq=21
+T 1350 5500 9 8 1 1 0 6 1
+pinlabel=GND
+T 1350 5500 5 8 0 1 0 8 1
+pintype=in
+}
+P 1700 5200 1400 5200 1 0 0
+{
+T 1500 5250 5 8 1 1 0 0 1
+pinnumber=23
+T 1500 5150 5 8 0 1 0 2 1
+pinseq=22
+T 1350 5200 9 8 1 1 0 6 1
+pinlabel=+12V
+T 1350 5200 5 8 0 1 0 8 1
+pintype=in
+}
+B 400 300 1000 5800 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 1400 6200 8 10 1 1 0 6 1
+refdes=S?
+T 400 100 9 10 1 0 0 0 1
+LVDS Driver Subsheet
+T 400 6400 5 10 0 0 0 0 1
+device=island-west-lvds
+T 400 6600 5 10 0 0 0 0 1
+footprint=
+T 400 6800 5 10 0 0 0 0 1
+author=Paul Pham
+T 400 7000 5 10 0 0 0 0 1
+documentation=
+T 400 7200 5 10 0 0 0 0 1
+description="West Island LVDS Driver Subsheet"
+T 400 7400 5 10 0 0 0 0 1
+numslots=0
