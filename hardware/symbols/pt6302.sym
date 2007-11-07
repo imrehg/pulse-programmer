@@ -126,7 +126,7 @@ refdes=U?
 T 1000 6700 5 10 0 0 0 0 1
 device=pt6302
 T 1000 7000 5 10 0 0 0 0 1
-footprint=sip12-pt6302
+footprint=PT6302A
 T 1000 7200 5 10 0 0 0 0 1
 author=Muir Kumph
 T 1000 7400 5 10 0 0 0 0 1

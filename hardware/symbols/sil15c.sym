@@ -126,7 +126,7 @@ refdes=U?
 T 1100 5900 5 10 0 0 0 0 1
 device=sil15c
 T 1100 6100 5 10 0 0 0 0 1
-footprint=keyed-sip11
+footprint=SIL15C
 T 1100 6300 5 10 0 0 0 0 1
 author=Muir Kumph
 T 1100 6500 5 10 0 0 0 0 1
