@@ -1,11 +1,11 @@
 # release: pcb 20070208
-# date:    Thu Nov  1 20:06:12 2007
+# date:    Tue Nov  6 19:24:24 2007
 # user:    ppham (ppham,U-NEOVICTORIAN\Paul T. Pham,S-1-5-21-1083071216-315547407-1799152704-1006)
 # host:    neovictorian
 
 PCB["" 275000 635000]
 
-Grid[50.000000 0 0 1]
+Grid[39.370079 0 0 1]
 Cursor[0 0 6.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
@@ -2551,7 +2551,7 @@ Layer(7 "unused")
 Layer(8 "unused")
 (
 	Text[342850 24000 0 100 "" ""]
-	Text[243500 454850 3 100 "+12V" ""]
+	Text[238233 467867 1 100 "+12V" ""]
 	Text[238500 352900 1 100 "Paul T. Pham, 11/2007" ""]
 	Text[89900 120500 0 100 "+3.3V" ""]
 	Text[240050 190550 1 100 "To FPGA West Coast" ""]
@@ -2559,6 +2559,11 @@ Layer(8 "unused")
 	Text[223600 66050 1 100 "Pulse Programmer" ""]
 	Text[231200 65700 1 100 "http://local-box.org" ""]
 	Text[216500 65550 1 100 "West Island, Rev. A" ""]
+	Text[206890 143622 0 100 "I2C Bus" ""]
+	Text[106417 65354 0 100 "+3.3V regulated input" ""]
+	Text[106771 106023 0 100 "Current test port" ""]
+	Text[217285 410432 1 100 "+12V regulated input" ""]
+	Text[217204 468819 1 100 "Current test port" ""]
 )
 NetList()
 (
