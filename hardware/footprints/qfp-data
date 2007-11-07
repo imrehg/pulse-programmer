@@ -72,5 +72,5 @@ part "LQFP-32"
         width = 4.2 mm
         height = 4.2 mm
         padwidth = 1.0 mm
-        padheight = 0.3 mm
+        padheight = 0.21 mm
 part "QFN-32"

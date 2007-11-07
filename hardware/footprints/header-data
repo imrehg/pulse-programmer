@@ -54,6 +54,12 @@ part "HEADER5x2"
         silkboxheight = 1.988 in
 part "HEADER17x2"
 
+        type = "sip"
+        silkboxheight = 0 mils
+        silkboxwidth = 0 mils
+        pins = 10
+part "HEADER10"
+
         type = "edgecard"
         padwidth = 50 mils
         padheight = 275 mils
