@@ -81,6 +81,10 @@ def defattr():
         "receptb"      :0,
         "lccnum"       :0,
         "pinkey"       :0,
+        "series"       :0,
+        "sepone"         :0,
+        "septwo"         :0,
+        "gndwidth"     :0,
 }
 
 # BGA row names 20 total
@@ -487,6 +491,7 @@ def samtec(attrlist):
     maskclear = findattr(attrlist, "maskclear")
     masktent = findattr(attrlist, "masktent")
     silkwidth = findattr(attrlist, "silkwidth")
+    silkboxheight = findattr(attrlist, "silkboxheight")
 
     tentpadheight = findattr(attrlist, "tentpadheight")
     bankwidth = findattr(attrlist, "bankwidth")
@@ -496,79 +501,143 @@ def samtec(attrlist):
     edgey = findattr(attrlist, "edgey")
     edgex = findattr(attrlist, "edgex")
     edgewidth = findattr(attrlist, "edgewidth")
-    width = bankwidth * (pins / bankpins)
+    series = findattr(attrlist, "series")
+    paddia = findattr(attrlist, "paddia")
+    drill = findattr(attrlist, "drill")
+    #width = bankwidth * (pins / bankpins)
+    width = findattr(attrlist, "width")
+    gndwidth = findattr(attrlist, "gndwidth")
+    sep1 = findattr(attrlist, "sepone")
+    sep2 = findattr(attrlist, "septwo")
+    silkoffset = findattr(attrlist, "silkoffset")
     banks = pins / bankpins
     overlap = 150 # 4 mil overlap to consider separate copper connected
     tentpadbase = -(padheight/2) - (tentpadheight/2)
     padbase = -(overlap/2)
 
     if (pins % bankpins) != 0:
-        raise RuntimeError("Number of pins not a multiple of 20")
+        raise RuntimeError("Number of pins not a multiple of bankpins")
 
     yaxis = 1
     if (mirror == "yes"):
         yaxis = -1
 
-    # Compensate pad extension height with the mask tent
-    tentpadheight += (padwidth - masktent)
-    padbase *= yaxis
-    edgey = yaxis * ((padheight/2) + edgey)
-    padheight += overlap
-    tabx = -tabx # distance from pin 1 left to alignment tab
+    # Edgemount connector
+    if (series == "qxe"):
+      # Compensate pad extension height with the mask tent
+      tentpadheight += (padwidth - masktent)
+      padbase *= yaxis
+      edgey = yaxis * ((padheight/2) + edgey)
+      padheight += overlap
+      tabx = -tabx # distance from pin 1 left to alignment tab
 
-    # Base pins with completely exposed pad
-    for i in range(banks):
-        startpin = (i*bankpins)+1
-        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),
-                             padbase],\
-                            pitch, "left", padwidth, padheight,\
-                            startpin, bankpins, \
-                            maskclear, polyclear, prefix="T")
-        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),
-                             padbase],\
-                            pitch, "left", padwidth, padheight,\
-                            startpin, bankpins, \
-                            maskclear, polyclear, prefix="B", onsolder=True)
-    # Pad extensions that are partially exposed (soldermask tent)
-    tentpadbase *= yaxis
-    for i in range(banks):
-        startpin = (i*bankpins)+1
-        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),\
-                             tentpadbase], \
-                            pitch, "left", padwidth, tentpadheight,\
-                            startpin, bankpins, masktent, \
-                            polyclear, prefix="T", tent=True)
-        samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),\
-                             tentpadbase], \
-                            pitch, "left", padwidth, tentpadheight,\
-                            startpin, bankpins, masktent, \
-                            polyclear, prefix="B", tent=True, onsolder=True)
+      # Base pins with completely exposed pad
+      for i in range(banks):
+          startpin = (i*bankpins)+1
+          bankstart = (bankwidth*(banks-i-1))
+          bankcenter = bankstart + (pitch*(bankpins-1)/2)
+          samelt += rowofpads([bankcenter, padbase], pitch, "left", \
+                              padwidth, padheight, startpin, bankpins, \
+                              maskclear, polyclear, prefix="T")
+          samelt += rowofpads([bankcenter, padbase], pitch, "left", \
+                              padwidth, padheight, startpin, bankpins, \
+                              maskclear, polyclear, prefix="B", onsolder=True)
+      # Pad extensions that are partially exposed (soldermask tent)
+      tentpadbase *= yaxis
+      for i in range(banks):
+          startpin = (i*bankpins)+1
+          samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),\
+                               tentpadbase], \
+                              pitch, "left", padwidth, tentpadheight,\
+                              startpin, bankpins, masktent, \
+                              polyclear, prefix="T", tent=True)
+          samelt += rowofpads([(bankwidth*(banks-i-1))+(pitch*(bankpins-1)/2),\
+                               tentpadbase], \
+                              pitch, "left", padwidth, tentpadheight,\
+                              startpin, bankpins, masktent, \
+                              polyclear, prefix="B", tent=True, onsolder=True)
+    elif (series == "qxss"):
+      # Half of separation between inner edges of row pads
+      halfsep = (width - (2*padheight)) / 2
+      for i in range(banks):
+          startpin = (i*bankpins)+1
+          bankstart = (bankwidth*(banks-i-1))
+          bankcenter = bankstart + (pitch*(bankpins-1)/2)
+          samelt += rowofpads([bankcenter, halfsep], pitch, "left", \
+                              padwidth, padheight, startpin, bankpins, \
+                              maskclear, polyclear, prefix="L")
+          samelt += rowofpads([bankcenter, -halfsep], pitch, "left", \
+                              padwidth, padheight, startpin, bankpins, \
+                              maskclear, polyclear, prefix="R")
 
     # Plated edge ground pad
-    edgestart = -edgex
-    edgeend = edgestart + (78750*banks) + edgewidth
-    samelt += pad(edgestart, edgey, edgeend, edgey, 1000, polyclear, maskclear,
-                  "TGND", shape="square")
-    samelt += pad(edgestart, edgey, edgeend, edgey, 1000, polyclear, maskclear,
-                  "BGND", shape="square", onsolder=True)
+    if (series == "qxe"):
+      edgestart = -edgex
+      edgeend = edgestart + (78750*banks) + edgewidth
+      samelt += pad(edgestart, edgey, edgeend, edgey, 1000, polyclear,
+                    maskclear, "TGND", shape="square")
+      samelt += pad(edgestart, edgey, edgeend, edgey, 1000, polyclear,
+                    maskclear, "BGND", shape="square", onsolder=True)
+      # Alignment tab drill guide
+      holedrill = 4300
+      taby = [-9350 * yaxis, -4050 * yaxis, 1250 * yaxis]
+      for i in range(3):
+          samelt += pin(tabx, taby[i], holedrill, holedrill, "", polyclear,
+                        maskclear, ishole = True)
+      # Silkscreen lines
+      silky1 = yaxis * 6000
+      silky2 = yaxis * -6500
+      samelt += silk(tabx + 2450, silky1, tabx + 2450, silky2, silkwidth)
+      samelt += silk(-31000, silky1, -31000, silky2, silkwidth)
 
-    # Alignment tab drill guide
-    holedrill = 4300
-    taby = [-9350 * yaxis, -4050 * yaxis, 1250 * yaxis]
-    for i in range(3):
-        samelt += pin(tabx, taby[i], holedrill, holedrill, "", polyclear,
-                      maskclear, ishole = True)
-    # Silkscreen lines
-    silky1 = yaxis * 6000
-    silky2 = yaxis * -6500
-    samelt += silk(tabx + 2450, silky1, tabx + 2450, silky2, silkwidth)
-    samelt += silk(-31000, silky1, -31000, silky2, silkwidth)
+      silkstart = (bankwidth * (banks-1)) + 79000
+      silkend = silkstart + 12000
+      samelt += silk(silkstart, silky1, silkstart, silky2, silkwidth)
+      samelt += silk(silkend, silky1, silkend, silky2, silkwidth)
 
-    silkstart = (bankwidth * (banks-1)) + 79000
-    silkend = silkstart + 12000
-    samelt += silk(silkstart, silky1, silkstart, silky2, silkwidth)
-    samelt += silk(silkend, silky1, silkend, silky2, silkwidth)
-    
+    elif (series == "qxss"):
+        bankstart = (bankwidth*(banks-1))
+        # Power pins
+        sep2a =  sep2 + sep1
+        lastpin = (bankwidth * (banks-1)) + (pitch * (bankpins-1))
+        sep3 = lastpin + sep1
+        sep4 = sep3 + sep2
+        samelt += pin(-sep1, -5000, paddia, drill, "PL3", \
+                      polyclear, maskclear)
+        samelt += pin(-sep2a, -5000, paddia, drill, "PL4", \
+                      polyclear, maskclear)
+        samelt += pin(-sep1, 5000, paddia, drill, "PR3", \
+                      polyclear, maskclear)
+        samelt += pin(-sep2a, 5000, paddia, drill, "PR4", \
+                      polyclear, maskclear)
+        samelt += pin(sep3, -5000, paddia, drill, "PL2", \
+                      polyclear, maskclear)
+        samelt += pin(sep4, -5000, paddia, drill, "PL1", \
+                      polyclear, maskclear)
+        samelt += pin(sep3, 5000, paddia, drill, "PR2", \
+                      polyclear, maskclear)
+        samelt += pin(sep4, 5000, paddia, drill, "PR1", \
+                      polyclear, maskclear)
+        # Center ground blades
+        for i in range(banks):
+          bankstart = (bankwidth*(banks-i-1))
+          bankcenter = bankstart + (pitch*(bankpins-1)/2)
+          halfgndwidth = gndwidth / 2
+          edgestart = bankcenter - halfgndwidth
+          edgeend = bankcenter + halfgndwidth
+          samelt += pad(edgestart, 0, edgeend, 0, 2000, polyclear,
+                        maskclear, "CGND", shape="square")
+
+        diff = bankwidth - (pitch * (bankpins-1))
+        offset2 = (silkoffset - diff) / 2
+        silkx1 = offset2 + diff
+        silkx2 = (bankwidth * banks) + offset2
+        silky = silkboxheight / 2
+        samelt += silk(-silkx1, silky, silkx2, silky, silkwidth)
+        samelt += silk(-silkx1, -silky, silkx2, -silky, silkwidth)
+        samelt += silk(-silkx1, silky, -silkx1, -silky, silkwidth)
+        samelt += silk(silkx2, silky, silkx2, -silky, silkwidth)
+
     return samelt
 
 # def rowofpads(pos, pitch, whichway, padlen, padheight, startnum, numpads, maskclear, polyclear):
