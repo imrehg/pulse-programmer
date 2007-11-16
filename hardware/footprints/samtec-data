@@ -5,6 +5,7 @@ elementdir = "connector"		# where to put generated files
         polyclear = 10 mil
         maskclear = 0 mil
 
+        series = "qxe"
 	padheight = 60 mils
         tentpadheight = 45 mils
         masktent = 5 mils
@@ -35,3 +36,51 @@ part "QSE-020-01-x-D-EM2"
 part "QTE-040-01-x-D-EM2"
         pins = 20
 part "QTE-020-01-x-D-EM2"
+
+        series = "qxss"
+        bankwidth = 840 mils
+	silkwidth = 10 mils
+	pitch = 25 mils
+        bankpins = 26
+        padwidth = 16 mils
+        drill = 26 mils
+        paddia = 60 mils
+
+	padheight = 55 mils
+        gndwidth = 680 mils
+        sepone = 213.3 mils
+        septwo = 78.6 mils
+        silkboxheight = 296 mils
+        silkoffset = 520 mils
+
+        pins = 26
+part "QMSS-026-11-H-D-PC4"
+
+        pins = 52
+part "QMSS-052-11-H-D-PC4"
+
+        pins = 78
+part "QMSS-078-11-H-D-PC4"
+
+        pins = 104
+part "QMSS-104-11-H-D-PC4"
+
+
+	padheight = 85 mils
+        gndwidth = 710 mils
+        sepone = 213.1 mils
+        septwo = 79 mils
+        silkboxheight = 320 mils
+        silkoffset = 507 mils
+
+        pins = 26
+part "QFSS-026-01-H-D-PC4"
+
+        pins = 52
+part "QFSS-052-01-H-D-PC4"
+
+        pins = 78
+part "QFSS-078-01-H-D-PC4"
+
+        pins = 104
+part "QFSS-104-01-H-D-PC4"
