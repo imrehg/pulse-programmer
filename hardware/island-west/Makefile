@@ -1,5 +1,5 @@
 BOARD = island-west
-REV = Ab3
+REV = A
 TARGETS = $(BOARD).sch
 
 SCHEM_FILES = \
