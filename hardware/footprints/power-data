@@ -10,11 +10,19 @@ elementdir = "ic"		# where to put generated files
 	paddia = 60 mils
 	pins = 12
 	pinkey = "no"
-part "PT6302A"
+        silkcustom =
+        ElementLine [0 -2000 0 2000 700]
+        ElementLine [0 0 1000 0 700]
+        silkcustomend
+part "PT6302A-proto"
 
 # adj 0.9-5V DC-DC regulator from artesyn
 	
 	drill = 30 mils
 	pins = 11
 	pinkey = "yes"
-part "SIL15C"
+        silkcustom =
+        ElementLine [0 -2000 0 2000 700]
+        ElementLine [0 0 1000 0 700]
+        silkcustomend
+part "SIL15C-proto"
