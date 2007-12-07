@@ -3,7 +3,8 @@ REV = 0b1
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
-island-east.tgt: \
+SCHEM_FILES = \
+	island-east-glue.sch
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
