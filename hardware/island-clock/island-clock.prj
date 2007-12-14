@@ -1,0 +1,5 @@
+schematics island-clock.sch
+output-name island-clock 
+elements-dir ../footprints
+use-files
+m4-pcbdir /
