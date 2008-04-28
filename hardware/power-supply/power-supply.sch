@@ -1,4 +1,4 @@
-v 20060906 1
+v 20070216 1
 C 61100 78800 1 0 0 connector2-1.sym
 {
 T 61300 79800 5 10 0 0 0 0 1
@@ -32,7 +32,7 @@ T 81000 75200 9 10 1 0 0 0 1
 1.85V
 T 72100 68100 9 10 1 0 0 0 1
 2.15V
-T 64700 69200 9 10 1 0 0 0 1
+T 64300 69700 9 10 1 0 0 0 1
 5.4V
 N 63800 76200 69200 76200 4
 N 73800 76200 73300 76200 4
@@ -334,7 +334,7 @@ N 75500 69900 75500 70100 4
 T 76400 65500 9 10 1 0 0 0 1
 Power Supply Board for Sequencer
 T 79500 64700 9 10 1 0 0 0 1
-Muir Kumph (aka John)
+Muir Kumph
 T 79400 65000 9 10 1 0 0 0 1
 A
 C 69600 73800 1 270 0 cap-small-pol.sym
@@ -830,25 +830,25 @@ N 76300 66900 76300 67300 4
 N 75100 67300 76300 67300 4
 T 76300 67500 9 10 1 0 0 0 1
 face-i2c
-C 68700 65300 1 0 0 connector6-2.sym
+C 66900 65300 1 0 0 connector6-2.sym
 {
-T 69400 68200 5 10 1 1 0 6 1
+T 67600 68200 5 10 1 1 0 6 1
 refdes=CONN5
-T 69000 68150 5 10 0 0 0 0 1
+T 67200 68150 5 10 0 0 0 0 1
 device=CONNECTOR_6
-T 69000 68350 5 10 0 0 0 0 1
+T 67200 68350 5 10 0 0 0 0 1
 footprint=MOLEX6
-T 69000 65100 5 10 1 1 0 0 1
+T 67200 65100 5 10 1 1 0 0 1
 value=22-27-2061
 }
 N 66100 68800 66100 67700 4
-N 66100 67700 68700 67700 4
-N 68700 67300 65000 67300 4
-N 68700 66900 64500 66900 4
-N 68700 66500 64000 66500 4
-N 68700 66100 63500 66100 4
+N 66100 67700 66900 67700 4
+N 66900 67300 65000 67300 4
+N 66900 66900 64500 66900 4
+N 66900 66500 64000 66500 4
+N 66900 66100 63500 66100 4
 N 63500 66100 63500 66900 4
-N 68700 65700 63000 65700 4
+N 66900 65700 63000 65700 4
 N 63000 65700 63000 66500 4
 C 62800 66500 1 0 0 generic-power.sym
 {
@@ -883,3 +883,175 @@ N 63400 79300 62800 79300 4
 N 62800 79000 63800 79000 4
 N 63300 76700 63400 76700 4
 N 63300 76400 63800 76400 4
+T 75400 65000 9 10 1 0 0 0 1
+power-supply.sch
+C 70800 65200 1 0 0 connector6-2.sym
+{
+T 71500 68100 5 10 1 1 0 6 1
+refdes=CONN13
+T 71100 68050 5 10 0 0 0 0 1
+device=CONNECTOR_6
+T 71100 68250 5 10 0 0 0 0 1
+footprint=MOLEX6
+T 71100 65000 5 10 1 1 0 0 1
+value=22-27-2061
+}
+N 70800 67600 69000 67600 4
+N 70800 66800 69000 66800 4
+N 70800 66000 69000 66000 4
+N 70800 67200 70500 67200 4
+N 70500 67200 70500 65300 4
+{
+T 70500 67200 5 10 0 0 0 0 1
+netname=GND
+}
+N 70800 65600 70500 65600 4
+N 70800 66400 70500 66400 4
+C 70400 65000 1 0 0 gnd-1.sym
+C 68800 67600 1 0 0 generic-power.sym
+{
+T 69000 67850 5 10 1 1 0 3 1
+net=Vcc1.85:1
+}
+C 68800 66800 1 0 0 generic-power.sym
+{
+T 69000 67050 5 10 1 1 0 3 1
+net=Vcc3.65:1
+}
+C 68800 66000 1 0 0 generic-power.sym
+{
+T 69000 66250 5 10 1 1 0 3 1
+net=Vcc5.4:1
+}
+T 71600 65300 9 10 1 0 0 0 1
+sequencer rev. c
+T 67700 65300 9 10 1 0 0 0 1
+ad9858 dds
+C 73300 76600 1 0 0 nc-left-1.sym
+{
+T 73300 77000 5 10 0 0 0 0 1
+value=NoConnection
+T 73300 77400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 73300 78100 1 0 0 nc-left-1.sym
+{
+T 73300 78500 5 10 0 0 0 0 1
+value=NoConnection
+T 73300 78900 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 73300 78600 1 0 0 nc-left-1.sym
+{
+T 73300 79000 5 10 0 0 0 0 1
+value=NoConnection
+T 73300 79400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 68700 78600 1 0 0 nc-left-1.sym
+{
+T 68700 79000 5 10 0 0 0 0 1
+value=NoConnection
+T 68700 79400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 68700 78100 1 0 0 nc-left-1.sym
+{
+T 68700 78500 5 10 0 0 0 0 1
+value=NoConnection
+T 68700 78900 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 68700 76600 1 0 0 nc-left-1.sym
+{
+T 68700 77000 5 10 0 0 0 0 1
+value=NoConnection
+T 68700 77400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 77900 78600 1 0 0 nc-left-1.sym
+{
+T 77900 79000 5 10 0 0 0 0 1
+value=NoConnection
+T 77900 79400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 77900 78100 1 0 0 nc-left-1.sym
+{
+T 77900 78500 5 10 0 0 0 0 1
+value=NoConnection
+T 77900 78900 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 77900 76600 1 0 0 nc-left-1.sym
+{
+T 77900 77000 5 10 0 0 0 0 1
+value=NoConnection
+T 77900 77400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 70500 71800 1 0 0 nc-left-1.sym
+{
+T 70500 72200 5 10 0 0 0 0 1
+value=NoConnection
+T 70500 72600 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 70500 71300 1 0 0 nc-left-1.sym
+{
+T 70500 71700 5 10 0 0 0 0 1
+value=NoConnection
+T 70500 72100 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 70500 69800 1 0 0 nc-left-1.sym
+{
+T 70500 70200 5 10 0 0 0 0 1
+value=NoConnection
+T 70500 70600 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 62400 73200 1 0 0 nc-left-1.sym
+{
+T 62400 73600 5 10 0 0 0 0 1
+value=NoConnection
+T 62400 74000 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 62400 73600 1 0 0 nc-left-1.sym
+{
+T 62400 74000 5 10 0 0 0 0 1
+value=NoConnection
+T 62400 74400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 60900 73600 1 0 0 nc-left-1.sym
+{
+T 60900 74000 5 10 0 0 0 0 1
+value=NoConnection
+T 60900 74400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 60900 73200 1 0 0 nc-left-1.sym
+{
+T 60900 73600 5 10 0 0 0 0 1
+value=NoConnection
+T 60900 74000 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 65000 72400 1 0 0 nc-bottom-1.sym
+{
+T 65000 73000 5 10 0 0 0 0 1
+value=NoConnection
+T 65000 73400 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 64900 68900 1 0 0 nc-bottom-1.sym
+{
+T 64900 69500 5 10 0 0 0 0 1
+value=NoConnection
+T 64900 69900 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+N 65100 69300 65100 69500 4
+N 65200 72800 65200 73000 4
