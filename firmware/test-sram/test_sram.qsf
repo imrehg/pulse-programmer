@@ -1,0 +1,79 @@
+# Copyright (C) 1991-2007 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		test-sram_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name DEVICE EP1C12Q240C6
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name TOP_LEVEL_ENTITY test_sram
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 7.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "19:49:30  JULY 23, 2007"
+set_global_assignment -name LAST_QUARTUS_VERSION 7.0
+set_global_assignment -name DEVICE_FILTER_PACKAGE PQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 240
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name VHDL_FILE test_sram.vhd
+set_location_assignment PIN_181 -to SRAM_DQA8
+set_location_assignment PIN_182 -to SRAM_DQA7
+set_location_assignment PIN_183 -to SRAM_DQA6
+set_location_assignment PIN_184 -to SRAM_DQA5
+set_location_assignment PIN_185 -to SRAM_DQA4
+set_location_assignment PIN_186 -to SRAM_DQA3
+set_location_assignment PIN_187 -to SRAM_DQA0
+set_location_assignment PIN_188 -to SRAM_DQA1
+set_location_assignment PIN_193 -to SRAM_A8
+set_location_assignment PIN_194 -to SRAM_A9
+set_location_assignment PIN_195 -to SRAM_A10
+set_location_assignment PIN_196 -to SRAM_A11
+set_location_assignment PIN_197 -to SRAM_A12
+set_location_assignment PIN_200 -to SRAM_DQA2
+set_location_assignment PIN_201 -to SRAM_nADSC
+set_location_assignment PIN_202 -to SRAM_nOE
+set_location_assignment PIN_203 -to SRAM_nGW
+set_location_assignment PIN_206 -to SRAM_nCE1
+set_location_assignment PIN_207 -to SRAM_DQB0
+set_location_assignment PIN_208 -to SRAM_DQB1
+set_location_assignment PIN_213 -to SRAM_A13
+set_location_assignment PIN_214 -to SRAM_A14
+set_location_assignment PIN_215 -to SRAM_A15
+set_location_assignment PIN_216 -to SRAM_A16
+set_location_assignment PIN_217 -to SRAM_A17
+set_location_assignment PIN_218 -to SRAM_A18
+set_location_assignment PIN_219 -to SRAM_A19
+set_location_assignment PIN_222 -to SRAM_DQB2
+set_location_assignment PIN_223 -to SRAM_DQB3
+set_location_assignment PIN_224 -to SRAM_DQB4
+set_location_assignment PIN_225 -to SRAM_DQB8
+set_location_assignment PIN_226 -to SRAM_DQB7
+set_location_assignment PIN_227 -to SRAM_DQB6
+set_location_assignment PIN_228 -to SRAM_DQB5
+set_location_assignment PIN_240 -to SRAM_A0
+set_location_assignment PIN_234 -to SRAM_A1
+set_location_assignment PIN_233 -to SRAM_A2
+set_location_assignment PIN_235 -to SRAM_A3
+set_location_assignment PIN_236 -to SRAM_A4
+set_location_assignment PIN_237 -to SRAM_A5
+set_location_assignment PIN_238 -to SRAM_A6
+set_location_assignment PIN_239 -to SRAM_A7
+
+set_location_assignment PIN_144 -to PLL2_OUTp

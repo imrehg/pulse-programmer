@@ -9,11 +9,11 @@ ptn_Child1=ViewFrame-0
 [ProjectWorkspace.Frames.ChildFrames.Document-0.ViewFrame-0]
 DocPathName=../../../../../altera/70/quartus/bin/pin_planner.ppl
 DocumentCLSID={428be327-2a68-4a16-a2c9-0502a8811afc}
-WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPCOPPPPPPNBAAAAAANBAAAAAAIIDAAAAAKIBAAAAA
+WindowPlacement=MCAAAAAACAAAAAAADAAAAAAAPPPPPPPPPPPPPPPPMPPPPPPPCOPPPPPPAAAAAAAAAAAAAAAALGDAAAAANGBAAAAA
 IsChildFrameDetached=False
 IsActiveChildFrame=True
 ptn_Child1=StateMap
 [ProjectWorkspace.Frames.ChildFrames.Document-0.ViewFrame-0.StateMap]
-AFC_CMP_AP_NAME=test-sram
-AFC_PROJ_DB_PATH=C:/ppham/sf/svnroot/firmware/test-sram/db/test-sram.quartus_db
+AFC_CMP_AP_NAME=test_sram
+AFC_PROJ_DB_PATH=C:/ppham/sf/svnroot/firmware/test-sram/db/test_sram.quartus_db
 AFC_IN_REPORT=False

@@ -200,3 +200,6 @@ set_location_assignment PIN_238 -to LVDS25p
 set_location_assignment PIN_239 -to LVDS24n
 set_global_assignment -name VHDL_FILE test_led.vhd
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_location_assignment PIN_227 -to VREF2B2
+set_location_assignment PIN_194 -to VREF0B2
+set_location_assignment PIN_208 -to VREF1B2

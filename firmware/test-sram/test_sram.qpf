@@ -20,4 +20,4 @@ DATE = "19:49:30  July 23, 2007"
 
 # Revisions
 
-PROJECT_REVISION = "test-sram"
+PROJECT_REVISION = "test_sram"
