@@ -66,6 +66,6 @@ numslots=0
 6		out	line	r		O1
 11		out	line	r		O2
 8		out	line	r		O3
-7		pwr	line	t		VCC
-14		pwr	line	t		GND
+14		pwr	line	t		VCC
+7		pwr	line	t		GND
 

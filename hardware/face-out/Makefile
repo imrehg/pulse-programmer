@@ -13,7 +13,7 @@ LAYER_COLORS = \
 	--layer-color-4 "\#ff0000" \
 	--layer-color-5 "\#408040" \
 
-# This is a high-speed board without only plated holes
+# This is a high-speed board with only plated holes
 IS_FRONT_ONLY = 1
 IS_HS = 1
 

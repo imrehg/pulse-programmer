@@ -2,8 +2,7 @@ BOARD = face-i2c
 REV = Ab1
 TARGETS = $(BOARD).sch
 
-# Dummy targets to remake dependencies
-face-i2c.tgt: \
+SCHEM_FILES = \
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \

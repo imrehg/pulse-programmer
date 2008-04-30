@@ -824,84 +824,84 @@ C 41000 50300 1 0 0 input-1.sym
 T 41000 50600 5 10 0 0 0 0 1
 device=INPUT
 T 40500 50300 5 10 1 1 0 0 1
-refdes=LE3
+refdes=TxEN
 }
 C 41000 50000 1 0 0 input-1.sym
 {
 T 41000 50300 5 10 0 0 0 0 1
 device=INPUT
 T 40500 50000 5 10 1 1 0 0 1
-refdes=LE2
+refdes=LE
 }
 C 41000 49700 1 0 0 input-1.sym
 {
 T 41000 50000 5 10 0 0 0 0 1
 device=INPUT
 T 40500 49700 5 10 1 1 0 0 1
-refdes=LE1
+refdes=DO23
 }
 C 41000 49400 1 0 0 input-1.sym
 {
 T 41000 49700 5 10 0 0 0 0 1
 device=INPUT
 T 40500 49400 5 10 1 1 0 0 1
-refdes=LE0
+refdes=DO22
 }
 C 44200 50300 1 0 0 output-1.sym
 {
 T 44300 50600 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 50300 5 10 1 1 0 0 1
-refdes=LE3-
+refdes=TxEN-
 }
 C 44200 50000 1 0 0 output-1.sym
 {
 T 44300 50300 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 50000 5 10 1 1 0 0 1
-refdes=LE3+
+refdes=TxEN+
 }
 C 44200 49700 1 0 0 output-1.sym
 {
 T 44300 50000 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 49700 5 10 1 1 0 0 1
-refdes=LE2+
+refdes=LE+
 }
 C 44200 49400 1 0 0 output-1.sym
 {
 T 44300 49700 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 49400 5 10 1 1 0 0 1
-refdes=LE2-
+refdes=LE-
 }
 C 44200 49100 1 0 0 output-1.sym
 {
 T 44300 49400 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 49100 5 10 1 1 0 0 1
-refdes=LE1-
+refdes=DO23-
 }
 C 44200 48800 1 0 0 output-1.sym
 {
 T 44300 49100 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 48800 5 10 1 1 0 0 1
-refdes=LE1+
+refdes=DO23+
 }
 C 44200 48500 1 0 0 output-1.sym
 {
 T 44300 48800 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 48500 5 10 1 1 0 0 1
-refdes=LE0+
+refdes=DO22+
 }
 C 44200 48200 1 0 0 output-1.sym
 {
 T 44300 48500 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 48200 5 10 1 1 0 0 1
-refdes=LE0-
+refdes=DO22-
 }
 N 41100 48600 41100 48300 4
 C 41300 48300 1 90 0 cap-small.sym
@@ -977,63 +977,63 @@ C 41000 47300 1 0 0 input-1.sym
 T 41000 47600 5 10 0 0 0 0 1
 device=INPUT
 T 40300 47300 5 10 1 1 0 0 1
-refdes=TxEN3
+refdes=DO21
 }
 C 44200 47300 1 0 0 output-1.sym
 {
 T 44300 47600 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 47300 5 10 1 1 0 0 1
-refdes=TxEN3-
+refdes=DO21-
 }
 C 44200 47000 1 0 0 output-1.sym
 {
 T 44300 47300 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 47000 5 10 1 1 0 0 1
-refdes=TxEN+
+refdes=DO21+
 }
 C 44200 46700 1 0 0 output-1.sym
 {
 T 44300 47000 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 46700 5 10 1 1 0 0 1
-refdes=TxEN2+
+refdes=DO20+
 }
 C 44200 46400 1 0 0 output-1.sym
 {
 T 44300 46700 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 46400 5 10 1 1 0 0 1
-refdes=TxEN2-
+refdes=DO20-
 }
 C 44200 46100 1 0 0 output-1.sym
 {
 T 44300 46400 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 46100 5 10 1 1 0 0 1
-refdes=TxEN1-
+refdes=DO19-
 }
 C 44200 45800 1 0 0 output-1.sym
 {
 T 44300 46100 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 45800 5 10 1 1 0 0 1
-refdes=TxEN+
+refdes=DO19+
 }
 C 44200 45500 1 0 0 output-1.sym
 {
 T 44300 45800 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 45500 5 10 1 1 0 0 1
-refdes=TxEN0+
+refdes=DO18+
 }
 C 44200 45200 1 0 0 output-1.sym
 {
 T 44300 45500 5 10 0 0 0 0 1
 device=OUTPUT
 T 45100 45200 5 10 1 1 0 0 1
-refdes=TxEN0-
+refdes=DO18-
 }
 N 41100 45600 41100 45300 4
 C 41300 45300 1 90 0 cap-small.sym
@@ -1088,21 +1088,21 @@ C 41000 47000 1 0 0 input-1.sym
 T 41000 47300 5 10 0 0 0 0 1
 device=INPUT
 T 40300 47000 5 10 1 1 0 0 1
-refdes=TxEN2
+refdes=DO20
 }
 C 41000 46700 1 0 0 input-1.sym
 {
 T 41000 47000 5 10 0 0 0 0 1
 device=INPUT
 T 40300 46700 5 10 1 1 0 0 1
-refdes=TxEN1
+refdes=DO19
 }
 C 41000 46400 1 0 0 input-1.sym
 {
 T 41000 46700 5 10 0 0 0 0 1
 device=INPUT
 T 40300 46400 5 10 1 1 0 0 1
-refdes=TxEN0
+refdes=DO18
 }
 N 49500 46900 49600 46900 4
 N 49500 46600 49600 46600 4
