@@ -1,2 +1,4 @@
 (hierarchy-uref-mangle "disabled")
+(hierarchy-netattrib-mangle "disabled")
+(hierarchy-netname-mangle "disabled")
 
