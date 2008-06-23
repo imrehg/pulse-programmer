@@ -45,7 +45,7 @@ GBIN = $(GROOT)/bin
 GSCM_DIR = $(GROOT)/share/gEDA/scheme
 GSCHEM = $(GBIN)/gschem 
 GNET = $(GBIN)/gnetlist -q
-G2PCB = gsch2pcb --use-files
+G2PCB = $(GBIN)/gsch2pcb --use-files
 PCB = $(GBIN)/pcb
 GBR = $(PCB) -x gerber --verbose --gerberfile $(GBR_PRE)
 GBR_PRE = $(FAB_DIR)/$(BOARD)-$(REV)
@@ -170,7 +170,7 @@ $(SCH_DIR)/%.ps: %.sch
 %.pdf: %.ps
 	ps2pdf $< $@
 
-$(BOARD).net: $(SCHEM_FILES)
+$(BOARD).net: $(SCHEM_FILES) gnetlistrc
 	$(GNET) -g PCB -o $@ $(BOARD).sch
 
 $(BOARD).drc: $(SCHEM_FILES)
