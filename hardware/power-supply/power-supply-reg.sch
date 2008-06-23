@@ -1,4 +1,4 @@
-v 20070216 1
+v 20080127 1
 C 40000 40000 0 0 0 title-B.sym
 T 50000 40400 9 10 1 0 0 0 1
 power-supply-reg.sch
