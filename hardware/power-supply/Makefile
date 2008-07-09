@@ -3,8 +3,8 @@ REV = 0b3
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
-power-supply.tgt: \
-	power-supply-xmit.tgt
+SCHEM_FILES = \
+	power-supply-reg.sch
 
 LAYER_COLORS = \
 	--layer-color-1 "\#8b2323" \
