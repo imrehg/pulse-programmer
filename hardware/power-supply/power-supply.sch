@@ -850,6 +850,8 @@ T 63300 78600 5 10 0 0 0 0 1
 device=DIODE
 T 63200 78500 5 10 1 1 0 0 1
 refdes=D2
+T 62900 78000 5 10 0 1 0 0 1
+footprint=DIODE
 }
 C 63900 80100 1 270 0 cap-small-pol.sym
 {
