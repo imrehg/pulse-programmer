@@ -849,12 +849,12 @@ C 62900 78000 1 0 0 diode-1.sym
 T 63300 78600 5 10 0 0 0 0 1
 device=DIODE
 T 63200 78500 5 10 1 1 0 0 1
-refdes=D?
+refdes=D2
 }
 C 63900 80100 1 270 0 cap-small-pol.sym
 {
 T 63880 79200 5 10 1 1 270 6 1
-refdes=C?
+refdes=C17
 T 63880 79700 5 10 0 0 270 0 1
 device=Cap Small
 T 64200 79500 5 10 1 1 270 0 1
@@ -871,7 +871,7 @@ C 65100 78600 1 270 0 capacitor-1.sym
 T 65800 78400 5 10 0 0 270 0 1
 device=CAPACITOR
 T 65400 78600 5 10 1 1 270 0 1
-refdes=C?
+refdes=C20
 T 66000 78400 5 10 0 0 270 0 1
 symversion=0.1
 T 65100 78600 5 10 1 1 270 0 1
@@ -884,7 +884,7 @@ C 65600 79200 1 270 0 capacitor-1.sym
 T 66300 79000 5 10 0 0 270 0 1
 device=CAPACITOR
 T 65900 79200 5 10 1 1 270 0 1
-refdes=C?
+refdes=C19
 T 66500 79000 5 10 0 0 270 0 1
 symversion=0.1
 T 65600 79200 5 10 1 1 270 0 1
@@ -897,7 +897,7 @@ C 66000 79900 1 270 0 capacitor-1.sym
 T 66700 79700 5 10 0 0 270 0 1
 device=CAPACITOR
 T 66300 79900 5 10 1 1 270 0 1
-refdes=C?
+refdes=C18
 T 66900 79700 5 10 0 0 270 0 1
 symversion=0.1
 T 66000 79900 5 10 1 1 270 0 1
@@ -921,7 +921,7 @@ N 61000 68500 61000 68800 4
 C 60800 68800 1 270 0 cap-small.sym
 {
 T 61300 68080 5 10 1 1 0 6 1
-refdes=C?
+refdes=C21
 T 61280 68400 5 10 0 0 270 0 1
 device=Cap Small
 T 61100 68800 5 10 0 1 0 0 1
@@ -934,7 +934,7 @@ N 61000 67700 63700 67700 4
 C 60800 66700 1 270 0 cap-small.sym
 {
 T 61300 65980 5 10 1 1 0 6 1
-refdes=C?
+refdes=C22
 T 61280 66300 5 10 0 0 270 0 1
 device=Cap Small
 T 61100 66700 5 10 0 1 0 0 1
