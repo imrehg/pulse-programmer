@@ -347,7 +347,7 @@ refdes=D1
 T 65100 77600 5 10 0 0 0 0 1
 device=LED
 T 65000 77000 5 10 0 0 0 0 1
-footprint=0603_LED
+footprint=DIODE
 }
 C 66800 79200 1 270 0 capacitor-1.sym
 {

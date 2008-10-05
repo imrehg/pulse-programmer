@@ -1,5 +1,5 @@
 # release: pcb 20080202
-# date:    Wed Jul  9 02:52:02 2008
+# date:    Sun Sep 28 19:14:07 2008
 # user:    buy-ppham (Administrator)
 # host:    anti-hero.gateway.2wire.net
 
@@ -14,7 +14,7 @@ PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[700 400 700 700 1500 750]
 Flags("nameonpcb,uniquename,clearnew,snappin")
-Groups("1,5,s:2,c:3:4")
+Groups("1,s:2,c:3:4:5")
 Styles["Signal,700,3000,1500,800:Power,2500,6000,3500,800:Fat,4000,6270,4700,1000:Skinny,800,3600,2500,1000"]
 
 Symbol(' ' 18)
