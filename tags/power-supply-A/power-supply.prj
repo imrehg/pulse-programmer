@@ -1,0 +1,6 @@
+schematics power-supply.sch
+output-name power-supply
+elements-dir ../footprints
+use-files
+m4-pcbdir /
+
