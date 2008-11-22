@@ -1,5 +1,5 @@
 BOARD = power-supply
-REV = 0b3
+REV = A
 TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies

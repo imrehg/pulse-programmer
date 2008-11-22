@@ -1,7 +1,7 @@
 # release: pcb 20080202
-# date:    Tue Oct 28 01:11:57 2008
-# user:    ppham (ppham,U-NEOVICTORIAN\Paul T. Pham,S-1-5-21-1083071216-315547407-1799152704-1006)
-# host:    neovictorian
+# date:    Sun Nov 16 23:03:53 2008
+# user:    buy-ppham (Administrator)
+# host:    anti-hero.ant.amazon.com
 
 # To read pcb files, the pcb version (or the cvs source date) must be >= the file version
 FileVersion[20070407]
@@ -13,7 +13,7 @@ Cursor[0 0 6.000000]
 PolyArea[200000000.000000]
 Thermal[0.500000]
 DRC[700 400 700 700 1500 750]
-Flags("nameonpcb,clearnew,snappin,orthomove")
+Flags("nameonpcb,autodrc,clearnew,snappin")
 Groups("1,5,s:2,c:3:4")
 Styles["Signal,700,3000,1500,800:Power,2500,6000,3500,800:Fat,4000,6270,4700,1000:Skinny,800,3600,2500,1000"]
 
@@ -797,7 +797,7 @@ Symbol('~' 12)
 	SymbolLine(15 35 20 35 8)
 	SymbolLine(20 35 25 30 8)
 )
-Via[725000 35000 6000 1600 0 3500 "" "thermal(3X)"]
+Via[469000 256000 6000 1600 0 3500 "" "thermal(3X)"]
 Via[256000 247000 6000 1600 0 3500 "" ""]
 Via[256000 200000 6000 1600 0 3500 "" ""]
 Via[402000 176000 6000 1600 0 3500 "" "thermal(3X)"]
@@ -848,7 +848,6 @@ Via[436000 176000 6000 1600 0 3500 "" "thermal(2X)"]
 Via[437000 75000 6000 1600 0 3500 "" "thermal(2X)"]
 Via[437000 41000 6000 1600 0 3500 "" "thermal(3X)"]
 Via[468000 206000 6000 1600 0 3500 "" "thermal(3X)"]
-Via[469000 256000 6000 1600 0 3500 "" "thermal(3X)"]
 
 Element["" "HEX-M3" "" "" 515000 25000 -16900 -21000 0 100 ""]
 (
@@ -1871,7 +1870,7 @@ Layer(2 "component")
 	Line[41188 237000 41377 236811 2500 1600 "clearline"]
 	Line[49756 192244 50000 192000 2500 1600 "clearline"]
 	Line[30000 237000 41188 237000 2500 1600 "clearline"]
-	Line[85000 260000 85000 256692 700 1600 "clearline"]
+	Line[486500 270000 487000 270500 2500 1600 "clearline"]
 	Line[70882 34000 62000 34000 2500 1600 "clearline"]
 	Line[102319 202000 102718 202399 2500 1600 "clearline"]
 	Line[25000 140000 25000 232000 2500 1600 "clearline"]
@@ -1955,7 +1954,7 @@ Layer(2 "component")
 	Line[48087 201299 51000 204212 2500 1600 "clearline"]
 	Line[67000 203000 67000 202000 2500 1600 "clearline"]
 	Line[42188 184000 41377 183189 2500 1600 "clearline"]
-	Line[85000 270000 59000 244000 2500 1600 "clearline"]
+	Line[476332 270000 486500 270000 2500 1600 "clearline"]
 	Line[59000 244000 59000 229000 2500 1600 "clearline"]
 	Line[59000 229000 49000 219000 2500 1600 "clearline"]
 	Line[49000 219000 41676 219000 2500 1600 "clearline"]
@@ -2072,8 +2071,10 @@ Layer(2 "component")
 	Line[280000 195709 274055 189764 2500 1600 "clearline"]
 	Line[402000 176000 414000 176000 2500 1600 "clearline"]
 	Line[458000 270000 471214 270000 2500 1600 "clearline"]
-	Line[476332 270000 486500 270000 2500 1600 "clearline"]
-	Line[486500 270000 487000 270500 2500 1600 "clearline"]
+	Line[59000 244000 63000 244000 2500 1600 "clearline"]
+	Line[63000 244000 67000 248000 2500 1600 "clearline"]
+	Line[67000 248000 67000 252000 2500 1600 "clearline"]
+	Line[67000 252000 85000 270000 2500 1600 "clearline"]
 )
 Layer(3 "+12V")
 (
@@ -2102,17 +2103,10 @@ Layer(6 "unused")
 )
 Layer(7 "unused")
 (
-	Text[712500 52500 0 122 "5.0V" ""]
-	Text[740000 110000 1 100 "+5.4V" ""]
-	Text[730000 52500 0 122 "1.8V" ""]
-	Text[758000 106000 1 100 "To TTL buffers" ""]
 	Text[330000 5000 0 122 "12.0V" ""]
-	Text[682500 35000 0 122 "5.4V" ""]
-	Text[380000 5000 0 100 "Vcc5.4A:1" ""]
-	Text[575000 47500 0 122 "3.3V" ""]
-	Text[617500 12500 0 100 "FPGA Header" ""]
-	Text[70000 315000 0 100 "Aaron Avril, Oct 2008" ""]
 	Text[275000 5000 0 100 "Vcc5.4D:1" ""]
+	Text[380000 5000 0 100 "Vcc5.4A:1" ""]
+	Text[70000 315000 0 100 "Aaron Avril, Oct 2008" ""]
 )
 NetList()
 (
