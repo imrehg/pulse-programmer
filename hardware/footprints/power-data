@@ -18,7 +18,7 @@ part "PT6302A-proto"
 
 # adj 0.9-5V DC-DC regulator from artesyn
 	
-	drill = 30 mils
+	drill = 40 mils
 	pins = 11
 	pinkey = "yes"
         silkcustom =
