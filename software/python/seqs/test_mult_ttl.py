@@ -1,0 +1,7 @@
+wait(10)
+start_super_parallel_env()
+ttl_add_to_super_parallel_env("854 sw",0,10)
+ttl_add_to_super_parallel_env("866 sw",0,10)
+ttl_add_to_super_parallel_env("854 sw",11,5)
+ttl_add_to_super_parallel_env("866 sw",20,5)
+end_super_parallel_env()

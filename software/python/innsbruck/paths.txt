@@ -1,0 +1,3 @@
+hardware_config="E:\My Documents\(Work)\expcontrol\qfp\Configuration\Settings\Hardware settings.txt"
+sequences_dir="E:/My Documents/(Work)/expcontrol/qfp/PulseSequences/"
+includes_dir="E:/My Documents/(Work)/expcontrol/qfp/PulseSequences/Includes/"

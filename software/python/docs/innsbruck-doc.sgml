@@ -1,0 +1,2296 @@
+<!DOCTYPE article  PUBLIC "-//OASIS//DTD DocBook V4.1//EN"
+ [ 
+<!ENTITY graph1001 "block">
+<!ENTITY graph1002 "clock_ext">
+<!ENTITY graph1003 "clock_int"> ]>
+
+<article lang="en">
+<!-- DocBook file was created by LyX 1.3
+  See http://www.lyx.org/ for more information -->
+  <articleinfo>
+   <title>
+Innsbruck pulse sequencer docs
+  </title>
+
+  </articleinfo>
+
+  <sect1>
+   <title>
+Starting up:
+  </title>
+   <sect2>
+    <title>
+Installing
+   </title>
+    <sect3>
+     <title>
+Installing python
+    </title>
+    <para>
+Download python from http://www.python.org/download 
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Getting the pulse compiler
+    </title>
+    <para>
+There are 2 possibilities
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+Get the pulse compiler from it's homepage http://pulse-sequencer.sf.net
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+Get the compiler from &bsol;&bsol;anna&bsol;all&bsol;Software&bsol;sequencer
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+And move the files in the directory of your choice
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+An example pulse program
+   </title>
+   <programlisting>
+<![CDATA[Pause=self.set_variable("float","Pause",0,2e4)
+]]><![CDATA[Hide=self.set_variable("Bool","Hide",0)
+]]><![CDATA[UseMotion=self.set_variable("Bool","UseMotion",1) 
+]]><![CDATA[
+]]><![CDATA[R729(2,1,0.5,"carrier")
+]]><![CDATA[R729(3,0.5,1.5,"blue")
+]]><![CDATA[R729(2,1,0.5,"carrier")
+]]><![CDATA[
+]]><![CDATA[if not UseMotion:
+]]><![CDATA[  R729(2,1,0.5,"blue")
+]]><![CDATA[
+]]><![CDATA[seq_wait(Pause)
+]]><![CDATA[
+]]><![CDATA[TTL(["854 sw","866 sw"],3.2)
+]]><![CDATA[if Hide:
+]]><![CDATA[  R729(3,1,0,"carrier")
+]]><![CDATA[
+]]><![CDATA[end_sequential()
+]]>
+   </programlisting>
+
+   </sect2>
+
+   <sect2>
+    <title>
+Some notes on programming in python
+   </title>
+   <para>
+First please look at the great tutorial on www.python.org
+   </para>
+   <itemizedlist>
+    <listitem>
+    <para>
+Note that 2/3 is as default an integer operation and will lead to 0. Use 2.0/3.0 instead !!!! Use this notation every time you type in a number
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+The python language relies on indentation of the code. So please do yourself a favour and use a good editor (not Notepad) good editors are:
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+Idle: the default editor that comes with python, but has no tabbed editing so you'll end up with 20 open windows
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+xemacs , emacs THE editor if you want to program more than one pulse program
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+vi , vim if you are familiar with them
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+I made bad experiences with some windows editors like notepad++ ; winedit; ...
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+   </listitem>
+
+   </itemizedlist>
+
+   </sect2>
+
+   <sect2>
+    <title>
+Starting the server
+   </title>
+   <para>
+On the computer that is connected to the box run the server by opening a shell (run_ cmd), change the directory to your python directory an type:
+   </para>
+   <programlisting>
+<![CDATA[python start_box_server.py
+]]>
+   </programlisting>
+   <para>
+You may want to modify some of the initial pulse shapes in this file. 
+   </para>
+   <para>
+If you want to have some more detailed output from the server write:
+   </para>
+   <programlisting>
+<![CDATA[python start_box_server.py --debug 1
+]]>
+   </programlisting>
+   <para>
+Note that you can set the debug level to your needs, but 1 is a good point to begin with unless you want to debug the generation of the machine code.
+   </para>
+   <para>
+Be aware that there may come some problems from an eventually running firewall!!!
+   </para>
+   <para>
+If you don't have a box handy and you want to test your sequences you can run the server with the --nonet switch.
+   </para>
+   <para>
+For testing without the labview program there is a python client in test_client.py. Remember to put the right command string into it.
+   </para>
+   <para>
+The debug levels mean :
+   </para>
+   <itemizedlist>
+    <listitem>
+    <para>
+1 : The most important server messages are displayed
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+2 : Many server messages are displayed
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+3 : Many compiler messages are displayed. It's not recommended to use this with the server this is for low level bug hunting in the machine code generation code
+    </para>
+
+   </listitem>
+
+   </itemizedlist>
+
+   </sect2>
+
+
+  </sect1>
+
+  <sect1>
+   <title>
+Overview + Bugs
+  </title>
+  <para>
+<graphic fileref="&graph1001;">
+  </para>
+    <sect3>
+     <title>
+The TTL Outputs
+    </title>
+    <para>
+The outputs are 5V types. The outputs 0 - 15 are derived from a single subcontainment of the fpga. This means they may be switched at the same time. The outputs 16 - 20 are in another subcontainment. If for example output 13 and 16 should be switched simultanously there will be a 10 ns delay.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+The TTL Inputs
+    </title>
+    <para>
+Are also 5V logic. Always terminate unused outputs to be zero because some of the driver ICs seem to have an open collector input, so to be on the safe side just ut an 50Ohm terminator on unused inputs.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+The DDS devices
+    </title>
+    <para>
+The used dds is a 1G sample Analog devices ad9885 evaluatio board. It is used in parallel programming mode.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+The VGA
+    </title>
+    <para>
+The amplitude shaping is realized with a analog devices variable gain amplifier and an analog devices 
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+Known Bugs
+   </title>
+   <itemizedlist>
+    <listitem>
+    <para>
+If the fpga clock is derived from the dds there may arise some problems with the dds reset and the fpga may be unstable. This means it won't output anything but you'll get no error report.
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+The part of the compiler responsible for the DAC control is buggy. If you get some strange slopes this maight be due to this error.
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+The timing conflicts resolving code could be way better. This may lead to some incorrect timings of up to a slope_duration.
+    </para>
+
+   </listitem>
+
+   </itemizedlist>
+
+   </sect2>
+
+   <sect2>
+    <title>
+Limitations
+   </title>
+   <itemizedlist>
+    <listitem>
+    <para>
+The slopes of a shaped pulse are precompiles and so there can no other event take place during a slope. If there is a conflict, the servers tries to resolve it in the following way:
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+raising slope: The other event is executed before the slope
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+falling slope: The other event is executed after the slope
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+   </listitem>
+    <listitem>
+    <para>
+The outputs 16 - 20 cannot be switched at the same time as the output 0 - 15. There will be 1 cycle delay (10ns)
+    </para>
+
+   </listitem>
+
+   </itemizedlist>
+
+   </sect2>
+
+
+  </sect1>
+
+  <sect1>
+   <title>
+Troubleshooting
+  </title>
+   <sect2>
+    <title>
+Characterizing the error
+   </title>
+    <sect3>
+     <title>
+No pulse transfer protocol reply:
+    </title>
+    <para>
+If the server complains that it got no pulse transfer protocol reply you may have a hardware or network problem
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+KeyError , AttributeError
+    </title>
+    <para>
+If the server returns some strange errors like KeyError or AttributeError you might have made an error with transferring the variables from labview to the server.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Pulses still overlap 
+    </title>
+    <para>
+If you got this error and you are using the sequential mode there might be something wrong with the delay times in innsbruck/__init__.py . If you get this error while running in a parallel environment you may have defined some overlapping pulses. This might not be a problem but the timing of your script may be incorrect.
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+Troubleshooting the network
+   </title>
+   <para>
+If you got the &ldquo;no pulse protocol reply&rdquo; error than your network connection may be broken. 
+   </para>
+   <para>
+If it worked before it may help to flush the arp cache of windows:
+   </para>
+   <programlisting>
+<![CDATA[netsh interface ip delete arpcache
+]]>
+   </programlisting>
+   <para>
+To check the connectivity look at the &ldquo;link&rdquo; LED's at the fpga board. If this LED is dark, it's most probably a hardware problem. Check that the network cables are plugged in correctly and you are not using crossed out cables.
+   </para>
+   <para>
+The network jumper of the fpga board might not be set correctly. They should look like:
+   </para>
+   <para>
+Another reason may that there is no DHCP server running where the box can get an IP address from or the box may be misconfigured so it doesn't send an DHCP request.
+   </para>
+   <para>
+You might want to use ethereal (www.ethereal.com) to debug your network. (Yes it is also avaible for windows)
+   </para>
+   <para>
+Just fire up your ethereal restart the fpga and look for a mac address of something like 00:01:ca:22:22:xx performing a dhcp request.
+   </para>
+
+   </sect2>
+
+   <sect2>
+    <title>
+Troubleshooting the fpga board
+   </title>
+   <para>
+Make sure that the fpga board has got a right external clock. You might check that by looking at the sync out connector of your dds board connected to the fpga. If you get no clock but you're really sure that there is a clock at the input of the dds board then look at the reset line of the dds chainboard. It's the one that goes quite in the middle of the chainboard and has a via. If you don't find it with ths great explanation just download the protel files from the homepage and look there. If the reset is 3.3V then there's something wrong with the bootup sequence of the fpga. Switch to internal clock on the fpga board and reset the dds right and switch to external clock again.
+   </para>
+   <para>
+<graphic fileref="&graph1002;">
+   </para>
+   <para>
+external clock
+   </para>
+   <para>
+<graphic fileref="&graph1003;">
+   </para>
+   <para>
+internal clock
+   </para>
+
+   </sect2>
+
+   <sect2>
+    <title>
+Troubleshooting the daisy chain boards
+   </title>
+   <para>
+If your pulse program seems to work but a dds or dac is not working, then check the address jumper of the corresponding cahinboards. INSERT A PICTURE HERE
+   </para>
+   <para>
+Then run the test programs in the main directory. For the dacs run test_dac_daisy.py for dds debuging use test_dds_daisy.py. I know you have checked this but do you look at the direct dds output or do you look at the output of the VGA ?
+   </para>
+
+   </sect2>
+
+
+  </sect1>
+
+  <sect1>
+   <title>
+Writing pulse programs
+  </title>
+   <sect2>
+    <title>
+The pulse program structure
+   </title>
+   <para>
+The pulse programs are structured as follows:
+   </para>
+   <programlisting>
+<![CDATA[<variable definition>
+]]><![CDATA[<pulse code>
+]]>
+   </programlisting>
+    <sect3>
+     <title>
+Variable definition
+    </title>
+    <para>
+The variable definition has the following syntax:
+    </para>
+    <programlisting>
+<![CDATA[VAR_NAME=self.set_variable("TYPE","LV_NAME",[MIN],[MAX])
+]]>
+    </programlisting>
+    <para>
+VAR_NAME:
+    </para>
+    <para>
+The name of the python variable which is used in the script
+TYPE:
+    </para>
+    <para>
+The type of the variable. One of FLOAT, INT, BOOL, STRING
+LV_NAME:
+    </para>
+    <para>
+The name of the variable in the labview program.
+MIN ; MAX
+    </para>
+    <para>
+The bounds of possible values of the variable
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Pulse code
+    </title>
+    <para>
+Put your pulse code at the end of your program. See &lsqb;&rsqb; for a summary of the pulse program functions
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Coherent frequency initialization
+    </title>
+    <para>
+in order to use phase coherent frequency switching you have to initialize the coherent frequency at the beginning of your program:
+    </para>
+    <programlisting>
+<![CDATA[freq1=coherent_create_freq(frequency,0) 
+]]><![CDATA[first_dds_init_frequency(freq1)
+]]>
+    </programlisting>
+    <para>
+see the corresponding manuals for details. 
+    </para>
+    <para>
+This is not neede when you're using the R729 rotations.
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+The two ways of programming your sequence
+   </title>
+   <para>
+There are basically two ways of programming:
+   </para>
+   <itemizedlist>
+    <listitem>
+    <para>
+sequential programming (default)
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+parallell environments 
+    </para>
+
+   </listitem>
+
+   </itemizedlist>
+    <sect3>
+     <title>
+Sequential programming
+    </title>
+    <para>
+This is the default programming where you just write a pulse and immediatly after that pulse the next one is included. If you want to add some delay you have to do this manually:
+    </para>
+    <programlisting>
+<![CDATA[pulse1
+]]><![CDATA[pulse2
+]]><![CDATA[wait(10)
+]]><![CDATA[pulse3
+]]><![CDATA[end_sequential()
+]]>
+    </programlisting>
+    <para>
+This is intended to be used for sequences when you use the 729 beam to make rotations on the ions. The pulses are charaterized by the ion, transition , the duration in angle of a spin flip and the phase:
+    </para>
+    <programlisting>
+<![CDATA[R729(ion,theta,phi,[transition])
+]]>
+    </programlisting>
+    <para>
+If you ommit the transition a default transition which is given by the qfp is used. 
+    </para>
+    <para>
+If you want some time where the processor is idle just add
+    </para>
+    <programlisting>
+<![CDATA[seq_wait(time)
+]]>
+    </programlisting>
+    <para>
+At the end there has to be :
+    </para>
+    <programlisting>
+<![CDATA[end_sequential()
+]]>
+    </programlisting>
+    <para>
+Otherwise the whole sequence is not processed !!!
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Parallell environments
+    </title>
+    <para>
+Parallel environments are an easy way to get timed pulses. Here you just specify the start time and the duration of the pulses. The pulses can overlap but they cannot have the same start or stop time. 
+    </para>
+    <programlisting>
+<![CDATA[start_parallel_env() 
+]]><![CDATA[ttl_add_to_parallel_env("866 sw",0,10) 
+]]><![CDATA[ttl_add_to_parallel_env("397 sw",2,5) 
+]]><![CDATA[shape_add_to_parallel_env(start_time=12,duration=5.0,frequency=freq1,\
+]]><![CDATA[                    phase=0,type="blackman",slope_duration=1.1,amplitude=1.0)
+]]><![CDATA[end_parallel_env(trigger="Line",repeat=30)
+]]>
+    </programlisting>
+    <para>
+This switches on the &ldquo;866 sw&rdquo; output at 0us for 10 us and the &ldquo;397 sw&rdquo; output at 2 us for 5 us. See &lsqb;&rsqb; for details on this commands. To some extend some conflicts can be resolved. The server sends a warning response in that case. This repeats the sequence 30 times and waits for a line trigger every timne it's running
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+TTL Outputs
+   </title>
+   <para>
+The names of the TTL outputs are taken from the &ldquo;Hardware Settings.txt&rdquo; file of the QFP. Note that if the device is !PB the output is inverted that means that setting the output to 0 will result in a voltage of 5V at the according output. Some example:
+   </para>
+   <programlisting>
+<![CDATA[866 main.ch=0 866 
+]]><![CDATA[main.Device=!PB
+]]>
+   </programlisting>
+   <para>
+We get the device &ldquo;866 main&rdquo; out of this. 
+   </para>
+   <programlisting>
+<![CDATA[add_to_parallel_env("866 sw",0,10)
+]]>
+   </programlisting>
+   <para>
+or in sequential mode:
+   </para>
+   <programlisting>
+<![CDATA[TTL("866 sw",1)
+]]>
+   </programlisting>
+   <para>
+This creates a TTL pulse. To switch the state of the TTL outputs use:
+   </para>
+   <programlisting>
+<![CDATA[set_TTL("866 sw",1)
+]]><![CDATA[set_TTL("866 sw",0)
+]]>
+   </programlisting>
+   <para>
+This is for the sequential mode only!
+   </para>
+   <programlisting>
+<![CDATA[
+]]>
+   </programlisting>
+
+   </sect2>
+
+   <sect2>
+    <title>
+High level functions
+   </title>
+   <para>
+The high level functions are some TTL sequences. They are characterized by:
+   </para>
+   <programlisting>
+<![CDATA[        start_time,duration,device,ion=None,repeat=1,TimeOffset=0
+]]>
+   </programlisting>
+   <para>
+For experiment preparation there are following functions:
+   </para>
+    <sect3>
+     <title>
+DopplerPreparation
+    </title>
+    <para>
+This functions does the DopplerPreparation. It is invoked by calling DopplerPreparation() and has no arguments. It consists of the following pulses:
+    </para>
+    <programlisting>
+<![CDATA[        0,2000,Doppler
+]]><![CDATA[        0,2050,Reset854
+]]><![CDATA[        1,1000,PMTrigPulses
+]]><![CDATA[        2010,40,Sigma397
+]]>
+    </programlisting>
+
+    </sect3>
+
+    <sect3>
+     <title>
+SidebandCooling
+    </title>
+    <para>
+This functions provides Sideband cooling.
+    </para>
+    <programlisting>
+<![CDATA[        0,10000,Quench854
+]]><![CDATA[        0,10,Sigma397,repeat=9,TimeOffset=10000
+]]><![CDATA[        0,2000,SbCool6,ion=1
+]]><![CDATA[        2000,8000,SbCool7,ion=2
+]]>
+    </programlisting>
+
+    </sect3>
+
+    <sect3>
+     <title>
+PMDetection
+    </title>
+    <para>
+This function provides the detection code. It has the mandatory argument detect_wait and the optional boolean argument CameraOn . It returns the variable detection_count .
+    </para>
+    <programlisting>
+<![CDATA[        0,detect_wait,detection397
+]]><![CDATA[        0,detect_wait,PMGate)
+]]><![CDATA[        0,trigger_length,PMTrigger)
+]]><![CDATA[        detect_wait-trigger_length,trigger_length,PMTrigger
+]]><![CDATA[        if CameraOn:
+]]><![CDATA[            0,trigger_length,Detection
+]]><![CDATA[            0,trigger_length,CameraTrigger
+]]>
+    </programlisting>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+Some important low level functions
+   </title>
+   <para>
+These functions are used in the sequential programming mode !
+   </para>
+    <sect3>
+     <title>
+Rotations
+    </title>
+    <para>
+The command for some Rotation is:
+    </para>
+    <programlisting>
+<![CDATA[R729(ion,theta,phi,[transition])
+]]>
+    </programlisting>
+    <para>
+The technical details of the rotation are given by the transition object. See <xref linkend="sec-Defining-Transitions"> how to define the transitions.
+    </para>
+    <para>
+The output of the second dds does not support phase coherent switching as ists intended as a compensation beam!
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+TTL pulses
+    </title>
+    <para>
+TTL pulses are programmed like:
+    </para>
+    <programlisting>
+<![CDATA[TTL(device_key,duration)
+]]>
+    </programlisting>
+    <para>
+Where device key is definec in the hardware settings file.
+    </para>
+    <para>
+But how do I make a TTL pulses with two or more outputs imultaneously?
+    </para>
+    <programlisting>
+<![CDATA[TTL(["866 sw","854 sw"],duration)
+]]>
+    </programlisting>
+
+    </sect3>
+
+    <sect3>
+     <title>
+The TTL sequence
+    </title>
+    <para>
+TTL sequences are some &ldquo;mini parallel environments&rdquo; for use within the sequential environment. The start ime should always start at 0 !
+    </para>
+    <programlisting>
+<![CDATA[seq=TTL_sequence()
+]]><![CDATA[seq.add_pulse(0,detection397,detect_wait)
+]]><![CDATA[seq.add_pulse(0,detect_wait,PMGate)
+]]><![CDATA[seq.add_pulse(0,trigger_length,PMTrigger)
+]]><![CDATA[seq.add_pulse(detect_wait-trigger_length,trigger_length,PMTrigger)
+]]><![CDATA[seq.end_sequence() 
+]]>
+    </programlisting>
+    <para>
+The TTL sequence class has the following mehtods:
+    </para>
+    <programlisting>
+<![CDATA[add_event(start_time,device_key,value)
+]]>
+    </programlisting>
+    <para>
+Sets the TTL Output device_key at start_time to value
+    </para>
+    <programlisting>
+<![CDATA[add_pulse(start_time,duration,device_key)
+]]>
+    </programlisting>
+    <para>
+Sets the corresponding TTL output at start_time to 1 and at start_time+duration to 0
+    </para>
+    <programlisting>
+<![CDATA[end_sequence()
+]]>
+    </programlisting>
+    <para>
+Is mandatory at the end of the TTL sequence. If this is missing the sequence is not processed at all !!!
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+seq_wait
+    </title>
+    <para>
+The syntax for the sequential wait function is:
+    </para>
+    <programlisting>
+<![CDATA[seq_wait(time)
+]]>
+    </programlisting>
+    <para>
+Where time is the waiting time in us. The speciality of this function is that you can define som pre and post delays depending on the prevous / preceding command. For an example if a seq_wait() instruction is in between to R729() commands, it will count the delay between the two points where the amplitude of the slopes are at the half maximum. An error message will be returned if the wait duration is smaller than the slope duration plus the frequency switching delays.
+    </para>
+    <programlisting>
+<![CDATA[
+]]>
+    </programlisting>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Defining Transitions<anchor id="sec-Defining-Transitions"> 
+    </title>
+    <para>
+Transitions can be defined in two different ways:
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+Direct in the sequences file
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+From labview via the TRANSITION keyword
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+An example for the direct definition
+    </para>
+    <programlisting>
+<![CDATA[Carrier=transition(transition_name="Carrier",t_rabi=t_carr,
+]]><![CDATA[                 frequency=freq1,amplitude=1,slope_type="blackman",
+]]><![CDATA[                 slope_duration=0.2,amplitude2=-1,frequency2=0) 
+]]>
+    </programlisting>
+    <para>
+This transition will be called by R729(ion,theta,phi,carrier)
+    </para>
+    <para>
+A transition from labview called carrier will be called by: R729(ion,theta,phi,&rdquo;carrier&rdquo;)
+    </para>
+    <para>
+The &ldquo; do make a huge difference !!!
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+phase coherent frequency switching.
+    </title>
+    <para>
+Please note: if you use the new R729 pulses you don't need this anymore !
+    </para>
+    <para>
+First the according frequencies have to be initialized, see &lsqb;&rsqb; for details:
+    </para>
+    <programlisting>
+<![CDATA[freq1=coherent_create_freq(frequency,0) 
+]]><![CDATA[first_dds_init_frequency(freq1)
+]]>
+    </programlisting>
+    <para>
+Phase coherent frequency switching is performed with the command
+    </para>
+    <programlisting>
+<![CDATA[get_shaped_pulse(duration,frequency,type,[slope_duration=0],[amplitude=1],[phase=0])
+]]>
+    </programlisting>
+    <para>
+See &lsqb;&rsqb; for details of the command.
+    </para>
+    <para>
+Please note that you should not use arbitrary numbers for the slope_duration and amplitude. The program precompiles the shapes beacause they take a long time to compile. It has also to recompile if the amplitudes of the pulses change.
+    </para>
+    <para>
+So just use 5 different slopes you're going to switch to !!! 
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+
+  </sect1>
+
+  <sect1>
+   <title>
+Configuring the software
+  </title>
+   <sect2>
+    <title>
+Configuring the server
+   </title>
+   <para>
+There are two ways of configuring your server. First you can change different startup scripts and define some values by editing the line where the main program is started. The other one is to edit the __init__.py file in the innsbruck directory:
+   </para>
+    <sect3>
+     <title>
+The __init__,py configuration
+    </title>
+    <programlisting>
+<![CDATA[class configuration:
+]]><![CDATA[  # The output of the ion trigger
+]]><![CDATA[  ion_trig_device="address trig"
+]]><![CDATA[  # The done signal for labview
+]]><![CDATA[  done_signal="PB trigger"
+]]><![CDATA[  #The default port for the server
+]]><![CDATA[  default_port=8880
+]]><![CDATA[  #The Hardware config file:
+]]><![CDATA[  hardware_config="E:\My Documents\qfp_43\Configuration\Lab Computer\Hardware settings.txt"
+]]><![CDATA[  #The line TRigger:
+]]><![CDATA[  line_trigger=(Input_0_Trigger,)
+]]><![CDATA[  #The PMT detection Trigger pulse length:
+]]><![CDATA[  PMT_trigger_length=0.2
+]]><![CDATA[
+]]><![CDATA[  #do we write an tcp answer by default?
+]]><![CDATA[  answer_tcp=True
+]]><![CDATA[  #do we run in parallel mode by default?
+]]><![CDATA[  parallel_mode=False
+]]><![CDATA[  #Shall we send a return before compiling the seqeunce?
+]]><![CDATA[  send_pre_return=True
+]]><![CDATA[  #The name of the TTL outputs:
+]]><![CDATA[  detection397="Detection 397"
+]]><![CDATA[  Detection="Detection"
+]]><![CDATA[  PMTrigger="PM trigger"
+]]><![CDATA[  PMGate="PM Gate"
+]]><![CDATA[  Doppler="Doppler"
+]]><![CDATA[  PMTrigPulses="PM trigger"
+]]><![CDATA[  Sigma397="Sigma397"
+]]><![CDATA[  Reset854="Reset854"
+]]><![CDATA[  Quench854="Quench854"
+]]><![CDATA[  SbCool6="SbCool6"
+]]><![CDATA[  SbCool7="SbCool7"
+]]><![CDATA[  CameraTrigger="Camera trigger"
+]]><![CDATA[  #main_loop_wait: min number of cycles to wait between 2 triggered programs
+]]><![CDATA[  main_loop_wait=100
+]]><![CDATA[  # The default ion list:
+]]><![CDATA[  ion_list={}
+]]><![CDATA[  for i in range(10):
+]]><![CDATA[    ion_list[i]=i
+]]><![CDATA[  # The sequences directory
+]]><![CDATA[  dir1=os.getcwd()
+]]><![CDATA[  sequences_dir=dir1+"/seqs/"
+]]><![CDATA[  # The known pulse shapes
+]]><![CDATA[  pulse_dictionary={}
+]]><![CDATA[  pulse_dictionary["blackman"]=blackman_pulse
+]]><![CDATA[  pulse_dictionary["sine"]=sine_pulse
+]]><![CDATA[
+]]><![CDATA[ cycle_time=1/float(ref_freq)
+]]><![CDATA[
+]]>
+    </programlisting>
+
+    </sect3>
+
+    <sect3>
+     <title>
+TCP ports
+    </title>
+    <para>
+The communication with labview is handled over the tcp protocol. The server is listening by default on port 8880 . To change this you have to edit the start_box_server.py file. To change the port to 1234 you have to edit the my_program definition line
+    </para>
+    <programlisting>
+<![CDATA[my_program=MainProgram(port=1234)
+]]>
+    </programlisting>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Sequence directory
+    </title>
+    <para>
+The sequence directory is by default ./seqs . To change this you have to edit the start_box_server.py file:
+    </para>
+    <programlisting>
+<![CDATA[my_program=MainProgram(sequences_dir="e:\sequences")
+]]>
+    </programlisting>
+
+    </sect3>
+
+    <sect3>
+     <title>
+The hardware config file
+    </title>
+    <para>
+The server gets it's definitions of the TTL outputs from the global hardware configuration file which is created by the qfp_43 program. The default location is &ldquo;E:&bsol;My Documents&bsol;qfp_43&bsol;Configuration&bsol;Lab Computer&bsol;Settings&bsol;Hardware settings.txt&quot; To change this you have to start the server with th following command:
+    </para>
+    <programlisting>
+<![CDATA[my_program=MainProgram(hardware_config="e:\hardware.txt")
+]]>
+    </programlisting>
+    <para>
+You also have to edit the innsbruck&bsol;__init__.py file if you want to change this file !!! 
+    </para>
+    <para>
+This should change in future.
+    </para>
+    <para>
+If you want to start the server with more than one variables just use a comma (&ldquo;,&rdquo;) between them.
+    </para>
+    <para>
+The hardware definition syntax is as follows:
+    </para>
+    <programlisting>
+<![CDATA[854 sw.Device=PB 
+]]><![CDATA[854 sw.ch=15 
+]]><![CDATA[866 sw.Device=!PB 
+]]><![CDATA[866 sw.ch=17 
+]]>
+    </programlisting>
+    <para>
+The !PB indicates a inverting channel. It doesn't matter if the device or the channel is the first argument.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Setting the parallel mode
+    </title>
+    <para>
+For using with the old qfp you have to switch the server to parallel mode. 
+    </para>
+    <programlisting>
+<![CDATA[my_program=MainProgram(parallel_mode=True)
+]]>
+    </programlisting>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+Configuring the devices
+   </title>
+   <para>
+You have to reconfigure the compiler if you make changes to your hardware settings; e.g. adding an additional DDS , ...
+   </para>
+    <sect3>
+     <title>
+Configuring the devices 
+    </title>
+    <para>
+In the __init__.py file in your particular device specific configuration edit the __init__.py file. 
+    </para>
+    <para>
+The most mportant statements are:
+    </para>
+    <programlisting>
+<![CDATA[ref_freq=800
+]]><![CDATA[cycle_time=(1e3/ref_freq)
+]]>
+    </programlisting>
+    <para>
+In these lines the reference frequency and the cycle time are set. Note that the cycle time is given in nanoseconds.
+    </para>
+    <programlisting>
+<![CDATA[ttl_device={}
+]]>
+    </programlisting>
+    <para>
+The ttl_device is a dictionary where the corresponding channels to the hardware file are stored. It also stores wheter the channel is inverting.
+    </para>
+    <programlisting>
+<![CDATA[first_dac_device=dac_factory.create_device(chain_address = 0x01)
+]]>
+    </programlisting>
+    <para>
+This defines the first DAC which is accesible via innsbruck.first_dac_device. If you want to add a dac just add another line which is similar to this and add a command in the api.py file.
+    </para>
+    <programlisting>
+<![CDATA[dds_factory_create_devices(chain_address={1; 0x1, 2; 0x2},ref_freq=ref_freq)
+]]>
+    </programlisting>
+    <para>
+This defines the first dds device. Please note that there are two different possibilities to interface the dds devices. Note that it's not possible to mix up dds with different reference frequency because the data transfer may be affected.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Calibrating the VGA
+    </title>
+    <para>
+Unfortounally the VGA (Variable Gain Amplifier) has a logarithmic dependency of the control voltage.
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+
+  </sect1>
+
+  <sect1>
+   <title>
+The labview interface
+  </title>
+  <para>
+There exist two differenr interfaces to labview:
+  </para>
+  <itemizedlist>
+   <listitem>
+   <para>
+Parallell environment: Bulid to be compatible with the old ofp program and using the matlab sequence files
+   </para>
+
+  </listitem>
+   <listitem>
+   <para>
+Python style: Works with the new qfp program and uses python sequence files
+   </para>
+
+  </listitem>
+
+  </itemizedlist>
+   <sect2>
+    <title>
+General format 
+   </title>
+   <para>
+The server accepts strings in the following format:
+   </para>
+   <programlisting>
+<![CDATA[command1,option1_1,option1_2;command2,option1,option1
+]]>
+   </programlisting>
+   <para>
+a simple example:
+   </para>
+   <programlisting>
+<![CDATA[NAME,test_ttl.py;TRIGGER,NONE;FLOAT,duration,3.4;
+]]>
+   </programlisting>
+    <sect3>
+     <title>
+Basic commands:
+    </title>
+    <itemizedlist>
+     <listitem>
+     <para>
+INT: sends an integer value to the script
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <programlisting>
+<![CDATA[INT,var_name,value
+]]>
+    </programlisting>
+    <itemizedlist>
+     <listitem>
+     <para>
+FLOAT: sends a float value to the script
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <programlisting>
+<![CDATA[FLOAT,var_name,value
+]]>
+    </programlisting>
+    <itemizedlist>
+     <listitem>
+     <para>
+STRING: 
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <programlisting>
+<![CDATA[STRING,var_name,value
+]]>
+    </programlisting>
+    <itemizedlist>
+     <listitem>
+     <para>
+BOOL:
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <programlisting>
+<![CDATA[BOOL,var_name, value
+]]>
+    </programlisting>
+    <itemizedlist>
+     <listitem>
+     <para>
+NAME: sends the filename of the sequence
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <programlisting>
+<![CDATA[NAME,filename
+]]>
+    </programlisting>
+    <itemizedlist>
+     <listitem>
+     <para>
+TRIGGER: gives the tpe of the trigger. For more information see ./innsbruck/handle_commands.py
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <programlisting>
+<![CDATA[TRIGGER,trig_string
+]]>
+    </programlisting>
+    <para>
+some standard Trigger strings are: NONE , LINE
+    </para>
+    <programlisting>
+<![CDATA[
+]]>
+    </programlisting>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+Parallel environment
+   </title>
+   <para>
+Labview just sends the pulse sequence as a string to the server. The server has to be started in parallel mode.
+   </para>
+
+   </sect2>
+
+   <sect2>
+    <title>
+Python style
+   </title>
+   <para>
+Python style gets following informations from labview for a transition:
+   </para>
+   <itemizedlist>
+    <listitem>
+    <para>
+Rabi times for each ion 
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+slope duration
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+slope type
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+slope amplitude
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+frequency
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+&lsqb;Ion number mapping&rsqb;
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+&lsqb;amplitude for second channel&rsqb;
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+&lsqb;frequency for second channel&rsqb;
+    </para>
+
+   </listitem>
+
+   </itemizedlist>
+   <para>
+The informations in square brackets are optional.
+   </para>
+    <sect3>
+     <title>
+The transition object
+    </title>
+    <programlisting>
+<![CDATA[TRANSITION,transition_name;RABI,rabi_times;SLOPE_TYPE,slope_type;SLOPE_DUR,slope_duration;
+]]><![CDATA[AMPL,slope_ampl;FREQ,frequency;IONS,ion_map;AMPL2,second_amplitude;FREQ2,second_frequency;
+]]>
+    </programlisting>
+    <para>
+Where rabi freqs looks like:
+    </para>
+    <programlisting>
+<![CDATA[1:19.34 , 2:21.12 , 3:20.34 , 4:22.67
+]]>
+    </programlisting>
+    <para>
+And ion_map:
+    </para>
+    <programlisting>
+<![CDATA[1:101 , 2:102 , 3:103 , 4:104
+]]>
+    </programlisting>
+
+    </sect3>
+
+    <sect3>
+     <title>
+The default transition
+    </title>
+    <programlisting>
+<![CDATA[DEFAULT_TRANSITION,transition_name;
+]]>
+    </programlisting>
+
+    </sect3>
+
+
+   </sect2>
+
+
+  </sect1>
+
+  <sect1>
+   <title>
+Changing the server
+  </title>
+  <para>
+The pulse sequncer software is written entirely in python this means you should know python quite well if you want to make some changes in this software. If you don't know python at all then learn it before messing araound !!!!!!
+  </para>
+  <para>
+I'll use the unix style path descriptions here. Be sure you use them too if you make some changes.
+  </para>
+   <sect2>
+    <title>
+How the software is managed
+   </title>
+   <para>
+The software is hosted by the sourceforge.net site. If you make any changes to the software please contact the project admins to commit the chages to the version control system. If you're lucky you may get one of those almighty admins. Don't start a local repository !!!!!!!!
+   </para>
+
+   </sect2>
+
+   <sect2>
+    <title>
+Understanding the internals of the software
+   </title>
+   <para>
+The software can be splitted in two parts:
+   </para>
+   <itemizedlist>
+    <listitem>
+    <para>
+Paul's wonderful compiler. Most of it's parts can be found under the ./sequencer/ directory. 
+    </para>
+
+   </listitem>
+    <listitem>
+    <para>
+Philipp's server and innsbruck specific configuration. It resides under ./innsbruck
+    </para>
+
+   </listitem>
+
+   </itemizedlist>
+
+   </sect2>
+
+   <sect2>
+    <title>
+The compiler
+   </title>
+   <para>
+Before you want to change something in the compiler itself you have to understand the underlying data structure and you have to know python real well. You can easily break up the whole compiler. So don't do anything unless you really know hat you're doing !!!
+   </para>
+    <sect3>
+     <title>
+The compiler data hierarchy
+    </title>
+    <para>
+The compiler uses some hierarchy structure:
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+events: These are representing some high level functions and may contain some other events. For example an infinite loop is described by an event containing other events
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+words: The events are translated into words. Each word contains an instruction.
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+charlist: The words are translated in a binary charlist that is understood by the processor.
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+    </sect3>
+
+    <sect3>
+     <title>
+The compiler directory tree
+    </title>
+    <para>
+The compiler directory tree resides under ./sequencer/ :
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+pcp : Here all instruction and events are defined and compiled
+     </para>
+     <itemizedlist>
+      <listitem>
+      <para>
+events: here all events are defined. 
+      </para>
+
+     </listitem>
+      <listitem>
+      <para>
+machines: All machine dependend code lives here
+      </para>
+
+     </listitem>
+      <listitem>
+      <para>
+instructions: All instruction known to the processor core are defined here.
+      </para>
+
+     </listitem>
+
+     </itemizedlist>
+
+    </listitem>
+     <listitem>
+     <para>
+ptp : The transfer protocol to the FPGA board over ethernet
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+devices: Here all devices are defined (DDS , DAC, TTL)
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+    </sect3>
+
+    <sect3>
+     <title>
+The compiler scheme
+    </title>
+    <para>
+The compiler uses the following scheme:
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+initialization
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+event creation
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+translation event to words
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+translation words to charlist
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Some important files:
+    </title>
+    <para>
+All pathes are given relative to ./sequencer
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+api.py
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+Here some events are defined. see also ./innsbruck/api
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+ptp/devices.py
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+The routines for the translation and sending the information are in here.
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+pcp/instructions/program.py
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+This files describes how the events are translated in the words.
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+pcp/machines/pcp32.py
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+This file describes how the words are handled and generates the charlists for the words. 
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Some important variables
+    </title>
+    <para>
+These are global veraibles accesible from the most modules
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+sequencer.current_sequence
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+This object contains the current sequence. In sequencer.current_sequence.event_list the events are stored.
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+innsbruck
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+Here are all devices and constants avaible. On some of the older test files this may be test_config
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Some notes on pulses
+    </title>
+    <para>
+There are two different kind of pulses:
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+AtomicPulse
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+SeparablePulse
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Some examples for changing things
+    </title>
+    <para>
+changing the dac handling
+    </para>
+    <para>
+changing the TTL handling
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+The server
+   </title>
+   <para>
+The server is somewhat easier to understand than the compiler but nevertheless: Don't do anything unless you know what you're doing !!!!
+   </para>
+   <para>
+The whole server resides in ./innsbruck so every path will be relative to this !
+   </para>
+   <para>
+The main file is main_program.py , the usual way to start a server is:
+   </para>
+   <programlisting>
+<![CDATA[my_program=MainProgram()
+]]><![CDATA[my_program.add_pulse(sine_pulse(slope_duration))
+]]><![CDATA[my_program.add_pulse(blackman_pulse(slope_duration)) 
+]]><![CDATA[my_program.start_server()
+]]>
+   </programlisting>
+   <para>
+The first line creates a MainProgram object. it just calls the __init__ function in the main_program.py file.
+   </para>
+   <para>
+The second and third lines create some pulse slopes that the program may use without compiling new ones.
+   </para>
+   <para>
+The fourth line starts the server.
+   </para>
+    <sect3>
+     <title>
+starting the server
+    </title>
+    <para>
+Wen starting the server following tasks are woked on:
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+create a program with the slopes as subroutines and some dummy content
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+start the server
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+    </sect3>
+
+    <sect3>
+     <title>
+The server function
+    </title>
+    <para>
+In the server function in main_program.py following is going on:
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+listen on the given port
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+get the variables from the command
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+create the event_list
+     </para>
+     <itemizedlist>
+      <listitem>
+      <para>
+If creating the event lisf fails because a shape was not in memory the event_list is executed a second time.
+      </para>
+
+     </listitem>
+
+     </itemizedlist>
+
+    </listitem>
+     <listitem>
+     <para>
+The result is sent back to labview. If there an error occurs it returns an error message and the line nr of the sequence file where the error occured.
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Simple user functions
+    </title>
+    <para>
+The user level functions reside in user_function.py or in api.py . If you want to add some please place it in user_function.py .
+    </para>
+     <sect4>
+      <title>
+example: wait_time
+     </title>
+     <para>
+The function wait time just gets the corresponding cycle count to the given waiting time:
+     </para>
+     <programlisting>
+<![CDATA[def wait_time(time):
+]]><![CDATA[   time=float(time)
+]]><![CDATA[   cycle_time=float(innsbruck.cycle_time/1000.0)
+]]><![CDATA[   wait_cycles=int(time/cycle_time)
+]]><![CDATA[   wait(wait_cycles) 
+]]>
+     </programlisting>
+     <para>
+The first line is the function definition. The second just converts the time to a float number so we don't get some rounding errors here. The third line just calculates the waiting time. 
+     </para>
+     <para>
+innsbruck.cycle time is defined in ./innsbruck/__init__.py but it s given in ns and all other times are in us. So we've to convert it. And then we just calculate how many steps we got for time.
+     </para>
+     <para>
+In the last line the wait() instruction as defined in ./sequencer/api.py is called and this instruction creates an event. Please note that these functions are evaluated immediatly while most of the functionality is wheter in a parallel or a sequential environment !!!!
+     </para>
+     <para>
+You may add a simple user function with add_to_sequential(function) (NOT IMPLEMENTED YET)
+     </para>
+
+     </sect4>
+
+
+    </sect3>
+
+    <sect3>
+     <title>
+Complex user functions
+    </title>
+    <para>
+To use some more complex user functions and global variables there exists the PulseCommand class in user_function.py . An example is the PMT Detection function:
+    </para>
+    <programlisting>
+<![CDATA[class PMDetection(PulseCommand):
+]]><![CDATA[    def __init__(self,detect_wait,CameraOn=False):
+]]><![CDATA[
+]]><![CDATA[        configuration=self.get_config()
+]]><![CDATA[        detection397=configuration.detection397
+]]><![CDATA[
+]]><![CDATA[        PMTrigger=configuration.ion_trig_device
+]]><![CDATA[        PMGate=configuration.PMGate
+]]><![CDATA[        trigger_length=configuration.PMT_trigger_length
+]]><![CDATA[
+]]><![CDATA[        detection_count=self.get_variable("detection_count")
+]]><![CDATA[        self.set_variable("detection_count",detection_count+2)
+]]><![CDATA[
+]]><![CDATA[        self.add_to_return_list("PM Count","detection_count")
+]]><![CDATA[        
+]]><![CDATA[        seq=TTL_sequence()
+]]><![CDATA[        seq.add_pulse(0,detection397,detect_wait)
+]]><![CDATA[        seq.add_pulse(0,PMGate,detect_wait)
+]]><![CDATA[        seq.add_pulse(0,PMTrigger,trigger_length)
+]]><![CDATA[        seq.add_pulse(detect_wait-trigger_length,PMTrigger,trigger_length)
+]]><![CDATA[        if CameraOn:
+]]><![CDATA[            seq.add_pulse(0,trigger_length,configuration.Detection)
+]]><![CDATA[            seq.add_pulse(0,trigger_length,configuration.CameraTrigger)
+]]><![CDATA[        seq.end_sequence() 
+]]>
+    </programlisting>
+    <para>
+This consists of following parts:
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+class definition
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+variable definition from the configuration in in __init__.py
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+handling of the return variables
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+the main ttl sequence
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+    </sect3>
+
+    <sect3>
+     <title>
+class definition for own user functions
+    </title>
+    <para>
+The class definition has to refer to the parent class (PulseCommand) and the method (function) that is executed when the class is called is __init__
+    </para>
+    <programlisting>
+<![CDATA[class PMDetection(PulseCommand):
+]]><![CDATA[    def __init__(self,detect_wait,CameraOn=False):
+]]>
+    </programlisting>
+    <para>
+You may want to use some other methods if you want to use some features where you have to store some values without global variables. A sample code that increases a variable and returns it to labview may look like:
+    </para>
+    <programlisting>
+<![CDATA[class counter1(PulseCommand):
+]]><![CDATA[    def __init__(self,value=0):
+]]><![CDATA[       self.value=value
+]]><![CDATA[
+]]><![CDATA[    def incme(self):
+]]><![CDATA[       self.value+=self.increase
+]]><![CDATA[
+]]><![CDATA[    def return_to_labview(self):
+]]><![CDATA[       self.set_variable("counter",self.value)
+]]><![CDATA[       self.add_to_return_list("COUNTER 1","counter")
+]]>
+    </programlisting>
+    <para>
+it is used in python like:
+    </para>
+    <programlisting>
+<![CDATA[inc1=coubter1()
+]]><![CDATA[inc1.incme()
+]]><![CDATA[<code>
+]]><![CDATA[if CameraOn
+]]><![CDATA[   inc1.incme()
+]]><![CDATA[<code>
+]]><![CDATA[inc1.return_to_labview()
+]]>
+    </programlisting>
+
+    </sect3>
+
+    <sect3>
+     <title>
+Returning values to labview and using global variables
+    </title>
+    <para>
+To return a value to labview you have to create a global variable:
+    </para>
+    <programlisting>
+<![CDATA[        detection_count=self.get_variable("detection_count")
+]]><![CDATA[        self.set_variable("detection_count",detection_count+1)
+]]><![CDATA[        self.add_to_return_list("PM Count","detection_count")
+]]>
+    </programlisting>
+    <para>
+First the current value of the variable is obtained. Then the variable is increased and returned back to the global variable. Then the global variable is added to the return list. If the variable is a list the values a returned separated by commas.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+User function framework
+    </title>
+    <para>
+The supplied methods for user functions are
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+self.get_config()
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+Returns the global configuration class which is defined in innsbruck/__init__.py
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+self.set_variable(variable_name,value)
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+Sets a global variable. You can assign all types except dictionaries !!!
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+self.get_variable(variable_name,&lsqb;default_value&rsqb;)
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+Returns the value set by set_variable(). 
+    </para>
+    <para>
+If the variable is not set yet it returns default_value. If default_value is omitted the default_value is 0.
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+self.add_to_return_list(Pre_String,variable_name)
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+Adds the variable to the labview return list. The variable is returned as:
+    </para>
+    <programlisting>
+<![CDATA["Pre_String,value;"
+]]>
+    </programlisting>
+    <para>
+or if the variable is a list &lsqb;var1,var2,var3,...&rsqb;:
+    </para>
+    <programlisting>
+<![CDATA["Pre_String,var1,var2,var3,...;"
+]]>
+    </programlisting>
+    <itemizedlist>
+     <listitem>
+     <para>
+self.get_error_handler()
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+Returns the error handler function to return error messages to labview.
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+self.get_cylce_time()
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+Returns the clock cycle time in microseconds.
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+self.address_ion(ion,&lsqb;start_time&rsqb;)
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+Checks if the current ion is ion . If the ion has to be changed it invokes self.ion_event() . It handles the ion return list as well
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+self.ion_event()
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+    <para>
+A pointer to the TTL event class which switches the ions. Normally this is parallel_ttl() within TTL_sequence this is self.add_pulse()
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+
+  </sect1>
+
+  <sect1>
+   <title>
+Appendix
+  </title>
+   <sect2>
+    <title>
+Parallel Pulse Program functions:
+   </title>
+   <para>
+These are the user fucntions which are defined in the user_functions.py file. You can add some functions if you need to, but then update this documentation as well.
+   </para>
+    <sect3>
+     <title>
+start_parallel_env()
+    </title>
+    <para>
+Starts a parallel environment.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+ttl_add_to_parallel_env(device_key,start_time,duration,&lsqb;start_value&rsqb;,&lsqb;stop_value&rsqb;)
+    </title>
+    <para>
+Adds a TTL pulse to the parallell environment. The device key is taken from the global &ldquo;Hardware Settings.txt&rdquo; file from Labview. If there are TTL pulses at different channels at the same tim they will be merged to a single pulse.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+shape_add_to_parallel_env(start_time,duration,frequency,phase,slope_type,
+slope_duration, amplitude,&lsqb;amplitude2&rsqb;,&lsqb;frequency2&rsqb;,&lsqb;phase2&rsqb;)
+    </title>
+    <para>
+Adds a shaped pulse to the parallell environment. If the values amplitude2 and frequency2 are set it creates a dual pulse with the same slope duration. The frequency of the second dds will not be switched phase continous.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+end_parallel_env()
+    </title>
+    <para>
+Generates the pulses.
+    </para>
+    <para>
+R729(ion,theta,phi,&lsqb;transition&rsqb;)
+    </para>
+    <para>
+Generates a Rotation on the given transition. If the transmission is ommitted the default transition for this sequence is used. The transition is a structured object that has to be transmitted from the labview program.
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+Laser Scan functions
+   </title>
+   <para>
+some functions don't need any timing control. They are used by the LaserScan vi:
+   </para>
+    <sect3>
+     <title>
+set_channel(device_key,value)
+    </title>
+    <para>
+Sets the output that corresponds to device_key to value. Remind that the channel can be defined as inverting in the config file.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+wait_time(time)
+    </title>
+    <para>
+Just waits for time us
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+rf_on(frequency,amplitude)
+    </title>
+    <para>
+Switches on or of the first dds with a given amplitude and frequency.
+    </para>
+
+    </sect3>
+
+    <sect3>
+     <title>
+acq_mode(time,diff_mode)
+    </title>
+    <para>
+Sets trigger for the PMT which are spaced by the given time. If diff mode is True, then the 866 laser is switched on alternating.
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+   <sect2>
+    <title>
+Depreciated functions
+   </title>
+   <para>
+These functions hould not be used. They are only here because i want to show xou that I wrote a lot documentation
+   </para>
+    <sect3>
+     <title>
+get_shaped_pulse(duration,frequency,type,&lsqb;slope_duration&rsqb;,&lsqb;amplitude&rsqb;,&lsqb;phase&rsqb;)
+    </title>
+    <para>
+Generates a phase coherent pulse with pulse shaping. Be careful when putting arbitrary numbers for amplitude and slope duration. See slopes for details.
+    </para>
+    <itemizedlist>
+     <listitem>
+     <para>
+duration: pulse duration in microseconds
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+frequency: a coherent frequency object
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+type: a string representing the pulse shape.
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+amplitude: a relative amplitude from 0 to 1
+     </para>
+
+    </listitem>
+     <listitem>
+     <para>
+phase: the phase of the pulse from 0 to . The default value is 0
+     </para>
+
+    </listitem>
+
+    </itemizedlist>
+
+    </sect3>
+
+    <sect3>
+     <title>
+get_square_pulse(duration,frequency,&lsqb;amplitude&rsqb;,&lsqb;phase&rsqb;)
+    </title>
+    <para>
+Generates a square pulse with coherent frequency switching.
+    </para>
+
+    </sect3>
+
+
+   </sect2>
+
+
+  </sect1>
+
+  <sect1>
+   <title>
+Pin configuration of the fpga
+  </title>
+  <programlisting>
+<![CDATA[Pin             Function                Device
+]]><![CDATA[
+]]><![CDATA[0               Digital out
+]]><![CDATA[1               WRB                     DAC 
+]]><![CDATA[2-15            D0-D13                  DAC 
+]]><![CDATA[16              PSEN                    DDS 
+]]><![CDATA[17              WRB                     DDS 
+]]><![CDATA[18-23           A0-A5                   DDS 
+]]><![CDATA[24-31           D0-D7                   DDS 
+]]><![CDATA[32-47           Digital Out 
+]]><![CDATA[48              IO UPDATE               DDS 
+]]><![CDATA[49,50           PS1 , PS0               DDS 
+]]><![CDATA[51-54           BA0-BA3                 chainboard DDS 
+]]><![CDATA[55-59           Digital Out 
+]]><![CDATA[60-63           BA0-Ba3                 chainboard DAC
+]]>
+  </programlisting>
+
+  </sect1>
+
+
+
+
+</article>

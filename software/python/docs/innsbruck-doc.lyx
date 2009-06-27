@@ -1,0 +1,2277 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass docbook
+\language english
+\inputencoding auto
+\fontscheme default
+\graphics default
+\paperfontsize default
+\spacing single 
+\papersize Default
+\paperpackage a4
+\use_geometry 0
+\use_amsmath 0
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+
+\layout Title
+
+Innsbruck pulse sequencer docs
+\layout Section
+
+Starting up:
+\layout Subsection
+
+Installing
+\layout Subsubsection
+
+Installing python
+\layout Standard
+
+Download python from http://www.python.org/download 
+\layout Subsubsection
+
+Getting the pulse compiler
+\layout Standard
+
+There are 2 possibilities
+\layout Itemize
+
+Get the pulse compiler from it's homepage http://pulse-sequencer.sf.net
+\layout Itemize
+
+Get the compiler from 
+\backslash 
+
+\backslash 
+anna
+\backslash 
+all
+\backslash 
+Software
+\backslash 
+sequencer
+\layout Standard
+
+And move the files in the directory of your choice
+\layout Subsection
+
+An example pulse program
+\layout Code
+
+Pause=self.set_variable("float","Pause",0,2e4)
+\layout Code
+
+Hide=self.set_variable("Bool","Hide",0)
+\layout Code
+
+UseMotion=self.set_variable("Bool","UseMotion",1) 
+\layout Code
+
+\layout Code
+
+R729(2,1,0.5,"carrier")
+\layout Code
+
+R729(3,0.5,1.5,"blue")
+\layout Code
+
+R729(2,1,0.5,"carrier")
+\layout Code
+
+\layout Code
+
+if not UseMotion:
+\layout Code
+
+  R729(2,1,0.5,"blue")
+\layout Code
+
+\layout Code
+
+seq_wait(Pause)
+\layout Code
+
+\layout Code
+
+TTL(["854 sw","866 sw"],3.2)
+\layout Code
+
+if Hide:
+\layout Code
+
+  R729(3,1,0,"carrier")
+\layout Code
+
+\layout Code
+
+end_sequential()
+\layout Subsection
+
+Some notes on programming in python
+\layout Standard
+
+First please look at the great tutorial on www.python.org
+\layout Itemize
+
+Note that 2/3 is as default an integer operation and will lead to 0.
+ Use 2.0/3.0 instead !!!! Use this notation 
+\series bold 
+every time you type in a number
+\layout Itemize
+
+The python language relies on indentation of the code.
+ So please do yourself a favour and use a 
+\series bold 
+good editor (not Notepad)
+\series default 
+ good editors are:
+\begin_deeper 
+\layout Itemize
+
+Idle: the default editor that comes with python, but has no tabbed editing
+ so you'll end up with 20 open windows
+\layout Itemize
+
+xemacs , emacs 
+\series bold 
+THE
+\series default 
+ editor if you want to program more than one pulse program
+\layout Itemize
+
+vi , vim if you are familiar with them
+\layout Itemize
+
+I made bad experiences with some windows editors like notepad++ ; winedit;
+ ...
+\end_deeper 
+\layout Subsection
+
+Starting the server
+\layout Standard
+
+On the computer that is connected to the box run the server by opening a
+ shell (run_ cmd), change the directory to your python directory an type:
+\layout Code
+
+python start_box_server.py
+\layout Standard
+
+You may want to modify some of the initial pulse shapes in this file.
+ 
+\layout Standard
+
+If you want to have some more detailed output from the server write:
+\layout Code
+
+python start_box_server.py --debug 1
+\layout Standard
+
+Note that you can set the debug level to your needs, but 1 is a good point
+ to begin with unless you want to debug the generation of the machine code.
+\layout Standard
+
+Be aware that there may come some problems from an eventually running firewall!!
+!
+\layout Standard
+
+If you don't have a box handy and you want to test your sequences you can
+ run the server with the --nonet switch.
+\layout Standard
+
+For testing without the labview program there is a python client in test_client.p
+y.
+ Remember to put the right command string into it.
+\layout Standard
+
+The debug levels mean :
+\layout Itemize
+
+1 : The most important server messages are displayed
+\layout Itemize
+
+2 : Many server messages are displayed
+\layout Itemize
+
+3 : Many compiler messages are displayed.
+ It's not recommended to use this with the server this is for low level
+ bug hunting in the machine code generation code
+\layout Section
+
+Overview + Bugs
+\layout Standard
+
+
+\begin_inset Graphics
+	filename block.png
+
+\end_inset 
+
+
+\layout Subsubsection
+
+The TTL Outputs
+\layout Standard
+
+The outputs are 5V types.
+ The outputs 0 - 15 are derived from a single subcontainment of the fpga.
+ This means they may be switched at the same time.
+ The outputs 16 - 20 are in another subcontainment.
+ If for example output 13 and 16 should be switched simultanously there
+ will be a 10 ns delay.
+\layout Subsubsection
+
+The TTL Inputs
+\layout Standard
+
+Are also 5V logic.
+ Always terminate unused outputs to be zero because some of the driver ICs
+ seem to have an open collector input, so to be on the safe side just ut
+ an 50Ohm terminator on unused inputs.
+\layout Subsubsection
+
+The DDS devices
+\layout Standard
+
+The used dds is a 1G sample Analog devices ad9885 evaluatio board.
+ It is used in parallel programming mode.
+\layout Subsubsection
+
+The VGA
+\layout Standard
+
+The amplitude shaping is realized with a analog devices variable gain amplifier
+ and an analog devices 
+\layout Subsection
+
+Known Bugs
+\layout Itemize
+
+If the fpga clock is derived from the dds there may arise some problems
+ with the dds reset and the fpga may be unstable.
+ This means it won't output anything but you'll get no error report.
+\layout Itemize
+
+The part of the compiler responsible for the DAC control is buggy.
+ If you get some strange slopes this maight be due to this error.
+\layout Itemize
+
+The timing conflicts resolving code could be way better.
+ This may lead to some incorrect timings of up to a slope_duration.
+\layout Subsection
+
+Limitations
+\layout Itemize
+
+The slopes of a shaped pulse are precompiles and so there can no other event
+ take place during a slope.
+ If there is a conflict, the servers tries to resolve it in the following
+ way:
+\begin_deeper 
+\layout Itemize
+
+raising slope: The other event is executed before the slope
+\layout Itemize
+
+falling slope: The other event is executed after the slope
+\end_deeper 
+\layout Itemize
+
+The outputs 16 - 20 cannot be switched at the same time as the output 0
+ - 15.
+ There will be 1 cycle delay (10ns)
+\layout Section
+
+Troubleshooting
+\layout Subsection
+
+Characterizing the error
+\layout Subsubsection
+
+No pulse transfer protocol reply:
+\layout Standard
+
+If the server complains that it got no pulse transfer protocol reply you
+ may have a hardware or network problem
+\layout Subsubsection
+
+KeyError , AttributeError
+\layout Standard
+
+If the server returns some strange errors like KeyError or AttributeError
+ you might have made an error with transferring the variables from labview
+ to the server.
+\layout Subsubsection
+
+Pulses still overlap 
+\layout Standard
+
+If you got this error and you are using the sequential mode there might
+ be something wrong with the delay times in innsbruck/__init__.py .
+ If you get this error while running in a parallel environment you may have
+ defined some overlapping pulses.
+ This might not be a problem but the timing of your script may be incorrect.
+\layout Subsection
+
+Troubleshooting the network
+\layout Standard
+
+If you got the 
+\begin_inset Quotes eld
+\end_inset 
+
+no pulse protocol reply
+\begin_inset Quotes erd
+\end_inset 
+
+ error than your network connection may be broken.
+ 
+\layout Standard
+
+If it worked before it may help to flush the arp cache of windows:
+\layout Code
+
+netsh interface ip delete arpcache
+\layout Standard
+
+To check the connectivity look at the 
+\begin_inset Quotes eld
+\end_inset 
+
+link
+\begin_inset Quotes erd
+\end_inset 
+
+ LED's at the fpga board.
+ If this LED is dark, it's most probably a hardware problem.
+ Check that the network cables are plugged in correctly and you are not
+ using crossed out cables.
+\layout Standard
+
+The network jumper of the fpga board might not be set correctly.
+ They should look like:
+\layout Standard
+
+Another reason may that there is no DHCP server running where the box can
+ get an IP address from or the box may be misconfigured so it doesn't send
+ an DHCP request.
+\layout Standard
+
+You might want to use ethereal (www.ethereal.com) to debug your network.
+ (Yes it is also avaible for windows)
+\layout Standard
+
+Just fire up your ethereal restart the fpga and look for a mac address of
+ something like 00:01:ca:22:22:xx performing a dhcp request.
+\layout Subsection
+
+Troubleshooting the fpga board
+\layout Standard
+
+Make sure that the fpga board has got a right external clock.
+ You might check that by looking at the sync out connector of your dds board
+ connected to the fpga.
+ If you get no clock but you're really sure that there is a clock at the
+ input of the dds board then look at the reset line of the dds chainboard.
+ It's the one that goes quite in the middle of the chainboard and has a
+ via.
+ If you don't find it with ths great explanation just download the protel
+ files from the homepage and look there.
+ If the reset is 3.3V then there's something wrong with the bootup sequence
+ of the fpga.
+ Switch to internal clock on the fpga board and reset the dds right and
+ switch to external clock again.
+\layout Standard
+
+
+\begin_inset Graphics
+	filename clock_ext.png
+
+\end_inset 
+
+
+\layout Standard
+
+external clock
+\layout Standard
+
+
+\begin_inset Graphics
+	filename clock_int.png
+
+\end_inset 
+
+
+\layout Standard
+
+internal clock
+\layout Subsection
+
+Troubleshooting the daisy chain boards
+\layout Standard
+
+If your pulse program seems to work but a dds or dac is not working, then
+ check the address jumper of the corresponding cahinboards.
+ INSERT A PICTURE HERE
+\layout Standard
+
+Then run the test programs in the main directory.
+ For the dacs run test_dac_daisy.py for dds debuging use test_dds_daisy.py.
+ I know you have checked this but do you look at the direct dds output or
+ do you look at the output of the VGA ?
+\layout Section
+
+Writing pulse programs
+\layout Subsection
+
+The pseudo XML pulse program structure
+\layout Standard
+
+The most advanced way of writing pulse programs, sequential mode uses ome
+ kind of XML files as a source for sequences.
+ A simple example:
+\layout Code
+
+<VARIABLES> 
+\layout Code
+
+Duration=self.set_variable("float","Duration",20,1,2e7)
+\layout Code
+
+</VARIABLES>
+\layout Code
+
+\layout Code
+
+<some_tag_for_labview>
+\layout Code
+
+some content for labview
+\layout Code
+
+</some_tag_for_labview>
+\layout Code
+
+\layout Code
+
+<SEQUENCE>
+\layout Code
+
+TTL("PM trigger",50)
+\layout Code
+
+seq_wait(Duration*1000.0)
+\layout Code
+
+TTL("PM trigger",50)
+\layout Code
+
+</SEQUENCE>
+\layout Standard
+
+
+\series bold 
+Be careful:
+\series default 
+ the variable definition will most likely change in the future!!!!!
+\layout Subsubsection
+
+Variable definition
+\layout Standard
+
+The variable definition has the following syntax:
+\layout Code
+
+VAR_NAME=self.set_variable("TYPE","LV_NAME",[MIN],[MAX])
+\layout Standard
+
+VAR_NAME:
+\layout Standard
+
+The name of the python variable which is used in the script
+\newline 
+TYPE:
+\layout Standard
+
+The type of the variable.
+ One of FLOAT, INT, BOOL, STRING
+\newline 
+LV_NAME:
+\layout Standard
+
+The name of the variable in the labview program.
+\newline 
+MIN ; MAX
+\layout Standard
+
+The bounds of possible values of the variable
+\layout Subsubsection
+
+Pulse code
+\layout Standard
+
+Put your pulse code at the end of your program.
+ See [] for a summary of the pulse program functions
+\layout Subsubsection
+
+Coherent frequency initialization
+\layout Standard
+
+in order to use phase coherent frequency switching you have to initialize
+ the coherent frequency at the beginning of your program:
+\layout Code
+
+freq1=coherent_create_freq(frequency,0) 
+\layout Code
+
+first_dds_init_frequency(freq1)
+\layout Standard
+
+see the corresponding manuals for details.
+ 
+\layout Standard
+
+
+\series bold 
+This is not neede when you're using the R729 rotations.
+\layout Subsection
+
+The two ways of programming your sequence
+\layout Standard
+
+There are basically two ways of programming:
+\layout Itemize
+
+sequential programming (default)
+\layout Itemize
+
+parallell environments 
+\layout Subsubsection
+
+Sequential programming
+\layout Standard
+
+This is the default programming where you just write a pulse and immediatly
+ after that pulse the next one is included.
+ If you want to add some delay you have to do this manually:
+\layout Code
+
+pulse1
+\layout Code
+
+pulse2
+\layout Code
+
+wait(10)
+\layout Code
+
+pulse3
+\layout Code
+
+end_sequential()
+\layout Standard
+
+This is intended to be used for sequences when you use the 729 beam to make
+ rotations on the ions.
+ The pulses are charaterized by the ion, transition , the duration in angle
+ of a spin flip and the phase:
+\layout Code
+
+R729(ion,theta,phi,[transition])
+\layout Standard
+
+If you ommit the transition a default transition which is given by the qfp
+ is used.
+ 
+\layout Standard
+
+If you want some time where the processor is idle just add
+\layout Code
+
+seq_wait(time)
+\layout Standard
+
+At the end there has to be :
+\layout Code
+
+end_sequential()
+\layout Standard
+
+Otherwise the whole sequence is not processed !!!
+\layout Subsubsection
+
+Parallell environments
+\layout Standard
+
+Parallel environments are an easy way to get timed pulses.
+ Here you just specify the start time and the duration of the pulses.
+ The pulses can overlap but they 
+\series bold 
+cannot have the same start or stop time
+\series default 
+.
+ 
+\layout Code
+
+start_parallel_env() 
+\layout Code
+
+ttl_add_to_parallel_env("866 sw",0,10) 
+\layout Code
+
+ttl_add_to_parallel_env("397 sw",2,5) 
+\layout Code
+
+shape_add_to_parallel_env(start_time=12,duration=5.0,frequency=freq1,
+\backslash 
+
+\layout Code
+
+                    phase=0,type="blackman",slope_duration=1.1,amplitude=1.0)
+\layout Code
+
+end_parallel_env(trigger="Line",repeat=30)
+\layout Standard
+
+This switches on the 
+\begin_inset Quotes eld
+\end_inset 
+
+866 sw
+\begin_inset Quotes erd
+\end_inset 
+
+ output at 0us for 10 us and the 
+\begin_inset Quotes eld
+\end_inset 
+
+397 sw
+\begin_inset Quotes erd
+\end_inset 
+
+ output at 2 us for 5 us.
+ See [] for details on this commands.
+ To some extend some conflicts can be resolved.
+ The server sends a warning response in that case.
+ This repeats the sequence 30 times and waits for a line trigger every timne
+ it's running
+\layout Subsection
+
+TTL Outputs
+\layout Standard
+
+The names of the TTL outputs are taken from the 
+\begin_inset Quotes eld
+\end_inset 
+
+Hardware Settings.txt
+\begin_inset Quotes erd
+\end_inset 
+
+ file of the QFP.
+ Note that if the device is !PB the output is inverted that means that setting
+ the output to 0 will result in a voltage of 5V at the according output.
+ Some example:
+\layout Code
+
+866 main.ch=0 866 
+\layout Code
+
+main.Device=!PB
+\layout Standard
+
+We get the device 
+\begin_inset Quotes eld
+\end_inset 
+
+866 main
+\begin_inset Quotes erd
+\end_inset 
+
+ out of this.
+ 
+\layout Code
+
+add_to_parallel_env("866 sw",0,10)
+\layout Standard
+
+or in sequential mode:
+\layout Code
+
+TTL("866 sw",1)
+\layout Standard
+
+This creates a TTL 
+\series bold 
+pulse.
+ 
+\series default 
+To switch the state of the TTL outputs use:
+\layout Code
+
+set_TTL("866 sw",1)
+\layout Code
+
+set_TTL("866 sw",0)
+\layout Standard
+
+This is for the sequential mode only!
+\layout Code
+
+\layout Subsection
+
+High level functions
+\layout Standard
+
+The high level functions are some TTL sequences.
+ They are characterized by:
+\layout Code
+
+        start_time,duration,device,ion=None,repeat=1,TimeOffset=0
+\layout Standard
+
+For experiment preparation there are following functions:
+\layout Subsubsection
+
+DopplerPreparation
+\layout Standard
+
+This functions does the DopplerPreparation.
+ It is invoked by calling DopplerPreparation() and has no arguments.
+ It consists of the following pulses:
+\layout Code
+
+        0,2000,Doppler
+\layout Code
+
+        0,2050,Reset854
+\layout Code
+
+        1,1000,PMTrigPulses
+\layout Code
+
+        2010,40,Sigma397
+\layout Subsubsection
+
+SidebandCooling
+\layout Standard
+
+This functions provides Sideband cooling.
+\layout Code
+
+        0,10000,Quench854
+\layout Code
+
+        0,10,Sigma397,repeat=9,TimeOffset=10000
+\layout Code
+
+        0,2000,SbCool6,ion=1
+\layout Code
+
+        2000,8000,SbCool7,ion=2
+\layout Subsubsection
+
+PMDetection
+\layout Standard
+
+This function provides the detection code.
+ It has the mandatory argument detect_wait and the optional boolean argument
+ CameraOn .
+ It returns the variable detection_count .
+\layout Code
+
+        0,detect_wait,detection397
+\layout Code
+
+        0,detect_wait,PMGate)
+\layout Code
+
+        0,trigger_length,PMTrigger)
+\layout Code
+
+        detect_wait-trigger_length,trigger_length,PMTrigger
+\layout Code
+
+        if CameraOn:
+\layout Code
+
+            0,trigger_length,Detection
+\layout Code
+
+            0,trigger_length,CameraTrigger
+\layout Subsection
+
+Some important low level functions
+\layout Standard
+
+These functions are used in the sequential programming mode !
+\layout Subsubsection
+
+Rotations
+\layout Standard
+
+The command for some Rotation is:
+\layout Code
+
+R729(ion,theta,phi,[transition])
+\layout Standard
+
+The technical details of the rotation are given by the transition object.
+ See 
+\begin_inset LatexCommand \ref{sec-Defining-Transitions}
+
+\end_inset 
+
+ how to define the transitions.
+\layout Standard
+
+The output of the second dds does 
+\series bold 
+not 
+\series default 
+support phase coherent switching as ists intended as a compensation beam!
+\layout Subsubsection
+
+TTL pulses
+\layout Standard
+
+TTL pulses are programmed like:
+\layout Code
+
+TTL(device_key,duration)
+\layout Standard
+
+Where device key is definec in the hardware settings file.
+\layout Standard
+
+But how do I make a TTL pulses with two or more outputs imultaneously?
+\layout Code
+
+TTL(["866 sw","854 sw"],duration)
+\layout Subsubsection
+
+The TTL sequence
+\layout Standard
+
+TTL sequences are some 
+\begin_inset Quotes eld
+\end_inset 
+
+mini parallel environments
+\begin_inset Quotes erd
+\end_inset 
+
+ for use within the sequential environment.
+ The start ime should always start at 0 !
+\layout Code
+
+seq=TTL_sequence()
+\layout Code
+
+seq.add_pulse(0,detection397,detect_wait)
+\layout Code
+
+seq.add_pulse(0,detect_wait,PMGate)
+\layout Code
+
+seq.add_pulse(0,trigger_length,PMTrigger)
+\layout Code
+
+seq.add_pulse(detect_wait-trigger_length,trigger_length,PMTrigger)
+\layout Code
+
+seq.end_sequence() 
+\layout Standard
+
+The TTL sequence class has the following mehtods:
+\layout Code
+
+add_event(start_time,device_key,value)
+\layout Standard
+
+Sets the TTL Output device_key at start_time to value
+\layout Code
+
+add_pulse(start_time,duration,device_key)
+\layout Standard
+
+Sets the corresponding TTL output at start_time to 1 and at start_time+duration
+ to 0
+\layout Code
+
+end_sequence()
+\layout Standard
+
+Is mandatory at the end of the TTL sequence.
+ If this is missing the sequence is not processed at all !!!
+\layout Subsubsection
+
+seq_wait
+\layout Standard
+
+The syntax for the sequential wait function is:
+\layout Code
+
+seq_wait(time)
+\layout Standard
+
+Where time is the waiting time in us.
+ The speciality of this function is that you can define som pre and post
+ delays depending on the prevous / preceding command.
+ For an example if a seq_wait() instruction is in between to R729() commands,
+ it will count the delay between the two points where the amplitude of the
+ slopes are at the half maximum.
+ An error message will be returned if the wait duration is smaller than
+ the slope duration plus the frequency switching delays.
+\layout Code
+
+\layout Subsubsection
+
+Defining Transitions
+\begin_inset LatexCommand \label{sec-Defining-Transitions}
+
+\end_inset 
+
+ 
+\layout Standard
+
+Transitions can be defined in two different ways:
+\layout Itemize
+
+Direct in the sequences file
+\layout Itemize
+
+From labview via the TRANSITION keyword
+\layout Standard
+
+An example for the direct definition
+\layout Code
+
+Carrier=transition(transition_name="Carrier",t_rabi=t_carr,
+\layout Code
+
+                 frequency=freq1,amplitude=1,slope_type="blackman",
+\layout Code
+
+                 slope_duration=0.2,amplitude2=-1,frequency2=0) 
+\layout Standard
+
+This transition will be called by R729(ion,theta,phi,carrier)
+\layout Standard
+
+A transition from labview called carrier will be called by: R729(ion,theta,phi,
+\begin_inset Quotes erd
+\end_inset 
+
+carrier
+\begin_inset Quotes erd
+\end_inset 
+
+)
+\layout Standard
+
+
+\series bold 
+The 
+\begin_inset Quotes eld
+\end_inset 
+
+ do make a huge difference !!!
+\layout Subsubsection
+
+phase coherent frequency switching.
+\layout Standard
+
+
+\series bold 
+Please note: if you use the new R729 pulses you don't need this anymore
+ !
+\layout Standard
+
+First the according frequencies have to be initialized, see [] for details:
+\layout Code
+
+freq1=coherent_create_freq(frequency,0) 
+\layout Code
+
+first_dds_init_frequency(freq1)
+\layout Standard
+
+Phase coherent frequency switching is performed with the command
+\layout Code
+
+get_shaped_pulse(duration,frequency,type,[slope_duration=0],[amplitude=1],[phase
+=0])
+\layout Standard
+
+See [] for details of the command.
+\layout Standard
+
+Please note that you should not use arbitrary numbers for the slope_duration
+ and amplitude.
+ The program precompiles the shapes beacause they take a long time to compile.
+ It has also to recompile if the amplitudes of the pulses change.
+\layout Standard
+
+
+\series bold 
+So just use 5 different slopes you're going to switch to !!! 
+\layout Section
+
+Configuring the software
+\layout Subsection
+
+Configuring the server
+\layout Standard
+
+There are two ways of configuring your server.
+ First you can change different startup scripts and define some values by
+ editing the line where the main program is started.
+ The other one is to edit the __init__.py file in the innsbruck directory:
+\layout Subsubsection
+
+The __init__,py configuration
+\layout Code
+
+class configuration:
+\layout Code
+
+  # The output of the ion trigger
+\layout Code
+
+  ion_trig_device="address trig"
+\layout Code
+
+  # The done signal for labview
+\layout Code
+
+  done_signal="PB trigger"
+\layout Code
+
+  #The default port for the server
+\layout Code
+
+  default_port=8880
+\layout Code
+
+  #The Hardware config file:
+\layout Code
+
+  hardware_config="E:
+\backslash 
+My Documents
+\backslash 
+qfp_43
+\backslash 
+Configuration
+\backslash 
+Lab Computer
+\backslash 
+Hardware settings.txt"
+\layout Code
+
+  #The line TRigger:
+\layout Code
+
+  line_trigger=(Input_0_Trigger,)
+\layout Code
+
+  #The PMT detection Trigger pulse length:
+\layout Code
+
+  PMT_trigger_length=0.2
+\layout Code
+
+\layout Code
+
+  #do we write an tcp answer by default?
+\layout Code
+
+  answer_tcp=True
+\layout Code
+
+  #do we run in parallel mode by default?
+\layout Code
+
+  parallel_mode=False
+\layout Code
+
+  #Shall we send a return before compiling the seqeunce?
+\layout Code
+
+  send_pre_return=True
+\layout Code
+
+  #The name of the TTL outputs:
+\layout Code
+
+  detection397="Detection 397"
+\layout Code
+
+  Detection="Detection"
+\layout Code
+
+  PMTrigger="PM trigger"
+\layout Code
+
+  PMGate="PM Gate"
+\layout Code
+
+  Doppler="Doppler"
+\layout Code
+
+  PMTrigPulses="PM trigger"
+\layout Code
+
+  Sigma397="Sigma397"
+\layout Code
+
+  Reset854="Reset854"
+\layout Code
+
+  Quench854="Quench854"
+\layout Code
+
+  SbCool6="SbCool6"
+\layout Code
+
+  SbCool7="SbCool7"
+\layout Code
+
+  CameraTrigger="Camera trigger"
+\layout Code
+
+  #main_loop_wait: min number of cycles to wait between 2 triggered programs
+\layout Code
+
+  main_loop_wait=100
+\layout Code
+
+  # The default ion list:
+\layout Code
+
+  ion_list={}
+\layout Code
+
+  for i in range(10):
+\layout Code
+
+    ion_list[i]=i
+\layout Code
+
+  # The sequences directory
+\layout Code
+
+  dir1=os.getcwd()
+\layout Code
+
+  sequences_dir=dir1+"/seqs/"
+\layout Code
+
+  # The known pulse shapes
+\layout Code
+
+  pulse_dictionary={}
+\layout Code
+
+  pulse_dictionary["blackman"]=blackman_pulse
+\layout Code
+
+  pulse_dictionary["sine"]=sine_pulse
+\layout Code
+
+\layout Code
+
+ cycle_time=1/float(ref_freq)
+\layout Code
+
+\layout Subsubsection
+
+TCP ports
+\layout Standard
+
+The communication with labview is handled over the tcp protocol.
+ The server is listening by default on port 8880 .
+ To change this you have to edit the start_box_server.py file.
+ To change the port to 1234 you have to edit the my_program definition line
+\layout Code
+
+my_program=MainProgram(port=1234)
+\layout Subsubsection
+
+Sequence directory
+\layout Standard
+
+The sequence directory is by default ./seqs .
+ To change this you have to edit the start_box_server.py file:
+\layout Code
+
+my_program=MainProgram(sequences_dir="e:
+\backslash 
+sequences")
+\layout Subsubsection
+
+The hardware config file
+\layout Standard
+
+The server gets it's definitions of the TTL outputs from the global hardware
+ configuration file which is created by the qfp_43 program.
+ The default location is 
+\begin_inset Quotes eld
+\end_inset 
+
+E:
+\backslash 
+My Documents
+\backslash 
+qfp_43
+\backslash 
+Configuration
+\backslash 
+Lab Computer
+\backslash 
+Settings
+\backslash 
+Hardware settings.txt" To change this you have to start the server with th
+ following command:
+\layout Code
+
+my_program=MainProgram(hardware_config="e:
+\backslash 
+hardware.txt")
+\layout Standard
+
+You also have to edit the innsbruck
+\backslash 
+__init__.py file if you want to change this file !!! 
+\layout Standard
+
+This should change in future.
+\layout Standard
+
+If you want to start the server with more than one variables just use a
+ comma (
+\begin_inset Quotes eld
+\end_inset 
+
+,
+\begin_inset Quotes erd
+\end_inset 
+
+) between them.
+\layout Standard
+
+The hardware definition syntax is as follows:
+\layout Code
+
+854 sw.Device=PB 
+\layout Code
+
+854 sw.ch=15 
+\layout Code
+
+866 sw.Device=!PB 
+\layout Code
+
+866 sw.ch=17 
+\layout Standard
+
+The !PB indicates a inverting channel.
+ It doesn't matter if the device or the channel is the first argument.
+\layout Subsubsection
+
+Setting the parallel mode
+\layout Standard
+
+For using with the old qfp you have to switch the server to parallel mode.
+ 
+\layout Code
+
+my_program=MainProgram(parallel_mode=True)
+\layout Subsection
+
+Configuring the devices
+\layout Standard
+
+You have to reconfigure the compiler if you make changes to your hardware
+ settings; e.g.
+ adding an additional DDS , ...
+\layout Subsubsection
+
+Configuring the devices 
+\layout Standard
+
+In the __init__.py file in your particular device specific configuration
+ edit the __init__.py file.
+ 
+\layout Standard
+
+The most mportant statements are:
+\layout Code
+
+ref_freq=800
+\layout Code
+
+cycle_time=(1e3/ref_freq)
+\layout Standard
+
+In these lines the reference frequency and the cycle time are set.
+ Note that the cycle time is given in nanoseconds.
+\layout Code
+
+ttl_device={}
+\layout Standard
+
+The ttl_device is a dictionary where the corresponding channels to the hardware
+ file are stored.
+ It also stores wheter the channel is inverting.
+\layout Code
+
+first_dac_device=dac_factory.create_device(chain_address = 0x01)
+\layout Standard
+
+This defines the first DAC which is accesible via innsbruck.first_dac_device.
+ If you want to add a dac just add another line which is similar to this
+ and add a command in the api.py file.
+\layout Code
+
+dds_factory_create_devices(chain_address={1; 0x1, 2; 0x2},ref_freq=ref_freq)
+\layout Standard
+
+This defines the first dds device.
+ Please note that there are two different possibilities to interface the
+ dds devices.
+ Note that it's not possible to mix up dds with different reference frequency
+ because the data transfer may be affected.
+\layout Subsubsection
+
+Calibrating the VGA
+\layout Standard
+
+Unfortounally the VGA (Variable Gain Amplifier) has a logarithmic dependency
+ of the control voltage.
+\layout Section
+
+The labview interface
+\layout Standard
+
+There exist two differenr interfaces to labview:
+\layout Itemize
+
+Parallell environment: Bulid to be compatible with the old ofp program and
+ using the matlab sequence files
+\layout Itemize
+
+Python style: Works with the new qfp program and uses python sequence files
+\layout Subsection
+
+General format 
+\layout Standard
+
+The server accepts strings in the following format:
+\layout Code
+
+command1,option1_1,option1_2;command2,option1,option1
+\layout Standard
+
+a simple example:
+\layout Code
+
+NAME,test_ttl.py;TRIGGER,NONE;FLOAT,duration,3.4;
+\layout Subsubsection
+
+Basic commands:
+\layout Itemize
+
+INT: sends an integer value to the script
+\layout Code
+
+INT,var_name,value
+\layout Itemize
+
+FLOAT: sends a float value to the script
+\layout Code
+
+FLOAT,var_name,value
+\layout Itemize
+
+STRING: 
+\layout Code
+
+STRING,var_name,value
+\layout Itemize
+
+BOOL:
+\layout Code
+
+BOOL,var_name, value
+\layout Itemize
+
+NAME: sends the filename of the sequence
+\layout Code
+
+NAME,filename
+\layout Itemize
+
+TRIGGER: gives the tpe of the trigger.
+ For more information see ./innsbruck/handle_commands.py
+\layout Code
+
+TRIGGER,trig_string
+\layout Standard
+
+some standard Trigger strings are: NONE , LINE
+\layout Code
+
+\layout Subsection
+
+Parallel environment
+\layout Standard
+
+Labview just sends the pulse sequence as a string to the server.
+ The server has to be started in parallel mode.
+\layout Subsection
+
+Python style
+\layout Standard
+
+Python style gets following informations from labview for a transition:
+\layout Itemize
+
+Rabi times for each ion 
+\layout Itemize
+
+slope duration
+\layout Itemize
+
+slope type
+\layout Itemize
+
+slope amplitude
+\layout Itemize
+
+frequency
+\layout Itemize
+
+[Ion number mapping]
+\layout Itemize
+
+[amplitude for second channel]
+\layout Itemize
+
+[frequency for second channel]
+\layout Standard
+
+The informations in square brackets are optional.
+\layout Subsubsection
+
+The transition object
+\layout Code
+
+TRANSITION,transition_name;RABI,rabi_times;SLOPE_TYPE,slope_type;SLOPE_DUR,slope
+_duration;
+\layout Code
+
+AMPL,slope_ampl;FREQ,frequency;IONS,ion_map;AMPL2,second_amplitude;FREQ2,second_
+frequency;
+\layout Standard
+
+Where rabi freqs looks like:
+\layout Code
+
+1:19.34 , 2:21.12 , 3:20.34 , 4:22.67
+\layout Standard
+
+And ion_map:
+\layout Code
+
+1:101 , 2:102 , 3:103 , 4:104
+\layout Subsubsection
+
+The default transition
+\layout Code
+
+DEFAULT_TRANSITION,transition_name;
+\layout Section
+
+Changing the server
+\layout Standard
+
+The pulse sequncer software is written entirely in python this means you
+ should know python 
+\series bold 
+quite well
+\series default 
+ if you want to make some changes in this software.
+ If you 
+\series bold 
+don't know python at all
+\series default 
+ then 
+\series bold 
+learn it before messing araound !!!!!!
+\layout Standard
+
+I'll use the unix style path descriptions here.
+ Be sure you use them too if you make some changes.
+\layout Subsection
+
+How the software is managed
+\layout Standard
+
+The software is hosted by the sourceforge.net site.
+ If you make any changes to the software please contact the project admins
+ to commit the chages to the version control system.
+ If you're lucky you may get one of those almighty admins.
+ 
+\series bold 
+Don't start a local repository !!!!!!!!
+\layout Subsection
+
+Understanding the internals of the software
+\layout Standard
+
+The software can be splitted in two parts:
+\layout Itemize
+
+Paul's wonderful compiler.
+ Most of it's parts can be found under the ./sequencer/ directory.
+ 
+\layout Itemize
+
+Philipp's server and innsbruck specific configuration.
+ It resides under ./innsbruck
+\layout Subsection
+
+The compiler
+\layout Standard
+
+Before you want to change something in the compiler itself you have to understan
+d the underlying data structure and you have to know python real well.
+ You can easily break up the whole compiler.
+ 
+\series bold 
+So don't do anything unless you really know hat you're doing !!!
+\layout Subsubsection
+
+The compiler data hierarchy
+\layout Standard
+
+The compiler uses some hierarchy structure:
+\layout Itemize
+
+events: These are representing some high level functions and may contain
+ some other events.
+ For example an infinite loop is described by an event containing other
+ events
+\layout Itemize
+
+words: The events are translated into words.
+ Each word contains an instruction.
+\layout Itemize
+
+charlist: The words are translated in a binary charlist that is understood
+ by the processor.
+\layout Subsubsection
+
+The compiler directory tree
+\layout Standard
+
+The compiler directory tree resides under ./sequencer/ :
+\layout Itemize
+
+pcp : Here all instruction and events are defined and compiled
+\begin_deeper 
+\layout Itemize
+
+events: here all events are defined.
+ 
+\layout Itemize
+
+machines: All machine dependend code lives here
+\layout Itemize
+
+instructions: All instruction known to the processor core are defined here.
+\end_deeper 
+\layout Itemize
+
+ptp : The transfer protocol to the FPGA board over ethernet
+\layout Itemize
+
+devices: Here all devices are defined (DDS , DAC, TTL)
+\layout Subsubsection
+
+The compiler scheme
+\layout Standard
+
+The compiler uses the following scheme:
+\layout Itemize
+
+initialization
+\layout Itemize
+
+event creation
+\layout Itemize
+
+translation event to words
+\layout Itemize
+
+translation words to charlist
+\layout Subsubsection
+
+Some important files:
+\layout Standard
+
+All pathes are given relative to ./sequencer
+\layout Itemize
+
+api.py
+\layout Standard
+
+Here some events are defined.
+ see also ./innsbruck/api
+\layout Itemize
+
+ptp/devices.py
+\layout Standard
+
+The routines for the translation and sending the information are in here.
+\layout Itemize
+
+pcp/instructions/program.py
+\layout Standard
+
+This files describes how the events are translated in the words.
+\layout Itemize
+
+pcp/machines/pcp32.py
+\layout Standard
+
+This file describes how the words are handled and generates the charlists
+ for the words.
+ 
+\layout Subsubsection
+
+Some important variables
+\layout Standard
+
+These are global veraibles accesible from the most modules
+\layout Itemize
+
+sequencer.current_sequence
+\layout Standard
+
+This object contains the current sequence.
+ In sequencer.current_sequence.event_list the events are stored.
+\layout Itemize
+
+innsbruck
+\layout Standard
+
+Here are all devices and constants avaible.
+ On some of the older test files this may be test_config
+\layout Subsubsection
+
+Some notes on pulses
+\layout Standard
+
+There are two different kind of pulses:
+\layout Itemize
+
+AtomicPulse
+\layout Itemize
+
+SeparablePulse
+\layout Subsubsection
+
+Some examples for changing things
+\layout Standard
+
+changing the dac handling
+\layout Standard
+
+changing the TTL handling
+\layout Subsection
+
+The server
+\layout Standard
+
+The server is somewhat easier to understand than the compiler but nevertheless:
+ 
+\series bold 
+Don't do anything unless you know what you're doing !!!!
+\layout Standard
+
+The whole server resides in ./innsbruck so every path will be relative to
+ this !
+\layout Standard
+
+The main file is main_program.py , the usual way to start a server is:
+\layout Code
+
+my_program=MainProgram()
+\layout Code
+
+my_program.add_pulse(sine_pulse(slope_duration))
+\layout Code
+
+my_program.add_pulse(blackman_pulse(slope_duration)) 
+\layout Code
+
+my_program.start_server()
+\layout Standard
+
+The first line creates a MainProgram object.
+ it just calls the __init__ function in the main_program.py file.
+\layout Standard
+
+The second and third lines create some pulse slopes that the program may
+ use without compiling new ones.
+\layout Standard
+
+The fourth line starts the server.
+\layout Subsubsection
+
+starting the server
+\layout Standard
+
+Wen starting the server following tasks are woked on:
+\layout Itemize
+
+create a program with the slopes as subroutines and some dummy content
+\layout Itemize
+
+start the server
+\layout Subsubsection
+
+The server function
+\layout Standard
+
+In the server function in main_program.py following is going on:
+\layout Itemize
+
+listen on the given port
+\layout Itemize
+
+get the variables from the command
+\layout Itemize
+
+create the event_list
+\begin_deeper 
+\layout Itemize
+
+If creating the event lisf fails because a shape was not in memory the event_lis
+t is executed a second time.
+\end_deeper 
+\layout Itemize
+
+The result is sent back to labview.
+ If there an error occurs it returns an error message and the line nr of
+ the sequence file where the error occured.
+\layout Subsubsection
+
+Simple user functions
+\layout Standard
+
+The user level functions reside in user_function.py or in api.py .
+ If you want to add some please place it in user_function.py .
+\layout Paragraph
+
+example: wait_time
+\layout Standard
+
+The function wait time just gets the corresponding cycle count to the given
+ waiting time:
+\layout Code
+
+def wait_time(time):
+\layout Code
+
+   time=float(time)
+\layout Code
+
+   cycle_time=float(innsbruck.cycle_time/1000.0)
+\layout Code
+
+   wait_cycles=int(time/cycle_time)
+\layout Code
+
+   wait(wait_cycles) 
+\layout Standard
+
+The first line is the function definition.
+ The second just converts the time to a float number so we don't get some
+ rounding errors here.
+ The third line just calculates the waiting time.
+ 
+\layout Standard
+
+innsbruck.cycle time is defined in ./innsbruck/__init__.py but it s given in
+ ns and all other times are in us.
+ So we've to convert it.
+ And then we just calculate how many steps we got for time.
+\layout Standard
+
+In the last line the wait() instruction as defined in ./sequencer/api.py is
+ called and this instruction creates an event.
+ Please note that these functions are evaluated immediatly while most of
+ the functionality is wheter in a parallel or a sequential environment !!!!
+\layout Standard
+
+You may add a simple user function with add_to_sequential(function) (NOT
+ IMPLEMENTED YET)
+\layout Subsubsection
+
+Complex user functions
+\layout Standard
+
+To use some more complex user functions and global variables there exists
+ the PulseCommand class in user_function.py .
+ An example is the PMT Detection function:
+\layout Code
+
+class PMDetection(PulseCommand):
+\layout Code
+
+    def __init__(self,detect_wait,CameraOn=False):
+\layout Code
+
+\layout Code
+
+        configuration=self.get_config()
+\layout Code
+
+        detection397=configuration.detection397
+\layout Code
+
+\layout Code
+
+        PMTrigger=configuration.ion_trig_device
+\layout Code
+
+        PMGate=configuration.PMGate
+\layout Code
+
+        trigger_length=configuration.PMT_trigger_length
+\layout Code
+
+\layout Code
+
+        detection_count=self.get_variable("detection_count")
+\layout Code
+
+        self.set_variable("detection_count",detection_count+2)
+\layout Code
+
+\layout Code
+
+        self.add_to_return_list("PM Count","detection_count")
+\layout Code
+
+        
+\layout Code
+
+        seq=TTL_sequence()
+\layout Code
+
+        seq.add_pulse(0,detection397,detect_wait)
+\layout Code
+
+        seq.add_pulse(0,PMGate,detect_wait)
+\layout Code
+
+        seq.add_pulse(0,PMTrigger,trigger_length)
+\layout Code
+
+        seq.add_pulse(detect_wait-trigger_length,PMTrigger,trigger_length)
+\layout Code
+
+        if CameraOn:
+\layout Code
+
+            seq.add_pulse(0,trigger_length,configuration.Detection)
+\layout Code
+
+            seq.add_pulse(0,trigger_length,configuration.CameraTrigger)
+\layout Code
+
+        seq.end_sequence() 
+\layout Standard
+
+This consists of following parts:
+\layout Itemize
+
+class definition
+\layout Itemize
+
+variable definition from the configuration in in __init__.py
+\layout Itemize
+
+handling of the return variables
+\layout Itemize
+
+the main ttl sequence
+\layout Subsubsection
+
+class definition for own user functions
+\layout Standard
+
+The class definition has to refer to the parent class (PulseCommand) and
+ the method (function) that is executed when the class is called is __init__
+\layout Code
+
+class PMDetection(PulseCommand):
+\layout Code
+
+    def __init__(self,detect_wait,CameraOn=False):
+\layout Standard
+
+You may want to use some other methods if you want to use some features
+ where you have to store some values without global variables.
+ A sample code that increases a variable and returns it to labview may look
+ like:
+\layout Code
+
+class counter1(PulseCommand):
+\layout Code
+
+    def __init__(self,value=0):
+\layout Code
+
+       self.value=value
+\layout Code
+
+\layout Code
+
+    def incme(self):
+\layout Code
+
+       self.value+=self.increase
+\layout Code
+
+\layout Code
+
+    def return_to_labview(self):
+\layout Code
+
+       self.set_variable("counter",self.value)
+\layout Code
+
+       self.add_to_return_list("COUNTER 1","counter")
+\layout Standard
+
+it is used in python like:
+\layout Code
+
+inc1=coubter1()
+\layout Code
+
+inc1.incme()
+\layout Code
+
+<code>
+\layout Code
+
+if CameraOn
+\layout Code
+
+   inc1.incme()
+\layout Code
+
+<code>
+\layout Code
+
+inc1.return_to_labview()
+\layout Subsubsection
+
+Returning values to labview and using global variables
+\layout Standard
+
+To return a value to labview you have to create a global variable:
+\layout Code
+
+        detection_count=self.get_variable("detection_count")
+\layout Code
+
+        self.set_variable("detection_count",detection_count+1)
+\layout Code
+
+        self.add_to_return_list("PM Count","detection_count")
+\layout Standard
+
+First the current value of the variable is obtained.
+ Then the variable is increased and returned back to the global variable.
+ Then the global variable is added to the return list.
+ If the variable is a list the values a returned separated by commas.
+\layout Subsubsection
+
+User function framework
+\layout Standard
+
+The supplied methods for user functions are
+\layout Itemize
+
+self.get_config()
+\layout Standard
+
+Returns the global configuration class which is defined in innsbruck/__init__.py
+\layout Itemize
+
+self.set_variable(variable_name,value)
+\layout Standard
+
+Sets a global variable.
+ You can assign all types 
+\series bold 
+except
+\series default 
+ dictionaries !!!
+\layout Itemize
+
+self.get_variable(variable_name,[default_value])
+\layout Standard
+
+Returns the value set by set_variable().
+ 
+\layout Standard
+
+If the variable is not set yet it returns default_value.
+ If default_value is omitted the default_value is 0.
+\layout Itemize
+
+self.add_to_return_list(Pre_String,variable_name)
+\layout Standard
+
+Adds the variable to the labview return list.
+ The variable is returned as:
+\layout Code
+
+"Pre_String,value;"
+\layout Standard
+
+or if the variable is a 
+\series bold 
+list
+\series default 
+ [var1,var2,var3,...]:
+\layout Code
+
+"Pre_String,var1,var2,var3,...;"
+\layout Itemize
+
+self.get_error_handler()
+\layout Standard
+
+Returns the error handler function to return error messages to labview.
+\layout Itemize
+
+self.get_cylce_time()
+\layout Standard
+
+Returns the clock cycle time in microseconds.
+\layout Itemize
+
+self.address_ion(ion,[start_time])
+\layout Standard
+
+Checks if the current ion is ion .
+ If the ion has to be changed it invokes self.ion_event() .
+ It handles the ion return list as well
+\layout Itemize
+
+self.ion_event()
+\layout Standard
+
+A pointer to the TTL event class which switches the ions.
+ Normally this is parallel_ttl() within TTL_sequence this is self.add_pulse()
+\layout Section
+
+Appendix
+\layout Subsection
+
+Parallel Pulse Program functions:
+\layout Standard
+
+These are the user fucntions which are defined in the user_functions.py file.
+ You can add some functions if you need to, but then update this documentation
+ as well.
+\layout Subsubsection
+
+start_parallel_env()
+\layout Standard
+
+Starts a parallel environment.
+\layout Subsubsection
+
+ttl_add_to_parallel_env(device_key,start_time,duration,[start_value],[stop_value
+])
+\layout Standard
+
+Adds a TTL pulse to the parallell environment.
+ The device key is taken from the global 
+\begin_inset Quotes eld
+\end_inset 
+
+Hardware Settings.txt
+\begin_inset Quotes erd
+\end_inset 
+
+ file from Labview.
+ If there are TTL pulses at different channels at the same tim they will
+ be merged to a single pulse.
+\layout Subsubsection
+
+shape_add_to_parallel_env(start_time,duration,frequency,phase,slope_type,
+\newline 
+slope_duration, amplitude,[amplitude2],[frequency2],[phase2])
+\layout Standard
+
+Adds a shaped pulse to the parallell environment.
+ If the values amplitude2 and frequency2 are set it creates a dual pulse
+ with the same slope duration.
+ The frequency of the second dds will not be switched phase continous.
+\layout Subsubsection
+
+end_parallel_env()
+\layout Standard
+
+Generates the pulses.
+\layout Standard
+
+R729(ion,theta,phi,[transition])
+\layout Standard
+
+Generates a Rotation on the given transition.
+ If the transmission is ommitted the default transition for this sequence
+ is used.
+ The transition is a structured object that has to be transmitted from the
+ labview program.
+\layout Subsection
+
+Laser Scan functions
+\layout Standard
+
+some functions don't need any timing control.
+ They are used by the LaserScan vi:
+\layout Subsubsection
+
+set_channel(device_key,value)
+\layout Standard
+
+Sets the output that corresponds to device_key to value.
+ Remind that the channel can be defined as inverting in the config file.
+\layout Subsubsection
+
+wait_time(time)
+\layout Standard
+
+Just waits for time us
+\layout Subsubsection
+
+rf_on(frequency,amplitude)
+\layout Standard
+
+Switches on or of the first dds with a given amplitude and frequency.
+\layout Subsubsection
+
+acq_mode(time,diff_mode)
+\layout Standard
+
+Sets trigger for the PMT which are spaced by the given time.
+ If diff mode is True, then the 866 laser is switched on alternating.
+\layout Subsection
+
+Depreciated functions
+\layout Standard
+
+These functions hould not be used.
+ They are only here because i want to show xou that I wrote a lot documentation
+\layout Subsubsection
+
+get_shaped_pulse(duration,frequency,type,[slope_duration],[amplitude],[phase])
+\layout Standard
+
+Generates a phase coherent pulse with pulse shaping.
+ Be careful when putting arbitrary numbers for amplitude and slope duration.
+ See slopes for details.
+\layout Itemize
+
+duration: pulse duration in microseconds
+\layout Itemize
+
+frequency: a coherent frequency object
+\layout Itemize
+
+type: a string representing the pulse shape.
+\layout Itemize
+
+amplitude: a relative amplitude from 0 to 1
+\layout Itemize
+
+phase: the phase of the pulse from 0 to .
+ The default value is 0
+\layout Subsubsection
+
+get_square_pulse(duration,frequency,[amplitude],[phase])
+\layout Standard
+
+Generates a square pulse with coherent frequency switching.
+\layout Section
+
+Pin configuration of the fpga
+\layout Code
+
+Pin             Function                Device
+\layout Code
+
+\layout Code
+
+0               Digital out
+\layout Code
+
+1               WRB                     DAC 
+\layout Code
+
+2-15            D0-D13                  DAC 
+\layout Code
+
+16              PSEN                    DDS 
+\layout Code
+
+17              WRB                     DDS 
+\layout Code
+
+18-23           A0-A5                   DDS 
+\layout Code
+
+24-31           D0-D7                   DDS 
+\layout Code
+
+32-47           Digital Out 
+\layout Code
+
+48              IO UPDATE               DDS 
+\layout Code
+
+49,50           PS1 , PS0               DDS 
+\layout Code
+
+51-54           BA0-BA3                 chainboard DDS 
+\layout Code
+
+55-59           Digital Out 
+\layout Code
+
+60-63           BA0-Ba3                 chainboard DAC
+\the_end

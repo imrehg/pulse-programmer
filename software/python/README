@@ -1,0 +1,152 @@
+MIT-NIST-ARDA Pulse Sequencer
+README for Python Control Interface
+Version 0.22
+
+http://pulse-sequencer.sf.net
+-------------------------------------------------------------------------------
+Table of Contents:
+
+  Overview
+  Files
+  Installing Packages
+  Writing Scripts
+  License
+  Further Information
+
+-------------------------------------------------------------------------------
+Overview:
+
+This directory contains the source for the Python control interface for the
+pulse sequencer. This includes both routines for constructing
+Pulse Control Processor (PCP) binaries from high-level functions and for
+controlling the device via the Pulse Transfer Protocol (PTP). The Python
+interface is the preferred method for controlling the pulse sequencer and
+will be the focus of future software work.
+
+This source distribution contains two parts: a core package that is dependent
+on firmware features (defined in VHDL code) and a site-specific configuration
+that depends on the operating parameters for a given experiment.
+The core package defines PTP encoders and decoders, PCP machines and their
+instruction sets, and low-level pulse program events. The site package
+defines reference frequencies, network settings (IP addresses), additional
+command-line options, special setup or teardown operations,
+device instantiation, device bit assignments, and higher-level 
+pulse events that are useful for a particular experiment only.
+
+This version has been tested with Python 2.4.1 on Windows XP, but in theory
+it should run on any platform where Python is supported.
+If you have tested it on other platforms, please report your results to the
+author at the address given below.
+
+-------------------------------------------------------------------------------
+Files:
+
+README            - this file, containing project information and
+                    build instructions.
+Makefile          - targets for automating distutils building.
+test_XXX.py	  - programs for basic testing of the pcp functions
+test_config/	  - The main configuration directory
+mpq/		  - The configuration directory for the Munich box
+innsbruck/	  - Innsbruck specific directory. 
+sequencer/        - core package directory
+  devices/        - sub-package for Analog Devices evaluation boards.
+  pcp/            - sub-package for building Pulse Control Processor binaries.
+    tests         - unit tests for pcp sub-package.
+    instructions/ - sub-sub-package for binary instruction format.
+      tests/      - unit tests.
+    events/       - sub-sub-package for low-level pulse events.
+      tests/      - unit tests.
+    machines/     - sub-sub-package for PCP machines and families.
+      tests/      - unit tests.
+  ptp/            - sub-package for controlling pulse sequencer devices via
+                    the Pulse Transfer Protocol.
+  tests/          - unit tests for the top-level package.
+
+-------------------------------------------------------------------------------
+Installing Packages:
+
+The easiest way to get up and running with the Python interface is to
+download binary distributions from the project website URL given above.
+They are currently available only for Microsoft Windows. Users on other
+platforms, and developers, can download the source distribution and run scripts
+in the same parent directory that contains the core package directory
+(sequencer). The rest of this section does not apply to them.
+
+The Windows installer is called
+
+  pulse-sequencer-x.xx.win32.exe
+
+where x.xx is the version number. Running it will detect your Python runtime
+from the Windows registry and install the precompiled modules into your
+site package directory.
+
+After installing the core package from a binary distribution, you can run
+scripts from anywhere and they will correctly import the core 'sequencer'
+package.
+
+-------------------------------------------------------------------------------
+Writing Pulse Programs:
+
+The control interface software for the pulse sequencer is written in Python,
+a high-level scripting language that is interpreted, dynamically-typed,
+object-oriented, open source, cross-platform, and comes with an extensive
+standard library for doing many common tasks. All of these make it ideal for
+use in scientific computing.
+
+Pulse programs are simply Python scripts which create pulse events
+and call functions in the 'sequencer' package. Therefore minimal knowledge
+of Python is useful for writing pulse programs. Pulse programs (and the
+users who write them) do not have to use all of Python's features, especially
+for simple scripts. However, more complicated tasks may require using the
+language's more sophisticated techniques and libraries.
+
+There is not yet a formal tutorial or documentation in the pulse sequencer
+project for the Python interface, although in the future it will be included
+in the technical manual. Another reason is that the scripts that will work
+at your specific site depend on what new functions you have defined, so it
+will be different for each experiment. This allows you to easily extend
+the low-level pulse events in the core 'sequencer' package and also removes
+some of the burden for documentation from the project authors :]
+It is good software engineering practice to document your site-specific
+functions so that everyone in your group knows what commands are available to
+use. The best way to learn how to write site-configuration modules and scripts
+is to look at the included examples (innsbruck.py and example.py) for the
+Innsbruck site.
+
+Unlike compiled languages, Python automatically precompiles source files into
+bytecode whenever the two get out of sync. There is no separate compilation
+step, so there is no section in this README for building the source.
+
+-------------------------------------------------------------------------------
+Innsbruck Documentation
+
+Some further documentation regarding the Innsbruck boxes can be found on:
+
+http://pulse-sequencer.sf.net/innsbruck
+
+-------------------------------------------------------------------------------
+License
+
+The Python interface source code is released under the BSD license and is
+copyright to the Universitaet Innsbruck.
+
+See the file COPYING for a description of the
+BSD License terms under which you can copy and redistribute the files.
+
+-------------------------------------------------------------------------------
+Further Information
+
+The main clearinghouse for all information regarding Python is the official
+website:
+
+http://www.python.org
+
+Here you can download development environments for many different operating
+systems. There is also good online documentation, including a beginner's
+tutorial, that is also available in the downloadable distributions.
+
+Please send any bug reports, feature requests, or feedback to the author,
+whose e-mail address is listed (and obfuscated) on the project website
+(URL at the top of this document).
+
+-------------------------------------------------------------------------------
