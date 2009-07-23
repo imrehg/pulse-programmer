@@ -1,0 +1,963 @@
+<session jtag_chain="ByteBlasterII [LPT1]" jtag_device="" sof_file="">
+  <display_tree>
+    <display_branch instance="auto_signaltap_0" signal_set="signal_set: 2004/11/08 16:56:37  #0" trigger="trigger: 2004/11/08 16:56:38  #0"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <signal_set is_expanded="true" name="signal_set: 2004/11/08 02:13:36  #0">
+      <clock name="ether_rx_clk" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="512" trigger_in_enable="yes" trigger_in_node="ptp_top:ptp|ptp_status:status_module|xmit_wbm_cyc_o" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_burst" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_grant" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.receive_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_read" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_write" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ip_addr_latched" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_discard" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:forward_reload" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|buffer_reload" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|route_recv_wbm_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|router_forward" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_avr" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_master" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_slave" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|ack_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_prefix" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_subopcode" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_suboperands" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_clear" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_transmitting" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_table" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.wait_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.wait_slave_ack" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_burst" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_grant" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.receive_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_read" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_write" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ip_addr_latched" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_discard" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:forward_reload" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|buffer_reload" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|route_recv_wbm_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|router_forward" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_avr" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_master" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_slave" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|ack_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_prefix" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_subopcode" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_suboperands" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_clear" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_transmitting" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_table" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.wait_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.wait_slave_ack" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <net name="ptp_router:router|avr_recv_wbs_ack_o"/>
+          <net name="ptp_router:router|avr_recv_wbs_cyc_i"/>
+          <net name="ptp_router:router|avr_recv_wbs_stb_i"/>
+          <net name="ptp_router:router|avr_xmit_wbm_ack_i"/>
+          <net name="ptp_router:router|avr_xmit_wbm_cyc_o"/>
+          <net name="ptp_router:router|avr_xmit_wbm_stb_o"/>
+          <net name="ptp_router:router|ip_addr_latched"/>
+          <net name="ptp_router:router|link_xmit_discard"/>
+          <net name="ptp_router:router|link_xmit_wb_cyc"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:forward_reload"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|buffer_reload"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|route_recv_wbm_cyc"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|router_forward"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_avr"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_master"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_slave"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_ack_i"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_cyc_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_stb_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_ack_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_cyc_i"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_stb_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|ack_enable"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_ack_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_stb_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_burst_out"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_ack_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_cyc_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_stb_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.done_state"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_high_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_low_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_prefix"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_subopcode"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_suboperands"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_high_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_low_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.idle"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_clear"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_receiving"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_transmitting"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_table"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_reading"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_writing"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.wait_ack"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.wait_slave_ack"/>
+          <bus link="all" name="dma_controller:ptp_dma|length_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="dma_controller:ptp_dma|length_count[15]"/>
+            <net name="dma_controller:ptp_dma|length_count[14]"/>
+            <net name="dma_controller:ptp_dma|length_count[13]"/>
+            <net name="dma_controller:ptp_dma|length_count[12]"/>
+            <net name="dma_controller:ptp_dma|length_count[11]"/>
+            <net name="dma_controller:ptp_dma|length_count[10]"/>
+            <net name="dma_controller:ptp_dma|length_count[9]"/>
+            <net name="dma_controller:ptp_dma|length_count[8]"/>
+            <net name="dma_controller:ptp_dma|length_count[7]"/>
+            <net name="dma_controller:ptp_dma|length_count[6]"/>
+            <net name="dma_controller:ptp_dma|length_count[5]"/>
+            <net name="dma_controller:ptp_dma|length_count[4]"/>
+            <net name="dma_controller:ptp_dma|length_count[3]"/>
+            <net name="dma_controller:ptp_dma|length_count[2]"/>
+            <net name="dma_controller:ptp_dma|length_count[1]"/>
+            <net name="dma_controller:ptp_dma|length_count[0]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|mem_burst"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_ack_i"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_cyc_o"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_stb_o"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_we_o"/>
+          <net name="dma_controller:ptp_dma|recv_grant"/>
+          <bus link="all" name="dma_controller:ptp_dma|recv_length_in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="dma_controller:ptp_dma|recv_length_in[0]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[1]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[2]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[3]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[4]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[5]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[6]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[7]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[8]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[9]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[10]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[11]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[12]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[13]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[14]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[15]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|recv_wbm_ack_i"/>
+          <net name="dma_controller:ptp_dma|recv_wbm_stb_o"/>
+          <net name="dma_controller:ptp_dma|recv_wbs_ack_o"/>
+          <net name="dma_controller:ptp_dma|recv_wbs_cyc_i"/>
+          <bus link="all" name="dma_controller:ptp_dma|recv_wbs_dat_i" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[0]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[1]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[2]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[3]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[4]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[5]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[6]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[7]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|recv_wbs_stb_i"/>
+          <net name="dma_controller:ptp_dma|state.idle"/>
+          <net name="dma_controller:ptp_dma|state.receive_done"/>
+          <net name="dma_controller:ptp_dma|state.receiving"/>
+          <net name="dma_controller:ptp_dma|state.transmit_done"/>
+          <net name="dma_controller:ptp_dma|state.transmit_read"/>
+          <net name="dma_controller:ptp_dma|state.transmit_write"/>
+        </setup_view>
+        <data_view>
+          <net name="ptp_router:router|avr_recv_wbs_ack_o"/>
+          <net name="ptp_router:router|avr_recv_wbs_cyc_i"/>
+          <net name="ptp_router:router|avr_recv_wbs_stb_i"/>
+          <net name="ptp_router:router|avr_xmit_wbm_ack_i"/>
+          <net name="ptp_router:router|avr_xmit_wbm_cyc_o"/>
+          <net name="ptp_router:router|avr_xmit_wbm_stb_o"/>
+          <net name="ptp_router:router|ip_addr_latched"/>
+          <net name="ptp_router:router|link_xmit_discard"/>
+          <net name="ptp_router:router|link_xmit_wb_cyc"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:forward_reload"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|buffer_reload"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|route_recv_wbm_cyc"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|router_forward"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_avr"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_master"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_slave"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_ack_i"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_cyc_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_stb_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_ack_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_cyc_i"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_stb_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|ack_enable"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_ack_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_stb_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_burst_out"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_ack_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_cyc_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_stb_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.done_state"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_high_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_low_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_prefix"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_subopcode"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_suboperands"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_high_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_low_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.idle"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_clear"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_receiving"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_transmitting"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_table"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_reading"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_writing"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.wait_ack"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.wait_slave_ack"/>
+          <bus link="all" name="dma_controller:ptp_dma|length_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="dma_controller:ptp_dma|length_count[15]"/>
+            <net name="dma_controller:ptp_dma|length_count[14]"/>
+            <net name="dma_controller:ptp_dma|length_count[13]"/>
+            <net name="dma_controller:ptp_dma|length_count[12]"/>
+            <net name="dma_controller:ptp_dma|length_count[11]"/>
+            <net name="dma_controller:ptp_dma|length_count[10]"/>
+            <net name="dma_controller:ptp_dma|length_count[9]"/>
+            <net name="dma_controller:ptp_dma|length_count[8]"/>
+            <net name="dma_controller:ptp_dma|length_count[7]"/>
+            <net name="dma_controller:ptp_dma|length_count[6]"/>
+            <net name="dma_controller:ptp_dma|length_count[5]"/>
+            <net name="dma_controller:ptp_dma|length_count[4]"/>
+            <net name="dma_controller:ptp_dma|length_count[3]"/>
+            <net name="dma_controller:ptp_dma|length_count[2]"/>
+            <net name="dma_controller:ptp_dma|length_count[1]"/>
+            <net name="dma_controller:ptp_dma|length_count[0]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|mem_burst"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_ack_i"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_cyc_o"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_stb_o"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_we_o"/>
+          <net name="dma_controller:ptp_dma|recv_grant"/>
+          <bus link="all" name="dma_controller:ptp_dma|recv_length_in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="dma_controller:ptp_dma|recv_length_in[0]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[1]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[2]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[3]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[4]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[5]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[6]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[7]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[8]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[9]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[10]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[11]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[12]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[13]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[14]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[15]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|recv_wbm_ack_i"/>
+          <net name="dma_controller:ptp_dma|recv_wbm_stb_o"/>
+          <net name="dma_controller:ptp_dma|recv_wbs_ack_o"/>
+          <net name="dma_controller:ptp_dma|recv_wbs_cyc_i"/>
+          <bus link="all" name="dma_controller:ptp_dma|recv_wbs_dat_i" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[0]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[1]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[2]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[3]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[4]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[5]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[6]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[7]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|recv_wbs_stb_i"/>
+          <net name="dma_controller:ptp_dma|state.idle"/>
+          <net name="dma_controller:ptp_dma|state.receive_done"/>
+          <net name="dma_controller:ptp_dma|state.receiving"/>
+          <net name="dma_controller:ptp_dma|state.transmit_done"/>
+          <net name="dma_controller:ptp_dma|state.transmit_read"/>
+          <net name="dma_controller:ptp_dma|state.transmit_write"/>
+        </data_view>
+      </presentation>
+      <trigger CRC="611F2A25" is_expanded="true" name="trigger: 2004/11/08 02:13:36  #1" position="pre" segment_size="1" trigger_in="rising edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+        <data name="log: 2004/11/08 15:39:33  #0" sample_depth="512" trigger_position="-1">000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000000000000000000000000000010100000000000000000000000100000000000000000100000000010000000000000000000100000000</data>
+      </trigger>
+    </signal_set>
+    <signal_set is_expanded="true" name="signal_set: 2004/11/08 16:56:37  #0">
+      <clock name="ether_rx_clk" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="512" trigger_in_enable="yes" trigger_in_node="dma_controller:ptp_dma|recv_wbm_ack_i" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_burst" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_grant" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.receive_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_read" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_write" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ip_addr_latched" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_discard" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:forward_reload" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|buffer_reload" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|route_recv_wbm_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|router_forward" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_avr" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_master" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_slave" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|ack_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_prefix" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_subopcode" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_suboperands" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_clear" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_transmitting" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_table" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.wait_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.wait_slave_ack" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|length_count[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_burst" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|mem_wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_grant" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_length_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.receive_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_read" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:ptp_dma|state.transmit_write" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|avr_xmit_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ip_addr_latched" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_discard" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:forward_reload" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|buffer_reload" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|route_recv_wbm_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|router_forward" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_avr" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_master" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_slave" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|ack_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_prefix" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_subopcode" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.extract_suboperands" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_clear" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_transmitting" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_table" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.wait_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_memory:memory_module|state.wait_slave_ack" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <net name="ptp_router:router|avr_recv_wbs_ack_o"/>
+          <net name="ptp_router:router|avr_recv_wbs_cyc_i"/>
+          <net name="ptp_router:router|avr_recv_wbs_stb_i"/>
+          <net name="ptp_router:router|avr_xmit_wbm_ack_i"/>
+          <net name="ptp_router:router|avr_xmit_wbm_cyc_o"/>
+          <net name="ptp_router:router|avr_xmit_wbm_stb_o"/>
+          <net name="ptp_router:router|ip_addr_latched"/>
+          <net name="ptp_router:router|link_xmit_discard"/>
+          <net name="ptp_router:router|link_xmit_wb_cyc"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:forward_reload"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|buffer_reload"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|route_recv_wbm_cyc"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|router_forward"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_avr"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_master"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_slave"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_ack_i"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_cyc_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_stb_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_ack_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_cyc_i"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_stb_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|ack_enable"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_ack_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_stb_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_burst_out"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_ack_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_cyc_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_stb_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.done_state"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_high_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_low_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_prefix"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_subopcode"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_suboperands"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_high_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_low_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.idle"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_clear"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_receiving"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_transmitting"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_table"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_reading"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_writing"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.wait_ack"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.wait_slave_ack"/>
+          <bus link="all" name="dma_controller:ptp_dma|length_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="dma_controller:ptp_dma|length_count[15]"/>
+            <net name="dma_controller:ptp_dma|length_count[14]"/>
+            <net name="dma_controller:ptp_dma|length_count[13]"/>
+            <net name="dma_controller:ptp_dma|length_count[12]"/>
+            <net name="dma_controller:ptp_dma|length_count[11]"/>
+            <net name="dma_controller:ptp_dma|length_count[10]"/>
+            <net name="dma_controller:ptp_dma|length_count[9]"/>
+            <net name="dma_controller:ptp_dma|length_count[8]"/>
+            <net name="dma_controller:ptp_dma|length_count[7]"/>
+            <net name="dma_controller:ptp_dma|length_count[6]"/>
+            <net name="dma_controller:ptp_dma|length_count[5]"/>
+            <net name="dma_controller:ptp_dma|length_count[4]"/>
+            <net name="dma_controller:ptp_dma|length_count[3]"/>
+            <net name="dma_controller:ptp_dma|length_count[2]"/>
+            <net name="dma_controller:ptp_dma|length_count[1]"/>
+            <net name="dma_controller:ptp_dma|length_count[0]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|mem_burst"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_ack_i"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_cyc_o"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_stb_o"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_we_o"/>
+          <net name="dma_controller:ptp_dma|recv_grant"/>
+          <bus link="all" name="dma_controller:ptp_dma|recv_length_in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="dma_controller:ptp_dma|recv_length_in[0]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[1]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[2]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[3]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[4]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[5]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[6]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[7]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[8]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[9]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[10]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[11]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[12]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[13]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[14]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[15]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|recv_wbm_ack_i"/>
+          <net name="dma_controller:ptp_dma|recv_wbm_stb_o"/>
+          <net name="dma_controller:ptp_dma|recv_wbs_ack_o"/>
+          <net name="dma_controller:ptp_dma|recv_wbs_cyc_i"/>
+          <bus link="all" name="dma_controller:ptp_dma|recv_wbs_dat_i" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[0]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[1]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[2]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[3]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[4]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[5]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[6]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[7]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|recv_wbs_stb_i"/>
+          <net name="dma_controller:ptp_dma|state.idle"/>
+          <net name="dma_controller:ptp_dma|state.receive_done"/>
+          <net name="dma_controller:ptp_dma|state.receiving"/>
+          <net name="dma_controller:ptp_dma|state.transmit_done"/>
+          <net name="dma_controller:ptp_dma|state.transmit_read"/>
+          <net name="dma_controller:ptp_dma|state.transmit_write"/>
+        </setup_view>
+        <data_view>
+          <net name="ptp_router:router|avr_recv_wbs_ack_o"/>
+          <net name="ptp_router:router|avr_recv_wbs_cyc_i"/>
+          <net name="ptp_router:router|avr_recv_wbs_stb_i"/>
+          <net name="ptp_router:router|avr_xmit_wbm_ack_i"/>
+          <net name="ptp_router:router|avr_xmit_wbm_cyc_o"/>
+          <net name="ptp_router:router|avr_xmit_wbm_stb_o"/>
+          <net name="ptp_router:router|ip_addr_latched"/>
+          <net name="ptp_router:router|link_xmit_discard"/>
+          <net name="ptp_router:router|link_xmit_wb_cyc"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:forward_reload"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|buffer_reload"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|route_recv_wbm_cyc"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|router_forward"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_avr"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_master"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_interface_out.to_slave"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_ack_i"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_cyc_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|xmit_wbm_stb_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_ack_o"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_cyc_i"/>
+          <net name="ptp_router:router|ptp_daisy_router:daisy_router|recv_wbs_stb_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|ack_enable"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_ack_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_stb_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_burst_out"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_ack_i"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_cyc_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|sram_wb_stb_o"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.done_state"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_high_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_address_low_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_prefix"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_subopcode"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.extract_suboperands"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_high_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.get_length_low_byte"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.idle"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_clear"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_receiving"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_read_transmitting"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_table"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_reading"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.memory_write_writing"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.wait_ack"/>
+          <net name="ptp_top:ptp|ptp_memory:memory_module|state.wait_slave_ack"/>
+          <bus link="all" name="dma_controller:ptp_dma|length_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="dma_controller:ptp_dma|length_count[15]"/>
+            <net name="dma_controller:ptp_dma|length_count[14]"/>
+            <net name="dma_controller:ptp_dma|length_count[13]"/>
+            <net name="dma_controller:ptp_dma|length_count[12]"/>
+            <net name="dma_controller:ptp_dma|length_count[11]"/>
+            <net name="dma_controller:ptp_dma|length_count[10]"/>
+            <net name="dma_controller:ptp_dma|length_count[9]"/>
+            <net name="dma_controller:ptp_dma|length_count[8]"/>
+            <net name="dma_controller:ptp_dma|length_count[7]"/>
+            <net name="dma_controller:ptp_dma|length_count[6]"/>
+            <net name="dma_controller:ptp_dma|length_count[5]"/>
+            <net name="dma_controller:ptp_dma|length_count[4]"/>
+            <net name="dma_controller:ptp_dma|length_count[3]"/>
+            <net name="dma_controller:ptp_dma|length_count[2]"/>
+            <net name="dma_controller:ptp_dma|length_count[1]"/>
+            <net name="dma_controller:ptp_dma|length_count[0]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|mem_burst"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_ack_i"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_cyc_o"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_stb_o"/>
+          <net name="dma_controller:ptp_dma|mem_wbm_we_o"/>
+          <net name="dma_controller:ptp_dma|recv_grant"/>
+          <bus link="all" name="dma_controller:ptp_dma|recv_length_in" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="dma_controller:ptp_dma|recv_length_in[0]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[1]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[2]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[3]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[4]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[5]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[6]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[7]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[8]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[9]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[10]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[11]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[12]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[13]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[14]"/>
+            <net name="dma_controller:ptp_dma|recv_length_in[15]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|recv_wbm_ack_i"/>
+          <net name="dma_controller:ptp_dma|recv_wbm_stb_o"/>
+          <net name="dma_controller:ptp_dma|recv_wbs_ack_o"/>
+          <net name="dma_controller:ptp_dma|recv_wbs_cyc_i"/>
+          <bus link="all" name="dma_controller:ptp_dma|recv_wbs_dat_i" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[0]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[1]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[2]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[3]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[4]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[5]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[6]"/>
+            <net name="dma_controller:ptp_dma|recv_wbs_dat_i[7]"/>
+          </bus>
+          <net name="dma_controller:ptp_dma|recv_wbs_stb_i"/>
+          <net name="dma_controller:ptp_dma|state.idle"/>
+          <net name="dma_controller:ptp_dma|state.receive_done"/>
+          <net name="dma_controller:ptp_dma|state.receiving"/>
+          <net name="dma_controller:ptp_dma|state.transmit_done"/>
+          <net name="dma_controller:ptp_dma|state.transmit_read"/>
+          <net name="dma_controller:ptp_dma|state.transmit_write"/>
+        </data_view>
+      </presentation>
+      <trigger CRC="611F8087" is_expanded="true" name="trigger: 2004/11/08 16:56:38  #0" position="pre" segment_size="1" trigger_in="rising edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="52"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="11"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="130560"/>
+      <multi attribute="timebars" size="1" value="88"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="column width" size="18" value="34,34,386,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="7" value="999,849,374,125,347,50,254"/>
+  </global_info>
+</session>

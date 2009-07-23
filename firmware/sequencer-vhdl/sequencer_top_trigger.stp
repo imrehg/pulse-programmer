@@ -1,0 +1,357 @@
+<session jtag_chain="" jtag_device="" sof_file="">
+  <display_tree>
+    <display_branch instance="auto_signaltap_0" signal_set="signal_set: 2005/06/21 13:49:01  #0" trigger="trigger: 2005/06/21 13:49:01  #1"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <signal_set is_expanded="true" name="signal_set: 2005/06/21 13:49:01  #0">
+      <clock name="clk0" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="128" trigger_in_enable="no" trigger_in_node="dma_controller:pcp_dma|state.transmit_read" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="dma_controller:pcp_dma|ack_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|recv_grant" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.receive_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.receive_wait_release" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.transmit_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.transmit_read" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.transmit_write" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|xmit_grant" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|xmit_mem_stb" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|xmit_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_prefetch_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.emptying" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|read_req" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_clk_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|write_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|state.reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|write_busy_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_dma_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|pcp_dma_stb_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_address_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_address_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_length_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_length_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_prefix" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_subopcode" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_trigger_source" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_pcp_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_pcp_release" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_slave_ack" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="dma_controller:pcp_dma|ack_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|length_count[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|recv_grant" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.receive_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.receive_wait_release" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.receiving" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.transmit_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.transmit_read" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|state.transmit_write" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|xmit_grant" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|xmit_mem_stb" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="dma_controller:pcp_dma|xmit_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_prefetch_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.emptying" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|read_req" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_clk_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|write_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|state.reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_controller:\pcp1_notgen:pcp|write_busy_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp_dma_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|pcp_dma_stb_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_address_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_address_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_length_high_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_length_low_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_prefix" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_subopcode" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_trigger_source" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_pcp_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_pcp_release" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_slave_ack" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <net is_signal_inverted="no" name="pcp_dma_ack"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|ack_enable"/>
+          <bus is_signal_inverted="no" link="all" name="dma_controller:pcp_dma|length_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[15]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[14]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[13]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[12]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[11]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[10]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[9]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[8]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[7]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[6]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[5]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[4]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[3]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[2]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[1]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|recv_grant"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.idle"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.receive_done"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.receive_wait_release"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.receiving"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.transmit_done"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.transmit_read"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.transmit_write"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|xmit_grant"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|xmit_mem_stb"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|pcp_dma_stb_out"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.done_state"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_address_high_byte"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_address_low_byte"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_length_high_byte"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_length_low_byte"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_prefix"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_subopcode"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_trigger_source"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_ack"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_pcp_ack"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_pcp_release"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_slave_ack"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|read_req"/>
+          <bus is_signal_inverted="no" link="all" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out" order="msb_to_lsb" radix="hex" state="expand" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[7]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[6]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[5]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[4]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[3]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[2]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[1]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_ack_i"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_cyc_o"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_stb_o"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_ack_o"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_clk_i"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_cyc_i"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_stb_i"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|xmit_wbs_ack_o"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|write_busy_out"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|state.idle"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|state.reading"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|state.writing"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.idle"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading_prefetch"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading_stall"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_prefetch"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_prefetch_stall"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_stall"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.emptying"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.idle"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.writing"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|write_enable"/>
+        </setup_view>
+        <data_view>
+          <net is_signal_inverted="no" name="pcp_dma_ack"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|ack_enable"/>
+          <bus is_signal_inverted="no" link="all" name="dma_controller:pcp_dma|length_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[15]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[14]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[13]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[12]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[11]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[10]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[9]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[8]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[7]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[6]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[5]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[4]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[3]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[2]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[1]"/>
+            <net is_signal_inverted="no" name="dma_controller:pcp_dma|length_count[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|recv_grant"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.idle"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.receive_done"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.receive_wait_release"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.receiving"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.transmit_done"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.transmit_read"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|state.transmit_write"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|xmit_grant"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|xmit_mem_stb"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|pcp_dma_stb_out"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.done_state"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_address_high_byte"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_address_low_byte"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_length_high_byte"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_length_low_byte"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_prefix"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_subopcode"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.extract_trigger_source"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_ack"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_pcp_ack"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_pcp_release"/>
+          <net is_signal_inverted="no" name="ptp_top:ptp|ptp_trigger:\trigger_gen:trigger_module|state.wait_slave_ack"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|read_req"/>
+          <bus is_signal_inverted="no" link="all" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[7]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[6]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[5]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[4]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[3]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[2]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[1]"/>
+            <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|debug_led_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_ack_i"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_cyc_o"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_read_stb_o"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_ack_o"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_clk_i"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_cyc_i"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|wb_write_stb_i"/>
+          <net is_signal_inverted="no" name="dma_controller:pcp_dma|xmit_wbs_ack_o"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|write_busy_out"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|state.idle"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|state.reading"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|state.writing"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.idle"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading_prefetch"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.reading_stall"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_prefetch"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_prefetch_stall"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\reader:state.writing_stall"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.emptying"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.idle"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|\writer:state.writing"/>
+          <net is_signal_inverted="no" name="pcp_controller:\pcp1_notgen:pcp|async_fifo:interclock|write_enable"/>
+        </data_view>
+      </presentation>
+      <trigger CRC="A9655A60" is_expanded="true" name="trigger: 2005/06/21 13:49:01  #1" position="pre" segment_size="1" trigger_in="rising edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="0"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="35"/>
+      <single attribute="setup vertical scroll position" value="32"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="1"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="131008"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="column width" size="18" value="34,34,518,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="7" value="955,587,374,125,356,50,125"/>
+  </global_info>
+</session>

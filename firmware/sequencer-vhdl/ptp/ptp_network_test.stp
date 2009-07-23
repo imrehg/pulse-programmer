@@ -1,0 +1,631 @@
+<session jtag_chain="ByteBlasterII [LPT1]" jtag_device="@1: EP1C12 (0x020830DD)" sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <global_info>
+    <multi attribute="window position" size="7" value="727,531,374,125,347,50,125"/>
+    <single attribute="active instance" value="0"/>
+  </global_info>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2004/09/28 03:44:49  #0">
+      <clock name="clockdiv:clock_divider|c0" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="512" trigger_in_enable="yes" trigger_in_node="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_gnt" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="daisy_receive[0]" tap_mode="classic" type="input pin"/>
+          <wire connection_status="true" name="daisy_receive[1]" tap_mode="classic" type="input pin"/>
+          <wire connection_status="true" name="daisy_receive[2]" tap_mode="classic" type="input pin"/>
+          <wire connection_status="true" name="daisy_receive[3]" tap_mode="classic" type="input pin"/>
+          <wire connection_status="true" name="daisy_transmit[0]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="daisy_transmit[1]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="daisy_transmit[2]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="daisy_transmit[3]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="network_detected" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_chain_terminator" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|chain_initiator" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_discard" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|debug_recv_wb_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|discover_recv_wb_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|recv_arbiter_gnt[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|recv_arbiter_gnt[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|recv_arbiter_gnt[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|recv_arbiter_gnt[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_udp_recv_wb_cyc" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="daisy_receive[0]" tap_mode="classic" type="input pin"/>
+          <wire connection_status="true" name="daisy_receive[1]" tap_mode="classic" type="input pin"/>
+          <wire connection_status="true" name="daisy_receive[2]" tap_mode="classic" type="input pin"/>
+          <wire connection_status="true" name="daisy_receive[3]" tap_mode="classic" type="input pin"/>
+          <wire connection_status="true" name="daisy_transmit[0]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="daisy_transmit[1]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="daisy_transmit[2]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="daisy_transmit[3]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="network_detected" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_chain_terminator" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|chain_initiator" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_discard" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|link_xmit_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_dest_id_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_length_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_opcode_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_src_id_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|recv_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|udp_recv_wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|debug_recv_wb_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|discover_recv_wb_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_adr_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|i2c_wb_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|led_wb_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|recv_arbiter_gnt[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|recv_arbiter_gnt[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|recv_arbiter_gnt[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|recv_arbiter_gnt[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_top:ptp|self_id_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_udp_recv_wb_cyc" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <net name="daisy_receive[0]"/>
+          <net name="daisy_receive[1]"/>
+          <net name="daisy_receive[2]"/>
+          <net name="daisy_receive[3]"/>
+          <net name="daisy_transmit[0]"/>
+          <net name="daisy_transmit[1]"/>
+          <net name="daisy_transmit[2]"/>
+          <net name="daisy_transmit[3]"/>
+          <net name="network_detected"/>
+          <net name="ptp_chain_terminator"/>
+          <net name="ptp_udp_recv_wb_cyc"/>
+          <net name="ptp_top:ptp|debug_recv_wb_cyc"/>
+          <net name="ptp_top:ptp|discover_recv_wb_cyc"/>
+          <net name="ptp_top:ptp|i2c_wb_ack_i"/>
+          <bus link="all" name="ptp_top:ptp|i2c_wb_adr_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|i2c_wb_adr_o[6]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[5]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[4]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[3]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[2]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[1]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[0]"/>
+          </bus>
+          <net name="ptp_top:ptp|i2c_wb_cyc_o"/>
+          <bus link="all" name="ptp_top:ptp|i2c_wb_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|i2c_wb_dat_i[7]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[6]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[5]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[4]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[3]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[2]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[1]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="ptp_top:ptp|i2c_wb_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|i2c_wb_dat_o[7]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[6]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[5]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[4]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[3]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[2]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[1]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[0]"/>
+          </bus>
+          <net name="ptp_top:ptp|i2c_wb_stb_o"/>
+          <net name="ptp_top:ptp|i2c_wb_we_o"/>
+          <net name="ptp_top:ptp|led_wb_ack_i"/>
+          <net name="ptp_top:ptp|led_wb_cyc_o"/>
+          <bus link="all" name="ptp_top:ptp|led_wb_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|led_wb_dat_o[7]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[6]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[5]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[4]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[3]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[2]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[1]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[0]"/>
+          </bus>
+          <net name="ptp_top:ptp|led_wb_stb_o"/>
+          <bus link="all" name="ptp_top:ptp|recv_arbiter_gnt" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_top:ptp|recv_arbiter_gnt[3]"/>
+            <net name="ptp_top:ptp|recv_arbiter_gnt[2]"/>
+            <net name="ptp_top:ptp|recv_arbiter_gnt[1]"/>
+            <net name="ptp_top:ptp|recv_arbiter_gnt[0]"/>
+          </bus>
+          <bus link="all" name="ptp_top:ptp|self_id_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|self_id_out[0]"/>
+            <net name="ptp_top:ptp|self_id_out[1]"/>
+            <net name="ptp_top:ptp|self_id_out[2]"/>
+            <net name="ptp_top:ptp|self_id_out[3]"/>
+            <net name="ptp_top:ptp|self_id_out[4]"/>
+            <net name="ptp_top:ptp|self_id_out[5]"/>
+            <net name="ptp_top:ptp|self_id_out[6]"/>
+            <net name="ptp_top:ptp|self_id_out[7]"/>
+          </bus>
+          <net name="ptp_router:router|chain_initiator"/>
+          <net name="ptp_router:router|link_xmit_discard"/>
+          <net name="ptp_router:router|link_xmit_wb_cyc"/>
+          <bus link="all" name="ptp_router:router|recv_dest_id_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_dest_id_out[0]"/>
+            <net name="ptp_router:router|recv_dest_id_out[1]"/>
+            <net name="ptp_router:router|recv_dest_id_out[2]"/>
+            <net name="ptp_router:router|recv_dest_id_out[3]"/>
+            <net name="ptp_router:router|recv_dest_id_out[4]"/>
+            <net name="ptp_router:router|recv_dest_id_out[5]"/>
+            <net name="ptp_router:router|recv_dest_id_out[6]"/>
+            <net name="ptp_router:router|recv_dest_id_out[7]"/>
+          </bus>
+          <bus link="all" name="ptp_router:router|recv_length_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_length_out[0]"/>
+            <net name="ptp_router:router|recv_length_out[1]"/>
+            <net name="ptp_router:router|recv_length_out[2]"/>
+            <net name="ptp_router:router|recv_length_out[3]"/>
+            <net name="ptp_router:router|recv_length_out[4]"/>
+            <net name="ptp_router:router|recv_length_out[5]"/>
+            <net name="ptp_router:router|recv_length_out[6]"/>
+            <net name="ptp_router:router|recv_length_out[7]"/>
+            <net name="ptp_router:router|recv_length_out[8]"/>
+            <net name="ptp_router:router|recv_length_out[9]"/>
+            <net name="ptp_router:router|recv_length_out[10]"/>
+            <net name="ptp_router:router|recv_length_out[11]"/>
+            <net name="ptp_router:router|recv_length_out[12]"/>
+            <net name="ptp_router:router|recv_length_out[13]"/>
+            <net name="ptp_router:router|recv_length_out[14]"/>
+            <net name="ptp_router:router|recv_length_out[15]"/>
+          </bus>
+          <bus link="all" name="ptp_router:router|recv_opcode_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_opcode_out[0]"/>
+            <net name="ptp_router:router|recv_opcode_out[1]"/>
+            <net name="ptp_router:router|recv_opcode_out[2]"/>
+            <net name="ptp_router:router|recv_opcode_out[3]"/>
+            <net name="ptp_router:router|recv_opcode_out[4]"/>
+            <net name="ptp_router:router|recv_opcode_out[5]"/>
+            <net name="ptp_router:router|recv_opcode_out[6]"/>
+            <net name="ptp_router:router|recv_opcode_out[7]"/>
+          </bus>
+          <bus link="all" name="ptp_router:router|recv_src_id_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_src_id_out[0]"/>
+            <net name="ptp_router:router|recv_src_id_out[1]"/>
+            <net name="ptp_router:router|recv_src_id_out[2]"/>
+            <net name="ptp_router:router|recv_src_id_out[3]"/>
+            <net name="ptp_router:router|recv_src_id_out[4]"/>
+            <net name="ptp_router:router|recv_src_id_out[5]"/>
+            <net name="ptp_router:router|recv_src_id_out[6]"/>
+            <net name="ptp_router:router|recv_src_id_out[7]"/>
+          </bus>
+          <net name="ptp_router:router|recv_wbm_ack_i"/>
+          <net name="ptp_router:router|recv_wbm_cyc_o"/>
+          <bus link="all" name="ptp_router:router|recv_wbm_dat_o" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_wbm_dat_o[0]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[1]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[2]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[3]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[4]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[5]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[6]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[7]"/>
+          </bus>
+          <net name="ptp_router:router|recv_wbm_stb_o"/>
+          <net name="ptp_router:router|udp_recv_wbs_ack_o"/>
+          <net name="ptp_router:router|udp_recv_wbs_cyc_i"/>
+          <bus link="all" name="ptp_router:router|udp_recv_wbs_dat_i" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[0]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[1]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[2]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[3]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[4]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[5]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[6]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[7]"/>
+          </bus>
+          <net name="ptp_router:router|udp_recv_wbs_stb_i"/>
+          <net name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_gnt"/>
+          <net name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_gnt"/>
+          <net name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_gnt"/>
+          <net name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_gnt"/>
+          <bus link="all" name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[2]"/>
+            <net name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[1]"/>
+            <net name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[0]"/>
+          </bus>
+        </data_view>
+        <setup_view>
+          <net name="daisy_receive[0]"/>
+          <net name="daisy_receive[1]"/>
+          <net name="daisy_receive[2]"/>
+          <net name="daisy_receive[3]"/>
+          <net name="daisy_transmit[0]"/>
+          <net name="daisy_transmit[1]"/>
+          <net name="daisy_transmit[2]"/>
+          <net name="daisy_transmit[3]"/>
+          <net name="network_detected"/>
+          <net name="ptp_chain_terminator"/>
+          <net name="ptp_udp_recv_wb_cyc"/>
+          <net name="ptp_top:ptp|debug_recv_wb_cyc"/>
+          <net name="ptp_top:ptp|discover_recv_wb_cyc"/>
+          <net name="ptp_top:ptp|i2c_wb_ack_i"/>
+          <bus link="all" name="ptp_top:ptp|i2c_wb_adr_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|i2c_wb_adr_o[6]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[5]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[4]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[3]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[2]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[1]"/>
+            <net name="ptp_top:ptp|i2c_wb_adr_o[0]"/>
+          </bus>
+          <net name="ptp_top:ptp|i2c_wb_cyc_o"/>
+          <bus link="all" name="ptp_top:ptp|i2c_wb_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|i2c_wb_dat_i[7]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[6]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[5]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[4]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[3]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[2]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[1]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="ptp_top:ptp|i2c_wb_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|i2c_wb_dat_o[7]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[6]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[5]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[4]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[3]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[2]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[1]"/>
+            <net name="ptp_top:ptp|i2c_wb_dat_o[0]"/>
+          </bus>
+          <net name="ptp_top:ptp|i2c_wb_stb_o"/>
+          <net name="ptp_top:ptp|i2c_wb_we_o"/>
+          <net name="ptp_top:ptp|led_wb_ack_i"/>
+          <net name="ptp_top:ptp|led_wb_cyc_o"/>
+          <bus link="all" name="ptp_top:ptp|led_wb_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|led_wb_dat_o[7]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[6]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[5]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[4]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[3]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[2]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[1]"/>
+            <net name="ptp_top:ptp|led_wb_dat_o[0]"/>
+          </bus>
+          <net name="ptp_top:ptp|led_wb_stb_o"/>
+          <bus link="all" name="ptp_top:ptp|recv_arbiter_gnt" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_top:ptp|recv_arbiter_gnt[3]"/>
+            <net name="ptp_top:ptp|recv_arbiter_gnt[2]"/>
+            <net name="ptp_top:ptp|recv_arbiter_gnt[1]"/>
+            <net name="ptp_top:ptp|recv_arbiter_gnt[0]"/>
+          </bus>
+          <bus link="all" name="ptp_top:ptp|self_id_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_top:ptp|self_id_out[0]"/>
+            <net name="ptp_top:ptp|self_id_out[1]"/>
+            <net name="ptp_top:ptp|self_id_out[2]"/>
+            <net name="ptp_top:ptp|self_id_out[3]"/>
+            <net name="ptp_top:ptp|self_id_out[4]"/>
+            <net name="ptp_top:ptp|self_id_out[5]"/>
+            <net name="ptp_top:ptp|self_id_out[6]"/>
+            <net name="ptp_top:ptp|self_id_out[7]"/>
+          </bus>
+          <net name="ptp_router:router|chain_initiator"/>
+          <net name="ptp_router:router|link_xmit_discard"/>
+          <net name="ptp_router:router|link_xmit_wb_cyc"/>
+          <bus link="all" name="ptp_router:router|recv_dest_id_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_dest_id_out[0]"/>
+            <net name="ptp_router:router|recv_dest_id_out[1]"/>
+            <net name="ptp_router:router|recv_dest_id_out[2]"/>
+            <net name="ptp_router:router|recv_dest_id_out[3]"/>
+            <net name="ptp_router:router|recv_dest_id_out[4]"/>
+            <net name="ptp_router:router|recv_dest_id_out[5]"/>
+            <net name="ptp_router:router|recv_dest_id_out[6]"/>
+            <net name="ptp_router:router|recv_dest_id_out[7]"/>
+          </bus>
+          <bus link="all" name="ptp_router:router|recv_length_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_length_out[0]"/>
+            <net name="ptp_router:router|recv_length_out[1]"/>
+            <net name="ptp_router:router|recv_length_out[2]"/>
+            <net name="ptp_router:router|recv_length_out[3]"/>
+            <net name="ptp_router:router|recv_length_out[4]"/>
+            <net name="ptp_router:router|recv_length_out[5]"/>
+            <net name="ptp_router:router|recv_length_out[6]"/>
+            <net name="ptp_router:router|recv_length_out[7]"/>
+            <net name="ptp_router:router|recv_length_out[8]"/>
+            <net name="ptp_router:router|recv_length_out[9]"/>
+            <net name="ptp_router:router|recv_length_out[10]"/>
+            <net name="ptp_router:router|recv_length_out[11]"/>
+            <net name="ptp_router:router|recv_length_out[12]"/>
+            <net name="ptp_router:router|recv_length_out[13]"/>
+            <net name="ptp_router:router|recv_length_out[14]"/>
+            <net name="ptp_router:router|recv_length_out[15]"/>
+          </bus>
+          <bus link="all" name="ptp_router:router|recv_opcode_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_opcode_out[0]"/>
+            <net name="ptp_router:router|recv_opcode_out[1]"/>
+            <net name="ptp_router:router|recv_opcode_out[2]"/>
+            <net name="ptp_router:router|recv_opcode_out[3]"/>
+            <net name="ptp_router:router|recv_opcode_out[4]"/>
+            <net name="ptp_router:router|recv_opcode_out[5]"/>
+            <net name="ptp_router:router|recv_opcode_out[6]"/>
+            <net name="ptp_router:router|recv_opcode_out[7]"/>
+          </bus>
+          <bus link="all" name="ptp_router:router|recv_src_id_out" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_src_id_out[0]"/>
+            <net name="ptp_router:router|recv_src_id_out[1]"/>
+            <net name="ptp_router:router|recv_src_id_out[2]"/>
+            <net name="ptp_router:router|recv_src_id_out[3]"/>
+            <net name="ptp_router:router|recv_src_id_out[4]"/>
+            <net name="ptp_router:router|recv_src_id_out[5]"/>
+            <net name="ptp_router:router|recv_src_id_out[6]"/>
+            <net name="ptp_router:router|recv_src_id_out[7]"/>
+          </bus>
+          <net name="ptp_router:router|recv_wbm_ack_i"/>
+          <net name="ptp_router:router|recv_wbm_cyc_o"/>
+          <bus link="all" name="ptp_router:router|recv_wbm_dat_o" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|recv_wbm_dat_o[0]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[1]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[2]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[3]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[4]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[5]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[6]"/>
+            <net name="ptp_router:router|recv_wbm_dat_o[7]"/>
+          </bus>
+          <net name="ptp_router:router|recv_wbm_stb_o"/>
+          <net name="ptp_router:router|udp_recv_wbs_ack_o"/>
+          <net name="ptp_router:router|udp_recv_wbs_cyc_i"/>
+          <bus link="all" name="ptp_router:router|udp_recv_wbs_dat_i" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[0]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[1]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[2]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[3]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[4]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[5]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[6]"/>
+            <net name="ptp_router:router|udp_recv_wbs_dat_i[7]"/>
+          </bus>
+          <net name="ptp_router:router|udp_recv_wbs_stb_i"/>
+          <net name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_gnt"/>
+          <net name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_gnt"/>
+          <net name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_gnt"/>
+          <net name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_gnt"/>
+          <bus link="all" name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[2]"/>
+            <net name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[1]"/>
+            <net name="ptp_router:router|ptp_daisy_link:daisy_link|xmit_arbiter_gnt[0]"/>
+          </bus>
+        </setup_view>
+      </presentation>
+      <trigger CRC="3DAD6D6D" global_temp="1" name="trigger: 2004/09/28 03:44:49  #1" position="pre" segment_size="1" trigger_in="rising edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+  </instance>
+</session>

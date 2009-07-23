@@ -1,0 +1,72 @@
+<session jtag_chain="ByteBlasterII [LPT1]" jtag_device="@1: EP1C12 (0x020830DD)" sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+      <single attribute="setup horizontal scroll position" value="97"/>
+      <single attribute="setup vertical scroll position" value="0"/>
+    </position_info>
+    <signal_set global_temp="1" name="signal_set: 2004/09/25 23:35:15  #0">
+      <clock name="clk0" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="24" reserved_trigger_nodes="24" sample_depth="128" trigger_in_enable="yes" trigger_in_node="wb_rst_i" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.display_status" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.display_status_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.display_status_ack_fall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.interval" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.interval_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.interval_ack_fall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="wb_rst_i" tap_mode="advanced" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.display_status" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.display_status_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.display_status_ack_fall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.interval" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.interval_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|state.interval_ack_fall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="wb_rst_i" tap_mode="advanced" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <net name="wb_rst_i"/>
+          <net name="boot_led:boot_led_display|state.display_status"/>
+          <net name="boot_led:boot_led_display|state.display_status_ack"/>
+          <net name="boot_led:boot_led_display|state.display_status_ack_fall"/>
+          <net name="boot_led:boot_led_display|state.interval"/>
+          <net name="boot_led:boot_led_display|state.interval_ack"/>
+          <net name="boot_led:boot_led_display|state.interval_ack_fall"/>
+        </data_view>
+        <setup_view>
+          <net name="wb_rst_i"/>
+          <net name="boot_led:boot_led_display|state.display_status"/>
+          <net name="boot_led:boot_led_display|state.display_status_ack"/>
+          <net name="boot_led:boot_led_display|state.display_status_ack_fall"/>
+          <net name="boot_led:boot_led_display|state.interval"/>
+          <net name="boot_led:boot_led_display|state.interval_ack"/>
+          <net name="boot_led:boot_led_display|state.interval_ack_fall"/>
+        </setup_view>
+      </presentation>
+      <trigger CRC="6004C6A" global_temp="1" name="trigger: 2004/09/25 23:35:15  #1" position="pre" segment_size="1" trigger_in="rising edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+        <data global_temp="1" name="log: 2004/09/25 23:39:11  #0" sample_depth="128" trigger_position="16">00010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010010001001000100100010010001001000100100010010001001000100100010010001001000100100010010001001000100100010010001001000100100010010001001000100100010010001001000100100010010001001000100100010010001001000100100010010001001000100100010010001001000100100010010001001000100100010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000000100000010000001000</data>
+      </trigger>
+    </signal_set>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="column width" size="18" value="34,34,279,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="7" value="999,791,374,125,0,50,125"/>
+  </global_info>
+</session>

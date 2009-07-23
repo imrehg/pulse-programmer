@@ -1,0 +1,643 @@
+# Copyright (C) 1991-2005 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic       
+# functions, and any output files any of the foregoing           
+# (including device programming or simulation files), and any    
+# associated documentation or information are expressly subject  
+# to the terms and conditions of the Altera Program License      
+# Subscription Agreement, Altera MegaCore Function License       
+# Agreement, or other applicable license agreement, including,   
+# without limitation, that your use is for the sole purpose of   
+# programming logic devices manufactured by Altera and sold by   
+# Altera or its authorized distributors.  Please refer to the    
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		sequencer_top_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name VER_COMPATIBLE_DB_DIR "c:/ppham/sf/sequencer/vhdl/export_db"
+set_global_assignment -name AUTO_EXPORT_VER_COMPATIBLE_DB OFF
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name INCREMENTAL_COMPILATION FULL_INCREMENTAL_COMPILATION
+set_parameter -name FLOW_ENABLE_TIMING_CONSTRAINT_CHECK OFF
+set_parameter -name DO_COMBINED_ANALYSIS OFF
+set_parameter -name ENABLE_CLOCK_LATENCY OFF
+set_parameter -name SMART_RECOMPILE OFF
+set_parameter -name FLOW_ENABLE_HCII_COMPARE OFF
+set_parameter -name HCII_OUTPUT_DIR hc_output
+set_parameter -name SAVE_MIGRATION_INFO_DURING_COMPILATION OFF
+set_parameter -name RUN_COMPARISON_ON_EVERY_COMPILE OFF
+set_parameter -name ENABLE_ATTEMPT_SIMILAR_PLACEMENT OFF
+set_parameter -name FLOW_ENABLE_IO_ASSIGNMENT_ANALYSIS OFF
+set_parameter -name RUN_FULL_COMPILE_ON_DEVICE_CHANGE ON
+set_parameter -name POWER_REPORT_POWER_DISSIPATION ON
+set_parameter -name ADD_PASS_THROUGH_LOGIC_TO_INFERRED_RAMS ON
+set_parameter -name MAX_BALANCING_DSP_BLOCKS "-1"
+set_parameter -name MAX_RAM_BLOCKS_M512 "-1"
+set_parameter -name MAX_RAM_BLOCKS_M4K "-1"
+set_parameter -name MAX_RAM_BLOCKS_MRAM "-1"
+set_parameter -name IGNORE_TRANSLATE_OFF OFF
+set_parameter -name STRATIXGX_BYPASS_REMAPPING_OF_FORCE_SIGNAL_DETECT_SIGNAL_THRESHOLD_SELECT OFF
+set_parameter -name SYNTH_TIMING_DRIVEN_REGISTER_DUPLICATION OFF
+set_parameter -name SHOW_PARAMETER_SETTINGS_TABLES_IN_SYNTHESIS_REPORT ON
+set_parameter -name INCREMENTAL_COMPILATION OFF
+set_parameter -name MIGRATION_CONSTRAIN_CORE_RESOURCES ON
+set_parameter -name SIGNALRACE_RULE_RESET_RACE ON
+set_parameter -name ENABLE_ASMI_FOR_FLASH_LOADER OFF
+set_parameter -name STRATIXII_EP2S60ES_ALLOW_MRAM_USAGE OFF
+set_parameter -name STRATIXII_ALLOW_DUAL_PORT_DUAL_CLOCK_MRAM_USAGE OFF
+set_parameter -name STRATIXII_MRAM_COMPATIBILITY ON
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "4.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:36:38  JULY 05, 2004"
+set_global_assignment -name LAST_QUARTUS_VERSION "5.0 SP1"
+set_parameter -name CARRY_CHAIN MANUAL
+set_parameter -name CASCADE_CHAIN MANUAL
+set_parameter -name OPTIMIZE_FOR_SPEED 9
+set_parameter -name STYLE FAST
+set_global_assignment -name VHDL_FILE seqlib.vhd
+set_global_assignment -name VHDL_FILE pcp/pcplib.vhd
+set_global_assignment -name VHDL_FILE wb_intercon.vhd
+set_global_assignment -name VHDL_FILE memory_controller.vhd
+set_global_assignment -name VHDL_FILE network/ring_buffer.vhd
+set_global_assignment -name VHDL_FILE network/udp_receive.vhd
+set_global_assignment -name VHDL_FILE network/udp_transmit.vhd
+set_global_assignment -name VHDL_FILE network/ethernet_receive.vhd
+set_global_assignment -name VHDL_FILE network/ethernet_transmit.vhd
+set_global_assignment -name VHDL_FILE network/ethernet.vhd
+set_global_assignment -name VHDL_FILE network/arp.vhd
+set_global_assignment -name VHDL_FILE network/arp_receive.vhd
+set_global_assignment -name VHDL_FILE network/arp_transmit.vhd
+set_global_assignment -name VHDL_FILE network/lookup_table.vhd
+set_global_assignment -name VHDL_FILE network/crc32.vhd
+set_global_assignment -name VHDL_FILE network/ip.vhd
+set_global_assignment -name VHDL_FILE network/ip_receive.vhd
+set_global_assignment -name VHDL_FILE network/ip_buffer.vhd
+set_global_assignment -name VHDL_FILE network/ip_transport.vhd
+set_global_assignment -name VHDL_FILE network/ip_transmit.vhd
+set_global_assignment -name VHDL_FILE network/icmp.vhd
+set_global_assignment -name VHDL_FILE network/icmp_transmit.vhd
+set_global_assignment -name VHDL_FILE network/icmp_receive.vhd
+set_global_assignment -name VHDL_FILE network/in_cksum.vhd
+set_global_assignment -name VHDL_FILE network/dhcp_receive.vhd
+set_global_assignment -name VHDL_FILE network/dhcp_transmit.vhd
+set_global_assignment -name VHDL_FILE network/dhcp.vhd
+set_global_assignment -name VHDL_FILE network/network_controller.vhd
+set_global_assignment -name VHDL_FILE sequencer_top.vhd
+set_global_assignment -name VHDL_FILE clockdiv.vhd
+set_global_assignment -name VHDL_FILE clock_doubler.vhd
+set_global_assignment -name VHDL_FILE divider.vhd
+set_global_assignment -name VHDL_FILE sram/sram_controller.vhd
+set_global_assignment -name VHDL_FILE pulse_generator.vhd
+set_global_assignment -name VHDL_FILE boot_led.vhd
+set_global_assignment -name VHDL_FILE i2c/i2c_controller.vhd
+set_global_assignment -name VHDL_FILE i2c/i2c_led_controller.vhd
+set_global_assignment -name VHDL_FILE i2c/i2c_master_top.vhd
+set_global_assignment -name VHDL_FILE i2c/i2c_master_byte_ctrl.vhd
+set_global_assignment -name VHDL_FILE i2c/i2c_master_bit_ctrl.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_top.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_router.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_buffer.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_transmit.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_receive.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_daisy_router.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_daisy_link.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_daisy_transmit.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_daisy_receive.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_status.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_debug.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_discover.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_memory.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_start.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_trigger.vhd
+set_global_assignment -name VHDL_FILE ptp/ptp_i2c.vhd
+set_global_assignment -name VHDL_FILE pcp/pcp1_decoder.vhd
+set_global_assignment -name VHDL_FILE pcp/pcp_phase_reg_file.vhd
+set_global_assignment -name VHDL_FILE pcp/pcp_loop_reg_file.vhd
+set_global_assignment -name VHDL_FILE pcp/pcp_address_stack.vhd
+set_global_assignment -name VHDL_FILE pcp/pcp1_core.vhd
+set_global_assignment -name VHDL_FILE pcp/pcp1_controller.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE sequencer_top.vwf
+set_global_assignment -name SIGNALTAP_FILE sequencer_top_trigger.stp
+set_global_assignment -name SIGNALTAP_FILE sequencer_top_eth_xmit.stp
+set_global_assignment -name SIGNALTAP_FILE sequencer_top_pcp1.stp
+set_global_assignment -name SIGNALTAP_FILE sequencer_top_netstate.stp
+set_global_assignment -name SIGNALTAP_FILE sequencer_top_ethfifo.stp
+set_global_assignment -name SIGNALTAP_FILE sequencer_top_daisy.stp
+set_global_assignment -name SIGNALTAP_FILE sequencer_top_memory.stp
+set_global_assignment -name SIGNALTAP_FILE sequencer_top_netxmit.stp
+set_global_assignment -name SIGNALTAP_FILE sequencer_top_eth.stp
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_1 -to daisy_transmit[3]
+set_location_assignment PIN_2 -to daisy_transmit[2]
+set_location_assignment PIN_3 -to daisy_transmit[1]
+set_location_assignment PIN_4 -to daisy_transmit[0]
+set_location_assignment PIN_5 -to daisy_receive[3]
+set_location_assignment PIN_6 -to daisy_receive[2]
+set_location_assignment PIN_7 -to daisy_receive[1]
+set_location_assignment PIN_8 -to daisy_receive[0]
+set_location_assignment PIN_12 -to ether_txd[0]
+set_location_assignment PIN_13 -to ether_txd[1]
+set_location_assignment PIN_14 -to ether_txd[2]
+set_location_assignment PIN_15 -to ether_txd[3]
+set_location_assignment PIN_16 -to ether_tx_en
+set_location_assignment PIN_17 -to switch[5]
+set_location_assignment PIN_19 -to ether_rx_dv
+set_location_assignment PIN_20 -to switch[4]
+set_location_assignment PIN_21 -to ether_rxd[0]
+set_location_assignment PIN_23 -to ether_rxd[1]
+set_location_assignment PIN_28 -to clk0
+set_location_assignment PIN_29 -to ether_rx_clk
+set_location_assignment PIN_39 -to switch[6]
+set_location_assignment PIN_41 -to ether_rxd[2]
+set_location_assignment PIN_42 -to ether_rxd[3]
+set_location_assignment PIN_43 -to scl
+set_location_assignment PIN_44 -to sda
+set_location_assignment PIN_45 -to lvds_receive[6]
+set_location_assignment PIN_46 -to lvds_receive[4]
+set_location_assignment PIN_47 -to lvds_receive[2]
+set_location_assignment PIN_48 -to lvds_receive[0]
+set_location_assignment PIN_49 -to lvds_receive[7]
+set_location_assignment PIN_50 -to lvds_receive[5]
+set_location_assignment PIN_53 -to lvds_receive[3]
+set_location_assignment PIN_54 -to lvds_receive[1]
+set_location_assignment PIN_55 -to lvds_transmit[63]
+set_location_assignment PIN_56 -to lvds_transmit[62]
+set_location_assignment PIN_57 -to lvds_transmit[60]
+set_location_assignment PIN_58 -to lvds_transmit[58]
+set_location_assignment PIN_59 -to lvds_transmit[61]
+set_location_assignment PIN_60 -to lvds_transmit[59]
+set_location_assignment PIN_61 -to lvds_transmit[57]
+set_location_assignment PIN_62 -to lvds_transmit[55]
+set_location_assignment PIN_63 -to lvds_transmit[56]
+set_location_assignment PIN_64 -to lvds_transmit[54]
+set_location_assignment PIN_65 -to lvds_transmit[52]
+set_location_assignment PIN_66 -to lvds_transmit[50]
+set_location_assignment PIN_67 -to lvds_transmit[53]
+set_location_assignment PIN_68 -to lvds_transmit[51]
+set_location_assignment PIN_73 -to lvds_transmit[49]
+set_location_assignment PIN_74 -to lvds_transmit[48]
+set_location_assignment PIN_75 -to lvds_transmit[47]
+set_location_assignment PIN_76 -to lvds_transmit[45]
+set_location_assignment PIN_77 -to lvds_transmit[43]
+set_location_assignment PIN_78 -to lvds_transmit[41]
+set_location_assignment PIN_79 -to lvds_transmit[46]
+set_location_assignment PIN_82 -to lvds_transmit[44]
+set_location_assignment PIN_83 -to lvds_transmit[42]
+set_location_assignment PIN_84 -to lvds_transmit[40]
+set_location_assignment PIN_85 -to lvds_transmit[39]
+set_location_assignment PIN_86 -to lvds_transmit[37]
+set_location_assignment PIN_87 -to lvds_transmit[38]
+set_location_assignment PIN_88 -to lvds_transmit[36]
+set_location_assignment PIN_93 -to lvds_transmit[34]
+set_location_assignment PIN_94 -to lvds_transmit[32]
+set_location_assignment PIN_95 -to lvds_transmit[35]
+set_location_assignment PIN_98 -to lvds_transmit[33]
+set_location_assignment PIN_99 -to lvds_transmit[31]
+set_location_assignment PIN_100 -to lvds_transmit[30]
+set_location_assignment PIN_101 -to lvds_transmit[28]
+set_location_assignment PIN_104 -to lvds_transmit[26]
+set_location_assignment PIN_105 -to lvds_transmit[29]
+set_location_assignment PIN_106 -to lvds_transmit[27]
+set_location_assignment PIN_107 -to lvds_transmit[25]
+set_location_assignment PIN_108 -to lvds_transmit[23]
+set_location_assignment PIN_113 -to lvds_transmit[24]
+set_location_assignment PIN_114 -to lvds_transmit[22]
+set_location_assignment PIN_115 -to lvds_transmit[20]
+set_location_assignment PIN_116 -to lvds_transmit[18]
+set_location_assignment PIN_117 -to lvds_transmit[21]
+set_location_assignment PIN_118 -to lvds_transmit[19]
+set_location_assignment PIN_119 -to lvds_transmit[17]
+set_location_assignment PIN_120 -to lvds_transmit[16]
+set_location_assignment PIN_121 -to lvds_transmit[15]
+set_location_assignment PIN_122 -to lvds_transmit[13]
+set_location_assignment PIN_123 -to lvds_transmit[11]
+set_location_assignment PIN_124 -to lvds_transmit[9]
+set_location_assignment PIN_125 -to lvds_transmit[14]
+set_location_assignment PIN_126 -to lvds_transmit[12]
+set_location_assignment PIN_127 -to lvds_transmit[10]
+set_location_assignment PIN_128 -to lvds_transmit[8]
+set_location_assignment PIN_131 -to lvds_transmit[7]
+set_location_assignment PIN_132 -to lvds_transmit[5]
+set_location_assignment PIN_133 -to lvds_transmit[3]
+set_location_assignment PIN_134 -to lvds_transmit[1]
+set_location_assignment PIN_135 -to lvds_transmit[6]
+set_location_assignment PIN_136 -to lvds_transmit[4]
+set_location_assignment PIN_137 -to lvds_transmit[2]
+set_location_assignment PIN_138 -to lvds_transmit[0]
+set_location_assignment PIN_139 -to switch[0]
+set_location_assignment PIN_140 -to switch[1]
+set_location_assignment PIN_143 -to switch[7]
+set_location_assignment PIN_152 -to ether_tx_clk
+set_location_assignment PIN_153 -to clk2
+set_location_assignment PIN_158 -to sram_data[35]
+set_location_assignment PIN_159 -to sram_data[34]
+set_location_assignment PIN_160 -to sram_data[33]
+set_location_assignment PIN_161 -to sram_data[32]
+set_location_assignment PIN_162 -to sram_data[31]
+set_location_assignment PIN_163 -to sram_data[30]
+set_location_assignment PIN_164 -to sram_data[29]
+set_location_assignment PIN_165 -to sram_data[28]
+set_location_assignment PIN_166 -to sram_data[27]
+set_location_assignment PIN_167 -to sram_data[18]
+set_location_assignment PIN_168 -to sram_data[19]
+set_location_assignment PIN_169 -to sram_data[20]
+set_location_assignment PIN_170 -to sram_data[21]
+set_location_assignment PIN_173 -to sram_data[22]
+set_location_assignment PIN_174 -to sram_data[23]
+set_location_assignment PIN_175 -to sram_data[24]
+set_location_assignment PIN_176 -to sram_data[25]
+set_location_assignment PIN_177 -to sram_data[26]
+set_location_assignment PIN_178 -to sram_addr[9]
+set_location_assignment PIN_179 -to sram_addr[8]
+set_location_assignment PIN_180 -to sram_nCE1
+set_location_assignment PIN_181 -to sram_clk
+set_location_assignment PIN_182 -to sram_nGW
+set_location_assignment PIN_183 -to sram_nOE
+set_location_assignment PIN_186 -to sram_addr[7]
+set_location_assignment PIN_187 -to sram_addr[6]
+set_location_assignment PIN_188 -to sram_data[17]
+set_location_assignment PIN_193 -to sram_data[16]
+set_location_assignment PIN_194 -to sram_data[15]
+set_location_assignment PIN_195 -to sram_data[14]
+set_location_assignment PIN_196 -to sram_data[13]
+set_location_assignment PIN_197 -to sram_data[12]
+set_location_assignment PIN_200 -to sram_data[11]
+set_location_assignment PIN_201 -to sram_data[10]
+set_location_assignment PIN_202 -to sram_data[9]
+set_location_assignment PIN_203 -to sram_data[0]
+set_location_assignment PIN_206 -to sram_data[1]
+set_location_assignment PIN_207 -to sram_data[2]
+set_location_assignment PIN_208 -to sram_data[3]
+set_location_assignment PIN_213 -to sram_data[4]
+set_location_assignment PIN_214 -to sram_data[5]
+set_location_assignment PIN_215 -to sram_data[6]
+set_location_assignment PIN_216 -to sram_data[7]
+set_location_assignment PIN_217 -to sram_data[8]
+set_location_assignment PIN_218 -to sram_addr[10]
+set_location_assignment PIN_219 -to sram_addr[11]
+set_location_assignment PIN_222 -to sram_addr[12]
+set_location_assignment PIN_223 -to sram_addr[13]
+set_location_assignment PIN_224 -to sram_addr[14]
+set_location_assignment PIN_225 -to sram_addr[15]
+set_location_assignment PIN_226 -to sram_addr[16]
+set_location_assignment PIN_227 -to sram_addr[17]
+set_location_assignment PIN_228 -to sram_addr[18]
+set_location_assignment PIN_233 -to sram_addr[19]
+set_location_assignment PIN_234 -to sram_addr[20]
+set_location_assignment PIN_235 -to sram_addr[0]
+set_location_assignment PIN_236 -to sram_addr[1]
+set_location_assignment PIN_237 -to sram_addr[2]
+set_location_assignment PIN_238 -to sram_addr[3]
+set_location_assignment PIN_239 -to sram_addr[4]
+set_location_assignment PIN_240 -to sram_addr[5]
+set_location_assignment PIN_184 -to switch[2]
+set_location_assignment PIN_185 -to switch[3]
+set_location_assignment PIN_11 -to ether_mdc
+set_location_assignment PIN_18 -to ether_mdio
+set_location_assignment PIN_156 -to fo_in
+set_location_assignment PIN_141 -to fo_out
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_global_assignment -name SAVE_DISK_SPACE OFF
+set_global_assignment -name DEVICE_FILTER_PACKAGE PQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 240
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 6
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name REMOVE_REDUNDANT_LOGIC_CELLS ON
+set_global_assignment -name REMOVE_DUPLICATE_REGISTERS ON
+set_global_assignment -name CYCLONE_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name REMOVE_DUPLICATE_LOGIC ON
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_WYSIWYG_REMAP ON
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_GATE_RETIME OFF
+set_global_assignment -name TOP_LEVEL_ENTITY sequencer_top
+set_global_assignment -name AUTO_ENABLE_SMART_COMPILE on
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP1C12Q240C6
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
+set_global_assignment -name OPTIMIZE_TIMING "NORMAL COMPILATION"
+set_global_assignment -name OPTIMIZE_IOC_REGISTER_PLACEMENT_FOR_TIMING ON
+set_global_assignment -name AUTO_PACKED_REGISTERS_CYCLONE OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_COMBO_LOGIC OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_DUPLICATION OFF
+set_global_assignment -name PHYSICAL_SYNTHESIS_REGISTER_RETIMING OFF
+set_global_assignment -name FITTER_EFFORT "AUTO FIT"
+set_global_assignment -name PHYSICAL_SYNTHESIS_EFFORT EXTRA
+set_instance_assignment -name IO_STANDARD LVCMOS -to daisy_transmit[3]
+set_instance_assignment -name IO_STANDARD LVCMOS -to daisy_transmit[2]
+set_instance_assignment -name IO_STANDARD LVCMOS -to daisy_transmit[1]
+set_instance_assignment -name IO_STANDARD LVCMOS -to daisy_transmit[0]
+set_instance_assignment -name IO_STANDARD LVCMOS -to daisy_receive[0]
+set_instance_assignment -name IO_STANDARD LVCMOS -to daisy_receive[1]
+set_instance_assignment -name IO_STANDARD LVCMOS -to daisy_receive[2]
+set_instance_assignment -name IO_STANDARD LVCMOS -to daisy_receive[3]
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_txd[0]
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_txd[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_txd[2]
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_txd[3]
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_tx_en
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_rx_dv
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_rxd[0]
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_rxd[1]
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_rxd[2]
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_rxd[3]
+set_instance_assignment -name IO_STANDARD LVCMOS -to clk0
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_rx_clk
+set_instance_assignment -name IO_STANDARD LVTTL -to scl
+set_instance_assignment -name IO_STANDARD LVTTL -to sda
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_receive[6]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_receive[4]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_receive[2]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_receive[0]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_receive[7]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_receive[5]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_receive[3]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_receive[1]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[0]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[1]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[2]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[3]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[4]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[5]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[6]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[7]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[8]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[9]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[10]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[11]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[12]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[13]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[14]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[15]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[16]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[17]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[18]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[19]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[20]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[21]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[22]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[23]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[24]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[25]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[26]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[27]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[28]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[29]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[30]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[31]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[32]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[33]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[34]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[35]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[36]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[37]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[38]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[39]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[40]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[41]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[42]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[43]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[44]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[45]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[46]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[47]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[48]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[49]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[50]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[51]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[52]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[53]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[54]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[55]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[56]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[57]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[58]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[59]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[60]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[61]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[62]
+set_instance_assignment -name IO_STANDARD LVCMOS -to lvds_transmit[63]
+set_instance_assignment -name IO_STANDARD LVCMOS -to switch[0]
+set_instance_assignment -name IO_STANDARD LVCMOS -to switch[1]
+set_instance_assignment -name IO_STANDARD LVCMOS -to switch[2]
+set_instance_assignment -name IO_STANDARD LVCMOS -to switch[3]
+set_instance_assignment -name IO_STANDARD LVCMOS -to switch[4]
+set_instance_assignment -name IO_STANDARD LVCMOS -to switch[5]
+set_instance_assignment -name IO_STANDARD LVCMOS -to switch[6]
+set_instance_assignment -name IO_STANDARD LVCMOS -to switch[7]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[1]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[2]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[3]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[4]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[5]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[6]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[7]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[8]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[9]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[10]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[11]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[12]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[13]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[14]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[15]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[16]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[17]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[18]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[19]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[20]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[21]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[22]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[23]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[24]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[25]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[26]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[27]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[28]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[29]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[30]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[31]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[32]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[33]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[34]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[35]
+set_instance_assignment -name IO_STANDARD LVTTL -to sram_data[36]
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_tx_clk
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_mdc
+set_instance_assignment -name IO_STANDARD LVTTL -to ether_mdio
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_instance_assignment -name IO_STANDARD LVCMOS -to clk2
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[9]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[8]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_nCE1
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_clk
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_nGW
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_nOE
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[7]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[6]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_data[0]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[10]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[11]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[12]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[13]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[14]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[15]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[16]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[17]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[18]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[19]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[20]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[0]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[1]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[2]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[3]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[4]
+set_instance_assignment -name IO_STANDARD LVCMOS -to sram_addr[5]
+
+# Simulator Assignments
+# =====================
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name ADD_DEFAULT_PINS_TO_SIMULATION_OUTPUT_WAVEFORMS OFF
+set_global_assignment -name CHECK_OUTPUTS OFF
+set_global_assignment -name GLITCH_INTERVAL "1 ns"
+set_global_assignment -name VECTOR_INPUT_SOURCE sequencer_top.vwf
+
+# SignalTap II Assignments
+# ========================
+set_global_assignment -name ENABLE_SIGNALTAP off
+set_global_assignment -name USE_SIGNALTAP_FILE sequencer_top_pcp1.stp
+
+# LogicLock Region Assignments
+# ============================
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_ASSIGNMENT OFF
+set_global_assignment -name LL_IMPORT_FILE "C:/ppham/research/sequencer/vhdl/network/network_controller.qsf"
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_FILE "c:/ppham/sf/sequencer/vhdl/atom_netlists/sequencer_top.vqm"
+
+# ----------------------------
+# start CLOCK("network clock")
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name DUTY_CYCLE 50 -section_id "network clock"
+	set_global_assignment -name FMAX_REQUIREMENT "100.0 MHz" -section_id "network clock"
+
+# end CLOCK("network clock")
+# --------------------------
+
+# ------------------------
+# start CLOCK(clk0_buffer)
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name DUTY_CYCLE 50 -section_id clk0_buffer
+	set_global_assignment -name INVERT_BASE_CLOCK OFF -section_id clk0_buffer
+	set_global_assignment -name MULTIPLY_BASE_CLOCK_PERIOD_BY 1 -section_id clk0_buffer
+	set_global_assignment -name DIVIDE_BASE_CLOCK_PERIOD_BY 1 -section_id clk0_buffer
+	set_global_assignment -name BASED_ON_CLOCK_SETTINGS clocks -section_id clk0_buffer
+
+# end CLOCK(clk0_buffer)
+# ----------------------
+
+# -------------------------
+# start CLOCK(clk2_divider)
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name DUTY_CYCLE 50 -section_id clk2_divider
+	set_global_assignment -name INVERT_BASE_CLOCK OFF -section_id clk2_divider
+	set_global_assignment -name MULTIPLY_BASE_CLOCK_PERIOD_BY 2 -section_id clk2_divider
+	set_global_assignment -name DIVIDE_BASE_CLOCK_PERIOD_BY 1 -section_id clk2_divider
+	set_global_assignment -name BASED_ON_CLOCK_SETTINGS "network clock" -section_id clk2_divider
+
+# end CLOCK(clk2_divider)
+# -----------------------
+
+# -------------------
+# start CLOCK(clocks)
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name DUTY_CYCLE 50 -section_id clocks
+	set_global_assignment -name FMAX_REQUIREMENT "125.0 MHz" -section_id clocks
+
+# end CLOCK(clocks)
+# -----------------
+
+# ---------------------
+# start CLOCK(ethernet)
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name DUTY_CYCLE 50 -section_id ethernet
+	set_global_assignment -name FMAX_REQUIREMENT "25.0 MHz" -section_id ethernet
+
+# end CLOCK(ethernet)
+# -------------------
+
+# -----------------
+# start CLOCK(sram)
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name DUTY_CYCLE 50 -section_id sram
+	set_global_assignment -name INVERT_BASE_CLOCK OFF -section_id sram
+	set_global_assignment -name MULTIPLY_BASE_CLOCK_PERIOD_BY 1 -section_id sram
+	set_global_assignment -name DIVIDE_BASE_CLOCK_PERIOD_BY 1 -section_id sram
+	set_global_assignment -name BASED_ON_CLOCK_SETTINGS clocks -section_id sram
+	set_global_assignment -name OFFSET_FROM_BASE_CLOCK "7.0 ns" -section_id sram
+
+# end CLOCK(sram)
+# ---------------
+
+# ---------------------------
+# start TIMEGROUP(sram_group)
+
+	# Timing Group Assignments
+	# ========================
+	set_global_assignment -name TIMEGROUP_MEMBER sram_addr -section_id sram_group
+	set_global_assignment -name TIMEGROUP_MEMBER sram_data -section_id sram_group
+	set_global_assignment -name TIMEGROUP_MEMBER sram_nCE1 -section_id sram_group
+	set_global_assignment -name TIMEGROUP_MEMBER sram_nGW -section_id sram_group
+	set_global_assignment -name TIMEGROUP_MEMBER sram_nOE -section_id sram_group
+
+# end TIMEGROUP(sram_group)
+# -------------------------
+
+# ---------------------------
+# start ENTITY(sequencer_top)
+
+	# Timing Assignments
+	# ==================
+	set_instance_assignment -name CLOCK_SETTINGS clocks -to clk0
+	set_instance_assignment -name CLOCK_SETTINGS ethernet -to ether_rx_clk
+	set_instance_assignment -name CLOCK_SETTINGS ethernet -to ether_tx_clk
+	set_instance_assignment -name CLOCK_SETTINGS "network clock" -to clk2
+	set_instance_assignment -name CLOCK_SETTINGS sram -to sram_clk
+	set_instance_assignment -name TH_REQUIREMENT 1ns -from sram_clk -to sram_group
+	set_instance_assignment -name TSU_REQUIREMENT 2ns -from sram_clk -to sram_group
+	set_instance_assignment -name INPUT_MAX_DELAY 4ns -from sram_clk -to sram_data
+	set_instance_assignment -name OUTPUT_MAX_DELAY 2ns -from sram_clk -to sram_group
+	set_instance_assignment -name OUTPUT_MIN_DELAY 1.5ns -from sram_clk -to sram_group
+	set_instance_assignment -name CLOCK_SETTINGS clk2_divider -to "clock_divider:divider|altpll:altpll_component|clk[0]"
+	set_instance_assignment -name CLOCK_SETTINGS clk0_buffer -to "clock_shifter:pcp_clock_buffer|c0"
+
+	# Incremental Compilation Assignments
+	# ===================================
+	set_instance_assignment -name PARTITION_HIERARCHY db/network_controller -to "network_controller:network_top"
+
+# end ENTITY(sequencer_top)
+# -------------------------

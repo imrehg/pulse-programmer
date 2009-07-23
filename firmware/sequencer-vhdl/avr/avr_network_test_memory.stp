@@ -1,0 +1,1999 @@
+<session jtag_chain="ByteBlasterII [LPT1]" jtag_device="" sof_file="">
+  <display_tree gui_logging_enabled="1">
+    <display_branch instance="auto_signaltap_0" signal_set="signal_set: 2005/05/24 13:02:54  #0" trigger="trigger: 2005/05/24 13:02:54  #1"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2004/10/17 01:33:38  #0">
+      <clock name="ether_rx_clk" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="256" trigger_in_enable="yes" trigger_in_node="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[19]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[20]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[21]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[22]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[23]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[24]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[25]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[26]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[27]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[28]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[29]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[30]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[31]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[32]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[33]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[34]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[35]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|select_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|select_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_we_i" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[19]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[20]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[21]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[22]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[23]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[24]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[25]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[26]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[27]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[28]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[29]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[30]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[31]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[32]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[33]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[34]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[35]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|select_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|select_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_we_i" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <bus link="all" name="memory_sizer:sizer8|burst_addr_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|burst_addr_in[18]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[17]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[16]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[15]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[14]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[13]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[12]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[11]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[10]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[9]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[8]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[7]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[6]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[5]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[4]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[3]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[2]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[1]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|burst_addr_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|burst_addr_out[15]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[14]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[13]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[12]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[11]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[10]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[9]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[8]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[7]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[6]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[5]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[4]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[3]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[2]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[1]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|burst_in"/>
+          <bus link="all" name="memory_sizer:sizer8|burst_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|burst_offset[2]"/>
+            <net name="memory_sizer:sizer8|burst_offset[1]"/>
+            <net name="memory_sizer:sizer8|burst_offset[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|burst_offset_out" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|burst_offset_out[1]"/>
+            <net name="memory_sizer:sizer8|burst_offset_out[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|burst_out"/>
+          <bus link="all" name="memory_sizer:sizer8|latched_addr" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|latched_addr[15]"/>
+            <net name="memory_sizer:sizer8|latched_addr[14]"/>
+            <net name="memory_sizer:sizer8|latched_addr[13]"/>
+            <net name="memory_sizer:sizer8|latched_addr[12]"/>
+            <net name="memory_sizer:sizer8|latched_addr[11]"/>
+            <net name="memory_sizer:sizer8|latched_addr[10]"/>
+            <net name="memory_sizer:sizer8|latched_addr[9]"/>
+            <net name="memory_sizer:sizer8|latched_addr[8]"/>
+            <net name="memory_sizer:sizer8|latched_addr[7]"/>
+            <net name="memory_sizer:sizer8|latched_addr[6]"/>
+            <net name="memory_sizer:sizer8|latched_addr[5]"/>
+            <net name="memory_sizer:sizer8|latched_addr[4]"/>
+            <net name="memory_sizer:sizer8|latched_addr[3]"/>
+            <net name="memory_sizer:sizer8|latched_addr[2]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|phy_start_addr" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|phy_start_addr[18]"/>
+            <net name="memory_sizer:sizer8|phy_start_addr[17]"/>
+            <net name="memory_sizer:sizer8|phy_start_addr[16]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|read_data" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|read_data[35]"/>
+            <net name="memory_sizer:sizer8|read_data[34]"/>
+            <net name="memory_sizer:sizer8|read_data[33]"/>
+            <net name="memory_sizer:sizer8|read_data[32]"/>
+            <net name="memory_sizer:sizer8|read_data[31]"/>
+            <net name="memory_sizer:sizer8|read_data[30]"/>
+            <net name="memory_sizer:sizer8|read_data[29]"/>
+            <net name="memory_sizer:sizer8|read_data[28]"/>
+            <net name="memory_sizer:sizer8|read_data[27]"/>
+            <net name="memory_sizer:sizer8|read_data[26]"/>
+            <net name="memory_sizer:sizer8|read_data[25]"/>
+            <net name="memory_sizer:sizer8|read_data[24]"/>
+            <net name="memory_sizer:sizer8|read_data[23]"/>
+            <net name="memory_sizer:sizer8|read_data[22]"/>
+            <net name="memory_sizer:sizer8|read_data[21]"/>
+            <net name="memory_sizer:sizer8|read_data[20]"/>
+            <net name="memory_sizer:sizer8|read_data[19]"/>
+            <net name="memory_sizer:sizer8|read_data[18]"/>
+            <net name="memory_sizer:sizer8|read_data[17]"/>
+            <net name="memory_sizer:sizer8|read_data[16]"/>
+            <net name="memory_sizer:sizer8|read_data[15]"/>
+            <net name="memory_sizer:sizer8|read_data[14]"/>
+            <net name="memory_sizer:sizer8|read_data[13]"/>
+            <net name="memory_sizer:sizer8|read_data[12]"/>
+            <net name="memory_sizer:sizer8|read_data[11]"/>
+            <net name="memory_sizer:sizer8|read_data[10]"/>
+            <net name="memory_sizer:sizer8|read_data[9]"/>
+            <net name="memory_sizer:sizer8|read_data[8]"/>
+            <net name="memory_sizer:sizer8|read_data[7]"/>
+            <net name="memory_sizer:sizer8|read_data[6]"/>
+            <net name="memory_sizer:sizer8|read_data[5]"/>
+            <net name="memory_sizer:sizer8|read_data[4]"/>
+            <net name="memory_sizer:sizer8|read_data[3]"/>
+            <net name="memory_sizer:sizer8|read_data[2]"/>
+            <net name="memory_sizer:sizer8|read_data[1]"/>
+            <net name="memory_sizer:sizer8|read_data[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|select_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|select_offset[1]"/>
+            <net name="memory_sizer:sizer8|select_offset[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_ack_i"/>
+          <bus link="all" name="memory_sizer:sizer8|wbm_adr_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_adr_o[18]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[17]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[16]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[15]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[14]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[13]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[12]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[11]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[10]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[9]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[8]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[7]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[6]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[5]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[4]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[3]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[2]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[1]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_cyc_o"/>
+          <bus link="all" name="memory_sizer:sizer8|wbm_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_dat_i[35]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[34]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[33]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[32]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[31]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[30]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[29]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[28]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[27]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[26]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[25]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[24]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[23]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[22]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[21]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[20]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[19]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[18]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[17]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[16]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[15]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[14]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[13]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[12]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[11]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[10]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[9]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[8]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[7]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[6]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[5]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[4]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[3]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[2]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[1]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|wbm_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_dat_o[35]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[34]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[33]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[32]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[31]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[30]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[29]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[28]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[27]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[26]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[25]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[24]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[23]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[22]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[21]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[20]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[19]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[18]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[17]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[16]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[15]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[14]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[13]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[12]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[11]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[10]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[9]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[8]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[7]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[6]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[5]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[4]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[3]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[2]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[1]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_stb_o"/>
+          <net name="memory_sizer:sizer8|wbm_we_o"/>
+          <net name="memory_sizer:sizer8|wbs_ack_o"/>
+          <bus link="all" name="memory_sizer:sizer8|wbs_adr_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_adr_i[15]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[14]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[13]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[12]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[11]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[10]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[9]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[8]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[7]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[6]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[5]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[4]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[3]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[2]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[1]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbs_cyc_i"/>
+          <bus link="all" name="memory_sizer:sizer8|wbs_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_dat_i[7]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[6]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[5]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[4]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[3]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[2]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[1]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|wbs_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_dat_o[7]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[6]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[5]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[4]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[3]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[2]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[1]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbs_stb_i"/>
+          <net name="memory_sizer:sizer8|wbs_we_i"/>
+        </setup_view>
+        <data_view>
+          <bus link="all" name="memory_sizer:sizer8|burst_addr_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|burst_addr_in[18]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[17]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[16]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[15]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[14]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[13]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[12]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[11]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[10]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[9]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[8]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[7]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[6]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[5]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[4]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[3]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[2]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[1]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|burst_addr_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|burst_addr_out[15]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[14]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[13]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[12]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[11]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[10]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[9]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[8]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[7]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[6]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[5]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[4]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[3]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[2]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[1]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|burst_in"/>
+          <bus link="all" name="memory_sizer:sizer8|burst_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|burst_offset[2]"/>
+            <net name="memory_sizer:sizer8|burst_offset[1]"/>
+            <net name="memory_sizer:sizer8|burst_offset[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|burst_offset_out" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|burst_offset_out[1]"/>
+            <net name="memory_sizer:sizer8|burst_offset_out[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|burst_out"/>
+          <bus link="all" name="memory_sizer:sizer8|latched_addr" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|latched_addr[15]"/>
+            <net name="memory_sizer:sizer8|latched_addr[14]"/>
+            <net name="memory_sizer:sizer8|latched_addr[13]"/>
+            <net name="memory_sizer:sizer8|latched_addr[12]"/>
+            <net name="memory_sizer:sizer8|latched_addr[11]"/>
+            <net name="memory_sizer:sizer8|latched_addr[10]"/>
+            <net name="memory_sizer:sizer8|latched_addr[9]"/>
+            <net name="memory_sizer:sizer8|latched_addr[8]"/>
+            <net name="memory_sizer:sizer8|latched_addr[7]"/>
+            <net name="memory_sizer:sizer8|latched_addr[6]"/>
+            <net name="memory_sizer:sizer8|latched_addr[5]"/>
+            <net name="memory_sizer:sizer8|latched_addr[4]"/>
+            <net name="memory_sizer:sizer8|latched_addr[3]"/>
+            <net name="memory_sizer:sizer8|latched_addr[2]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|phy_start_addr" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|phy_start_addr[18]"/>
+            <net name="memory_sizer:sizer8|phy_start_addr[17]"/>
+            <net name="memory_sizer:sizer8|phy_start_addr[16]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|read_data" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|read_data[35]"/>
+            <net name="memory_sizer:sizer8|read_data[34]"/>
+            <net name="memory_sizer:sizer8|read_data[33]"/>
+            <net name="memory_sizer:sizer8|read_data[32]"/>
+            <net name="memory_sizer:sizer8|read_data[31]"/>
+            <net name="memory_sizer:sizer8|read_data[30]"/>
+            <net name="memory_sizer:sizer8|read_data[29]"/>
+            <net name="memory_sizer:sizer8|read_data[28]"/>
+            <net name="memory_sizer:sizer8|read_data[27]"/>
+            <net name="memory_sizer:sizer8|read_data[26]"/>
+            <net name="memory_sizer:sizer8|read_data[25]"/>
+            <net name="memory_sizer:sizer8|read_data[24]"/>
+            <net name="memory_sizer:sizer8|read_data[23]"/>
+            <net name="memory_sizer:sizer8|read_data[22]"/>
+            <net name="memory_sizer:sizer8|read_data[21]"/>
+            <net name="memory_sizer:sizer8|read_data[20]"/>
+            <net name="memory_sizer:sizer8|read_data[19]"/>
+            <net name="memory_sizer:sizer8|read_data[18]"/>
+            <net name="memory_sizer:sizer8|read_data[17]"/>
+            <net name="memory_sizer:sizer8|read_data[16]"/>
+            <net name="memory_sizer:sizer8|read_data[15]"/>
+            <net name="memory_sizer:sizer8|read_data[14]"/>
+            <net name="memory_sizer:sizer8|read_data[13]"/>
+            <net name="memory_sizer:sizer8|read_data[12]"/>
+            <net name="memory_sizer:sizer8|read_data[11]"/>
+            <net name="memory_sizer:sizer8|read_data[10]"/>
+            <net name="memory_sizer:sizer8|read_data[9]"/>
+            <net name="memory_sizer:sizer8|read_data[8]"/>
+            <net name="memory_sizer:sizer8|read_data[7]"/>
+            <net name="memory_sizer:sizer8|read_data[6]"/>
+            <net name="memory_sizer:sizer8|read_data[5]"/>
+            <net name="memory_sizer:sizer8|read_data[4]"/>
+            <net name="memory_sizer:sizer8|read_data[3]"/>
+            <net name="memory_sizer:sizer8|read_data[2]"/>
+            <net name="memory_sizer:sizer8|read_data[1]"/>
+            <net name="memory_sizer:sizer8|read_data[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|select_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|select_offset[1]"/>
+            <net name="memory_sizer:sizer8|select_offset[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_ack_i"/>
+          <bus link="all" name="memory_sizer:sizer8|wbm_adr_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_adr_o[18]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[17]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[16]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[15]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[14]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[13]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[12]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[11]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[10]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[9]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[8]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[7]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[6]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[5]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[4]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[3]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[2]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[1]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_cyc_o"/>
+          <bus link="all" name="memory_sizer:sizer8|wbm_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_dat_i[35]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[34]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[33]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[32]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[31]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[30]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[29]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[28]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[27]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[26]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[25]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[24]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[23]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[22]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[21]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[20]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[19]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[18]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[17]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[16]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[15]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[14]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[13]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[12]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[11]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[10]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[9]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[8]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[7]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[6]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[5]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[4]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[3]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[2]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[1]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|wbm_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_dat_o[35]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[34]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[33]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[32]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[31]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[30]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[29]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[28]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[27]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[26]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[25]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[24]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[23]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[22]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[21]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[20]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[19]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[18]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[17]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[16]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[15]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[14]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[13]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[12]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[11]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[10]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[9]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[8]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[7]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[6]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[5]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[4]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[3]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[2]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[1]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_stb_o"/>
+          <net name="memory_sizer:sizer8|wbm_we_o"/>
+          <net name="memory_sizer:sizer8|wbs_ack_o"/>
+          <bus link="all" name="memory_sizer:sizer8|wbs_adr_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_adr_i[15]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[14]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[13]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[12]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[11]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[10]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[9]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[8]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[7]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[6]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[5]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[4]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[3]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[2]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[1]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbs_cyc_i"/>
+          <bus link="all" name="memory_sizer:sizer8|wbs_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_dat_i[7]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[6]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[5]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[4]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[3]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[2]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[1]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|wbs_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_dat_o[7]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[6]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[5]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[4]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[3]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[2]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[1]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbs_stb_i"/>
+          <net name="memory_sizer:sizer8|wbs_we_i"/>
+        </data_view>
+      </presentation>
+      <trigger CRC="7014DE74" global_temp="1" is_expanded="true" name="trigger: 2004/10/17 01:33:38  #1" position="pre" segment_size="1" trigger_in="rising edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="0"/>
+    </position_info>
+    <signal_set name="signal_set: 2005/05/24 13:02:54  #0">
+      <clock name="ether_rx_clk" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="256" trigger_in_enable="yes" trigger_in_node="ptp_top:ptp|ptp_memory:memory_module|recv_wbs_cyc_i" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[19]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[20]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[21]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[22]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[23]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[24]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[25]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[26]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[27]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[28]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[29]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[30]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[31]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[32]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[33]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[34]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[35]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|select_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|select_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_we_i" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_addr_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|latched_addr[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|phy_start_addr[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[19]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[20]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[21]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[22]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[23]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[24]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[25]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[26]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[27]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[28]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[29]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[30]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[31]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[32]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[33]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[34]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[35]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|select_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|select_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_adr_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbs_we_i" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <bus link="all" name="memory_sizer:sizer8|burst_addr_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|burst_addr_in[18]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[17]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[16]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[15]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[14]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[13]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[12]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[11]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[10]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[9]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[8]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[7]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[6]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[5]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[4]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[3]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[2]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[1]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|burst_addr_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|burst_addr_out[15]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[14]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[13]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[12]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[11]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[10]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[9]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[8]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[7]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[6]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[5]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[4]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[3]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[2]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[1]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|burst_in"/>
+          <bus link="all" name="memory_sizer:sizer8|burst_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|burst_offset[2]"/>
+            <net name="memory_sizer:sizer8|burst_offset[1]"/>
+            <net name="memory_sizer:sizer8|burst_offset[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|burst_offset_out" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|burst_offset_out[1]"/>
+            <net name="memory_sizer:sizer8|burst_offset_out[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|burst_out"/>
+          <bus link="all" name="memory_sizer:sizer8|latched_addr" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|latched_addr[15]"/>
+            <net name="memory_sizer:sizer8|latched_addr[14]"/>
+            <net name="memory_sizer:sizer8|latched_addr[13]"/>
+            <net name="memory_sizer:sizer8|latched_addr[12]"/>
+            <net name="memory_sizer:sizer8|latched_addr[11]"/>
+            <net name="memory_sizer:sizer8|latched_addr[10]"/>
+            <net name="memory_sizer:sizer8|latched_addr[9]"/>
+            <net name="memory_sizer:sizer8|latched_addr[8]"/>
+            <net name="memory_sizer:sizer8|latched_addr[7]"/>
+            <net name="memory_sizer:sizer8|latched_addr[6]"/>
+            <net name="memory_sizer:sizer8|latched_addr[5]"/>
+            <net name="memory_sizer:sizer8|latched_addr[4]"/>
+            <net name="memory_sizer:sizer8|latched_addr[3]"/>
+            <net name="memory_sizer:sizer8|latched_addr[2]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|phy_start_addr" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|phy_start_addr[18]"/>
+            <net name="memory_sizer:sizer8|phy_start_addr[17]"/>
+            <net name="memory_sizer:sizer8|phy_start_addr[16]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|read_data" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|read_data[35]"/>
+            <net name="memory_sizer:sizer8|read_data[34]"/>
+            <net name="memory_sizer:sizer8|read_data[33]"/>
+            <net name="memory_sizer:sizer8|read_data[32]"/>
+            <net name="memory_sizer:sizer8|read_data[31]"/>
+            <net name="memory_sizer:sizer8|read_data[30]"/>
+            <net name="memory_sizer:sizer8|read_data[29]"/>
+            <net name="memory_sizer:sizer8|read_data[28]"/>
+            <net name="memory_sizer:sizer8|read_data[27]"/>
+            <net name="memory_sizer:sizer8|read_data[26]"/>
+            <net name="memory_sizer:sizer8|read_data[25]"/>
+            <net name="memory_sizer:sizer8|read_data[24]"/>
+            <net name="memory_sizer:sizer8|read_data[23]"/>
+            <net name="memory_sizer:sizer8|read_data[22]"/>
+            <net name="memory_sizer:sizer8|read_data[21]"/>
+            <net name="memory_sizer:sizer8|read_data[20]"/>
+            <net name="memory_sizer:sizer8|read_data[19]"/>
+            <net name="memory_sizer:sizer8|read_data[18]"/>
+            <net name="memory_sizer:sizer8|read_data[17]"/>
+            <net name="memory_sizer:sizer8|read_data[16]"/>
+            <net name="memory_sizer:sizer8|read_data[15]"/>
+            <net name="memory_sizer:sizer8|read_data[14]"/>
+            <net name="memory_sizer:sizer8|read_data[13]"/>
+            <net name="memory_sizer:sizer8|read_data[12]"/>
+            <net name="memory_sizer:sizer8|read_data[11]"/>
+            <net name="memory_sizer:sizer8|read_data[10]"/>
+            <net name="memory_sizer:sizer8|read_data[9]"/>
+            <net name="memory_sizer:sizer8|read_data[8]"/>
+            <net name="memory_sizer:sizer8|read_data[7]"/>
+            <net name="memory_sizer:sizer8|read_data[6]"/>
+            <net name="memory_sizer:sizer8|read_data[5]"/>
+            <net name="memory_sizer:sizer8|read_data[4]"/>
+            <net name="memory_sizer:sizer8|read_data[3]"/>
+            <net name="memory_sizer:sizer8|read_data[2]"/>
+            <net name="memory_sizer:sizer8|read_data[1]"/>
+            <net name="memory_sizer:sizer8|read_data[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|select_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|select_offset[1]"/>
+            <net name="memory_sizer:sizer8|select_offset[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_ack_i"/>
+          <bus link="all" name="memory_sizer:sizer8|wbm_adr_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_adr_o[18]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[17]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[16]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[15]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[14]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[13]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[12]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[11]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[10]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[9]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[8]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[7]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[6]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[5]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[4]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[3]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[2]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[1]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_cyc_o"/>
+          <bus link="all" name="memory_sizer:sizer8|wbm_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_dat_i[35]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[34]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[33]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[32]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[31]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[30]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[29]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[28]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[27]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[26]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[25]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[24]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[23]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[22]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[21]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[20]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[19]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[18]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[17]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[16]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[15]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[14]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[13]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[12]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[11]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[10]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[9]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[8]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[7]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[6]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[5]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[4]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[3]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[2]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[1]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|wbm_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_dat_o[35]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[34]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[33]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[32]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[31]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[30]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[29]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[28]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[27]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[26]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[25]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[24]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[23]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[22]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[21]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[20]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[19]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[18]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[17]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[16]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[15]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[14]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[13]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[12]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[11]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[10]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[9]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[8]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[7]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[6]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[5]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[4]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[3]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[2]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[1]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_stb_o"/>
+          <net name="memory_sizer:sizer8|wbm_we_o"/>
+          <net name="memory_sizer:sizer8|wbs_ack_o"/>
+          <bus link="all" name="memory_sizer:sizer8|wbs_adr_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_adr_i[15]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[14]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[13]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[12]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[11]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[10]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[9]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[8]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[7]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[6]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[5]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[4]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[3]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[2]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[1]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbs_cyc_i"/>
+          <bus link="all" name="memory_sizer:sizer8|wbs_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_dat_i[7]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[6]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[5]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[4]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[3]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[2]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[1]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|wbs_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_dat_o[7]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[6]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[5]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[4]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[3]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[2]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[1]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbs_stb_i"/>
+          <net name="memory_sizer:sizer8|wbs_we_i"/>
+        </setup_view>
+        <data_view>
+          <bus link="all" name="memory_sizer:sizer8|burst_addr_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|burst_addr_in[18]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[17]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[16]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[15]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[14]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[13]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[12]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[11]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[10]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[9]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[8]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[7]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[6]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[5]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[4]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[3]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[2]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[1]"/>
+            <net name="memory_sizer:sizer8|burst_addr_in[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|burst_addr_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|burst_addr_out[15]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[14]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[13]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[12]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[11]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[10]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[9]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[8]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[7]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[6]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[5]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[4]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[3]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[2]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[1]"/>
+            <net name="memory_sizer:sizer8|burst_addr_out[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|burst_in"/>
+          <bus link="all" name="memory_sizer:sizer8|burst_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|burst_offset[2]"/>
+            <net name="memory_sizer:sizer8|burst_offset[1]"/>
+            <net name="memory_sizer:sizer8|burst_offset[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|burst_offset_out" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|burst_offset_out[1]"/>
+            <net name="memory_sizer:sizer8|burst_offset_out[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|burst_out"/>
+          <bus link="all" name="memory_sizer:sizer8|latched_addr" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|latched_addr[15]"/>
+            <net name="memory_sizer:sizer8|latched_addr[14]"/>
+            <net name="memory_sizer:sizer8|latched_addr[13]"/>
+            <net name="memory_sizer:sizer8|latched_addr[12]"/>
+            <net name="memory_sizer:sizer8|latched_addr[11]"/>
+            <net name="memory_sizer:sizer8|latched_addr[10]"/>
+            <net name="memory_sizer:sizer8|latched_addr[9]"/>
+            <net name="memory_sizer:sizer8|latched_addr[8]"/>
+            <net name="memory_sizer:sizer8|latched_addr[7]"/>
+            <net name="memory_sizer:sizer8|latched_addr[6]"/>
+            <net name="memory_sizer:sizer8|latched_addr[5]"/>
+            <net name="memory_sizer:sizer8|latched_addr[4]"/>
+            <net name="memory_sizer:sizer8|latched_addr[3]"/>
+            <net name="memory_sizer:sizer8|latched_addr[2]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|phy_start_addr" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|phy_start_addr[18]"/>
+            <net name="memory_sizer:sizer8|phy_start_addr[17]"/>
+            <net name="memory_sizer:sizer8|phy_start_addr[16]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|read_data" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|read_data[35]"/>
+            <net name="memory_sizer:sizer8|read_data[34]"/>
+            <net name="memory_sizer:sizer8|read_data[33]"/>
+            <net name="memory_sizer:sizer8|read_data[32]"/>
+            <net name="memory_sizer:sizer8|read_data[31]"/>
+            <net name="memory_sizer:sizer8|read_data[30]"/>
+            <net name="memory_sizer:sizer8|read_data[29]"/>
+            <net name="memory_sizer:sizer8|read_data[28]"/>
+            <net name="memory_sizer:sizer8|read_data[27]"/>
+            <net name="memory_sizer:sizer8|read_data[26]"/>
+            <net name="memory_sizer:sizer8|read_data[25]"/>
+            <net name="memory_sizer:sizer8|read_data[24]"/>
+            <net name="memory_sizer:sizer8|read_data[23]"/>
+            <net name="memory_sizer:sizer8|read_data[22]"/>
+            <net name="memory_sizer:sizer8|read_data[21]"/>
+            <net name="memory_sizer:sizer8|read_data[20]"/>
+            <net name="memory_sizer:sizer8|read_data[19]"/>
+            <net name="memory_sizer:sizer8|read_data[18]"/>
+            <net name="memory_sizer:sizer8|read_data[17]"/>
+            <net name="memory_sizer:sizer8|read_data[16]"/>
+            <net name="memory_sizer:sizer8|read_data[15]"/>
+            <net name="memory_sizer:sizer8|read_data[14]"/>
+            <net name="memory_sizer:sizer8|read_data[13]"/>
+            <net name="memory_sizer:sizer8|read_data[12]"/>
+            <net name="memory_sizer:sizer8|read_data[11]"/>
+            <net name="memory_sizer:sizer8|read_data[10]"/>
+            <net name="memory_sizer:sizer8|read_data[9]"/>
+            <net name="memory_sizer:sizer8|read_data[8]"/>
+            <net name="memory_sizer:sizer8|read_data[7]"/>
+            <net name="memory_sizer:sizer8|read_data[6]"/>
+            <net name="memory_sizer:sizer8|read_data[5]"/>
+            <net name="memory_sizer:sizer8|read_data[4]"/>
+            <net name="memory_sizer:sizer8|read_data[3]"/>
+            <net name="memory_sizer:sizer8|read_data[2]"/>
+            <net name="memory_sizer:sizer8|read_data[1]"/>
+            <net name="memory_sizer:sizer8|read_data[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|select_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="memory_sizer:sizer8|select_offset[1]"/>
+            <net name="memory_sizer:sizer8|select_offset[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_ack_i"/>
+          <bus link="all" name="memory_sizer:sizer8|wbm_adr_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_adr_o[18]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[17]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[16]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[15]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[14]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[13]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[12]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[11]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[10]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[9]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[8]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[7]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[6]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[5]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[4]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[3]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[2]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[1]"/>
+            <net name="memory_sizer:sizer8|wbm_adr_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_cyc_o"/>
+          <bus link="all" name="memory_sizer:sizer8|wbm_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_dat_i[35]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[34]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[33]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[32]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[31]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[30]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[29]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[28]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[27]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[26]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[25]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[24]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[23]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[22]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[21]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[20]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[19]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[18]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[17]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[16]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[15]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[14]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[13]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[12]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[11]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[10]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[9]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[8]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[7]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[6]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[5]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[4]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[3]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[2]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[1]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|wbm_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbm_dat_o[35]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[34]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[33]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[32]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[31]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[30]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[29]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[28]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[27]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[26]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[25]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[24]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[23]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[22]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[21]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[20]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[19]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[18]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[17]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[16]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[15]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[14]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[13]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[12]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[11]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[10]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[9]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[8]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[7]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[6]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[5]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[4]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[3]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[2]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[1]"/>
+            <net name="memory_sizer:sizer8|wbm_dat_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbm_stb_o"/>
+          <net name="memory_sizer:sizer8|wbm_we_o"/>
+          <net name="memory_sizer:sizer8|wbs_ack_o"/>
+          <bus link="all" name="memory_sizer:sizer8|wbs_adr_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_adr_i[15]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[14]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[13]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[12]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[11]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[10]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[9]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[8]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[7]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[6]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[5]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[4]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[3]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[2]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[1]"/>
+            <net name="memory_sizer:sizer8|wbs_adr_i[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbs_cyc_i"/>
+          <bus link="all" name="memory_sizer:sizer8|wbs_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_dat_i[7]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[6]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[5]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[4]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[3]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[2]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[1]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_i[0]"/>
+          </bus>
+          <bus link="all" name="memory_sizer:sizer8|wbs_dat_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="memory_sizer:sizer8|wbs_dat_o[7]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[6]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[5]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[4]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[3]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[2]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[1]"/>
+            <net name="memory_sizer:sizer8|wbs_dat_o[0]"/>
+          </bus>
+          <net name="memory_sizer:sizer8|wbs_stb_i"/>
+          <net name="memory_sizer:sizer8|wbs_we_i"/>
+        </data_view>
+      </presentation>
+      <trigger name="trigger: 2005/05/24 13:02:54  #1" position="pre" segment_size="1" trigger_in="rising edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+  </instance>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="window position" size="7" value="999,849,374,125,0,50,125"/>
+  </global_info>
+</session>

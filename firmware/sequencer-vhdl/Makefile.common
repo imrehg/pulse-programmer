@@ -1,0 +1,285 @@
+#-*-Makefile-*-
+# Makefile for Quartus II sequencer project
+
+###############################################################################
+# Project Configuration:
+# Specify the name of the design (project) and the list of source files used.
+
+PROJECT = sequencer
+
+clean:
+	rm -rf *.rpt *.chg smart.log *.htm *.eqn *.pin *.sof *.pof *.simgen
+# Emacs backup files
+	rm -rf *~ *.log *.sim.fun *.sim.tan *.qdf sim.cfg cmp_state.ini
+	rm -rf db *.summary *.qpf *.qws *.bsf *.done $(VHDL_FILES)
+
+map: smart.log $(PROJECT).map.rpt
+fit: smart.log $(PROJECT).fit.rpt
+asm: smart.log $(PROJECT).asm.rpt
+tan: smart.log $(PROJECT).tan.rpt
+smart: smart.log
+
+###############################################################################
+# Configurable Targets
+help:
+	@echo
+	@echo "The following targets are available"
+	@echo
+	@echo "  make [help]	prints this message."
+	@echo "  make tests 	runs all tests in local directory."
+	@echo "  make vhdl	regenerates all VHDL files from m4 macros."
+	@echo
+	@echo "The following variable modifiers are available:"
+	@echo
+	@echo "  BUILD =        release"
+	@echo "                   turn on optimizations in compilation."
+	@echo "  USE_PARAMS =   {anything}"
+	@echo "                   include global parameters in params.m4"
+	@echo $(HELP_LOCAL)
+	@echo
+
+tests: $(TEST_FILES)
+
+###############################################################################
+# Executable Configuration
+
+MAP_ARGS = --family=Cyclone		\
+	   --import_settings_files=on	\
+#	   --export_settings_files=on	\
+	   $(SIM_ARG)
+
+## Conditional optimisations for Build release
+ifeq ($(BUILD),release)
+MAP_ARGS +=	--restructure_multiplexers=on	\
+		--enable_register_retiming=on	\
+		--optimize=speed
+
+else
+MAP_ARGS +=	--restructure_multiplexers=off	\
+		--enable_register_retiming=off
+endif
+
+FIT_ARGS =	--part=EP1C12Q240C6		\
+		--one_fit_attempt=off
+#		--incremental_fitting		\
+#		--io_smart_recompile
+
+## Conditional optimisations for Build release
+ifeq ($(BUILD),release)
+FIT_ARGS +=	--effort=auto			\
+		--tdc=on			\
+		--pack_register=on
+else
+FIT_ARGS +=	--effort=fast			\
+		--pack_register=off		\
+		--tdc=off
+endif
+
+ASM_ARGS =
+TAN_ARGS = --speed=6
+SIM_ARGS = --check_outputs=on
+PGM_ARGS = -c ByteBlasterII -m asc
+
+QROOT = /c/altera/quartus50/bin
+MAP = $(QROOT)/quartus_map $(MAP_ARGS)
+FIT = $(QROOT)/quartus_fit $(FIT_ARGS)
+TAN = $(QROOT)/quartus_tan $(TAN_ARGS)
+ASM = $(QROOT)/quartus_asm $(ASM_ARGS)
+SIMFUN = $(QROOT)/quartus_sim --mode=functional $(SIM_ARGS)
+SIMTAN = $(QROOT)/quartus_sim --mode=timing $(SIM_ARGS)
+PGM = $(QROOT)/quartus_pgm $(PGM_ARGS)
+
+##############################################################################
+# m4 Related Configuration
+
+ifdef ($(USE_PARAMS))
+	PARAMS = $(TOP_SRC_DIR)/params.m4
+endif
+
+M4_INCLUDES =                           		\
+        $(TOP_SRC_DIR)/util.m4          		\
+        $(TOP_SRC_DIR)/vhdl.m4          		\
+	$(PARAMS)					\
+	$(TOP_SRC_DIR)/memory.m4			\
+	$(TOP_SRC_DIR)/peripherals.m4			\
+        $(TOP_SRC_DIR)/sequencer.m4			\
+
+# To be used for top-level tests and the uber top-level sequencer_top
+M4_TOP_INCLUDES =					\
+	$(TOP_SRC_DIR)/i2c.m4				\
+	$(TOP_SRC_DIR)/pcp.m4				\
+	$(TOP_SRC_DIR)/ptp.m4				\
+	$(TOP_SRC_DIR)/network.m4			\
+	$(TOP_SRC_DIR)/sram.m4				\
+#	$(TOP_SRC_DIR)/avr.m4				\
+
+M4_COMPONENTS =						\
+	$(M4_COMMON)					\
+	$(M4_NETWORK_COMMON)				\
+
+M4_COMMON =						\
+	$(TOP_SRC_DIR)/dma_controller.m4		\
+	$(TOP_SRC_DIR)/memory_controller.m4		\
+	$(TOP_SRC_DIR)/memory_burst_controller.m4	\
+	$(TOP_SRC_DIR)/memory_dual_controller.m4	\
+	$(TOP_SRC_DIR)/memory_sizer.m4			\
+	$(TOP_SRC_DIR)/wb_intercon.m4			\
+	$(TOP_SRC_DIR)/divider.m4			\
+	$(TOP_SRC_DIR)/clock_divider.m4			\
+	$(TOP_SRC_DIR)/clock_shifter.m4			\
+	$(TOP_SRC_DIR)/async_fifo.m4			\
+
+M4_NETWORK_COMMON =					\
+	$(TOP_SRC_DIR)/network/in_cksum.m4		\
+	$(TOP_SRC_DIR)/network/crc32.m4			\
+	$(TOP_SRC_DIR)/network/ring_buffer.m4		\
+	$(TOP_SRC_DIR)/network/lookup_table.m4		\
+
+
+M4_I2C =						\
+	$(TOP_SRC_DIR)/i2c/i2c_controller.m4		\
+	$(TOP_SRC_DIR)/i2c/i2c_led_controller.m4	\
+
+M4_PTP =						\
+	$(TOP_SRC_DIR)/ptp/ptp_top.m4			\
+	$(TOP_SRC_DIR)/ptp/ptp_router.m4		\
+	$(TOP_SRC_DIR)/ptp/ptp_avr_interface.m4		\
+
+M4_PCP =$(TOP_SRC_DIR)/pcp/pcp1_controller.m4		\
+	$(TOP_SRC_DIR)/pcp/pcplib.m4			\
+
+M4_AVR =						\
+	$(TOP_SRC_DIR)/avr/avr_controller.m4		\
+
+M4_NETWORK =						\
+	$(TOP_SRC_DIR)/network/network_controller.m4	\
+	$(TOP_SRC_DIR)/network/dhcp.m4			\
+
+M4_SRAM =						\
+	$(TOP_SRC_DIR)/sram/sram_controller.m4		\
+
+M4_PERIPHERALS =					\
+	$(TOP_SRC_DIR)/boot_led.m4			\
+	$(TOP_SRC_DIR)/pulse_generator.m4		\
+	$(TOP_SRC_DIR)/clock_divider.m4			\
+	$(TOP_SRC_DIR)/async_read_write.m4		\
+
+TOP_M4 =				\
+	$(M4_PERIPHERALS)		\
+	$(M4_PTP)			\
+	$(M4_PCP)			\
+	$(M4_AVR)			\
+	$(M4_NETWORK)			\
+	$(M4_I2C)			\
+	$(M4_SRAM)			\
+
+TOP_VHDL = $(TOP_M4:.m4=.vhd)
+
+M4_DIVERT = $(TOP_SRC_DIR)/divert.m4
+M4_UNDIVERT = $(TOP_SRC_DIR)/undivert.m4
+
+M4 = m4 $(M4_DEBUG) $(M4_INCLUDES)
+DOS2UNIX = dos2unix
+
+##############################################################################
+# Target implementations
+
+# Target to generate block symbol file
+
+%.bsf: %.vhd
+	rm -f $*.map.simgen
+	$(MAP) --generate_symbol=$< $*
+
+%.sim.fun: %.map.simgen
+	$(SIMFUN) --vector_source=$*.vwf $*
+	echo "blah" > $@
+
+%.sim.tan: %.tan.rpt
+	$(SIMTAN) --vector_source=$*.vwf $*
+
+# Target to generate functional simulation data
+# We don't make it depend on *.qsf b/c *.qsf is always touched during compiles.
+%.map.simgen: %.vhd
+	$(MAP) --generate_functional_sim_netlist $* | tee $*.map.simgen.log
+	echo "blah" > $@
+
+%.vhd: %.m4 $(M4_INCLUDES)
+#	test -e $@ && chmod 644 $@
+	$(M4) $< > $@
+	$(DOS2UNIX) $@
+#	chmod 444 $@
+
+%.map.eqn: %.vhd
+	rm -f $*.map.simgen
+	$(MAP) $* | tee $*.map.log
+
+%.map.rpt: %.vhd
+	$(MAP) $* | tee $*.map.log
+
+%.fit.rpt: %.map.rpt
+	$(FIT) $* -c $* | tee $*.fit.log
+
+%.tan.rpt: %.fit.rpt
+	$(TAN) $* | tee $*.tan.log
+
+%.asm.rpt: %.tan.rpt
+	$(ASM) $* -c $* | tee $*.tan.log
+
+%.pof: %.tan.rpt
+	$(ASM) $* | tee $*.tan.log
+
+%.pgm: %.pof
+	$(PGM) -o "PL;$*.pof"
+
+smart.log: $(ASSIGNMENT_FILES)
+	quartus_sh --determine_smart_action $(PROJECT) > $@
+
+# Secondary phony target without prereqs makes all files intermediate
+.SECONDARY:
+
+boot_led.vhd : $(M4_INCLUDES) boot_led.m4 seqlib.vhd
+
+###############################################################################
+# Top-level peripheral components
+
+# Target to generate all VHDL files from m4 macros
+MAKE_SUBDIR_VHDL = cd $(subdir); make vhdl; cd ..;
+MAKE_SUBDIR_CLEAN = cd $(subdir); make clean; cd ..;
+
+clean-all: clean
+	$(foreach subdir,$(SUBDIRS), $(MAKE_SUBDIR_CLEAN))
+
+vhdl: $(VHDL_FILES)
+	$(foreach subdir,$(SUBDIRS), $(MAKE_SUBDIR_VHDL))
+
+$(TOP_SRC_DIR)/seqlib.vhd:	$(M4_INCLUDES) $(M4_COMPONENTS)	\
+				$(TOP_SRC_DIR)/Makefile.common	\
+				$(TOP_SRC_DIR)/seqlib.m4
+	$(M4) $(M4_DIVERT) $(M4_COMPONENTS) $(M4_UNDIVERT) 	\
+		$(TOP_SRC_DIR)/seqlib.m4 > $@
+	$(DOS2UNIX) $@
+
+wb_intercon.vhd : $(M4_INCLUDES) seqlib.vhd wb_intercon.m4
+	$(M4) $(M4_DIVERT) seqlib.m4 $(M4_UNDIVERT)		\
+		$(TOP_SRC_DIR)/wb_intercon.m4 > $@
+	$(DOS2UNIX) $@
+memory_sizer.vhd      : $(M4_INCLUDES) memory_sizer.m4 seqlib.vhd
+memory_controller.vhd : $(M4_INCLUDES) memory.m4 memory_controller.m4	\
+			seqlib.vhd
+memory_dual_controller.vhd : $(M4_INCLUDES) memory.m4 memory_burst_controller.m4	\
+			seqlib.vhd
+#	$(M4) $(M4_DIVERT) seqlib.m4 $(M4_UNDIVERT)		\
+#		$(TOP_SRC_DIR)/memory_controller.m4 > $@
+#	$(DOS2UNIX) $@
+sram/sram_controller.vhd : $(M4_INCLUDES) sram/sram_controller.m4 seqlib.vhd
+	$(M4) $(M4_DIVERT) seqlib.m4 $(M4_UNDIVERT)	\
+		$(TOP_SRC_DIR)/sram/sram_controller.m4 > $@
+	$(DOS2UNIX) $@
+network/network_controller.vhd : $(M4_INCLUDES) network/network_controller.m4
+network/dhcp.vhd : $(M4_INCLUDES) network/dhcp.m4
+
+###############################################################################
+# Project initialization
+
+$(ASSIGNMENT_FILES):
+	quartus_sh --tcl_eval project_new $(PROJECT) -overwrite

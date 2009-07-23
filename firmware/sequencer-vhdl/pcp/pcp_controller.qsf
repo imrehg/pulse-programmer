@@ -1,0 +1,114 @@
+# Copyright (C) 1991-2004 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		pcp_controller_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "4.1 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:50:02  NOVEMBER 03, 2004"
+set_global_assignment -name LAST_QUARTUS_VERSION 4.2
+set_global_assignment -name VECTOR_WAVEFORM_FILE pcp_controller_reg.vwf
+set_global_assignment -name VHDL_FILE ../seqlib.vhd
+set_global_assignment -name VHDL_FILE ../async_fifo.vhd
+set_global_assignment -name VHDL_FILE ../clock_doubler.vhd
+set_global_assignment -name VHDL_FILE pcplib.vhd
+set_global_assignment -name VHDL_FILE ../memory_dual_controller.vhd
+set_global_assignment -name VHDL_FILE ../timer.vhd
+set_global_assignment -name VHDL_FILE ../subtimer.vhd
+set_global_assignment -name VHDL_FILE ../memory_burst_controller.vhd
+set_global_assignment -name VHDL_FILE ../memory_controller.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE pcp_controller_iset.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE pcp_controller_one.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE pcp_controller_one_train.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE pcp_controller_two.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE pcp_controller_three.vwf
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_global_assignment -name DEVICE_FILTER_PACKAGE ANY
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT ANY
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE ANY
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name CYCLONE_OPTIMIZATION_TECHNIQUE SPEED
+set_global_assignment -name ADV_NETLIST_OPT_SYNTH_GATE_RETIME OFF
+set_global_assignment -name TOP_LEVEL_ENTITY pcp_controller
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP1C12Q240C6
+set_global_assignment -name OPTIMIZE_TIMING NORMAL_COMPILATION
+set_global_assignment -name AUTO_PACKED_REGISTERS_CYCLONE OFF
+set_global_assignment -name FITTER_EFFORT "AUTO FIT"
+
+# Simulator Assignments
+# =====================
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name ADD_DEFAULT_PINS_TO_SIMULATION_OUTPUT_WAVEFORMS OFF
+set_global_assignment -name CHECK_OUTPUTS ON
+set_global_assignment -name VECTOR_INPUT_SOURCE pcp_controller_two.vwf
+
+# LogicLock Region Assignments
+# ============================
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_ASSIGNMENT off
+
+# --------------------------
+# start CLOCK("Write Clock")
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name DUTY_CYCLE 50 -section_id "Write Clock"
+	set_global_assignment -name FMAX_REQUIREMENT "25.0 MHz" -section_id "Write Clock"
+
+# end CLOCK("Write Clock")
+# ------------------------
+
+# -------------------
+# start CLOCK(Clocks)
+
+	# Timing Assignments
+	# ==================
+	set_global_assignment -name DUTY_CYCLE 50 -section_id Clocks
+	set_global_assignment -name FMAX_REQUIREMENT "100.0 MHz" -section_id Clocks
+
+# end CLOCK(Clocks)
+# -----------------
+
+# ----------------------------
+# start ENTITY(pcp_controller)
+
+	# Timing Assignments
+	# ==================
+	set_instance_assignment -name CLOCK_SETTINGS Clocks -to "clock_doubler:read_clockgen|altpll:altpll_component|_clk0"
+	set_instance_assignment -name CLOCK_SETTINGS "Write Clock" -to wb_write_clk_i
+	set_instance_assignment -name CLOCK_SETTINGS Clocks -to wb_clk_i
+
+# end ENTITY(pcp_controller)
+# --------------------------

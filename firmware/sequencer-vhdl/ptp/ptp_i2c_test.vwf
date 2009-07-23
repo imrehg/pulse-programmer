@@ -1,0 +1,5266 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2004 Altera Corporation
+Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+support information,  device programming or simulation file,  and any other
+associated  documentation or information  provided by  Altera  or a partner
+under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+other  use  of such  megafunction  design,  netlist,  support  information,
+device programming or simulation file,  or any other  related documentation
+or information  is prohibited  for  any  other purpose,  including, but not
+limited to  modification,  reverse engineering,  de-compiling, or use  with
+any other  silicon devices,  unless such use is  explicitly  licensed under
+a separate agreement with  Altera  or a megafunction partner.  Title to the
+intellectual property,  including patents,  copyrights,  trademarks,  trade
+secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+support  information,  device programming or simulation file,  or any other
+related documentation or information provided by  Altera  or a megafunction
+partner, remains with Altera, the megafunction partner, or their respective
+licensors. No other licenses, including any licenses needed under any third
+party's intellectual property, are provided herein.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	SIMULATION_TIME = 200000.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("avr_reset")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("clock_scale_quantum")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 6;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("clock_scale_quantum[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "clock_scale_quantum";
+}
+
+SIGNAL("clock_scale_quantum[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "clock_scale_quantum";
+}
+
+SIGNAL("clock_scale_quantum[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "clock_scale_quantum";
+}
+
+SIGNAL("clock_scale_quantum[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "clock_scale_quantum";
+}
+
+SIGNAL("clock_scale_quantum[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "clock_scale_quantum";
+}
+
+SIGNAL("clock_scale_quantum[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "clock_scale_quantum";
+}
+
+SIGNAL("daisy_receive")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("daisy_receive[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "daisy_receive";
+}
+
+SIGNAL("daisy_receive[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "daisy_receive";
+}
+
+SIGNAL("daisy_receive[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "daisy_receive";
+}
+
+SIGNAL("daisy_receive[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "daisy_receive";
+}
+
+SIGNAL("daisy_transmit")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 4;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("daisy_transmit[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "daisy_transmit";
+}
+
+SIGNAL("daisy_transmit[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "daisy_transmit";
+}
+
+SIGNAL("daisy_transmit[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "daisy_transmit";
+}
+
+SIGNAL("daisy_transmit[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "daisy_transmit";
+}
+
+SIGNAL("debug_led_wb_ack")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("debug_led_wb_cyc")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("debug_led_wb_dat")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("debug_led_wb_dat[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "debug_led_wb_dat";
+}
+
+SIGNAL("debug_led_wb_dat[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "debug_led_wb_dat";
+}
+
+SIGNAL("debug_led_wb_dat[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "debug_led_wb_dat";
+}
+
+SIGNAL("debug_led_wb_dat[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "debug_led_wb_dat";
+}
+
+SIGNAL("debug_led_wb_dat[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "debug_led_wb_dat";
+}
+
+SIGNAL("debug_led_wb_dat[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "debug_led_wb_dat";
+}
+
+SIGNAL("debug_led_wb_dat[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "debug_led_wb_dat";
+}
+
+SIGNAL("debug_led_wb_dat[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "debug_led_wb_dat";
+}
+
+SIGNAL("debug_led_wb_stb")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("network_clock")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("network_detected")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("pcp_dma_start_addr")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 16;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pcp_dma_start_addr[15]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[14]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[13]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[12]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[11]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[10]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[9]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_start_addr[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_start_addr";
+}
+
+SIGNAL("pcp_dma_xmit_sram_ack")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 16;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[15]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[14]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[13]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[12]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[11]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[10]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[9]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_length[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_dma_xmit_sram_length";
+}
+
+SIGNAL("pcp_dma_xmit_sram_stb")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pcp_halted")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("pcp_sram_addr_prefix")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 5;
+	LSB_INDEX = 14;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("pcp_sram_addr_prefix[18]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_sram_addr_prefix";
+}
+
+SIGNAL("pcp_sram_addr_prefix[17]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_sram_addr_prefix";
+}
+
+SIGNAL("pcp_sram_addr_prefix[16]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_sram_addr_prefix";
+}
+
+SIGNAL("pcp_sram_addr_prefix[15]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_sram_addr_prefix";
+}
+
+SIGNAL("pcp_sram_addr_prefix[14]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "pcp_sram_addr_prefix";
+}
+
+SIGNAL("ptp_chain_initiator")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_chain_terminator")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_i2c_wb_ack")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_i2c_wb_adr")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 7;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_i2c_wb_adr[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_adr";
+}
+
+SIGNAL("ptp_i2c_wb_adr[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_adr";
+}
+
+SIGNAL("ptp_i2c_wb_adr[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_adr";
+}
+
+SIGNAL("ptp_i2c_wb_adr[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_adr";
+}
+
+SIGNAL("ptp_i2c_wb_adr[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_adr";
+}
+
+SIGNAL("ptp_i2c_wb_adr[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_adr";
+}
+
+SIGNAL("ptp_i2c_wb_adr[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_adr";
+}
+
+SIGNAL("ptp_i2c_wb_cyc")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_i2c_wb_read_data")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_i2c_wb_read_data[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_read_data";
+}
+
+SIGNAL("ptp_i2c_wb_read_data[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_read_data";
+}
+
+SIGNAL("ptp_i2c_wb_read_data[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_read_data";
+}
+
+SIGNAL("ptp_i2c_wb_read_data[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_read_data";
+}
+
+SIGNAL("ptp_i2c_wb_read_data[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_read_data";
+}
+
+SIGNAL("ptp_i2c_wb_read_data[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_read_data";
+}
+
+SIGNAL("ptp_i2c_wb_read_data[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_read_data";
+}
+
+SIGNAL("ptp_i2c_wb_read_data[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_read_data";
+}
+
+SIGNAL("ptp_i2c_wb_stb")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_i2c_wb_we")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_i2c_wb_write_data")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_i2c_wb_write_data[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_write_data";
+}
+
+SIGNAL("ptp_i2c_wb_write_data[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_write_data";
+}
+
+SIGNAL("ptp_i2c_wb_write_data[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_write_data";
+}
+
+SIGNAL("ptp_i2c_wb_write_data[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_write_data";
+}
+
+SIGNAL("ptp_i2c_wb_write_data[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_write_data";
+}
+
+SIGNAL("ptp_i2c_wb_write_data[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_write_data";
+}
+
+SIGNAL("ptp_i2c_wb_write_data[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_write_data";
+}
+
+SIGNAL("ptp_i2c_wb_write_data[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_i2c_wb_write_data";
+}
+
+SIGNAL("ptp_self_id")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_self_id[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_self_id";
+}
+
+SIGNAL("ptp_self_id[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_self_id";
+}
+
+SIGNAL("ptp_self_id[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_self_id";
+}
+
+SIGNAL("ptp_self_id[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_self_id";
+}
+
+SIGNAL("ptp_self_id[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_self_id";
+}
+
+SIGNAL("ptp_self_id[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_self_id";
+}
+
+SIGNAL("ptp_self_id[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_self_id";
+}
+
+SIGNAL("ptp_self_id[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_self_id";
+}
+
+SIGNAL("ptp_triggers")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 9;
+	LSB_INDEX = 0;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_triggers[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ptp_triggers";
+}
+
+SIGNAL("ptp_triggers[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ptp_triggers";
+}
+
+SIGNAL("ptp_triggers[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ptp_triggers";
+}
+
+SIGNAL("ptp_triggers[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ptp_triggers";
+}
+
+SIGNAL("ptp_triggers[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ptp_triggers";
+}
+
+SIGNAL("ptp_triggers[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ptp_triggers";
+}
+
+SIGNAL("ptp_triggers[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ptp_triggers";
+}
+
+SIGNAL("ptp_triggers[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ptp_triggers";
+}
+
+SIGNAL("ptp_triggers[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "ptp_triggers";
+}
+
+SIGNAL("ptp_udp_recv_wb_ack")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_recv_wb_cyc")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_ack")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_cyc")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_dat[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_dat[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_dat[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_dat[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_dat[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_dat[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_dat[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_dat[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_udp_xmit_wb_stb")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("scl")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = BIDIR;
+	PARENT = "";
+}
+
+SIGNAL("sda")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = BIDIR;
+	PARENT = "";
+}
+
+SIGNAL("udp_recv_wb_dat[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("udp_recv_wb_dat[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("udp_recv_wb_dat[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("udp_recv_wb_dat[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("udp_recv_wb_dat[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("udp_recv_wb_dat[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("udp_recv_wb_dat[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("udp_recv_wb_dat[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("udp_recv_wb_stb")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("wb_rst_i")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("sda~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("scl~result")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.done_state")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.extract_address")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.extract_read_length_high_byte")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.extract_read_length_low_byte")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.idle")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.reading_load")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.reading_read")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.reading_write")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.test_write")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.wait_slave_ack")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.writing_read")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.writing_stall")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.writing_write")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = COMBINATORIAL;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top_debug_led")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 8;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ptp_top_debug_led[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_top_debug_led";
+}
+
+SIGNAL("ptp_top_debug_led[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_top_debug_led";
+}
+
+SIGNAL("ptp_top_debug_led[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_top_debug_led";
+}
+
+SIGNAL("ptp_top_debug_led[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_top_debug_led";
+}
+
+SIGNAL("ptp_top_debug_led[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_top_debug_led";
+}
+
+SIGNAL("ptp_top_debug_led[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_top_debug_led";
+}
+
+SIGNAL("ptp_top_debug_led[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_top_debug_led";
+}
+
+SIGNAL("ptp_top_debug_led[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "ptp_top_debug_led";
+}
+
+GROUP("udp_recv_wb_dat")
+{
+	MEMBERS = "udp_recv_wb_dat[0]", "udp_recv_wb_dat[1]", "udp_recv_wb_dat[2]", "udp_recv_wb_dat[3]", "udp_recv_wb_dat[4]", "udp_recv_wb_dat[5]", "udp_recv_wb_dat[6]", "udp_recv_wb_dat[7]";
+}
+
+GROUP("ptp_udp_xmit_wb_dat")
+{
+	MEMBERS = "ptp_udp_xmit_wb_dat[0]", "ptp_udp_xmit_wb_dat[1]", "ptp_udp_xmit_wb_dat[2]", "ptp_udp_xmit_wb_dat[3]", "ptp_udp_xmit_wb_dat[4]", "ptp_udp_xmit_wb_dat[5]", "ptp_udp_xmit_wb_dat[6]", "ptp_udp_xmit_wb_dat[7]";
+}
+
+TRANSITION_LIST("avr_reset")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("clock_scale_quantum[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("clock_scale_quantum[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("clock_scale_quantum[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("clock_scale_quantum[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("clock_scale_quantum[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("clock_scale_quantum[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("daisy_receive[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("daisy_receive[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("daisy_receive[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("daisy_receive[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("daisy_transmit[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("daisy_transmit[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("daisy_transmit[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("daisy_transmit[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_ack")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_cyc")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_dat[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_dat[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_dat[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_dat[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_dat[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_dat[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_dat[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_dat[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("debug_led_wb_stb")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("network_clock")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 20000;
+			LEVEL 0 FOR 5.0;
+			LEVEL 1 FOR 5.0;
+		}
+	}
+}
+
+TRANSITION_LIST("network_detected")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[15]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[14]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[13]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[12]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[11]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[10]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[9]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_start_addr[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_ack")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[15]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[14]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[13]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[12]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[11]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[10]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[9]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_length[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_dma_xmit_sram_stb")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_halted")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_sram_addr_prefix[18]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_sram_addr_prefix[17]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_sram_addr_prefix[16]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_sram_addr_prefix[15]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("pcp_sram_addr_prefix[14]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_chain_initiator")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_chain_terminator")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_ack")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 48175.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 22500.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 51510.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 22490.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 55285.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_adr[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_adr[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 345.0;
+		LEVEL 1 FOR 199655.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_adr[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 345.0;
+		LEVEL 1 FOR 199655.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_adr[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 345.0;
+		LEVEL 1 FOR 199655.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_adr[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 345.0;
+		LEVEL 1 FOR 199655.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_adr[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 345.0;
+		LEVEL 1 FOR 199655.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_adr[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_cyc")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 375.0;
+		LEVEL 1 FOR 70350.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 73990.0;
+		LEVEL 0 FOR 55275.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_read_data[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 122205.0;
+		LEVEL 1 FOR 77795.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_read_data[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144705.0;
+		LEVEL 1 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_read_data[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 122205.0;
+		LEVEL 1 FOR 22500.0;
+		LEVEL 0 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_read_data[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144705.0;
+		LEVEL 1 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_read_data[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144705.0;
+		LEVEL 1 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_read_data[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 122205.0;
+		LEVEL 1 FOR 22500.0;
+		LEVEL 0 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_read_data[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_read_data[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 122205.0;
+		LEVEL 1 FOR 77795.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_stb")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 385.0;
+		LEVEL 1 FOR 47800.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 22490.0;
+		LEVEL 0 FOR 180.0;
+		LEVEL 1 FOR 51340.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 22490.0;
+		LEVEL 0 FOR 55285.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_we")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 375.0;
+		LEVEL 1 FOR 70350.0;
+		LEVEL 0 FOR 129275.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_write_data[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_write_data[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_write_data[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 48205.0;
+		LEVEL 1 FOR 151795.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_write_data[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 385.0;
+		LEVEL 1 FOR 47820.0;
+		LEVEL 0 FOR 151795.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_write_data[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_write_data[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_write_data[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 48205.0;
+		LEVEL 1 FOR 151795.0;
+	}
+}
+
+TRANSITION_LIST("ptp_i2c_wb_write_data[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 385.0;
+		LEVEL 1 FOR 47820.0;
+		LEVEL 0 FOR 151795.0;
+	}
+}
+
+TRANSITION_LIST("ptp_self_id[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_self_id[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_self_id[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_self_id[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_self_id[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_self_id[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_self_id[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_self_id[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_triggers[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_triggers[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_triggers[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_triggers[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_triggers[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_triggers[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_triggers[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_triggers[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_triggers[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_recv_wb_ack")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 35.0;
+		LEVEL 1 FOR 100.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 55.0;
+		LEVEL 0 FOR 199800.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_recv_wb_cyc")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 199800.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_ack")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 145205.0;
+		LEVEL 1 FOR 5530.0;
+		LEVEL 0 FOR 49265.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_cyc")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144785.0;
+		LEVEL 1 FOR 550.0;
+		LEVEL 0 FOR 54665.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_dat[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 145225.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 54695.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_dat[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144775.0;
+		LEVEL 1 FOR 430.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 54695.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_dat[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 145235.0;
+		NODE
+		{
+			REPEAT = 2;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 20.0;
+		}
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 54685.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_dat[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 145265.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 54685.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_dat[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 145235.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 54685.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_dat[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 145295.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 54685.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_dat[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 145315.0;
+		LEVEL 1 FOR 54685.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_dat[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 145305.0;
+		LEVEL 1 FOR 54695.0;
+	}
+}
+
+TRANSITION_LIST("ptp_udp_xmit_wb_stb")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144775.0;
+		LEVEL 1 FOR 550.0;
+		LEVEL 0 FOR 54675.0;
+	}
+}
+
+TRANSITION_LIST("scl")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL H FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("sda")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL H FOR 23545.0;
+		LEVEL 0 FOR 2725.0;
+		LEVEL H FOR 19825.0;
+		LEVEL 0 FOR 2730.0;
+		LEVEL H FOR 19950.0;
+		LEVEL 0 FOR 3345.0;
+		LEVEL H FOR 26020.0;
+		LEVEL 0 FOR 2540.0;
+		LEVEL H FOR 2320.0;
+		LEVEL 0 FOR 2475.0;
+		LEVEL H FOR 2480.0;
+		LEVEL 0 FOR 4955.0;
+		LEVEL H FOR 2480.0;
+		LEVEL 0 FOR 2480.0;
+		LEVEL H FOR 9910.0;
+		LEVEL 0 FOR 2480.0;
+		LEVEL H FOR 4955.0;
+		LEVEL 0 FOR 5205.0;
+		LEVEL H FOR 28355.0;
+		LEVEL 0 FOR 3345.0;
+		LEVEL H FOR 27880.0;
+	}
+}
+
+TRANSITION_LIST("udp_recv_wb_dat[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 70.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199810.0;
+	}
+}
+
+TRANSITION_LIST("udp_recv_wb_dat[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 50.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199800.0;
+	}
+}
+
+TRANSITION_LIST("udp_recv_wb_dat[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 80.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199790.0;
+	}
+}
+
+TRANSITION_LIST("udp_recv_wb_dat[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 110.0;
+		LEVEL 1 FOR 50.0;
+		LEVEL 0 FOR 40.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199790.0;
+	}
+}
+
+TRANSITION_LIST("udp_recv_wb_dat[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199810.0;
+	}
+}
+
+TRANSITION_LIST("udp_recv_wb_dat[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199800.0;
+	}
+}
+
+TRANSITION_LIST("udp_recv_wb_dat[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199790.0;
+	}
+}
+
+TRANSITION_LIST("udp_recv_wb_dat[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 120.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 60.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199790.0;
+	}
+}
+
+TRANSITION_LIST("udp_recv_wb_stb")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 180.0;
+		LEVEL 0 FOR 199800.0;
+	}
+}
+
+TRANSITION_LIST("wb_rst_i")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199990.0;
+	}
+}
+
+TRANSITION_LIST("sda~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5.0;
+		LEVEL H FOR 2070.0;
+		LEVEL 0 FOR 4500.0;
+		LEVEL H FOR 12500.0;
+		LEVEL 0 FOR 7195.0;
+		LEVEL H FOR 305.0;
+		LEVEL 0 FOR 7500.0;
+		LEVEL H FOR 2500.0;
+		LEVEL 0 FOR 7500.0;
+		LEVEL H FOR 2020.0;
+		LEVEL 0 FOR 2730.0;
+		LEVEL H FOR 250.0;
+		LEVEL 0 FOR 5000.0;
+		LEVEL H FOR 2500.0;
+		LEVEL 0 FOR 7500.0;
+		LEVEL H FOR 2500.0;
+		LEVEL 0 FOR 6500.0;
+		LEVEL H FOR 3000.0;
+		LEVEL 0 FOR 4500.0;
+		LEVEL H FOR 12500.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL H FOR 2565.0;
+		LEVEL 0 FOR 2540.0;
+		LEVEL H FOR 2320.0;
+		LEVEL 0 FOR 2475.0;
+		LEVEL H FOR 2480.0;
+		LEVEL 0 FOR 4955.0;
+		LEVEL H FOR 2480.0;
+		LEVEL 0 FOR 2480.0;
+		LEVEL H FOR 2705.0;
+		LEVEL 0 FOR 2500.0;
+		LEVEL H FOR 4705.0;
+		LEVEL 0 FOR 2480.0;
+		LEVEL H FOR 4955.0;
+		LEVEL 0 FOR 5205.0;
+		LEVEL H FOR 2655.0;
+		LEVEL 0 FOR 4000.0;
+		LEVEL H FOR 21700.0;
+		LEVEL 0 FOR 3345.0;
+		LEVEL H FOR 27880.0;
+	}
+}
+
+TRANSITION_LIST("scl~result")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5.0;
+		LEVEL H FOR 3070.0;
+		NODE
+		{
+			REPEAT = 27;
+			LEVEL 0 FOR 1500.0;
+			LEVEL H FOR 1000.0;
+		}
+		LEVEL 0 FOR 1500.0;
+		LEVEL H FOR 5000.0;
+		NODE
+		{
+			REPEAT = 27;
+			LEVEL 0 FOR 1500.0;
+			LEVEL H FOR 1000.0;
+		}
+		LEVEL 0 FOR 1500.0;
+		LEVEL H FOR 53925.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.done_state")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144725.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 55265.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.extract_address")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 335.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199655.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.extract_read_length_high_byte")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 345.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199645.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.extract_read_length_low_byte")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 355.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199635.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.idle")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 335.0;
+		LEVEL 0 FOR 144410.0;
+		LEVEL 1 FOR 55255.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.reading_load")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 70725.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 129265.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.reading_read")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 70875.0;
+		LEVEL 1 FOR 51340.0;
+		LEVEL 0 FOR 10.0;
+		LEVEL 1 FOR 22490.0;
+		LEVEL 0 FOR 55285.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.reading_write")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 70735.0;
+		LEVEL 1 FOR 140.0;
+		LEVEL 0 FOR 51340.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 22490.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 55275.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.test_write")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 365.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 199625.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.wait_slave_ack")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144735.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 55255.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.writing_read")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 375.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 47810.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 22500.0;
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 129275.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.writing_stall")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 48185.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 22500.0;
+		LEVEL 1 FOR 10.0;
+		LEVEL 0 FOR 129295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.writing_write")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 385.0;
+		LEVEL 1 FOR 47800.0;
+		LEVEL 0 FOR 20.0;
+		LEVEL 1 FOR 22490.0;
+		LEVEL 0 FOR 129305.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top_debug_led[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 122205.0;
+		LEVEL 1 FOR 77795.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top_debug_led[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144705.0;
+		LEVEL 1 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top_debug_led[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 122205.0;
+		LEVEL 1 FOR 22500.0;
+		LEVEL 0 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top_debug_led[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144705.0;
+		LEVEL 1 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top_debug_led[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 144705.0;
+		LEVEL 1 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top_debug_led[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 122205.0;
+		LEVEL 1 FOR 22500.0;
+		LEVEL 0 FOR 55295.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top_debug_led[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 200000.0;
+	}
+}
+
+TRANSITION_LIST("ptp_top_debug_led[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 122205.0;
+		LEVEL 1 FOR 77795.0;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "network_clock";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "wb_rst_i";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "avr_reset";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clock_scale_quantum";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+	CHILDREN = 4, 5, 6, 7, 8, 9;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clock_scale_quantum[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clock_scale_quantum[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clock_scale_quantum[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clock_scale_quantum[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clock_scale_quantum[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clock_scale_quantum[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 1;
+	PARENT = 3;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_receive";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 0;
+	CHILDREN = 11, 12, 13, 14;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_receive[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_receive[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_receive[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_receive[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 1;
+	PARENT = 10;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_transmit";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 0;
+	CHILDREN = 16, 17, 18, 19;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_transmit[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 1;
+	PARENT = 15;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_transmit[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 1;
+	PARENT = 15;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_transmit[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 1;
+	PARENT = 15;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "daisy_transmit[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 1;
+	PARENT = 15;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_recv_wb_cyc";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 20;
+	TREE_LEVEL = 0;
+	COMMENT
+	{
+		TIME = 34800;
+		RISE = -54;
+		RUN = 111;
+		TEXT = "I2C write of 2 bytes to slave 3E with 2 byte read";
+		FONT_NAME = "";
+		FONT_SIZE = 0;
+		FONT_STYLE = "";
+		FONT_COLOR = 4294967295;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_stb";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 21;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_dat";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 22;
+	TREE_LEVEL = 0;
+	CHILDREN = 23, 24, 25, 26, 27, 28, 29, 30;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_dat[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_dat[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 24;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_dat[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 25;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_dat[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 26;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_dat[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 27;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_dat[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 28;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_dat[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 29;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "udp_recv_wb_dat[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 30;
+	TREE_LEVEL = 1;
+	PARENT = 22;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_recv_wb_ack";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 31;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "scl";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 32;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sda";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 33;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "sda~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 34;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "scl~result";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 35;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top_debug_led";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 36;
+	TREE_LEVEL = 0;
+	CHILDREN = 37, 38, 39, 40, 41, 42, 43, 44;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top_debug_led[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 37;
+	TREE_LEVEL = 1;
+	PARENT = 36;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top_debug_led[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 38;
+	TREE_LEVEL = 1;
+	PARENT = 36;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top_debug_led[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 39;
+	TREE_LEVEL = 1;
+	PARENT = 36;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top_debug_led[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 40;
+	TREE_LEVEL = 1;
+	PARENT = 36;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top_debug_led[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 41;
+	TREE_LEVEL = 1;
+	PARENT = 36;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top_debug_led[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 42;
+	TREE_LEVEL = 1;
+	PARENT = 36;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top_debug_led[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 43;
+	TREE_LEVEL = 1;
+	PARENT = 36;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top_debug_led[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 44;
+	TREE_LEVEL = 1;
+	PARENT = 36;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.done_state";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 45;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.extract_address";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 46;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.extract_read_length_high_byte";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 47;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.extract_read_length_low_byte";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 48;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.idle";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 49;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.reading_load";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 50;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.reading_read";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 51;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.reading_write";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 52;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.test_write";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 53;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.wait_slave_ack";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 54;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.writing_read";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 55;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.writing_stall";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 56;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_top:ptp|ptp_i2c:\i2c_gen:i2c_module|state.writing_write";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 57;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_ack";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 58;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_cyc";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 59;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_dat";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 60;
+	TREE_LEVEL = 0;
+	CHILDREN = 61, 62, 63, 64, 65, 66, 67, 68;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_dat[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 61;
+	TREE_LEVEL = 1;
+	PARENT = 60;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_dat[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 62;
+	TREE_LEVEL = 1;
+	PARENT = 60;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_dat[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 63;
+	TREE_LEVEL = 1;
+	PARENT = 60;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_dat[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 64;
+	TREE_LEVEL = 1;
+	PARENT = 60;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_dat[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 65;
+	TREE_LEVEL = 1;
+	PARENT = 60;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_dat[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 66;
+	TREE_LEVEL = 1;
+	PARENT = 60;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_dat[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 67;
+	TREE_LEVEL = 1;
+	PARENT = 60;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_dat[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 68;
+	TREE_LEVEL = 1;
+	PARENT = 60;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "debug_led_wb_stb";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 69;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "network_detected";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 70;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 71;
+	TREE_LEVEL = 0;
+	CHILDREN = 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[15]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 72;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[14]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 73;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[13]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 74;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[12]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 75;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[11]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 76;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[10]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 77;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[9]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 78;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[8]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 79;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 80;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 81;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 82;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 83;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 84;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 85;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 86;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_start_addr[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 87;
+	TREE_LEVEL = 1;
+	PARENT = 71;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_ack";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 88;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 89;
+	TREE_LEVEL = 0;
+	CHILDREN = 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 90;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 91;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 92;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 93;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 94;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 95;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 96;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 97;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[8]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 98;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[9]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 99;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[10]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 100;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[11]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 101;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[12]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 102;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[13]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 103;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[14]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 104;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_length[15]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 105;
+	TREE_LEVEL = 1;
+	PARENT = 89;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_dma_xmit_sram_stb";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 106;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_halted";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 107;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_sram_addr_prefix";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 108;
+	TREE_LEVEL = 0;
+	CHILDREN = 109, 110, 111, 112, 113;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_sram_addr_prefix[18]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 109;
+	TREE_LEVEL = 1;
+	PARENT = 108;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_sram_addr_prefix[17]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 110;
+	TREE_LEVEL = 1;
+	PARENT = 108;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_sram_addr_prefix[16]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 111;
+	TREE_LEVEL = 1;
+	PARENT = 108;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_sram_addr_prefix[15]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 112;
+	TREE_LEVEL = 1;
+	PARENT = 108;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "pcp_sram_addr_prefix[14]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 113;
+	TREE_LEVEL = 1;
+	PARENT = 108;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_chain_initiator";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 114;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_chain_terminator";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 115;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_ack";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 116;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_adr";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 117;
+	TREE_LEVEL = 0;
+	CHILDREN = 118, 119, 120, 121, 122, 123, 124;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_adr[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 118;
+	TREE_LEVEL = 1;
+	PARENT = 117;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_adr[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 119;
+	TREE_LEVEL = 1;
+	PARENT = 117;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_adr[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 120;
+	TREE_LEVEL = 1;
+	PARENT = 117;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_adr[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 121;
+	TREE_LEVEL = 1;
+	PARENT = 117;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_adr[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 122;
+	TREE_LEVEL = 1;
+	PARENT = 117;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_adr[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 123;
+	TREE_LEVEL = 1;
+	PARENT = 117;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_adr[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 124;
+	TREE_LEVEL = 1;
+	PARENT = 117;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_cyc";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 125;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_read_data";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 126;
+	TREE_LEVEL = 0;
+	CHILDREN = 127, 128, 129, 130, 131, 132, 133, 134;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_read_data[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 127;
+	TREE_LEVEL = 1;
+	PARENT = 126;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_read_data[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 128;
+	TREE_LEVEL = 1;
+	PARENT = 126;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_read_data[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 129;
+	TREE_LEVEL = 1;
+	PARENT = 126;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_read_data[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 130;
+	TREE_LEVEL = 1;
+	PARENT = 126;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_read_data[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 131;
+	TREE_LEVEL = 1;
+	PARENT = 126;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_read_data[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 132;
+	TREE_LEVEL = 1;
+	PARENT = 126;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_read_data[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 133;
+	TREE_LEVEL = 1;
+	PARENT = 126;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_read_data[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 134;
+	TREE_LEVEL = 1;
+	PARENT = 126;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_stb";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 135;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_we";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 136;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_write_data";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 137;
+	TREE_LEVEL = 0;
+	CHILDREN = 138, 139, 140, 141, 142, 143, 144, 145;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_write_data[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 138;
+	TREE_LEVEL = 1;
+	PARENT = 137;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_write_data[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 139;
+	TREE_LEVEL = 1;
+	PARENT = 137;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_write_data[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 140;
+	TREE_LEVEL = 1;
+	PARENT = 137;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_write_data[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 141;
+	TREE_LEVEL = 1;
+	PARENT = 137;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_write_data[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 142;
+	TREE_LEVEL = 1;
+	PARENT = 137;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_write_data[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 143;
+	TREE_LEVEL = 1;
+	PARENT = 137;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_write_data[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 144;
+	TREE_LEVEL = 1;
+	PARENT = 137;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_i2c_wb_write_data[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 145;
+	TREE_LEVEL = 1;
+	PARENT = 137;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_self_id";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 146;
+	TREE_LEVEL = 0;
+	CHILDREN = 147, 148, 149, 150, 151, 152, 153, 154;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_self_id[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 147;
+	TREE_LEVEL = 1;
+	PARENT = 146;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_self_id[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 148;
+	TREE_LEVEL = 1;
+	PARENT = 146;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_self_id[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 149;
+	TREE_LEVEL = 1;
+	PARENT = 146;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_self_id[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 150;
+	TREE_LEVEL = 1;
+	PARENT = 146;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_self_id[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 151;
+	TREE_LEVEL = 1;
+	PARENT = 146;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_self_id[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 152;
+	TREE_LEVEL = 1;
+	PARENT = 146;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_self_id[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 153;
+	TREE_LEVEL = 1;
+	PARENT = 146;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_self_id[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 154;
+	TREE_LEVEL = 1;
+	PARENT = 146;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 155;
+	TREE_LEVEL = 0;
+	CHILDREN = 156, 157, 158, 159, 160, 161, 162, 163, 164;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers[8]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 156;
+	TREE_LEVEL = 1;
+	PARENT = 155;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 157;
+	TREE_LEVEL = 1;
+	PARENT = 155;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 158;
+	TREE_LEVEL = 1;
+	PARENT = 155;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 159;
+	TREE_LEVEL = 1;
+	PARENT = 155;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 160;
+	TREE_LEVEL = 1;
+	PARENT = 155;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 161;
+	TREE_LEVEL = 1;
+	PARENT = 155;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 162;
+	TREE_LEVEL = 1;
+	PARENT = 155;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 163;
+	TREE_LEVEL = 1;
+	PARENT = 155;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_triggers[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 164;
+	TREE_LEVEL = 1;
+	PARENT = 155;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_cyc";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 165;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_stb";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 166;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_dat";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 167;
+	TREE_LEVEL = 0;
+	CHILDREN = 168, 169, 170, 171, 172, 173, 174, 175;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_dat[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 168;
+	TREE_LEVEL = 1;
+	PARENT = 167;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_dat[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 169;
+	TREE_LEVEL = 1;
+	PARENT = 167;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_dat[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 170;
+	TREE_LEVEL = 1;
+	PARENT = 167;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_dat[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 171;
+	TREE_LEVEL = 1;
+	PARENT = 167;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_dat[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 172;
+	TREE_LEVEL = 1;
+	PARENT = 167;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_dat[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 173;
+	TREE_LEVEL = 1;
+	PARENT = 167;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_dat[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 174;
+	TREE_LEVEL = 1;
+	PARENT = 167;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_dat[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 175;
+	TREE_LEVEL = 1;
+	PARENT = 167;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ptp_udp_xmit_wb_ack";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 176;
+	TREE_LEVEL = 0;
+}
+
+TIME_BAR
+{
+	TIME = 13600;
+	MASTER = TRUE;
+}
+;

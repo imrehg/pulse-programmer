@@ -1,0 +1,246 @@
+# Copyright (C) 1991-2004 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		ptp_wire_test_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "4.1 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:21:20  SEPTEMBER 25, 2004"
+set_global_assignment -name LAST_QUARTUS_VERSION "4.1 SP2"
+set_global_assignment -name VHDL_FILE ../seqlib.vhd
+set_global_assignment -name VHDL_FILE ../wb_intercon.vhd
+set_global_assignment -name VHDL_FILE ../pulse_generator.vhd
+set_global_assignment -name VHDL_FILE ../boot_led.vhd
+set_global_assignment -name VHDL_FILE ../clockdiv.vhd
+set_global_assignment -name VHDL_FILE ../clock_scaler.vhd
+set_global_assignment -name VHDL_FILE ../sram/sram_controller.vhd
+set_global_assignment -name VHDL_FILE ../i2c/i2c_controller.vhd
+set_global_assignment -name VHDL_FILE ../i2c/i2c_led_controller.vhd
+set_global_assignment -name VHDL_FILE ../i2c/i2c_master_top.vhd
+set_global_assignment -name VHDL_FILE ../i2c/i2c_master_byte_ctrl.vhd
+set_global_assignment -name VHDL_FILE ../i2c/i2c_master_bit_ctrl.vhd
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_1 -to daisy_transmit\[3\]
+set_location_assignment PIN_2 -to daisy_transmit\[2\]
+set_location_assignment PIN_3 -to daisy_transmit\[1\]
+set_location_assignment PIN_4 -to daisy_transmit\[0\]
+set_location_assignment PIN_5 -to daisy_receive\[3\]
+set_location_assignment PIN_6 -to daisy_receive\[2\]
+set_location_assignment PIN_7 -to daisy_receive\[1\]
+set_location_assignment PIN_8 -to daisy_receive\[0\]
+set_location_assignment PIN_12 -to ether_txd\[0\]
+set_location_assignment PIN_13 -to ether_txd\[1\]
+set_location_assignment PIN_14 -to ether_txd\[2\]
+set_location_assignment PIN_15 -to ether_txd\[3\]
+set_location_assignment PIN_16 -to ether_tx_en
+set_location_assignment PIN_17 -to switch\[5\]
+set_location_assignment PIN_19 -to ether_rx_dv
+set_location_assignment PIN_20 -to switch\[4\]
+set_location_assignment PIN_21 -to ether_rxd\[0\]
+set_location_assignment PIN_23 -to ether_rxd\[1\]
+set_location_assignment PIN_28 -to clk0
+set_location_assignment PIN_29 -to ether_rx_clk
+set_location_assignment PIN_39 -to switch\[6\]
+set_location_assignment PIN_41 -to ether_rxd\[2\]
+set_location_assignment PIN_42 -to ether_rxd\[3\]
+set_location_assignment PIN_43 -to scl
+set_location_assignment PIN_44 -to sda
+set_location_assignment PIN_45 -to lvds_receive\[6\]
+set_location_assignment PIN_46 -to lvds_receive\[4\]
+set_location_assignment PIN_47 -to lvds_receive\[2\]
+set_location_assignment PIN_48 -to lvds_receive\[0\]
+set_location_assignment PIN_49 -to lvds_receive\[7\]
+set_location_assignment PIN_50 -to lvds_receive\[5\]
+set_location_assignment PIN_53 -to lvds_receive\[3\]
+set_location_assignment PIN_54 -to lvds_receive\[1\]
+set_location_assignment PIN_55 -to lvds_transmit\[63\]
+set_location_assignment PIN_56 -to lvds_transmit\[62\]
+set_location_assignment PIN_57 -to lvds_transmit\[60\]
+set_location_assignment PIN_58 -to lvds_transmit\[58\]
+set_location_assignment PIN_59 -to lvds_transmit\[61\]
+set_location_assignment PIN_60 -to lvds_transmit\[59\]
+set_location_assignment PIN_61 -to lvds_transmit\[57\]
+set_location_assignment PIN_62 -to lvds_transmit\[55\]
+set_location_assignment PIN_63 -to lvds_transmit\[56\]
+set_location_assignment PIN_64 -to lvds_transmit\[54\]
+set_location_assignment PIN_65 -to lvds_transmit\[52\]
+set_location_assignment PIN_66 -to lvds_transmit\[50\]
+set_location_assignment PIN_67 -to lvds_transmit\[53\]
+set_location_assignment PIN_68 -to lvds_transmit\[51\]
+set_location_assignment PIN_73 -to lvds_transmit\[49\]
+set_location_assignment PIN_74 -to lvds_transmit\[48\]
+set_location_assignment PIN_75 -to lvds_transmit\[47\]
+set_location_assignment PIN_76 -to lvds_transmit\[45\]
+set_location_assignment PIN_77 -to lvds_transmit\[43\]
+set_location_assignment PIN_78 -to lvds_transmit\[41\]
+set_location_assignment PIN_79 -to lvds_transmit\[46\]
+set_location_assignment PIN_82 -to lvds_transmit\[44\]
+set_location_assignment PIN_83 -to lvds_transmit\[42\]
+set_location_assignment PIN_84 -to lvds_transmit\[40\]
+set_location_assignment PIN_85 -to lvds_transmit\[39\]
+set_location_assignment PIN_86 -to lvds_transmit\[37\]
+set_location_assignment PIN_87 -to lvds_transmit\[38\]
+set_location_assignment PIN_88 -to lvds_transmit\[36\]
+set_location_assignment PIN_93 -to lvds_transmit\[34\]
+set_location_assignment PIN_94 -to lvds_transmit\[32\]
+set_location_assignment PIN_95 -to lvds_transmit\[35\]
+set_location_assignment PIN_98 -to lvds_transmit\[33\]
+set_location_assignment PIN_99 -to lvds_transmit\[31\]
+set_location_assignment PIN_100 -to lvds_transmit\[30\]
+set_location_assignment PIN_101 -to lvds_transmit\[28\]
+set_location_assignment PIN_104 -to lvds_transmit\[26\]
+set_location_assignment PIN_105 -to lvds_transmit\[29\]
+set_location_assignment PIN_106 -to lvds_transmit\[27\]
+set_location_assignment PIN_107 -to lvds_transmit\[25\]
+set_location_assignment PIN_108 -to lvds_transmit\[23\]
+set_location_assignment PIN_113 -to lvds_transmit\[24\]
+set_location_assignment PIN_114 -to lvds_transmit\[22\]
+set_location_assignment PIN_115 -to lvds_transmit\[20\]
+set_location_assignment PIN_116 -to lvds_transmit\[18\]
+set_location_assignment PIN_117 -to lvds_transmit\[21\]
+set_location_assignment PIN_118 -to lvds_transmit\[19\]
+set_location_assignment PIN_119 -to lvds_transmit\[17\]
+set_location_assignment PIN_120 -to lvds_transmit\[16\]
+set_location_assignment PIN_121 -to lvds_transmit\[15\]
+set_location_assignment PIN_122 -to lvds_transmit\[13\]
+set_location_assignment PIN_123 -to lvds_transmit\[11\]
+set_location_assignment PIN_124 -to lvds_transmit\[9\]
+set_location_assignment PIN_125 -to lvds_transmit\[14\]
+set_location_assignment PIN_126 -to lvds_transmit\[12\]
+set_location_assignment PIN_127 -to lvds_transmit\[10\]
+set_location_assignment PIN_128 -to lvds_transmit\[8\]
+set_location_assignment PIN_131 -to lvds_transmit\[7\]
+set_location_assignment PIN_132 -to lvds_transmit\[5\]
+set_location_assignment PIN_133 -to lvds_transmit\[3\]
+set_location_assignment PIN_134 -to lvds_transmit\[1\]
+set_location_assignment PIN_135 -to lvds_transmit\[6\]
+set_location_assignment PIN_136 -to lvds_transmit\[4\]
+set_location_assignment PIN_137 -to lvds_transmit\[2\]
+set_location_assignment PIN_138 -to lvds_transmit\[0\]
+set_location_assignment PIN_139 -to switch\[0\]
+set_location_assignment PIN_140 -to switch\[1\]
+set_location_assignment PIN_143 -to switch\[7\]
+set_location_assignment PIN_152 -to ether_tx_clk
+set_location_assignment PIN_153 -to clk2
+set_location_assignment PIN_158 -to sram_data\[35\]
+set_location_assignment PIN_159 -to sram_data\[34\]
+set_location_assignment PIN_160 -to sram_data\[33\]
+set_location_assignment PIN_161 -to sram_data\[32\]
+set_location_assignment PIN_162 -to sram_data\[31\]
+set_location_assignment PIN_163 -to sram_data\[30\]
+set_location_assignment PIN_164 -to sram_data\[29\]
+set_location_assignment PIN_165 -to sram_data\[28\]
+set_location_assignment PIN_166 -to sram_data\[27\]
+set_location_assignment PIN_167 -to sram_data\[18\]
+set_location_assignment PIN_168 -to sram_data\[19\]
+set_location_assignment PIN_169 -to sram_data\[20\]
+set_location_assignment PIN_170 -to sram_data\[21\]
+set_location_assignment PIN_173 -to sram_data\[22\]
+set_location_assignment PIN_174 -to sram_data\[23\]
+set_location_assignment PIN_175 -to sram_data\[24\]
+set_location_assignment PIN_176 -to sram_data\[25\]
+set_location_assignment PIN_177 -to sram_data\[26\]
+set_location_assignment PIN_178 -to sram_addr\[9\]
+set_location_assignment PIN_179 -to sram_addr\[8\]
+set_location_assignment PIN_180 -to sram_nCE1
+set_location_assignment PIN_181 -to sram_clk
+set_location_assignment PIN_182 -to sram_nGW
+set_location_assignment PIN_183 -to sram_nOE
+set_location_assignment PIN_186 -to sram_addr\[7\]
+set_location_assignment PIN_187 -to sram_addr\[6\]
+set_location_assignment PIN_188 -to sram_data\[17\]
+set_location_assignment PIN_193 -to sram_data\[16\]
+set_location_assignment PIN_194 -to sram_data\[15\]
+set_location_assignment PIN_195 -to sram_data\[14\]
+set_location_assignment PIN_196 -to sram_data\[13\]
+set_location_assignment PIN_197 -to sram_data\[12\]
+set_location_assignment PIN_200 -to sram_data\[11\]
+set_location_assignment PIN_201 -to sram_data\[10\]
+set_location_assignment PIN_202 -to sram_data\[9\]
+set_location_assignment PIN_203 -to sram_data\[0\]
+set_location_assignment PIN_206 -to sram_data\[1\]
+set_location_assignment PIN_207 -to sram_data\[2\]
+set_location_assignment PIN_208 -to sram_data\[3\]
+set_location_assignment PIN_213 -to sram_data\[4\]
+set_location_assignment PIN_214 -to sram_data\[5\]
+set_location_assignment PIN_215 -to sram_data\[6\]
+set_location_assignment PIN_216 -to sram_data\[7\]
+set_location_assignment PIN_217 -to sram_data\[8\]
+set_location_assignment PIN_218 -to sram_addr\[10\]
+set_location_assignment PIN_219 -to sram_addr\[11\]
+set_location_assignment PIN_222 -to sram_addr\[12\]
+set_location_assignment PIN_223 -to sram_addr\[13\]
+set_location_assignment PIN_224 -to sram_addr\[14\]
+set_location_assignment PIN_225 -to sram_addr\[15\]
+set_location_assignment PIN_226 -to sram_addr\[16\]
+set_location_assignment PIN_227 -to sram_addr\[17\]
+set_location_assignment PIN_228 -to sram_addr\[18\]
+set_location_assignment PIN_233 -to sram_addr\[19\]
+set_location_assignment PIN_234 -to sram_addr\[20\]
+set_location_assignment PIN_235 -to sram_addr\[0\]
+set_location_assignment PIN_236 -to sram_addr\[1\]
+set_location_assignment PIN_237 -to sram_addr\[2\]
+set_location_assignment PIN_238 -to sram_addr\[3\]
+set_location_assignment PIN_239 -to sram_addr\[4\]
+set_location_assignment PIN_240 -to sram_addr\[5\]
+set_location_assignment PIN_184 -to switch\[2\]
+set_location_assignment PIN_185 -to switch\[3\]
+set_location_assignment PIN_11 -to ether_mdc
+set_location_assignment PIN_18 -to ether_mdio
+set_location_assignment PIN_156 -to fo_in
+set_location_assignment PIN_141 -to fo_out
+set_location_assignment PIN_24 -to nCSO
+set_location_assignment PIN_37 -to ASDO
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name TOP_LEVEL_ENTITY ptp_wire_test
+set_global_assignment -name MUX_RESTRUCTURE OFF
+set_global_assignment -name SPEED_DISK_USAGE_TRADEOFF SMART
+set_global_assignment -name FAMILY Cyclone
+set_global_assignment -name AUTO_ENABLE_SMART_COMPILE off
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP1C12Q240C6
+set_global_assignment -name OPTIMIZE_TIMING OFF
+set_global_assignment -name AUTO_PACKED_REGISTERS_CYCLONE OFF
+set_global_assignment -name FITTER_EFFORT "FAST FIT"
+
+# SignalTap II Assignments
+# ========================
+set_global_assignment -name ENABLE_SIGNALTAP off
+set_global_assignment -name USE_SIGNALTAP_FILE ptp_wire_test.stp
+
+# LogicLock Region Assignments
+# ============================
+set_global_assignment -name LOGICLOCK_INCREMENTAL_COMPILE_ASSIGNMENT off

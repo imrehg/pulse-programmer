@@ -1,0 +1,871 @@
+<session sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2005/08/11 23:06:50  #0">
+      <clock name="clk0" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="512" trigger_in_enable="yes" trigger_in_node="ptp_top:ptp|ptp_memory:memory_module|state.idle" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[19]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[20]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[21]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[22]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[23]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[24]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[25]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[26]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[27]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[28]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[29]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[30]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[31]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[32]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[33]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[34]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[35]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_burst_load" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_burst_load_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_burst_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_burst_reading_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_burst_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_burst_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_burst_reading_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_burst_writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_gnt_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_addr[0]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[10]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[11]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[12]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[13]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[14]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[15]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[16]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[17]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[18]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[1]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[2]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[3]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[4]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[5]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[6]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[7]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[8]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[9]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_controller:sram|burst_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|loaded" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_we_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_data[0]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[10]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[11]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[12]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[13]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[14]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[15]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[16]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[17]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[18]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[19]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[1]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[20]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[21]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[22]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[23]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[24]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[25]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[26]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[27]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[28]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[29]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[2]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[30]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[31]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[32]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[33]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[34]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[35]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[3]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[4]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[5]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[6]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[7]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[8]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[9]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_nCE1" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_nGW" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_nOE" tap_mode="classic" type="output pin"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_offset_out[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|burst_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[19]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[20]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[21]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[22]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[23]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[24]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[25]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[26]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[27]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[28]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[29]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[30]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[31]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[32]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[33]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[34]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[35]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|read_data[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_burst_load" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_burst_load_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_burst_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_burst_reading_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.read_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_burst_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_burst_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_burst_reading_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_burst_writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|state.write_writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_adr_o[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_dat_i[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_gnt_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="memory_sizer:sizer8|wbm_we_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_addr[0]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[10]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[11]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[12]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[13]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[14]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[15]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[16]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[17]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[18]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[1]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[2]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[3]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[4]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[5]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[6]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[7]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[8]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_addr[9]" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_controller:sram|burst_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|loaded" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|memory_addr_burst[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_we_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_data[0]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[10]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[11]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[12]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[13]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[14]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[15]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[16]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[17]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[18]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[19]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[1]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[20]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[21]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[22]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[23]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[24]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[25]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[26]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[27]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[28]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[29]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[2]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[30]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[31]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[32]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[33]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[34]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[35]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[3]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[4]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[5]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[6]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[7]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[8]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_data[9]" tap_mode="classic" type="bidir pin"/>
+          <wire connection_status="true" name="sram_nCE1" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_nGW" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_nOE" tap_mode="classic" type="output pin"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <net is_signal_inverted="no" name="sram_controller:sram|burst_in"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|loaded"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_ack_o"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_cyc_i"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_stb_i"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_we_i"/>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|burst_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset[2]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|burst_offset_out" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset_out[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.idle"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_burst_load"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_burst_load_stall"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_burst_reading"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_burst_reading_ack"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_done"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_reading"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_burst_done"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_burst_reading"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_burst_reading_ack"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_burst_writing"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_done"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_reading"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_writing"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_out"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_ack_i"/>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|wbm_adr_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[18]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[17]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[16]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[15]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[14]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[13]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[12]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[11]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[10]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[9]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[8]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[7]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[6]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[5]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[4]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[3]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[2]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_cyc_o"/>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|wbm_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[35]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[34]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[33]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[32]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[31]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[30]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[29]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[28]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[27]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[26]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[25]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[24]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[23]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[22]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[21]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[20]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[19]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[18]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[17]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[16]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[15]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[14]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[13]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[12]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[11]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[10]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[9]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[8]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[7]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[6]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[5]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[4]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[3]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[2]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_gnt_i"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_stb_o"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_we_o"/>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|read_data" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[35]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[34]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[33]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[32]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[31]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[30]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[29]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[28]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[27]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[26]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[25]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[24]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[23]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[22]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[21]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[20]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[19]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[18]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[17]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[16]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[15]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[14]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[13]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[12]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[11]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[10]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[9]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[8]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[7]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[6]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[5]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[4]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[3]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[2]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sram_controller:sram|memory_addr_burst" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[18]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[17]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[16]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[15]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[14]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[13]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[12]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[11]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[10]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[9]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[8]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[7]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[6]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[5]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[4]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[3]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[2]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[1]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sram_addr" order="msb_to_lsb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="sram_addr[18]"/>
+            <net is_signal_inverted="no" name="sram_addr[17]"/>
+            <net is_signal_inverted="no" name="sram_addr[16]"/>
+            <net is_signal_inverted="no" name="sram_addr[15]"/>
+            <net is_signal_inverted="no" name="sram_addr[14]"/>
+            <net is_signal_inverted="no" name="sram_addr[13]"/>
+            <net is_signal_inverted="no" name="sram_addr[12]"/>
+            <net is_signal_inverted="no" name="sram_addr[11]"/>
+            <net is_signal_inverted="no" name="sram_addr[10]"/>
+            <net is_signal_inverted="no" name="sram_addr[9]"/>
+            <net is_signal_inverted="no" name="sram_addr[8]"/>
+            <net is_signal_inverted="no" name="sram_addr[7]"/>
+            <net is_signal_inverted="no" name="sram_addr[6]"/>
+            <net is_signal_inverted="no" name="sram_addr[5]"/>
+            <net is_signal_inverted="no" name="sram_addr[4]"/>
+            <net is_signal_inverted="no" name="sram_addr[3]"/>
+            <net is_signal_inverted="no" name="sram_addr[2]"/>
+            <net is_signal_inverted="no" name="sram_addr[1]"/>
+            <net is_signal_inverted="no" name="sram_addr[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sram_data" order="msb_to_lsb" radix="hex" state="collapse" type="bidir pin">
+            <net is_signal_inverted="no" name="sram_data[35]"/>
+            <net is_signal_inverted="no" name="sram_data[34]"/>
+            <net is_signal_inverted="no" name="sram_data[33]"/>
+            <net is_signal_inverted="no" name="sram_data[32]"/>
+            <net is_signal_inverted="no" name="sram_data[31]"/>
+            <net is_signal_inverted="no" name="sram_data[30]"/>
+            <net is_signal_inverted="no" name="sram_data[29]"/>
+            <net is_signal_inverted="no" name="sram_data[28]"/>
+            <net is_signal_inverted="no" name="sram_data[27]"/>
+            <net is_signal_inverted="no" name="sram_data[26]"/>
+            <net is_signal_inverted="no" name="sram_data[25]"/>
+            <net is_signal_inverted="no" name="sram_data[24]"/>
+            <net is_signal_inverted="no" name="sram_data[23]"/>
+            <net is_signal_inverted="no" name="sram_data[22]"/>
+            <net is_signal_inverted="no" name="sram_data[21]"/>
+            <net is_signal_inverted="no" name="sram_data[20]"/>
+            <net is_signal_inverted="no" name="sram_data[19]"/>
+            <net is_signal_inverted="no" name="sram_data[18]"/>
+            <net is_signal_inverted="no" name="sram_data[17]"/>
+            <net is_signal_inverted="no" name="sram_data[16]"/>
+            <net is_signal_inverted="no" name="sram_data[15]"/>
+            <net is_signal_inverted="no" name="sram_data[14]"/>
+            <net is_signal_inverted="no" name="sram_data[13]"/>
+            <net is_signal_inverted="no" name="sram_data[12]"/>
+            <net is_signal_inverted="no" name="sram_data[11]"/>
+            <net is_signal_inverted="no" name="sram_data[10]"/>
+            <net is_signal_inverted="no" name="sram_data[9]"/>
+            <net is_signal_inverted="no" name="sram_data[8]"/>
+            <net is_signal_inverted="no" name="sram_data[7]"/>
+            <net is_signal_inverted="no" name="sram_data[6]"/>
+            <net is_signal_inverted="no" name="sram_data[5]"/>
+            <net is_signal_inverted="no" name="sram_data[4]"/>
+            <net is_signal_inverted="no" name="sram_data[3]"/>
+            <net is_signal_inverted="no" name="sram_data[2]"/>
+            <net is_signal_inverted="no" name="sram_data[1]"/>
+            <net is_signal_inverted="no" name="sram_data[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="sram_nCE1"/>
+          <net is_signal_inverted="no" name="sram_nGW"/>
+          <net is_signal_inverted="no" name="sram_nOE"/>
+        </setup_view>
+        <data_view>
+          <net is_signal_inverted="no" name="sram_controller:sram|burst_in"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|loaded"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_ack_o"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_cyc_i"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_stb_i"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_we_i"/>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|burst_offset" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset[2]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|burst_offset_out" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset_out[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_offset_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.idle"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_burst_load"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_burst_load_stall"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_burst_reading"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_burst_reading_ack"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_done"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.read_reading"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_burst_done"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_burst_reading"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_burst_reading_ack"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_burst_writing"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_done"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_reading"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|state.write_writing"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|burst_out"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_ack_i"/>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|wbm_adr_o" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[18]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[17]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[16]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[15]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[14]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[13]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[12]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[11]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[10]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[9]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[8]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[7]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[6]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[5]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[4]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[3]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[2]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_adr_o[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_cyc_o"/>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|wbm_dat_i" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[35]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[34]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[33]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[32]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[31]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[30]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[29]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[28]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[27]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[26]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[25]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[24]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[23]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[22]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[21]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[20]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[19]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[18]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[17]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[16]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[15]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[14]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[13]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[12]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[11]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[10]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[9]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[8]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[7]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[6]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[5]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[4]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[3]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[2]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_dat_i[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_gnt_i"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_stb_o"/>
+          <net is_signal_inverted="no" name="memory_sizer:sizer8|wbm_we_o"/>
+          <bus is_signal_inverted="no" link="all" name="memory_sizer:sizer8|read_data" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[35]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[34]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[33]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[32]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[31]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[30]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[29]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[28]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[27]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[26]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[25]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[24]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[23]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[22]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[21]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[20]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[19]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[18]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[17]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[16]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[15]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[14]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[13]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[12]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[11]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[10]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[9]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[8]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[7]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[6]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[5]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[4]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[3]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[2]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[1]"/>
+            <net is_signal_inverted="no" name="memory_sizer:sizer8|read_data[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sram_controller:sram|memory_addr_burst" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[18]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[17]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[16]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[15]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[14]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[13]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[12]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[11]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[10]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[9]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[8]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[7]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[6]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[5]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[4]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[3]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[2]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[1]"/>
+            <net is_signal_inverted="no" name="sram_controller:sram|memory_addr_burst[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sram_addr" order="msb_to_lsb" radix="hex" state="collapse" type="output pin">
+            <net is_signal_inverted="no" name="sram_addr[18]"/>
+            <net is_signal_inverted="no" name="sram_addr[17]"/>
+            <net is_signal_inverted="no" name="sram_addr[16]"/>
+            <net is_signal_inverted="no" name="sram_addr[15]"/>
+            <net is_signal_inverted="no" name="sram_addr[14]"/>
+            <net is_signal_inverted="no" name="sram_addr[13]"/>
+            <net is_signal_inverted="no" name="sram_addr[12]"/>
+            <net is_signal_inverted="no" name="sram_addr[11]"/>
+            <net is_signal_inverted="no" name="sram_addr[10]"/>
+            <net is_signal_inverted="no" name="sram_addr[9]"/>
+            <net is_signal_inverted="no" name="sram_addr[8]"/>
+            <net is_signal_inverted="no" name="sram_addr[7]"/>
+            <net is_signal_inverted="no" name="sram_addr[6]"/>
+            <net is_signal_inverted="no" name="sram_addr[5]"/>
+            <net is_signal_inverted="no" name="sram_addr[4]"/>
+            <net is_signal_inverted="no" name="sram_addr[3]"/>
+            <net is_signal_inverted="no" name="sram_addr[2]"/>
+            <net is_signal_inverted="no" name="sram_addr[1]"/>
+            <net is_signal_inverted="no" name="sram_addr[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="sram_data" order="msb_to_lsb" radix="hex" state="collapse" type="bidir pin">
+            <net is_signal_inverted="no" name="sram_data[35]"/>
+            <net is_signal_inverted="no" name="sram_data[34]"/>
+            <net is_signal_inverted="no" name="sram_data[33]"/>
+            <net is_signal_inverted="no" name="sram_data[32]"/>
+            <net is_signal_inverted="no" name="sram_data[31]"/>
+            <net is_signal_inverted="no" name="sram_data[30]"/>
+            <net is_signal_inverted="no" name="sram_data[29]"/>
+            <net is_signal_inverted="no" name="sram_data[28]"/>
+            <net is_signal_inverted="no" name="sram_data[27]"/>
+            <net is_signal_inverted="no" name="sram_data[26]"/>
+            <net is_signal_inverted="no" name="sram_data[25]"/>
+            <net is_signal_inverted="no" name="sram_data[24]"/>
+            <net is_signal_inverted="no" name="sram_data[23]"/>
+            <net is_signal_inverted="no" name="sram_data[22]"/>
+            <net is_signal_inverted="no" name="sram_data[21]"/>
+            <net is_signal_inverted="no" name="sram_data[20]"/>
+            <net is_signal_inverted="no" name="sram_data[19]"/>
+            <net is_signal_inverted="no" name="sram_data[18]"/>
+            <net is_signal_inverted="no" name="sram_data[17]"/>
+            <net is_signal_inverted="no" name="sram_data[16]"/>
+            <net is_signal_inverted="no" name="sram_data[15]"/>
+            <net is_signal_inverted="no" name="sram_data[14]"/>
+            <net is_signal_inverted="no" name="sram_data[13]"/>
+            <net is_signal_inverted="no" name="sram_data[12]"/>
+            <net is_signal_inverted="no" name="sram_data[11]"/>
+            <net is_signal_inverted="no" name="sram_data[10]"/>
+            <net is_signal_inverted="no" name="sram_data[9]"/>
+            <net is_signal_inverted="no" name="sram_data[8]"/>
+            <net is_signal_inverted="no" name="sram_data[7]"/>
+            <net is_signal_inverted="no" name="sram_data[6]"/>
+            <net is_signal_inverted="no" name="sram_data[5]"/>
+            <net is_signal_inverted="no" name="sram_data[4]"/>
+            <net is_signal_inverted="no" name="sram_data[3]"/>
+            <net is_signal_inverted="no" name="sram_data[2]"/>
+            <net is_signal_inverted="no" name="sram_data[1]"/>
+            <net is_signal_inverted="no" name="sram_data[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="sram_nCE1"/>
+          <net is_signal_inverted="no" name="sram_nGW"/>
+          <net is_signal_inverted="no" name="sram_nOE"/>
+        </data_view>
+      </presentation>
+      <trigger global_temp="1" is_expanded="true" name="trigger: 2005/08/11 23:06:50  #1" position="pre" segment_size="1" trigger_in="falling edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="26"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="column width" size="18" value="34,34,303,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="7" value="976,587,398,124,356,50,32"/>
+  </global_info>
+</session>

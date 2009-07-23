@@ -1,0 +1,513 @@
+<session jtag_chain="ByteBlasterII [LPT1]" jtag_device="@1: EP1C12 (0x020830DD)" sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2004/09/27 19:09:30  #0">
+      <clock name="clockdiv:clock_divider|c0" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="2048" trigger_in_enable="yes" trigger_in_node="daisy_receive[2]" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="bit_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="bit_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="bit_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="bit_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|clock_count" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|clock_ref" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|locked_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|reset" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="data_reg[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_stb" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|busy_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_recv_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_recv_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_xmit_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_xmit_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_last_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_wb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_route_recv_wb_ack" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_stb" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.receive_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.receive_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.receiving_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.receiving_led" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmit_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmit_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmit_bit_ack_fall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmitting_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmitting_led" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="bit_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="bit_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="bit_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="bit_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="boot_led:boot_led_display|clock_scale_quantum[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|clock_count" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|clock_ref" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|current_count[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="clock_scaler:scaler|locked_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|reset" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="clock_scaler:scaler|scale_quantum[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="data_reg[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="data_reg[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_dat[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="debug_led_wb_stb" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|busy_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_recv_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_recv_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_xmit_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_xmit_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_last_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_wb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_route_recv_wb_ack" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_cyc" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_dat[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_route_xmit_wb_stb" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.receive_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.receive_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.receiving_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.receiving_led" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmit_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmit_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmit_bit_ack_fall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmitting_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="state.transmitting_led" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <net name="state.receive_bit"/>
+          <net name="state.receive_bit_ack"/>
+          <net name="state.receiving_done"/>
+          <net name="state.receiving_led"/>
+          <net name="state.transmit_bit"/>
+          <net name="state.transmit_bit_ack"/>
+          <net name="state.transmit_bit_ack_fall"/>
+          <net name="state.transmitting_done"/>
+          <net name="state.transmitting_led"/>
+          <bus link="all" name="bit_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="bit_count[3]"/>
+            <net name="bit_count[2]"/>
+            <net name="bit_count[1]"/>
+            <net name="bit_count[0]"/>
+          </bus>
+          <net name="state.idle"/>
+          <net name="ptp_route_recv_wb_ack"/>
+          <net name="ptp_route_xmit_wb_cyc"/>
+          <bus link="all" name="ptp_route_xmit_wb_dat" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_route_xmit_wb_dat[7]"/>
+            <net name="ptp_route_xmit_wb_dat[6]"/>
+            <net name="ptp_route_xmit_wb_dat[5]"/>
+            <net name="ptp_route_xmit_wb_dat[4]"/>
+            <net name="ptp_route_xmit_wb_dat[3]"/>
+            <net name="ptp_route_xmit_wb_dat[2]"/>
+            <net name="ptp_route_xmit_wb_dat[1]"/>
+            <net name="ptp_route_xmit_wb_dat[0]"/>
+          </bus>
+          <net name="ptp_route_xmit_wb_stb"/>
+          <net name="debug_led_wb_cyc"/>
+          <bus link="all" name="debug_led_wb_dat" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="debug_led_wb_dat[7]"/>
+            <net name="debug_led_wb_dat[6]"/>
+            <net name="debug_led_wb_dat[5]"/>
+            <net name="debug_led_wb_dat[4]"/>
+            <net name="debug_led_wb_dat[3]"/>
+            <net name="debug_led_wb_dat[2]"/>
+            <net name="debug_led_wb_dat[1]"/>
+            <net name="debug_led_wb_dat[0]"/>
+          </bus>
+          <net name="debug_led_wb_stb"/>
+          <bus link="all" name="boot_led:boot_led_display|clock_scale_quantum" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="boot_led:boot_led_display|clock_scale_quantum[5]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[4]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[3]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[2]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[1]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[0]"/>
+          </bus>
+          <net name="clock_scaler:scaler|clock_count"/>
+          <net name="clock_scaler:scaler|clock_ref"/>
+          <bus link="all" name="clock_scaler:scaler|current_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="clock_scaler:scaler|current_count[6]"/>
+            <net name="clock_scaler:scaler|current_count[5]"/>
+            <net name="clock_scaler:scaler|current_count[4]"/>
+            <net name="clock_scaler:scaler|current_count[3]"/>
+            <net name="clock_scaler:scaler|current_count[2]"/>
+            <net name="clock_scaler:scaler|current_count[1]"/>
+            <net name="clock_scaler:scaler|current_count[0]"/>
+          </bus>
+          <net name="clock_scaler:scaler|locked_out"/>
+          <net name="clock_scaler:scaler|reset"/>
+          <bus link="all" name="clock_scaler:scaler|scale_quantum" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="clock_scaler:scaler|scale_quantum[5]"/>
+            <net name="clock_scaler:scaler|scale_quantum[4]"/>
+            <net name="clock_scaler:scaler|scale_quantum[3]"/>
+            <net name="clock_scaler:scaler|scale_quantum[2]"/>
+            <net name="clock_scaler:scaler|scale_quantum[1]"/>
+            <net name="clock_scaler:scaler|scale_quantum[0]"/>
+          </bus>
+          <bus link="all" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count[1]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count[0]"/>
+          </bus>
+          <bus link="all" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[3]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[2]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[1]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[0]"/>
+          </bus>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|busy_out"/>
+          <bus link="all" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[0..7]" order="lsb_to_msb" radix="hex" state="collapse" type="register">
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[0]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[1]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[2]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[3]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[4]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[5]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[6]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[7]"/>
+          </bus>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_recv_dat_cyc"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_recv_stb_ack"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_xmit_dat_cyc"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_xmit_stb_ack"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_ack_i"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_cyc_o"/>
+          <bus link="all" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[0]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[1]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[2]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[3]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[4]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[5]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[6]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[7]"/>
+          </bus>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_stb_o"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.idle"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit_ack"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_byte_done"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_last_bit"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_start"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_stop"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_wb_ack"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.timed_out"/>
+          <bus link="all" name="data_reg" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="data_reg[7]"/>
+            <net name="data_reg[6]"/>
+            <net name="data_reg[5]"/>
+            <net name="data_reg[4]"/>
+            <net name="data_reg[3]"/>
+            <net name="data_reg[2]"/>
+            <net name="data_reg[1]"/>
+            <net name="data_reg[0]"/>
+          </bus>
+        </setup_view>
+        <data_view>
+          <net name="state.receive_bit"/>
+          <net name="state.receive_bit_ack"/>
+          <net name="state.receiving_done"/>
+          <net name="state.receiving_led"/>
+          <net name="state.transmit_bit"/>
+          <net name="state.transmit_bit_ack"/>
+          <net name="state.transmit_bit_ack_fall"/>
+          <net name="state.transmitting_done"/>
+          <net name="state.transmitting_led"/>
+          <bus link="all" name="bit_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="bit_count[3]"/>
+            <net name="bit_count[2]"/>
+            <net name="bit_count[1]"/>
+            <net name="bit_count[0]"/>
+          </bus>
+          <net name="state.idle"/>
+          <net name="ptp_route_recv_wb_ack"/>
+          <net name="ptp_route_xmit_wb_cyc"/>
+          <bus link="all" name="ptp_route_xmit_wb_dat" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_route_xmit_wb_dat[7]"/>
+            <net name="ptp_route_xmit_wb_dat[6]"/>
+            <net name="ptp_route_xmit_wb_dat[5]"/>
+            <net name="ptp_route_xmit_wb_dat[4]"/>
+            <net name="ptp_route_xmit_wb_dat[3]"/>
+            <net name="ptp_route_xmit_wb_dat[2]"/>
+            <net name="ptp_route_xmit_wb_dat[1]"/>
+            <net name="ptp_route_xmit_wb_dat[0]"/>
+          </bus>
+          <net name="ptp_route_xmit_wb_stb"/>
+          <net name="debug_led_wb_cyc"/>
+          <bus link="all" name="debug_led_wb_dat" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="debug_led_wb_dat[7]"/>
+            <net name="debug_led_wb_dat[6]"/>
+            <net name="debug_led_wb_dat[5]"/>
+            <net name="debug_led_wb_dat[4]"/>
+            <net name="debug_led_wb_dat[3]"/>
+            <net name="debug_led_wb_dat[2]"/>
+            <net name="debug_led_wb_dat[1]"/>
+            <net name="debug_led_wb_dat[0]"/>
+          </bus>
+          <net name="debug_led_wb_stb"/>
+          <bus link="all" name="boot_led:boot_led_display|clock_scale_quantum" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="boot_led:boot_led_display|clock_scale_quantum[5]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[4]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[3]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[2]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[1]"/>
+            <net name="boot_led:boot_led_display|clock_scale_quantum[0]"/>
+          </bus>
+          <net name="clock_scaler:scaler|clock_count"/>
+          <net name="clock_scaler:scaler|clock_ref"/>
+          <bus link="all" name="clock_scaler:scaler|current_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="clock_scaler:scaler|current_count[6]"/>
+            <net name="clock_scaler:scaler|current_count[5]"/>
+            <net name="clock_scaler:scaler|current_count[4]"/>
+            <net name="clock_scaler:scaler|current_count[3]"/>
+            <net name="clock_scaler:scaler|current_count[2]"/>
+            <net name="clock_scaler:scaler|current_count[1]"/>
+            <net name="clock_scaler:scaler|current_count[0]"/>
+          </bus>
+          <net name="clock_scaler:scaler|locked_out"/>
+          <net name="clock_scaler:scaler|reset"/>
+          <bus link="all" name="clock_scaler:scaler|scale_quantum" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net name="clock_scaler:scaler|scale_quantum[5]"/>
+            <net name="clock_scaler:scaler|scale_quantum[4]"/>
+            <net name="clock_scaler:scaler|scale_quantum[3]"/>
+            <net name="clock_scaler:scaler|scale_quantum[2]"/>
+            <net name="clock_scaler:scaler|scale_quantum[1]"/>
+            <net name="clock_scaler:scaler|scale_quantum[0]"/>
+          </bus>
+          <bus link="all" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count[1]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|ack_stable_count[0]"/>
+          </bus>
+          <bus link="all" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[3]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[2]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[1]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|bit_count[0]"/>
+          </bus>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|busy_out"/>
+          <bus link="all" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[0..7]" order="lsb_to_msb" radix="hex" state="expand" type="register">
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[0]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[1]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[2]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[3]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[4]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[5]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[6]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_byte[7]"/>
+          </bus>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_recv_dat_cyc"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_recv_stb_ack"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_xmit_dat_cyc"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|daisy_xmit_stb_ack"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_ack_i"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_cyc_o"/>
+          <bus link="all" name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o" order="lsb_to_msb" radix="hex" state="collapse" type="combinatorial">
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[0]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[1]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[2]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[3]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[4]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[5]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[6]"/>
+            <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_dat_o[7]"/>
+          </bus>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|recv_wbm_stb_o"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.idle"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit_ack"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_byte_done"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_last_bit"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_start"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_stop"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_wb_ack"/>
+          <net name="ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.timed_out"/>
+          <bus link="all" name="data_reg" order="msb_to_lsb" radix="hex" state="expand" type="register">
+            <net name="data_reg[7]"/>
+            <net name="data_reg[6]"/>
+            <net name="data_reg[5]"/>
+            <net name="data_reg[4]"/>
+            <net name="data_reg[3]"/>
+            <net name="data_reg[2]"/>
+            <net name="data_reg[1]"/>
+            <net name="data_reg[0]"/>
+          </bus>
+        </data_view>
+      </presentation>
+      <trigger global_temp="1" is_expanded="true" name="trigger: 2004/09/27 19:09:30  #1" position="pre" segment_size="1" trigger_in="rising edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="data horizontal scroll position" value="1707"/>
+      <single attribute="data vertical scroll position" value="0"/>
+      <single attribute="setup horizontal scroll position" value="8"/>
+      <single attribute="setup vertical scroll position" value="28"/>
+      <single attribute="zoom level denominator" value="1"/>
+      <single attribute="zoom level numerator" value="8"/>
+      <single attribute="zoom offset denominator" value="1"/>
+      <single attribute="zoom offset numerator" value="16256"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="column width" size="18" value="34,34,447,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="7" value="999,791,374,88,347,50,125"/>
+  </global_info>
+</session>

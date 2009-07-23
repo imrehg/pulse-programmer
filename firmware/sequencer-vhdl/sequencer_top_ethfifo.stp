@@ -1,0 +1,551 @@
+<session sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2005/08/16 16:48:11  #0">
+      <clock name="clock_divider:divider|c2" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="128" trigger_in_enable="no" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_prefetch_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.emptying" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|rdempty" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|rdfull" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|wrempty" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|wrfull" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|read_req" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_clk_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|write_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|write_req" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|writing_cyc_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_prefetch_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.emptying" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|header_valid_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[2]" tap_mode="classic" type="register"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_prefetch_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.emptying" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|rdempty" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|rdfull" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|wrempty" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|wrfull" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|read_req" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_ack_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_clk_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_cyc_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_stb_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|write_enable" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|write_req" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|writing_cyc_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_prefetch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_prefetch_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.emptying" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.writing" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|header_valid_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[2]" tap_mode="classic" type="register"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <data_view>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.idle"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading_prefetch"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_prefetch"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_prefetch_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.emptying"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.idle"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.writing"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|read_req"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_ack_i"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_clk_i"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_cyc_o"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_ack_o"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_cyc_i"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|write_enable"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|write_req"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|rdempty"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|rdfull"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|wrempty"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|wrfull"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_stb_o"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_stb_i"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[15]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[14]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[13]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[12]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[11]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[10]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[15]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[14]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[13]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[12]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[11]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[10]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[15]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[14]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[13]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[12]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[11]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[10]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|header_valid_out"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|writing_cyc_out"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.idle"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading_prefetch"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_prefetch"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_prefetch_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.emptying"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.idle"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.writing"/>
+        </data_view>
+        <setup_view>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.idle"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading_prefetch"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.reading_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_prefetch"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_prefetch_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\reader:state.writing_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.emptying"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.idle"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|\writer:state.writing"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|rdusedw_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|read_req"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|stable_counter[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_ack_i"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_clk_i"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_cyc_o"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_ack_o"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_cyc_i"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|write_enable"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|write_req"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wrusedw_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|rdempty"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|rdfull"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|wrempty"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|lpm_fifo_dc:transfer_fifo|wrfull"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|debug_led_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_read_stb_o"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|wb_write_stb_i"/>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[15]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[14]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[13]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[12]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[11]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[10]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[15]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[14]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[13]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[12]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[11]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[10]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ip_recv_type_length_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[15]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[14]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[13]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[12]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[11]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[10]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[9]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[8]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[7]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[6]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[5]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[4]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[3]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|type_length_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[2]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[1]"/>
+            <net is_signal_inverted="no" name="network_controller:network_top|ip:ip_controller|eth_recv_arbiter_gnt[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|ethernet_receive:receiver|header_valid_out"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:recv_fifo|writing_cyc_out"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.idle"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading_prefetch"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.reading_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_prefetch"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_prefetch_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\reader:state.writing_stall"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.emptying"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.idle"/>
+          <net is_signal_inverted="no" name="network_controller:network_top|ethernet:ethernet_mac|async_fifo:xmit_fifo|\writer:state.writing"/>
+        </setup_view>
+      </presentation>
+      <trigger global_temp="1" is_expanded="true" name="trigger: 2005/08/16 16:48:11  #1" position="pre" segment_size="1" trigger_in="dont_care" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="29"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="column width" size="18" value="34,34,666,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="7" value="976,519,398,124,356,50,65"/>
+  </global_info>
+</session>

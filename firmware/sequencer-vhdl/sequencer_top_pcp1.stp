@@ -1,0 +1,926 @@
+<session sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2006/04/07 00:00:53  #0">
+      <clock name="clk0" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="256" trigger_in_enable="yes" trigger_in_node="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|fired_out" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="pcp1_controller:pcp1|halted_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|fired_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|load" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|sclr" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|wait_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[36]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[37]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[38]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[39]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[40]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[41]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[42]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[43]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[44]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[45]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[46]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[47]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[48]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[49]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[50]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[51]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[52]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[53]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[54]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[55]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[56]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[57]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[58]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[59]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[60]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[61]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[62]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[63]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_burst" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|burst_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|loaded" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_we_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_nGW" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_nOE" tap_mode="classic" type="output pin"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="pcp1_controller:pcp1|halted_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[0]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[10]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[11]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[12]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[13]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[14]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[15]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[16]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[17]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[18]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[1]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[2]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[3]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[4]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[5]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[6]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[7]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[8]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[9]" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|fired_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|load" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|sclr" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pcp1_core:pcp1|wait_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[10]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[11]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[12]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[13]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[14]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[15]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[16]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[17]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[18]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[19]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[20]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[21]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[22]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[23]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[24]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[25]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[26]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[27]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[28]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[29]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[30]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[31]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[32]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[33]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[34]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[35]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[36]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[37]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[38]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[39]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[40]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[41]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[42]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[43]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[44]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[45]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[46]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[47]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[48]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[49]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[50]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[51]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[52]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[53]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[54]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[55]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[56]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[57]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[58]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[59]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[60]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[61]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[62]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[63]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|pulse_out[9]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[0]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[1]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[2]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[3]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[4]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[5]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[6]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[7]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="pcp1_controller:pcp1|triggers_in[8]" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_burst" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|burst_in" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|loaded" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_ack_o" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_cyc_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_stb_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_controller:sram|wb_we_i" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="sram_nCE1" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_nGW" tap_mode="classic" type="output pin"/>
+          <wire connection_status="true" name="sram_nOE" tap_mode="classic" type="output pin"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <net is_signal_inverted="no" name="sram_controller:sram|burst_in"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|loaded"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_ack_o"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_cyc_i"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_stb_i"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_we_i"/>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|halted_out"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pulse_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[63]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[62]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[61]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[60]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[59]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[58]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[57]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[56]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[55]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[54]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[53]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[52]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[51]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[50]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[49]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[48]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[47]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[46]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[45]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[44]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[43]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[42]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[41]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[40]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[39]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[38]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[37]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[36]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[35]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[34]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[33]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[32]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[31]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[30]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[29]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[28]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[27]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[26]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[25]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[24]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[23]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[22]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[21]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[20]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[19]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|triggers_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|wait_in"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[31]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[30]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[29]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[28]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[27]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[26]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[25]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[24]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[23]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[22]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[21]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[20]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[19]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="sram_burst"/>
+          <net is_signal_inverted="no" name="sram_nCE1"/>
+          <net is_signal_inverted="no" name="sram_nGW"/>
+          <net is_signal_inverted="no" name="sram_nOE"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[27]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[26]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[25]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[24]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[23]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[22]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[21]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[20]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[19]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|load"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[27]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[26]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[25]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[24]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[23]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[22]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[21]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[20]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[19]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|sclr"/>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|fired_out"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[0]"/>
+          </bus>
+        </setup_view>
+        <data_view>
+          <net is_signal_inverted="no" name="sram_controller:sram|burst_in"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|loaded"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_ack_o"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_cyc_i"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_stb_i"/>
+          <net is_signal_inverted="no" name="sram_controller:sram|wb_we_i"/>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|halted_out"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pulse_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[63]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[62]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[61]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[60]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[59]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[58]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[57]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[56]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[55]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[54]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[53]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[52]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[51]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[50]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[49]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[48]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[47]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[46]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[45]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[44]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[43]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[42]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[41]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[40]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[39]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[38]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[37]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[36]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[35]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[34]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[33]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[32]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[31]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[30]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[29]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[28]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[27]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[26]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[25]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[24]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[23]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[22]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[21]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[20]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[19]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pulse_out[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|triggers_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|triggers_in[0]"/>
+          </bus>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pc_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|wait_in"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[31]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[30]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[29]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[28]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[27]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[26]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[25]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[24]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[23]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[22]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[21]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[20]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[19]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|instruction_in[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="sram_burst"/>
+          <net is_signal_inverted="no" name="sram_nCE1"/>
+          <net is_signal_inverted="no" name="sram_nGW"/>
+          <net is_signal_inverted="no" name="sram_nOE"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[27]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[26]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[25]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[24]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[23]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[22]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[21]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[20]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[19]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_out[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|load"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in" order="msb_to_lsb" radix="hex" state="collapse" type="combinatorial">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[27]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[26]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[25]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[24]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[23]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[22]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[21]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[20]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[19]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|count_in[0]"/>
+          </bus>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|sclr"/>
+          <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|timer:delay_timer|fired_out"/>
+          <bus is_signal_inverted="no" link="all" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr" order="msb_to_lsb" radix="hex" state="collapse" type="register">
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[18]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[17]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[16]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[15]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[14]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[13]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[12]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[11]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[10]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[9]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[8]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[7]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[6]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[5]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[4]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[3]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[2]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[1]"/>
+            <net is_signal_inverted="no" name="pcp1_controller:pcp1|pcp1_core:pcp1|pcp1_decoder:decoder|pc_branch_addr[0]"/>
+          </bus>
+        </data_view>
+      </presentation>
+      <trigger global_temp="1" is_expanded="true" name="trigger: 2006/04/07 00:00:53  #1" position="pre" segment_size="1" trigger_in="rising edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="setup horizontal scroll position" value="0"/>
+      <single attribute="setup vertical scroll position" value="13"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="column width" size="18" value="34,34,303,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="7" value="976,497,398,124,356,50,63"/>
+  </global_info>
+</session>

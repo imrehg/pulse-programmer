@@ -1,0 +1,403 @@
+<session sof_file="">
+  <display_tree gui_logging_enabled="0">
+    <display_branch instance="auto_signaltap_0" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
+  </display_tree>
+  <instance entity_name="sld_signaltap" is_auto_node="yes" is_expanded="true" name="auto_signaltap_0" source_file="sld_signaltap.vhd">
+    <node_ip_info instance_id="0" mfg_id="110" node_id="0" version="3"/>
+    <signal_set global_temp="1" is_expanded="true" name="signal_set: 2005/08/10 22:02:19  #0">
+      <clock name="ether_tx_clk" polarity="posedge"/>
+      <config ram_type="M4K" reserved_data_nodes="0" reserved_trigger_nodes="0" sample_depth="1024" trigger_in_enable="no" trigger_in_node="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.idle" trigger_out_enable="no"/>
+      <top_entity/>
+      <signal_vec>
+        <trigger_input_vec>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_recv_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_xmit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_xmit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_recv_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_xmit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_xmit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_last_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_wb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_last_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_wb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte_done_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_interbyte_wait" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_start_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_stop_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte_done_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_interbyte_wait" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_start_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_stop_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.memory_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.precache_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.receive_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.receive_latch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.transmit_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.wait_slave_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.check_checksum" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.checksum_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.pass_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.receive_header" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.generate_header" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.memory_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.receive_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.transmit_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.transmit_precache" tap_mode="classic" type="combinatorial"/>
+        </trigger_input_vec>
+        <data_input_vec>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_recv_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_xmit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_xmit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_recv_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_xmit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_xmit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_last_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_wb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_last_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_wb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte_done_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_interbyte_wait" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_start_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_stop_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.timed_out" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte_done" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte_done_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_interbyte_wait" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_start_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_stop_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_dat_cyc" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_gnt" tap_mode="classic" type="register"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_stb_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.memory_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.precache_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.receive_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.receive_latch" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.transmit_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.wait_slave_ack" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.check_checksum" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.checksum_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.pass_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.receive_header" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.done_state" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.generate_header" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.idle" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.memory_stall" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.receive_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.transmit_data" tap_mode="classic" type="combinatorial"/>
+          <wire connection_status="true" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.transmit_precache" tap_mode="classic" type="combinatorial"/>
+        </data_input_vec>
+      </signal_vec>
+      <presentation>
+        <setup_view>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_recv"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_recv_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_xmit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_xmit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_recv"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_recv_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_xmit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_xmit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_byte_done"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_last_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_wb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.timed_out"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.timed_out"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte_done"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte_done_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_interbyte_wait"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_start_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_stop_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_bit_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_byte_done"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_last_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_wb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.timed_out"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.timed_out"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte_done"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte_done_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_interbyte_wait"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_start_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_stop_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.check_checksum"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.checksum_stall"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.done_state"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.pass_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.receive_header"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.done_state"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.memory_stall"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.precache_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.receive_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.receive_latch"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.transmit_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.wait_slave_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.done_state"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.generate_header"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.memory_stall"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.receive_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.transmit_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.transmit_precache"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_dat_cyc"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_dat_cyc"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_dat_cyc"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_dat_cyc"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_stb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_stb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_stb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_stb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_gnt"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_gnt"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_gnt"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_gnt"/>
+        </setup_view>
+        <data_view>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_recv"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_recv_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_xmit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.master_xmit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_recv"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_recv_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_xmit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|\daisy_arbiter:state.slave_xmit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.forward_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|\receiving:state.pass_up_recv"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_bit_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_byte_done"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_last_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.receive_wb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:master_receive|state.timed_out"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.timed_out"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_bit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte_done"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_byte_done_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_interbyte_wait"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_start_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:master_transmitter|state.transmit_stop_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_bit_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_byte_done"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_last_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.receive_wb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_receive:slave_receive|state.timed_out"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.timed_out"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_bit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte_done"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_byte_done_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_interbyte_wait"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_start"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_start_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_stop"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|ptp_daisy_transmit:slave_transmitter|state.transmit_stop_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.check_checksum"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.checksum_stall"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.done_state"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.pass_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_receive:receiver|state.receive_header"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.done_state"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.memory_stall"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.precache_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.receive_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.receive_latch"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.transmit_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_buffer:reload_buffer|state.wait_slave_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.done_state"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.generate_header"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.idle"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.memory_stall"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.receive_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.transmit_data"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_router:daisy_router|ptp_transmit:transmitter|state.transmit_precache"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_dat_cyc"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_dat_cyc"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_dat_cyc"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_dat_cyc"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_stb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_stb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_stb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_stb_ack"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_recv_gnt"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|slave_xmit_gnt"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_recv_gnt"/>
+          <net is_signal_inverted="no" name="ptp_router:router|ptp_daisy_link:daisy_link|master_xmit_gnt"/>
+        </data_view>
+      </presentation>
+      <trigger global_temp="1" is_expanded="true" name="trigger: 2005/08/10 22:02:19  #1" position="pre" segment_size="1" trigger_in="falling edge" trigger_out="active high" trigger_type="circular">
+        <events>
+          <level enabled="yes" type="basic">
+            <op_node/>
+          </level>
+        </events>
+      </trigger>
+    </signal_set>
+    <position_info>
+      <single attribute="active tab" value="1"/>
+      <single attribute="setup horizontal scroll position" value="188"/>
+      <single attribute="setup vertical scroll position" value="12"/>
+    </position_info>
+  </instance>
+  <mnemonics/>
+  <global_info>
+    <single attribute="active instance" value="0"/>
+    <multi attribute="column width" size="18" value="34,34,666,74,68,70,88,100,101,101,101,101,101,101,101,101,107,78"/>
+    <multi attribute="window position" size="7" value="927,515,398,124,356,50,65"/>
+  </global_info>
+</session>
