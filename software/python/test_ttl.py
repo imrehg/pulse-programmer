@@ -12,12 +12,12 @@ parse_params(('dummy', 'int'))
 
 #end_sequence()
 
-begin_sequence()
+begin_sequence(reset_dds=False)
 begin_infinite_loop()
 for i in range(108):
   ttl_signal_a(0x0)
   wait(100)
-  ttl_signal_a(0x1)
+  ttl_signal_a(0xF)
 
 wait(200)
 
