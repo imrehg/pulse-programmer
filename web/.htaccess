@@ -1,0 +1,15 @@
+SecFilterEngine Off
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^wiki\.
+RewriteRule (.*) http://127.0.0.1:2519/$1 [P,L]
+#Alias /wiki/ "/home/"
+#<Directory "/home/users/local-box/local/share/moin/htdocs/">
+#   Order deny,allow
+#   Allow from all
+#</Directory>
+#ScriptAlias /cgi-bin "/home/local-box/domains/pulse-programmer.org/cgi-bin/"
+#ScriptAlias /moin2 "/home/local-box/local/share/moin/mywiki/cgi-bin/moin.cgi"
+#<Directory "/home/users/local-box/local/share/moin/mywiki/cgi-bin">
+#   Order deny,allow
+#   Allow from all
+#</Directory>
