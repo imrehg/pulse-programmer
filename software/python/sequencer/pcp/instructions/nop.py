@@ -42,5 +42,6 @@ class Nop_Instr(TargetInstruction):
   def __str__(self):
     return "Nop_Instr: " + \
            "collapsable=" + repr(self.collapsable) +\
-           " addr:" + hex(self.address)
+           " addr:" + hex(self.address_inc)
+# address_inc vs. address
 #==============================================================================
