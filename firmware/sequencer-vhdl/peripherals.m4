@@ -89,8 +89,7 @@ define([clock_buffer_instance_], [dnl
       inclk0 => clk0,
       pllena => '1',
       pfdena => '1',
-      c0     => pcp_clock,
-      c1     => sram_clock
+      c0     => pcp_clock
       );
 ])
 

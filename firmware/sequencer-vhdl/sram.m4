@@ -38,7 +38,6 @@ define([sram_instance_], [dnl
     addr_out            => sram_addr_out,
     one_shot_in         => '0'
     );
-  sram_clk <= sram_clock;
 ])
 
 ###############################################################################
