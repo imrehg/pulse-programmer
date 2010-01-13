@@ -172,6 +172,8 @@ import sequencer.pcp.events.tests.separable_pulse
 all_suites.addTest(separable_pulse.all_suites)
 import sequencer.pcp.events.tests.feedback_branch
 all_suites.addTest(feedback_branch.all_suites)
+import sequencer.pcp.events.tests.feedback_branch_wait
+all_suites.addTest(feedback_branch_wait.all_suites)
 import sequencer.pcp.events.tests.feedback_while_loop
 all_suites.addTest(feedback_while_loop.all_suites)
 import sequencer.pcp.events.tests.halt

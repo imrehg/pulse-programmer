@@ -14,12 +14,13 @@ from sequencer.pcp.instructions.j     import * # Jump instruction
 from sequencer.pcp.instructions.btr   import * # Branch-on-trigger instruction
 
 # Import universally supported event types
-from sequencer.pcp.events.halt                import *
-from sequencer.pcp.events.jump                import *
-from sequencer.pcp.events.feedback_branch     import *
-from sequencer.pcp.events.feedback_while_loop import *
-from sequencer.pcp.events.infinite_loop       import *
-from sequencer.pcp.events.label               import *
+from sequencer.pcp.events.halt                 import *
+from sequencer.pcp.events.jump                 import *
+from sequencer.pcp.events.feedback_branch      import *
+from sequencer.pcp.events.feedback_branch_wait import *
+from sequencer.pcp.events.feedback_while_loop  import *
+from sequencer.pcp.events.infinite_loop        import *
+from sequencer.pcp.events.label                import *
 
 # Classes
 
@@ -65,6 +66,24 @@ class Family:
       word_list.append(Nop_Instr())
     return word_list
   handle_feedback_branch = Callable(handle_feedback_branch)
+  #----------------------------------------------------------------------------
+  def handle_feedback_branch_wait(self, event):
+    trigger_mask = 0x00
+    word_list = [event.get_first_word()]
+    # Execute Halt first
+    word_list.append(Halt_Instr())
+    # Fill all but last branch delay slot with nops
+    for i in range(self.branch_delay_slots-1):
+      word_list.append(Nop_Instr())
+    
+    for x in event.feedback_source_generator():
+      trigger_mask |= (0x01 << x.get_bit_index())
+    # Add BranchTrigger to last branch delay slot
+    b = BranchTrigger_Instr(target=event.get_target().get_first_word(),
+                            trigger=trigger_mask)
+    word_list.append(b)
+    return word_list
+  handle_feedback_branch_wait = Callable(handle_feedback_branch_wait)
   #----------------------------------------------------------------------------
   def handle_loop(self, loop_event):
     word_list = [loop_event.get_first_word()]
@@ -138,6 +157,7 @@ class Family:
       Halt_Event              : self.handle_halt,
       Jump_Event              : self.handle_jump,
       FeedbackBranch_Event    : self.handle_feedback_branch,
+      FeedbackBranchWait_Event: self.handle_feedback_branch_wait,
       FeedbackWhileLoop_Event : self.handle_loop,
       InfiniteLoop_Event      : self.handle_loop
       }
