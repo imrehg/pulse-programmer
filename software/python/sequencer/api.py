@@ -3,6 +3,7 @@ import os
 
 #------------------------------------------------------------------------------
 from datetime import datetime
+import struct
 
 def save_program(binary_charlist):
   datetext = datetime.today().strftime("%Y-%m-%d-%H%M%S")
@@ -10,8 +11,16 @@ def save_program(binary_charlist):
   if (os.access(filename, os.F_OK)):
     filename = "pulse-"+datetext+"2.bin"
   filehandle = open(filename, "wb")
-  for char in binary_charlist:
-    filehandle.write(char)
+  sizeoflist = len(binary_charlist)
+  osname = os.uname()[0]
+  if osname == 'Linux':
+	list1 = binary_charlist[0:sizeoflist:2]
+	list2 = binary_charlist[1:sizeoflist:2]
+	for c1, c2 in zip(list1, list2):
+		filehandle.write(c2 + c1)
+  else:
+	for char in binary_charlist:
+		filehandle.write(char)
   filehandle.close()
 #------------------------------------------------------------------------------
 from sequencer.pcp.events.infinite_loop import InfiniteLoop_Event
@@ -42,7 +51,7 @@ def branch(label, triggers):
   unset_current_devices()
   sequencer.current_sequence.add_event(FeedbackBranch_Event(label, triggers))
 #------------------------------------------------------------------------------
-from sequencer.pcp.events.feedback_branch_wait import FeedbackBranchWait_Event
+#from sequencer.pcp.events.feedback_branch_wait import FeedbackBranchWait_Event
 
 def branch_wait(label, triggers):
   unset_current_devices()
