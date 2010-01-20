@@ -119,3 +119,29 @@ def insert_label(label_event):
 def unset_current_devices():
   sequencer.current_sequence.unset_current_devices()
 
+### TODO: ###
+from sequencer.pcp.events.input_counter import InputCounterReset_Event
+from sequencer.pcp.events.input_counter import InputCounterLatch_Event
+from sequencer.pcp.events.input_counter import InputCounterWrite_Event
+from sequencer.pcp.events.input_counter import InputCounterCompare_Event
+from sequencer.pcp.events.input_counter import InputCounterBranch_Event
+
+def reset_input_counter(input_channel):
+  reset_icnt = InputCounterReset_Event(input_channel)
+  sequencer.current_sequence.add_event(reset_icnt)
+
+def latch_input_counter(input_channel):
+  latch_icnt = InputCounterLatch_Event(input_channel)
+  sequencer.current_sequence.add_event(latch_icnt)
+
+def write_input_counter(input_channel, memory_address):
+  write_icnt = InputCounterWrite_Event(input_channel, memory_address)
+  sequencer.current_sequence.add_event(write_icnt)
+
+def compare_input_counter(input_channel):
+  compare_icnt = InputCounterCompare_Event(input_channel)
+  sequencer.current_sequence.add_event(compare_icnt)
+
+def branch_input(input_channel, triggers):
+  pass
+  

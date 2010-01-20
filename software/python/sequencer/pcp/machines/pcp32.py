@@ -21,6 +21,7 @@ from sequencer.pcp.instructions.bdec  import * # Branch-decrement instruction
 from sequencer.pcp.instructions.sub   import * # Subroutine instruction
 from sequencer.pcp.instructions.ret   import * # Return instruction
 from sequencer.pcp.instructions.wait  import * # Wait instruction
+from sequencer.pcp.instructions.icnt  import * # Input Counting instruction
 
 # Import supported event types
 from sequencer.pcp.events.atomic_pulse     import *
@@ -33,6 +34,7 @@ from sequencer.pcp.events.switch_frequency import *
 from sequencer.pcp.events.subroutine_call  import *
 from sequencer.pcp.events.subroutine       import *
 from sequencer.pcp.events.ins_nop          import *
+from sequencer.pcp.events.input_counter    import *
 
 import copy
 
@@ -313,7 +315,54 @@ class PCP32_Family(Family):
   #----------------------------------------------------------------------------
   def handle_simul_pulse(self, event):
     raise RuntimeError("not yet implemented.")
+    word_list = [event.get_first_word()]
   handle_simul_pulse = Callable(handle_simul_pulse)
+  #----------------------------------------------------------------------------
+### TODO: ###
+  def handle_input_counter_reset(self, event):
+	word_list = [event.get_first_word()]
+	word_list.append(InputCounter_Instr(
+						register = event.get_input_channel().get_bit_index(),
+						subopcode = event.get_subopcode(),
+						mem_address = 0)) # address unused
+	return word_list
+  handle_input_counter_reset = Callable(handle_input_counter_reset)
+  #----------------------------------------------------------------------------
+  def handle_input_counter_latch(self, event):
+	word_list = [event.get_first_word()]
+	word_list.append(InputCounter_Instr(
+						register = event.get_input_channel().get_bit_index(),
+						subopcode = event.get_subopcode(),
+						mem_address = 0)) # address unused
+	return word_list
+  handle_input_counter_latch = Callable(handle_input_counter_latch)
+  #----------------------------------------------------------------------------
+  def handle_input_counter_write(self, event):
+	word_list = [event.get_first_word()]
+	word_list.append(InputCounter_Instr(
+						register = event.get_input_channel().get_bit_index(),
+						subopcode = event.get_subopcode(),
+						mem_address = event.get_memory_address()))
+	return word_list
+  handle_input_counter_write = Callable(handle_input_counter_write)
+  #----------------------------------------------------------------------------
+  def handle_input_counter_compare(self, event):
+	word_list = [event.get_first_word()]
+	word_list.append(InputCounter_Instr(
+						register = event.get_input_channel().get_bit_index(),
+						subopcode = event.get_subopcode(),
+						mem_address = 0)) # address unused
+	return word_list
+  handle_input_counter_compare = Callable(handle_input_counter_compare)
+  #----------------------------------------------------------------------------
+  def handle_input_counter_branch(self, event):
+	word_list = [event.get_first_word()]
+	word_list.append(InputCounter_Instr(
+						register = event.get_input_channel().get_bit_index(),
+						subopcode = event.get_subopcode(),
+						mem_address = event.get_target())) #### TODO: this should not be get_target? ###
+	return word_list
+  handle_input_counter_branch = Callable(handle_input_counter_branch)
   #----------------------------------------------------------------------------
   def __init__(self               ,
                name               ,
@@ -348,6 +397,12 @@ class PCP32_Family(Family):
     self.event_dict[SwitchFrequency_Event] = self.handle_switch_frequency
     self.event_dict[Wait_Event           ] = self.handle_wait
     self.event_dict[ins_nop_Event        ] = self.handle_ins_nop
+	### TODO: ###
+    self.event_dict[InputCounterReset_Event] = self.handle_input_counter_reset
+    self.event_dict[InputCounterLatch_Event] = self.handle_input_counter_latch
+    self.event_dict[InputCounterWrite_Event] = self.handle_input_counter_write
+    self.event_dict[InputCounterCompare_Event] = self.handle_input_counter_compare
+    self.event_dict[InputCounterBranch_Event] = self.handle_input_counter_branch
     # Create family-specific output registers for remembering output values
     self.reg16 = (OutputRegister(16), OutputRegister(16),
                   OutputRegister(16), OutputRegister(16))
@@ -483,5 +538,14 @@ class PCP32_Family(Family):
       addend_flag_shift      = 21,
       set_current_flag_shift = 20,
       hw_phase_data_width    = self.phase_data_width)
+	### TODO: ###
+    InputCounter_Instr.set_opcode(opcode = 0x2)
+    InputCounter_Instr.set_masks(
+	  register_width = 5,
+	  register_shift = 23,
+	  subopcode_width = 3,
+	  subopcode_shift = 20,
+	  address_width = 18,
+	  address_shift = 0)
 
 #==============================================================================
