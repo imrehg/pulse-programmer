@@ -22,27 +22,11 @@ setup()
 
 # We send the R register first, followed by the control
 # register, and lastly the N register.
-CONTROL_REG = 1
-N_REG = 2
-R_REG = 0
-
-# Stores the data to transmit
-data = [0,0,0]
-
-# Control register
-data[CONTROL_REG] = int('100011111111000100001100',2)
-#data[CONTROL_REG] = int('100011111111000100001000',2)
-
-# N register
-data[N_REG] = int('000000001111101000000010',2)
-#data[N_REG] = int('000000011000011001010010',2)
-
-# R register
-data[R_REG] = int('000000000000000011001001',2)
-#data[R_REG] = int('000000000000000011001001',2)
-
-# Register size, in bits
-REGISTER_BITS = 24
+data = [
+  '000000000000000011001001', # R_REG
+  '100011111111000100001100', # CONTROL_REG
+  '000000001111101000000010', # N_REG
+]
 
 # I2C slave address
 I2C_SLAVE = 0x61
@@ -56,25 +40,20 @@ I2C_COMMAND = "\x44%c"
 LE_PIN = 1 << 5
 CLOCK_PIN = 1 << 7
 DATA_PIN = 1 << 6
-# TODO: check these pin mappings!
 
 # To make sure setup and hold time are met,
 # we'll first set the data pins, then raise the
 # clock pin, then lower the clock pin.  This
 # means each bit will require three commands.
-
-BIT_MASK = 1 << (REGISTER_BITS - 1)
 for entry in data:
-	print entry
+	#print entry
 	# Transmit bits
-	for i in xrange(REGISTER_BITS):
-		bit_mask = (255^DATA_PIN if (entry & BIT_MASK) else 255)
+	for i in entry:
+		bit_mask = 255^DATA_PIN if i == '1' else 255
 		print list(I2C_COMMAND % bit_mask)
 
 		send_i2c(I2C_SLAVE, I2C_COMMAND % bit_mask)
 		send_i2c(I2C_SLAVE, I2C_COMMAND % (bit_mask^CLOCK_PIN))
-		#send_i2c(I2C_SLAVE, I2C_COMMAND % bit_mask)
-		entry <<= 1
 
 	# Set the LE register high to store data in the
 	# appropriate register.
@@ -84,5 +63,3 @@ for entry in data:
 send_i2c(I2C_SLAVE, "\x44\xFF")
 
 teardown()
-
-
