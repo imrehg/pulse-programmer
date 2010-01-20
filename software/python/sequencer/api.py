@@ -11,17 +11,9 @@ def save_program(binary_charlist):
   if (os.access(filename, os.F_OK)):
     filename = "pulse-"+datetext+"2.bin"
   filehandle = open(filename, "wb")
-  sizeoflist = len(binary_charlist)
-  osname = os.uname()[0]
-  if osname == 'Linux':
-	list1 = binary_charlist[0:sizeoflist:2]
-	list2 = binary_charlist[1:sizeoflist:2]
-	for c1, c2 in zip(list1, list2):
-		filehandle.write(c2 + c1)
-  else:
-	for char in binary_charlist:
-		filehandle.write(char)
-  filehandle.close()
+  for char in binary_charlist:
+    filehandle.write(char)
+  filehandle.close()  
 #------------------------------------------------------------------------------
 from sequencer.pcp.events.infinite_loop import InfiniteLoop_Event
 def begin_infinite_loop():
