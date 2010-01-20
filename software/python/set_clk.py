@@ -50,7 +50,7 @@ for entry in data:
 	# Transmit bits
 	for i in entry:
 		bit_mask = 255^DATA_PIN if i == '1' else 255
-		print list(I2C_COMMAND % bit_mask)
+		#print list(I2C_COMMAND % bit_mask)
 
 		send_i2c(I2C_SLAVE, I2C_COMMAND % bit_mask)
 		send_i2c(I2C_SLAVE, I2C_COMMAND % (bit_mask^CLOCK_PIN))
