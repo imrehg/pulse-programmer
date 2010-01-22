@@ -142,6 +142,7 @@ def compare_input_counter(input_channel):
   compare_icnt = InputCounterCompare_Event(input_channel)
   sequencer.current_sequence.add_event(compare_icnt)
 
-def branch_input(input_channel, triggers):
-  pass
+def branch_input(label, input_channel):
+  unset_current_devices()
+  sequencer.current_sequence.add_event(InputCounterBranch_Event(label, input_channel))
   

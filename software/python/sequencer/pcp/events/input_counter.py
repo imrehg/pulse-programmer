@@ -3,6 +3,7 @@
 # Class definitions for input counting events
 
 from sequencer.pcp.events import *
+from sequencer.pcp.instructions.icnt import icnt_subopcodes as subop
 
 #==============================================================================
 class InputCounterReset_Event(Event):
@@ -16,7 +17,7 @@ class InputCounterReset_Event(Event):
 		"""
 		Event.__init__(self)
 		self.input_channel = input_channel
-		self.subopcode = 0x0
+		self.subopcode = subop.ICNT_RESET
 	
 	def get_subopcode(self):
 		return self.subopcode
@@ -40,7 +41,7 @@ class InputCounterLatch_Event(Event):
 		"""
 		Event.__init__(self)
 		self.input_channel = input_channel
-		self.subopcode = 0x1
+		self.subopcode = subop.ICNT_LATCH
 	
 	def get_subopcode(self):
 		return self.subopcode
@@ -57,6 +58,7 @@ class InputCounterWrite_Event(Event):
 	"""
 	Base class for abstract input counter write to memory event
 	"""
+	### TODO: is memory_address really needed? does the memory pointer just increment when written to?
 	def __init__(self, input_channel, memory_address):
 		"""
 		InputCounterWrite_Event(input_channel, memory_address):
@@ -65,7 +67,7 @@ class InputCounterWrite_Event(Event):
 		Event.__init__(self)
 		self.input_channel = input_channel
 		self.memory_address = memory_address
-		self.subopcode = 0x2 
+		self.subopcode = subop.ICNT_WRITE 
 	
 	def get_subopcode(self):
 		return self.subopcode
@@ -93,7 +95,7 @@ class InputCounterCompare_Event(Event):
 		"""
 		Event.__init__(self)
 		self.input_channel = input_channel
-		self.subopcode = 0x4
+		self.subopcode = subop.ICNT_COMPARE
 	
 	def get_subopcode(self):
 		return self.subopcode
@@ -110,16 +112,21 @@ class InputCounterBranch_Event(Target_Event):
 	"""
 	Base class for abstract input counter branch on threshold event
 	"""
-	def __init__(self, target, branch_delay_slot = None):
+	def __init__(self, target, input_channel, branch_delay_slot = None):
 		"""
 		InputCounterBranch_Event(target):
-			target = instruction to branch to
+			target = event to branch to
 		"""
 		Target_Event.__init__(self, target, branch_delay_slot)
-		self.subopcode = 0x5
+		self.subopcode = subop.ICNT_BRANCH
+		self.target = target
+		self.input_channel = input_channel
 	
 	def get_subopcode(self):
 		return self.subopcode
+	
+	def get_input_channel(self):
+		return self.input_channel
 	
 	def __str__(self):
 		return "InputCounterBranch_Event: " + \

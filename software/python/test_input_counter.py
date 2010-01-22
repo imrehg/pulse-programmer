@@ -9,5 +9,11 @@ latch_input_counter(Input_3_Trigger)
 write_input_counter(Input_4_Trigger, 0xbeef)
 compare_input_counter(Input_5_Trigger)
 
+label1 = create_and_insert_label("test_label1")
+label2 = create_label("test_label2")
+branch_input(label2, Input_6_Trigger)
+jump_label(label1)
+insert_label(label2)
+
 end_sequence()
 

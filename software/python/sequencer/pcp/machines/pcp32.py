@@ -324,7 +324,7 @@ class PCP32_Family(Family):
 	word_list.append(InputCounter_Instr(
 						register = event.get_input_channel().get_bit_index(),
 						subopcode = event.get_subopcode(),
-						mem_address = 0)) # address unused
+						target = 0)) # address unused
 	return word_list
   handle_input_counter_reset = Callable(handle_input_counter_reset)
   #----------------------------------------------------------------------------
@@ -333,7 +333,7 @@ class PCP32_Family(Family):
 	word_list.append(InputCounter_Instr(
 						register = event.get_input_channel().get_bit_index(),
 						subopcode = event.get_subopcode(),
-						mem_address = 0)) # address unused
+						target = 0)) # address unused
 	return word_list
   handle_input_counter_latch = Callable(handle_input_counter_latch)
   #----------------------------------------------------------------------------
@@ -342,7 +342,7 @@ class PCP32_Family(Family):
 	word_list.append(InputCounter_Instr(
 						register = event.get_input_channel().get_bit_index(),
 						subopcode = event.get_subopcode(),
-						mem_address = event.get_memory_address()))
+						target = event.get_memory_address()))
 	return word_list
   handle_input_counter_write = Callable(handle_input_counter_write)
   #----------------------------------------------------------------------------
@@ -351,7 +351,7 @@ class PCP32_Family(Family):
 	word_list.append(InputCounter_Instr(
 						register = event.get_input_channel().get_bit_index(),
 						subopcode = event.get_subopcode(),
-						mem_address = 0)) # address unused
+						target = 0)) # address unused
 	return word_list
   handle_input_counter_compare = Callable(handle_input_counter_compare)
   #----------------------------------------------------------------------------
@@ -360,7 +360,10 @@ class PCP32_Family(Family):
 	word_list.append(InputCounter_Instr(
 						register = event.get_input_channel().get_bit_index(),
 						subopcode = event.get_subopcode(),
-						mem_address = event.get_target())) #### TODO: this should not be get_target? ###
+						target = event.get_target().get_first_word()))
+    # Naively fill branch delay slots with non-collapsable nops
+	for i in range(self.branch_delay_slots):
+		word_list.append(Nop_Instr())
 	return word_list
   handle_input_counter_branch = Callable(handle_input_counter_branch)
   #----------------------------------------------------------------------------
