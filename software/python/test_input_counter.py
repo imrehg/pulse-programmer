@@ -6,12 +6,12 @@ begin_sequence(reset_dds=False)
 
 reset_input_counter(Input_1_Trigger)
 latch_input_counter(Input_3_Trigger)
-write_input_counter(Input_4_Trigger, 0xbeef)
+write_input_counter(Input_4_Trigger)
 compare_input_counter(Input_5_Trigger)
 
 label1 = create_and_insert_label("test_label1")
 label2 = create_label("test_label2")
-branch_input(label2, Input_6_Trigger)
+branch_input(label2)
 jump_label(label1)
 insert_label(label2)
 

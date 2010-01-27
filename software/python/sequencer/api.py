@@ -118,31 +118,29 @@ def insert_label(label_event):
 # unset the current devices - we need this for loops and subroutines
 def unset_current_devices():
   sequencer.current_sequence.unset_current_devices()
-
-### TODO: ###
+#--------------------------------------------------------------------------
 from sequencer.pcp.events.input_counter import InputCounterReset_Event
-from sequencer.pcp.events.input_counter import InputCounterLatch_Event
-from sequencer.pcp.events.input_counter import InputCounterWrite_Event
-from sequencer.pcp.events.input_counter import InputCounterCompare_Event
-from sequencer.pcp.events.input_counter import InputCounterBranch_Event
-
 def reset_input_counter(input_channel):
   reset_icnt = InputCounterReset_Event(input_channel)
   sequencer.current_sequence.add_event(reset_icnt)
 
+from sequencer.pcp.events.input_counter import InputCounterLatch_Event
 def latch_input_counter(input_channel):
   latch_icnt = InputCounterLatch_Event(input_channel)
   sequencer.current_sequence.add_event(latch_icnt)
 
-def write_input_counter(input_channel, memory_address):
-  write_icnt = InputCounterWrite_Event(input_channel, memory_address)
+from sequencer.pcp.events.input_counter import InputCounterWrite_Event
+def write_input_counter(input_channel):
+  write_icnt = InputCounterWrite_Event(input_channel)
   sequencer.current_sequence.add_event(write_icnt)
 
+from sequencer.pcp.events.input_counter import InputCounterCompare_Event
 def compare_input_counter(input_channel):
   compare_icnt = InputCounterCompare_Event(input_channel)
   sequencer.current_sequence.add_event(compare_icnt)
 
-def branch_input(label, input_channel):
+from sequencer.pcp.events.input_counter import InputCounterBranch_Event
+def branch_input(label):
   unset_current_devices()
-  sequencer.current_sequence.add_event(InputCounterBranch_Event(label, input_channel))
+  sequencer.current_sequence.add_event(InputCounterBranch_Event(label))
   

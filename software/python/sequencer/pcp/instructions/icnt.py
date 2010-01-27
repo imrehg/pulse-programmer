@@ -26,7 +26,7 @@ class InputCounter_Instr(InstructionWord, TargetInstruction):
 	
 	# Class constants
 	OPCODE 					= 0x2
-	### bit 18,19 unused?
+	# bits 18,19 are unused
 	REGISTER_MASK			= Bitmask(label="Register", width=5, shift=24)
 	SUBOPCODE_MASK			= Bitmask(label="Subopcode", width=3, shift=21)
 	TARGET_MASK				= Bitmask(label="Target", width=18, shift=0)
@@ -64,18 +64,17 @@ class InputCounter_Instr(InstructionWord, TargetInstruction):
 	#----------------------------------------------------------------------------
 	def __init__(self, register, subopcode, target):
 		"""
-		InputCounter_Intsr(subopcode)
+		InputCounter_Intsr(register, subopcode, target)
 			register		= address of counter register
 			subopcode		= subopcode of the instruction
-			target_address		= memory address for writing/branching
+			target			= memory address for writing/branching
 		"""
 		InstructionWord.__init__(self)
 		# This has to be done otherwise the collapsable attribute is not set
 		check_inputs([(register, InputCounter_Instr.REGISTER_MASK),
 					  (subopcode, InputCounter_Instr.SUBOPCODE_MASK)])
-					  #(target_address, InputCounter_Instr.TARGET_MASK)])
 
-		self.register = register
+		self.register = register | 0x10 # all input counter registers are prefixed with 0x10xxx
 		self.subopcode = subopcode
 		self.target = target
 	#----------------------------------------------------------------------------
