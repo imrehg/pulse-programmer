@@ -1,3 +1,8 @@
+# This script turns pins or lights on and off.
+# To turn a pin on, pass the pin's number as an argument.
+# Example: to turn on only the first pin:
+#   set_pins.py 0
+
 from test_config import *
 import sys
 
