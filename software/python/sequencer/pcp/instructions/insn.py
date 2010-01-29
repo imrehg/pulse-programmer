@@ -11,7 +11,7 @@ from sequencer.pcp.instructions import *
 
 #==============================================================================
 class InstructionWord(Word):
-  "Base class for a 64-bit instruction word."
+  "Base class for a 32-bit instruction word."
   #----------------------------------------------------------------------------
   OPCODE_WIDTH = 6
   OPCODE_MASK  = generate_mask(OPCODE_WIDTH)

@@ -38,10 +38,10 @@ def end_finite_loop(loop_count):
 #------------------------------------------------------------------------------
 from sequencer.pcp.events.feedback_branch import FeedbackBranch_Event
 
-def branch(label, triggers):
+def branch(label, triggers, level = 1):
   #we've to remove the current devices so we create the setup events for them !!
   unset_current_devices()
-  sequencer.current_sequence.add_event(FeedbackBranch_Event(label, triggers))
+  sequencer.current_sequence.add_event(FeedbackBranch_Event(label, triggers, level))
 #------------------------------------------------------------------------------
 #from sequencer.pcp.events.feedback_branch_wait import FeedbackBranchWait_Event
 

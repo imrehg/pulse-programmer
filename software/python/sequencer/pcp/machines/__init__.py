@@ -59,7 +59,8 @@ class Family:
     for x in event.feedback_source_generator():
       trigger_mask |= (0x01 << x.get_bit_index())
     b = BranchTrigger_Instr(target=event.get_target().get_first_word(),
-                            trigger=trigger_mask)
+                            trigger=trigger_mask,
+			    level=event.level)
     # One branch delay slot, naively fill with non-collapsable nop
     word_list = [event.get_first_word(), b]
     for i in range(self.branch_delay_slots):

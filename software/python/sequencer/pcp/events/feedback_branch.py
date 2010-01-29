@@ -11,12 +11,13 @@ class FeedbackBranch_Event(Target_Event):
   a feedback while loop.
   """
   #----------------------------------------------------------------------------
-  def __init__(self, target, feedback_sources, branch_delay_slot = None):
+  def __init__(self, target, feedback_sources, level, branch_delay_slot = None):
     """
-    FeedbackBranch_Event(target, trigger):
+    FeedbackBranch_Event(target, trigger, level):
       target = first instruction (collapsable nop) of target event
       feedback_sources = tuple of positive feedback sources, any of which will
                          take the branch
+      level = integer that chooses whether to trigger on the sources if high or low
     """
     Target_Event.__init__(self, target, branch_delay_slot)
     if (len(feedback_sources) <= 0):
@@ -25,6 +26,7 @@ class FeedbackBranch_Event(Target_Event):
       if (not x.is_feedback_source()):
         raise RuntimeError("Some item is not a feedback source.")
     self.feedback_sources = set(feedback_sources)
+    self.level = level
   #----------------------------------------------------------------------------
   def feedback_source_generator(self):
     for x in self.feedback_sources:
@@ -33,6 +35,7 @@ class FeedbackBranch_Event(Target_Event):
   def __str__(self):
     return "FeedbackBranch_Event: " \
            "target=" + repr(self.target) + \
-           " feedback " + repr(self.feedback_sources)
+           " feedback=" + repr(self.feedback_sources) + \
+	   " level=" + repr(self.level)
 #           "trigger=" + repr(self.trigger)
 #==============================================================================

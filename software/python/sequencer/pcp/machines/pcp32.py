@@ -497,8 +497,10 @@ class PCP32_Family(Family):
     Jump_Instr            .set_opcode(opcode = 0x4)
 
     BranchTrigger_Instr   .set_opcode(opcode = 0x3)
-    BranchTrigger_Instr   .set_trigger_mask(trigger_width = 9,
-                                            trigger_shift = 19)
+    BranchTrigger_Instr   .set_masks(trigger_width = 9,
+                                     trigger_shift = 19,
+				     level_width = 1,
+                                     level_shift = 18)
     PulseImmed_Instr      .set_opcode(opcode = 0xC)
     PulseImmed_Instr      .set_masks(output_width   = 16,
                                      output_shift   = 0 ,
