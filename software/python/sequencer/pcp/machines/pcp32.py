@@ -388,7 +388,7 @@ class PCP32_Family(Family):
                     reg_width          = 5             ,
                     reg_count          = 32            ,
                     min_duration       = 1             ,
-                    branch_delay_slots = 5
+                    branch_delay_slots = 6
                     )
     self.event_dict[AtomicPulse_Event    ] = self.handle_atomic_pulse
     self.event_dict[SimulPulse_Event     ] = self.handle_simul_pulse
