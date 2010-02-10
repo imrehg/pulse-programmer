@@ -1,0 +1,29 @@
+gEDA/gschem version 1.4.3.20081231
+gEDA/gschem comes with ABSOLUTELY NO WARRANTY; see COPYING for more details.
+This is free software, and you are welcome to redistribute it under certain
+conditions; please see the COPYING file for more details.
+
+Read system-gafrc file [/etc/gEDA/system-gafrc]
+Read ~/.gEDA/gafrc file [/home/david/.gEDA/gafrc]
+Did not find optional local gafrc file [/media/Windows/pulseprogrammer/pulse-sequencer/hardware/clock-source/gafrc]
+Read system-gschemrc file [/etc/gEDA/system-gschemrc]
+
+In unknown file:
+   ?: 0* [primitive-load "/home/david/.gEDA/gschemrc"]
+In /home/david/.gEDA/gschemrc:
+   2: 1* [load-module ...
+   2: 2*  [string-append ...
+
+/home/david/.gEDA/gschemrc:1:6: Unbound variable: gedadata
+Read ~/.gEDA/gschemrc file [/home/david/.gEDA/gschemrc]
+Did not find optional local gschemrc file [/media/Windows/pulseprogrammer/pulse-sequencer/hardware/clock-source/gschemrc]
+Read init scm file [/usr/share/gEDA/scheme/gschem.scm]
+Loading schematic [/media/Windows/pulseprogrammer/pulse-sequencer/hardware/clock-source/clock-source.sch]
+Did not find specified gafrc file [/media/Windows/pulseprogrammer/pulse-sequencer/hardware/clock-source/gafrc]
+Found an improper attribute: _documentation=_
+Found an improper attribute: _documentation=_
+Found an improper attribute: _documentation=_
+Loading schematic [/media/Windows/pulseprogrammer/pulse-sequencer/hardware/clock-source/clock-source-page2.sch]
+Did not find specified gafrc file [/media/Windows/pulseprogrammer/pulse-sequencer/hardware/clock-source/gafrc]
+Saved [/media/Windows/pulseprogrammer/pulse-sequencer/hardware/clock-source/clock-source.sch]
+Saved [/media/Windows/pulseprogrammer/pulse-sequencer/hardware/clock-source/clock-source-page2.sch]
