@@ -44,4 +44,16 @@ class Device2(Generic_Device):
                           width = 1,
                           shift = 32)
     Generic_Device.__init__(self, output_mask = output_mask)
+
+
+class LoopbackDevice(Generic_Device):
+  """
+  Device to connect outputs to inputs for testing
+  """
+  #----------------------------------------------------------------------------
+  def __init__(self):
+    output_mask = Bitmask(label = "Generic Output 4",
+                          width = 8,
+                          shift = 0)
+    Generic_Device.__init__(self, output_mask = output_mask)
     

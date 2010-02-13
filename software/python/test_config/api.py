@@ -93,6 +93,10 @@ def ttl_signal_a(value):
 def ttl_set_channel(bit,value):
   event_list = test_config.device_two.create_bit_output_events(bit = bit,value = value)
   sequencer.current_sequence.add_event_list(event_list)
+  
+def ttl_signal_loopback(value):
+  event_list = test_config.device_loopback.create_output_events(value = value)
+  sequencer.current_sequence.add_event_list(event_list)
 
 def dac_setup():
   event_list = test_config.first_dac_device.internal_get_setup_events()

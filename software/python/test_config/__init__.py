@@ -53,6 +53,7 @@ all_sequencers = sequencer.ptp.devices.Device(
 
 device_one = Device1()
 device_two = Device2()
+device_loopback = LoopbackDevice()
 pmt_device = Device_PMT()
 
 # Create devices

@@ -342,6 +342,11 @@ class PCP32_Family(Family):
 						register = event.get_input_channel().get_bit_index(),
 						subopcode = event.get_subopcode(),
 						target = 0)) # uses address from address accumulator
+						
+	# Insert nops in case we have multiple writes in a row
+	# Number is currently arbitrary - 12 is too few, 24 is probably too many
+	for i in range(24):
+		word_list.append(Nop_Instr())
 	return word_list
   handle_input_counter_write = Callable(handle_input_counter_write)
   #----------------------------------------------------------------------------
