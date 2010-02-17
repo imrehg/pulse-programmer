@@ -46,7 +46,7 @@ class BranchTrigger_Instr(InstructionWord):
     BranchTrigger_Instr.TARGET_MASK     = target_mask
   set_masks = Callable(set_masks)
   #----------------------------------------------------------------------------
-  def __init__(self, target, trigger, level):
+  def __init__(self, target, trigger, level=1):
     """
     BranchTrigger_Instr(target, trigger, level)
       target         = destination instruction of branch.

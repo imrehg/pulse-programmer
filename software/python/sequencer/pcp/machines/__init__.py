@@ -73,16 +73,19 @@ class Family:
     word_list = [event.get_first_word()]
     # Execute Halt first
     word_list.append(Halt_Instr())
-    # Fill all but last branch delay slot with nops
-    for i in range(self.branch_delay_slots-1):
-      word_list.append(Nop_Instr())
     
-    for x in event.feedback_source_generator():
-      trigger_mask |= (0x01 << x.get_bit_index())
-    # Add BranchTrigger to last branch delay slot
-    b = BranchTrigger_Instr(target=event.get_target().get_first_word(),
+    
+    # Fill all but last branch delay slot with nops
+    for i in range(self.branch_delay_slots):
+      for x in event.feedback_source_generator():
+        trigger_mask |= (0x01 << x.get_bit_index())
+      # Add BranchTrigger to last branch delay slot
+      b = BranchTrigger_Instr(target=event.get_target().get_first_word(),
                             trigger=trigger_mask)
-    word_list.append(b)
+      word_list.append(b)
+    
+    
+ 
     return word_list
   handle_feedback_branch_wait = Callable(handle_feedback_branch_wait)
   #----------------------------------------------------------------------------

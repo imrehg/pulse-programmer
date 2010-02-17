@@ -10,8 +10,8 @@ test_config.first_sequencer.stop_processor()
 
 # Reads 128 bytes from the memory written to by icnt write
 # NOTE: There appears to be a bug where reading from 0x100000 actually reads from 0x0
-payload = read_imem(0x100000, 128)
-i = 0x100000
+payload = read_imem(0x40000 - 0x4, 36)
+i = 0x40000-0x4
 i -= 1
 
 for byte in payload:

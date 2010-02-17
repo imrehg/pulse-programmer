@@ -43,7 +43,7 @@ def branch(label, triggers, level = 1):
   unset_current_devices()
   sequencer.current_sequence.add_event(FeedbackBranch_Event(label, triggers, level))
 #------------------------------------------------------------------------------
-#from sequencer.pcp.events.feedback_branch_wait import FeedbackBranchWait_Event
+from sequencer.pcp.events.feedback_branch_wait import FeedbackBranchWait_Event
 
 def branch_wait(label, triggers):
   unset_current_devices()
