@@ -68,6 +68,22 @@ part "SO-8"
         silkcustomend
 part "XTAL"
 
+	pins = 4
+	width = 6.5 mm
+	pitch = 7.62 mm
+	padheight = 1.4 mm
+	padwidth = 1.9 mm
+        silkslot = "no"
+        silkcorner = "no"
+	silkoffset = 15 mils
+	silkboxheight = 11.4 mm
+	silkwidth = 10 mils
+	silkstyle = "outside"
+        silkcustom =
+        ElementArc[-12500 -14000 300 300 0 360 700]
+        silkcustomend
+part "OSC_TCXO"
+
 	pins = 6
 	width = 170 mils
 	pitch = 100 mils

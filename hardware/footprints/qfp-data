@@ -74,3 +74,24 @@ part "LQFP-32"
         padwidth = 1.0 mm
         padheight = 0.21 mm
 part "QFN-32"
+
+	pins = 24
+    lccnum = "no"
+	pitch = 0.5 mm
+	width = 2.95 mm	# distance inside pins
+	height = 2.95 mm
+	padwidth = 0.72 mm
+	padheight = 0.35 mm
+    silkoffset 0.75 mm
+part "LFCSP-24"
+    
+    type "so"
+        silkboxwidth = 1.6 mm
+        silkboxheight = 2.9 mm
+    pins = 6
+    pitch = 0.95 mm
+    padheight = 0.65 mm
+    padwidth = 1.06 mm
+    width = 1.6 mm
+    height = 0.425 mm
+part "SOT-23-6"
