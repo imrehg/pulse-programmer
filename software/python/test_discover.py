@@ -1,3 +1,6 @@
+from test_config import *
+
+parse_params(('dummy','int'))
 import sequencer.ptp
 sequencer.ptp.setup_socket()
 #for i in range(100):

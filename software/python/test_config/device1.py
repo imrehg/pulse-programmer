@@ -30,19 +30,19 @@ class Device1(Generic_Device):
   def __init__(self):
     output_mask = Bitmask(label = "Generic Output 1",
                           width = 4,
-                          shift = 32)
+                          shift = 33)
     Generic_Device.__init__(self, output_mask = output_mask)
 
 
 class Device2(Generic_Device):
   """
-  Generic device 1 for test scripts, TTL level toggling.
+  Generic device 2 for test scripts, TTL level toggling.
   """
   #----------------------------------------------------------------------------
   def __init__(self):
     output_mask = Bitmask(label = "Generic Output 2",
                           width = 1,
-                          shift = 32)
+                          shift = 49)
     Generic_Device.__init__(self, output_mask = output_mask)
 
 

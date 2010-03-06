@@ -9,7 +9,7 @@ parse_params(('dummy', 'int'))
  
 setup()
 send_i2c(slave_address = 0x60,
-         write_data = '\x44\xFF')
+         write_data = '\x44\x00')
 
 # write_data consists of two bytes
 # First byte: 0x44 means to write the following data and update output

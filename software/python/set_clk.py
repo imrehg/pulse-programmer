@@ -27,13 +27,13 @@ I2C_COMMAND = "\x44%c"
 
 # Clock source pins
 LE_PIN            = 1 << 5
-CLOCK_PIN         = 1 << 7
 DATA_PIN          = 1 << 6
+CLOCK_PIN         = 1 << 7
 
 # Clock divider pins
-DIVIDER_CLOCK_PIN = 1 << 4
-DIVIDER_DATA_PIN  = 1 << 3
-DIVIDER_CE_PIN    = 1 << 2
+DIVIDER_CE_PIN    = 1 << 4
+DIVIDER_CLOCK_PIN = 1 << 3
+DIVIDER_DATA_PIN  = 1 << 2
 
 # Contents of clock source register
 # We send the R register first, followed by the control
@@ -57,7 +57,7 @@ divider_data = [
     [0x140,0x43,0x43,0x42,0x43],
     [0x190,0,0x80,0,0xbb,0,0,0,0x80,0,0x22,0,0x11,0,0,0x33,0,0x11,0x20,0,0],
     [0x1e0,0,0,0,0,0],
-    [0x232,1] # this will flush the data out!
+    #[0x232,1] # this will flush the data out!
 ]
 
 # Set the pins
@@ -77,19 +77,26 @@ def send_clock_divider_bits(data,length):
    
 # To initialize the clock divider, set up the registers.
 def init_clock_divider():
+    # Make CE go high.
+    set_pins(DIVIDER_CE_PIN)
     set_pins(0)
     
     for entry in divider_data:
         # Send header
-        send_clock_divider_bits(entry[0] | CLOCK_DIVIDER_STREAMING,16)
+        send_clock_divider_bits((entry[0] + len(entry) - 2) | CLOCK_DIVIDER_STREAMING,16)
         
         # Send each data item
-        for item in entry[1:]:
+        for item in entry[:0:-1]:
             send_clock_divider_bits(item, 8)
                 
         # Make CE go high.
         set_pins(DIVIDER_CE_PIN)
         set_pins(0)
+    
+    # Transfer data from buffers to registers
+    send_clock_divider_bits(CLOCK_DIVIDER_FLUSH, 16)
+    send_clock_divider_bits(1, 8)
+    set_pins(DIVIDER_CE_PIN)
 
 # To initialize the clock source, we need to set up the three
 # registers on the board chip.
