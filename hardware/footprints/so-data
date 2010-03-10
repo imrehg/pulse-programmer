@@ -107,3 +107,14 @@ part "TF-6"
         silkcustom =
         silkcustomend
 part "H1260NL"
+
+	pins = 6
+	lccnum = "no"
+	width = 2.03 mm
+	height = 3.30 mm
+	padheight = 0.76 mm
+	padwidth = 1.40 mm
+	pitch = 1.27 mm
+	silkboxwidth = 3.81 mm
+	silkboxheight = 3.81 mm
+part "SM-22"

@@ -252,7 +252,7 @@ asm: $(RC_FILES) $(ASM_ZIP) $(ASM_ZIP).md5
 schpdf: $(RC_FILES) $(SCH_ZIP) $(SCH_ZIP).md5
 pcbpdf: $(RC_FILES) $(PCB_ZIP) $(PCB_ZIP).md5
 sch: $(GSCHEMRC) $(GAFRC)
-	$(GSCHEM) $(BOARD).sch
+	$(GSCHEM) $(BOARD).sch &
 layout: $(RC_FILES)
 	$(PCB) $(LAYER_COLORS) $(BOARD).pcb
 ps: $(RC_FILES) $(TARGETS_PS)
