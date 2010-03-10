@@ -1,0 +1,5 @@
+schematics clock-divider.sch
+output-name clock-divider
+elements-dir /m/projects/pulse_py/pulse-sequencer/hardware/footprints
+use-files
+m4-pcbdir /
