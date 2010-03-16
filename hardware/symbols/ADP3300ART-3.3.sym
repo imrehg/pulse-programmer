@@ -3,7 +3,7 @@ B 600 600 1400 1700 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
 P 300 2000 600 2000 1 0 0
 {
 T 400 1900 5 10 0 2 0 0 1
-pintype=unknown
+pintype=in
 T 655 1995 3 8 1 1 0 0 1
 pinlabel=IN
 T 505 2045 5 8 1 1 0 6 1
@@ -14,7 +14,7 @@ pinseq=0
 P 300 1400 600 1400 1 0 0
 {
 T 300 1400 5 10 0 0 0 0 1
-pintype=unknown
+pintype=in
 T 655 1395 3 8 1 1 0 0 1
 pinlabel=\_SD\_
 T 505 1445 5 8 1 1 0 6 1
@@ -25,7 +25,7 @@ pinseq=0
 P 300 800 600 800 1 0 0
 {
 T 300 800 5 10 0 0 0 0 1
-pintype=unknown
+pintype=pwr
 T 655 795 3 8 1 1 0 0 1
 pinlabel=GND
 T 505 845 5 8 1 1 0 6 1
@@ -36,7 +36,7 @@ pinseq=0
 P 2300 2000 2000 2000 1 0 0
 {
 T 2300 2000 5 10 0 0 0 0 1
-pintype=unknown
+pintype=out
 T 1945 1995 3 8 1 1 0 6 1
 pinlabel=NR
 T 2095 2045 5 8 1 1 0 0 1
@@ -47,7 +47,7 @@ pinseq=0
 P 2300 1400 2000 1400 1 0 0
 {
 T 2300 1400 5 10 0 0 0 0 1
-pintype=unknown
+pintype=out
 T 1945 1395 3 8 1 1 0 6 1
 pinlabel=OUT
 T 2095 1445 5 8 1 1 0 0 1
@@ -58,7 +58,7 @@ pinseq=0
 P 2300 800 2000 800 1 0 0
 {
 T 2300 800 5 10 0 0 0 0 1
-pintype=unknown
+pintype=out
 T 1945 795 3 8 1 1 0 6 1
 pinlabel=\_ERR\_
 T 2095 845 5 8 1 1 0 0 1

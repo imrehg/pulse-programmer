@@ -188,7 +188,7 @@ def pad(x1, y1, x2, y2, width, clear, mask, pinname, shape, tent=False,
     return "\tPad[%d %d %d %d %d %d %d \"\" \"%s\" \"%s\"]\n"\
            % (x1, y1, x2, y2, width, clear*2, mask, pinname, flags)
 
-def padctr(x,y,height,width,clear,mask,pinname,tent,onsolder):
+def padctr(x,y,height,width,clear,mask,pinname,tent=False,onsolder=False):
     linewidth = min(height,width)
     linelength = abs(height-width)
     if height>width:

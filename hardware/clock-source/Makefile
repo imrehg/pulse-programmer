@@ -1,4 +1,4 @@
-BOARD = clock-divider
+BOARD = clock-source-top
 REV = A
 TARGETS = $(BOARD).sch
 
@@ -7,6 +7,8 @@ SCHEM_FILES = \
 		clock-divider-jumpers.sch \
 		clock-divider-port0.sch \
 		clock-divider-port10.sch \
+        clock-source.sch \
+        clock-source-page2.sch \
 
 
 LAYER_COLORS = \
