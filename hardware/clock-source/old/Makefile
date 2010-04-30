@@ -4,6 +4,11 @@ TARGETS = $(BOARD).sch
 
 # Dummy targets to remake dependencies
 SCHEM_FILES = \
+		clock-divider-jumpers.sch \
+		clock-divider-port0.sch \
+		clock-divider-port10.sch \
+        clock-source.sch \
+        clock-source-page2.sch \
 
 
 LAYER_COLORS = \
