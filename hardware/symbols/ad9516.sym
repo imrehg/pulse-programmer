@@ -1,4 +1,4 @@
-v 20081231 1
+v 20100214 2
 B 300 400 5400 5300 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
 {
 T 600 5500 5 10 1 1 0 6 1
@@ -35,7 +35,7 @@ P 0 1300 200 1300 1 0 0
 T 100 1300 5 10 0 0 180 0 1
 pintype=in
 T 355 1295 3 8 1 1 0 0 1
-pinlabel=CLKB
+pinlabel=\_CLK\_
 T 205 1345 5 8 1 1 0 6 1
 pinnumber=14
 T 100 1300 5 10 0 0 180 0 1
@@ -99,9 +99,9 @@ pinseq=9
 P 0 3100 200 3100 1 0 0
 {
 T 100 3100 5 10 0 0 180 0 1
-pintype=unknown
+pintype=in
 T 355 3095 3 8 1 1 0 0 1
-pinlabel=SYNCB
+pinlabel=\_SYNC\_
 T 205 3145 5 8 1 1 0 6 1
 pinnumber=8
 T 100 3100 5 10 0 0 180 0 1
@@ -154,7 +154,7 @@ pinseq=4
 P 0 4600 300 4600 1 0 0
 {
 T 100 4600 5 10 0 0 180 0 1
-pintype=in
+pintype=out
 T 355 4595 3 8 1 1 0 0 1
 pinlabel=LD
 T 205 4645 5 8 1 1 0 6 1
@@ -165,7 +165,7 @@ pinseq=3
 P 0 4900 300 4900 1 0 0
 {
 T 100 4900 5 10 0 0 180 0 1
-pintype=in
+pintype=out
 T 355 4895 3 8 1 1 0 0 1
 pinlabel=REFMON
 T 205 4945 5 8 1 1 0 6 1
@@ -200,7 +200,7 @@ P 6000 4900 5800 4900 1 0 0
 T 5900 4900 5 10 0 0 0 0 1
 pintype=out
 T 5645 4895 3 8 1 1 0 6 1
-pinlabel=OUT6B
+pinlabel=\_OUT6\_
 T 5795 4945 5 8 1 1 0 0 1
 pinnumber=47
 T 5900 4900 5 10 0 0 0 0 1
@@ -222,7 +222,7 @@ P 6000 4300 5800 4300 1 0 0
 T 5900 4300 5 10 0 0 0 0 1
 pintype=out
 T 5645 4295 3 8 1 1 0 6 1
-pinlabel=OUT7B
+pinlabel=\_OUT7\_
 T 5795 4345 5 8 1 1 0 0 1
 pinnumber=45
 T 5900 4300 5 10 0 0 0 0 1
@@ -255,7 +255,7 @@ P 6000 3400 5800 3400 1 0 0
 T 5900 3400 5 10 0 0 0 0 1
 pintype=out
 T 5645 3395 3 8 1 1 0 6 1
-pinlabel=OUT2B
+pinlabel=\_OUT2\_
 T 5795 3445 5 8 1 1 0 0 1
 pinnumber=42
 T 5900 3400 5 10 0 0 0 0 1
@@ -288,7 +288,7 @@ P 6000 2500 5800 2500 1 0 0
 T 5900 2500 5 10 0 0 0 0 1
 pintype=out
 T 5645 2495 3 8 1 1 0 6 1
-pinlabel=OUT3B
+pinlabel=\_OUT3\_
 T 5795 2545 5 8 1 1 0 0 1
 pinnumber=39
 T 5900 2500 5 10 0 0 0 0 1
@@ -321,7 +321,7 @@ P 6000 1600 5800 1600 1 0 0
 T 5900 1600 5 10 0 0 0 0 1
 pintype=out
 T 5645 1595 3 8 1 1 0 6 1
-pinlabel=OUT9B
+pinlabel=\_OUT9\_
 T 5795 1645 5 8 1 1 0 0 1
 pinnumber=36
 T 5900 1600 5 10 0 0 0 0 1
@@ -343,7 +343,7 @@ P 6000 1000 5800 1000 1 0 0
 T 5900 1000 5 10 0 0 0 0 1
 pintype=out
 T 5645 995 3 8 1 1 0 6 1
-pinlabel=OUT8B
+pinlabel=\_OUT8\_
 T 5795 1045 5 8 1 1 0 0 1
 pinnumber=34
 T 5900 1000 5 10 0 0 0 0 1
@@ -398,7 +398,7 @@ P 4500 100 4500 300 1 0 0
 T 4500 200 5 10 0 0 270 0 1
 pintype=out
 T 4500 455 3 8 1 1 90 0 1
-pinlabel=OUT5B
+pinlabel=\_OUT5\_
 T 4450 305 5 8 1 1 90 6 1
 pinnumber=29
 T 4500 200 5 10 0 0 270 0 1
@@ -431,7 +431,7 @@ P 3600 100 3600 300 1 0 0
 T 3600 200 5 10 0 0 270 0 1
 pintype=out
 T 3600 455 3 8 1 1 90 0 1
-pinlabel=OUT4B
+pinlabel=\_OUT4\_
 T 3550 305 5 8 1 1 90 6 1
 pinnumber=26
 T 3600 200 5 10 0 0 270 0 1
@@ -453,7 +453,7 @@ P 3000 100 3000 400 1 0 0
 T 3000 200 5 10 0 0 270 0 1
 pintype=unknown
 T 3000 455 3 8 1 1 90 0 1
-pinlabel=PDB
+pinlabel=\_PD\_
 T 2950 305 5 8 1 1 90 6 1
 pinnumber=24
 T 3000 200 5 10 0 0 270 0 1
@@ -464,7 +464,7 @@ P 2700 100 2700 300 1 0 0
 T 2700 200 5 10 0 0 270 0 1
 pintype=unknown
 T 2700 455 3 8 1 1 90 0 1
-pinlabel=RESETB
+pinlabel=\_RESET\_
 T 2650 305 5 8 1 1 90 6 1
 pinnumber=23
 T 2700 200 5 10 0 0 270 0 1
@@ -473,7 +473,7 @@ pinseq=23
 P 2400 100 2400 400 1 0 0
 {
 T 2400 200 5 10 0 0 270 0 1
-pintype=io
+pintype=in
 T 2400 455 3 8 1 1 90 0 1
 pinlabel=SDIO
 T 2350 305 5 8 1 1 90 6 1
@@ -484,7 +484,7 @@ pinseq=22
 P 2100 100 2100 400 1 0 0
 {
 T 2100 200 5 10 0 0 270 0 1
-pintype=unknown
+pintype=out
 T 2100 455 3 8 1 1 90 0 1
 pinlabel=SDO
 T 2050 305 5 8 1 1 90 6 1
@@ -530,7 +530,7 @@ P 900 100 900 400 1 0 0
 T 900 200 5 10 0 0 270 0 1
 pintype=in
 T 948 455 3 8 1 1 90 0 1
-pinlabel=CSB
+pinlabel=\_CSB\_
 T 798 305 5 8 1 1 90 6 1
 pinnumber=17
 T 900 200 5 10 0 0 270 0 1
@@ -552,7 +552,7 @@ P 1200 6000 1200 5800 1 0 0
 T 1200 5900 5 10 0 0 90 0 1
 pintype=in
 T 1200 5645 3 8 1 1 90 6 1
-pinlabel=REFINB
+pinlabel=\_REFIN\_
 T 1150 5795 5 8 1 1 90 0 1
 pinnumber=63
 T 1200 5900 5 10 0 0 90 0 1
@@ -640,7 +640,7 @@ P 3600 6000 3600 5800 1 0 0
 T 3600 5900 5 10 0 0 90 0 1
 pintype=out
 T 3600 5645 3 8 1 1 90 6 1
-pinlabel=OUT0B
+pinlabel=\_OUT0\_
 T 3550 5795 5 8 1 1 90 0 1
 pinnumber=55
 T 3600 5900 5 10 0 0 90 0 1
@@ -673,7 +673,7 @@ P 4500 6000 4500 5800 1 0 0
 T 4500 5900 5 10 0 0 90 0 1
 pintype=out
 T 4500 5645 3 8 1 1 90 6 1
-pinlabel=OUT1B
+pinlabel=\_OUT1\_
 T 4450 5795 5 8 1 1 90 0 1
 pinnumber=52
 T 4500 5900 5 10 0 0 90 0 1
