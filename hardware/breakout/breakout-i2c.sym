@@ -1,0 +1,16 @@
+v 20081231 1
+B 400 700 800 2000 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 400 12800 5 10 0 0 0 0 1
+device=island-east-ad9517
+T 400 13000 5 10 0 0 0 0 1
+footprint=
+T 400 13200 5 10 0 0 0 0 1
+author=Paul Pham
+T 400 13400 5 10 0 0 0 0 1
+documentation=
+T 400 13600 5 10 0 0 0 0 1
+description="AD9517 Clock Generator of East Island"
+T 400 13800 5 10 0 0 0 0 1
+numslots=0
+T 400 2800 9 10 1 0 0 0 1
+Power Subsheet
