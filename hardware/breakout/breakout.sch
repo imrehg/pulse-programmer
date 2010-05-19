@@ -1,4 +1,4 @@
-v 20081231 1
+v 20100214 2
 C 40000 40000 0 0 0 title-B.sym
 C 40700 43500 1 0 0 gnd-1.sym
 T 50000 40800 9 10 1 0 0 0 1
@@ -786,7 +786,7 @@ C 47700 47000 1 0 0 breakout-lvds.sym
 T 48100 59800 5 10 0 0 0 0 1
 device=breakout-lvds
 T 48100 47500 5 10 1 1 0 0 1
-source=breakout-lvds.sch
+source=breakout-lvds-1.sch
 }
 C 45400 47300 1 0 0 breakout-power.sym
 {
@@ -794,4 +794,11 @@ T 45800 60100 5 10 0 0 0 0 1
 device=breakout-power
 T 45800 47800 5 10 1 1 0 0 1
 source=breakout-power.sch
+}
+C 49700 46800 1 0 0 breakout-lvds.sym
+{
+T 50100 59600 5 10 0 0 0 0 1
+device=breakout-lvds
+T 50100 47300 5 10 1 1 0 0 1
+source=breakout-lvds-2.sch
 }
