@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="2880"
+   height="3600"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   version="1.0"
+   sodipodi:docname="acm-poster-2010.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/Users/buy-ppham/Documents/CSE Pulse Programming/acm-poster-2010.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35355339"
+     inkscape:cx="1887.3068"
+     inkscape:cy="1972.9956"
+     inkscape:document-units="in"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="in"
+     showborder="true"
+     inkscape:showpageshadow="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="785"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     showguides="false"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       id="guide2537"
+       position="1550,3104"
+       orientation="0,1" />
+    <sodipodi:guide
+       id="guide2547"
+       position="1508,3300"
+       orientation="0,1" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="888,2504"
+       id="guide5375" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1720,2412"
+       id="guide5394" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="107,2310"
+       id="guide5497" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="68,1890"
+       id="guide5806" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="1640,1846"
+       id="guide5815" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient4608"
+       inkscape:collect="always">
+      <stop
+         id="stop4610"
+         offset="0"
+         style="stop-color:#8000b6;stop-opacity:1;" />
+      <stop
+         id="stop4612"
+         offset="1"
+         style="stop-color:#8000b6;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3459">
+      <stop
+         id="stop3461"
+         offset="0"
+         style="stop-color:#8000b6;stop-opacity:1;" />
+      <stop
+         style="stop-color:#8000b6;stop-opacity:0.49803922;"
+         offset="1"
+         id="stop3469" />
+      <stop
+         id="stop3463"
+         offset="1"
+         style="stop-color:#8000b6;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3251"
+       inkscape:collect="always">
+      <stop
+         id="stop3253"
+         offset="0"
+         style="stop-color:#000000;stop-opacity:1;" />
+      <stop
+         id="stop3255"
+         offset="1"
+         style="stop-color:#000000;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3239">
+      <stop
+         id="stop3241"
+         offset="0"
+         style="stop-color:#800080;stop-opacity:1;" />
+      <stop
+         style="stop-color:#800080;stop-opacity:0.49803922;"
+         offset="0.79166669"
+         id="stop3247" />
+      <stop
+         id="stop3249"
+         offset="1"
+         style="stop-color:#800080;stop-opacity:0.24705882;" />
+      <stop
+         id="stop3243"
+         offset="1"
+         style="stop-color:#800080;stop-opacity:0;" />
+    </linearGradient>
+    <inkscape:perspective
+       id="perspective10"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2746" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2813" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2863" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2930" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective2997" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective3064" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective3131" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective3198" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective3265" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective3576" />
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective4530" />
+    <linearGradient
+       gradientUnits="userSpaceOnUse"
+       y2="1570"
+       x2="1712.3438"
+       y1="1570"
+       x1="1469.0312"
+       id="linearGradient4614"
+       xlink:href="#linearGradient4608"
+       inkscape:collect="always" />
+    <inkscape:perspective
+       id="perspective5170"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5457"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5576"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5643"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5710"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5777"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5881"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5948"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6015"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6082"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective6186"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3459"
+       id="radialGradient6214"
+       gradientUnits="userSpaceOnUse"
+       cx="798.57141"
+       cy="1647.1428"
+       fx="798.57141"
+       fy="1647.1428"
+       r="279.07144" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3251"
+       id="linearGradient6216"
+       gradientUnits="userSpaceOnUse"
+       x1="519.99997"
+       y1="1647.1428"
+       x2="1077.1429"
+       y2="1647.1428" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       style="opacity:1;fill:#e2cfea;fill-opacity:1"
+       id="rect5499"
+       width="1518"
+       height="822"
+       x="68"
+       y="2710" />
+    <g
+       id="g5295"
+       transform="translate(-70,44)">
+      <rect
+         style="fill:#e2cfea;fill-opacity:1"
+         id="rect4356"
+         width="1570"
+         height="680"
+         x="140"
+         y="966" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="177"
+         y="1124.4418"
+         id="text2433"><tspan
+           sodipodi:role="line"
+           id="tspan2435"
+           x="177"
+           y="1124.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS Bold">What happens when Moore's Law ends?</tspan><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1169.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan4571">What if Nature provided us with strange new</tspan><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1214.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan4569">computational resources that we aren't using at all?</tspan><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1259.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan4581" /><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1304.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2438"><tspan
+   style="font-size:36px;font-weight:bold;-inkscape-font-specification:Euphemia UCAS Bold"
+   id="tspan4563">Quantum computing </tspan>seeks to harness the</tspan><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1349.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2440">strange properties of light and matter on a tiny scale</tspan><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1394.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2464">to perform computational tasks which are</tspan><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1439.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan4583">less efficient or even impossible</tspan><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1484.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan4585">in a purely classical universe.</tspan><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1529.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2478">Thankfully, we don't live in such a place.</tspan><tspan
+           sodipodi:role="line"
+           x="177"
+           y="1574.4418"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan4552"> </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="176"
+         y="1052"
+         id="text3582"><tspan
+           sodipodi:role="line"
+           id="tspan3584"
+           x="176"
+           y="1052"
+           style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#8d00b2;fill-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS">The Field</tspan></text>
+      <g
+         transform="translate(430,16)"
+         id="g4975">
+        <g
+           id="g4967">
+          <path
+             sodipodi:type="arc"
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#8000b6;stroke-width:9.98999977;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path4606"
+             sodipodi:cx="1156"
+             sodipodi:cy="2062"
+             sodipodi:rx="102"
+             sodipodi:ry="102"
+             d="M 1258,2062 A 102,102 0 1 1 1054,2062 A 102,102 0 1 1 1258,2062 z"
+             transform="matrix(1.4486191,0,0,1.4486191,-762.60367,-1633.0526)" />
+          <text
+             xml:space="preserve"
+             style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#8000b6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+             x="910"
+             y="1348"
+             id="text4618"><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+               sodipodi:role="line"
+               x="910"
+               y="1348"
+               id="tspan4622">QUANTUM</tspan><tspan
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+               id="tspan4904"
+               sodipodi:role="line"
+               x="910"
+               y="1398">COMPUTING</tspan></text>
+        </g>
+        <g
+           id="g4962"
+           transform="translate(194,-168)">
+          <path
+             sodipodi:type="arc"
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#8000b6;stroke-width:9.98999977;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path4616"
+             sodipodi:cx="1156"
+             sodipodi:cy="2062"
+             sodipodi:rx="102"
+             sodipodi:ry="102"
+             d="M 1258,2062 A 102,102 0 1 1 1054,2062 A 102,102 0 1 1 1258,2062 z"
+             transform="translate(-440,-792)" />
+          <text
+             xml:space="preserve"
+             style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#8000b6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+             x="717.38477"
+             y="1282.459"
+             id="text4906"><tspan
+               style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+               id="tspan4910"
+               sodipodi:role="line"
+               x="717.38477"
+               y="1282.459">PHYSICS</tspan></text>
+        </g>
+        <g
+           id="g4950"
+           transform="translate(34,-44)">
+          <text
+             xml:space="preserve"
+             style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#8000b6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+             x="1097.3848"
+             y="1512.459"
+             id="text4936"><tspan
+               style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+               id="tspan4940"
+               sodipodi:role="line"
+               x="1097.3848"
+               y="1512.459">COMPUTER</tspan><tspan
+               id="tspan4944"
+               style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+               sodipodi:role="line"
+               x="1097.3848"
+               y="1547.459">SCIENCE</tspan></text>
+          <path
+             sodipodi:type="arc"
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#8000b6;stroke-width:9.98999977;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path4946"
+             sodipodi:cx="1156"
+             sodipodi:cy="2062"
+             sodipodi:rx="102"
+             sodipodi:ry="102"
+             d="M 1258,2062 A 102,102 0 1 1 1054,2062 A 102,102 0 1 1 1258,2062 z"
+             transform="translate(-58,-544)" />
+        </g>
+        <g
+           id="g4956"
+           transform="translate(-34,-36)">
+          <text
+             xml:space="preserve"
+             style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#8000b6;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+             x="725.38477"
+             y="1504.459"
+             id="text4918"><tspan
+               style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+               id="tspan4922"
+               sodipodi:role="line"
+               x="725.38477"
+               y="1504.459">ELECTRICAL</tspan><tspan
+               id="tspan4926"
+               style="font-size:28px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+               sodipodi:role="line"
+               x="725.38477"
+               y="1539.459">ENGINEERING</tspan></text>
+          <path
+             sodipodi:type="arc"
+             style="opacity:1;fill:none;fill-opacity:1;stroke:#8000b6;stroke-width:9.98999977;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             id="path4948"
+             sodipodi:cx="1156"
+             sodipodi:cy="2062"
+             sodipodi:rx="102"
+             sodipodi:ry="102"
+             d="M 1258,2062 A 102,102 0 1 1 1054,2062 A 102,102 0 1 1 1258,2062 z"
+             transform="translate(-432,-552)" />
+        </g>
+      </g>
+    </g>
+    <text
+       sodipodi:linespacing="110%"
+       id="text2383"
+       y="300"
+       x="39.999992"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:110.00000238%;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         dx="0 -20 -19.999998 -8.5714273 -14.285712 -11.42857 -17.142855"
+         id="tspan2387"
+         style="font-size:288px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:110.00000238%;writing-mode:lr-tb;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+         y="300"
+         x="39.999992"
+         sodipodi:role="line">Quantum</tspan><tspan
+         dx="0 -17.142857 -22.857141 -19.999998 -17.142855 -14.285712 -17.142855 -14.285712"
+         dy="-8.5714283 0 0 6.811959e-08 -6.811959e-08"
+         id="tspan2391"
+         style="font-size:288px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:110.00000238%;writing-mode:lr-tb;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+         y="616.79999"
+         x="39.999992"
+         sodipodi:role="line">Computer</tspan><tspan
+         dx="0 -11.428571 -22.857143 -5.7142859 -17.142857 -19.999998 -19.999998 -19.999998 -5.7142849 -17.142855 -22.857141"
+         id="tspan2393"
+         style="font-size:288px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:110.00000238%;writing-mode:lr-tb;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+         y="933.60004"
+         x="39.999992"
+         sodipodi:role="line"><tspan
+   dy="-34.285717"
+   dx="20"
+   id="tspan2395"
+   style="font-size:288px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:110.00000238%;writing-mode:lr-tb;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS">E</tspan>ngineering</tspan></text>
+    <path
+       d="M 795.78571,1365.7144 A 1.5,1.5 0 1 1 792.78571,1365.7144 A 1.5,1.5 0 1 1 795.78571,1365.7144 z"
+       sodipodi:ry="1.5"
+       sodipodi:rx="1.5"
+       sodipodi:cy="1365.7144"
+       sodipodi:cx="794.28571"
+       style="fill:#000000;stroke:none"
+       id="path3473"
+       sodipodi:type="arc" />
+    <flowRoot
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"
+       id="flowRoot2497"
+       xml:space="preserve"><flowRegion
+         id="flowRegion2499"><rect
+           y="2280"
+           x="696.66669"
+           height="516.66669"
+           width="846.66669"
+           id="rect2501" /></flowRegion><flowPara
+         id="flowPara2503" /></flowRoot>    <g
+       transform="translate(186,0)"
+       id="g2549">
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="1625.7144"
+         y="128.57143"
+         id="text2401"><tspan
+           sodipodi:role="line"
+           id="tspan2403"
+           x="1625.7144"
+           y="128.57143"
+           style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           dx="0 0 0 0 0 0 0 0 0 0 0 -20 0 0 -11.428571">University of Washington</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="202.51833"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2443"
+           dx="0 0 0 0 0 0 0 0 0 0 0 0 -18"
+           dy="35.714287">Departments of</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="272.51831"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2447"
+           dx="-2.8571429 0 0 0 0 0 0 0 -14.285713 2 0 0 0 0 0 0 0 -13 0 -11.428571"
+           dy="-11.428571">Computer Science &amp; Engineering</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="342.51831"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2449"
+           dx="0 0 0 0 0 0 -8 0 0 0 0 0 0 0 -10.428571 0 -11.428571"
+           dy="0 0 -10">  and Physics &amp; Astronomy</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="412.51831"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2445" /><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="482.51831"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2409"
+           dx="0 0 0 0 0 -11.428571">Paul Pham</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="552.51831"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2425"
+           dx="0 0 0 0 0 0 -11.428571">Aaron Avril</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="622.51831"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2433"
+           dx="0 0 0 0 -11.428571">Rob McClure</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="692.51831"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2427"
+           dx="0 0 0 0 0 -11.428571">Jeff Booth</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="762.51831"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           id="tspan2429"
+           dx="0 0 0 0 0 0 -11.428571">David Nufer</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="832.51831"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           dx="0 0 0 0 0 0 -11.428571"
+           id="tspan2543" /><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="918.57141"
+           style="font-size:72px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;text-anchor:start;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           dx="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -11.428571"
+           id="tspan2545">http://pulse-programmer.org</tspan><tspan
+           sodipodi:role="line"
+           x="1625.7144"
+           y="1008.5714"
+           style="font-size:56px;text-align:start;text-anchor:start"
+           id="tspan2405" /></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="2097"
+         y="496"
+         id="text2518"><tspan
+           sodipodi:role="line"
+           id="tspan2520"
+           x="2097"
+           y="496"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           dx="0 0 0 0 0 0 -13">Boris Blinov</tspan><tspan
+           sodipodi:role="line"
+           x="2097"
+           y="566"
+           id="tspan2531"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           dx="0 0 0 0 0 -11">Dave Bacon</tspan><tspan
+           sodipodi:role="line"
+           x="2097"
+           y="636"
+           id="tspan2533"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           dx="0 0 0 0 0 -6">Carl Ebeling</tspan><tspan
+           sodipodi:role="line"
+           x="2097"
+           y="706"
+           id="tspan2535"
+           style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS" /></text>
+    </g>
+    <g
+       id="g6282">
+      <text
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+         x="107"
+         y="2192.9707"
+         id="text2570"><tspan
+           sodipodi:role="line"
+           id="tspan2572"
+           x="107"
+           y="2192.9707">Be honest, you miss the heady days when</tspan><tspan
+           sodipodi:role="line"
+           x="107"
+           y="2237.9707"
+           id="tspan2576">computers were gigantic, complicated machines</tspan><tspan
+           sodipodi:role="line"
+           x="107"
+           y="2282.9707"
+           id="tspan2574">which filled entire air-conditioned rooms</tspan><tspan
+           sodipodi:role="line"
+           x="107"
+           y="2327.9707"
+           id="tspan2586">and were fussed over by teams of scientists.</tspan><tspan
+           sodipodi:role="line"
+           x="107"
+           y="2372.9707"
+           id="tspan2592" /></text>
+      <image
+         y="2441.3823"
+         x="68"
+         id="image2815"
+         height="185"
+         width="315"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/lab_scene_2_small.jpg"
+         xlink:href="ACM Poster 2010/lab_scene_2_small.jpg" />
+      <image
+         y="1757"
+         x="107"
+         id="image2865"
+         height="250"
+         width="250"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/4ions.jpg"
+         xlink:href="ACM Poster 2010/4ions.jpg" />
+      <image
+         y="2377.6177"
+         x="440.51477"
+         id="image2932"
+         height="225"
+         width="300"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/P1060113_resize.JPG"
+         xlink:href="ACM Poster 2010/P1060113_resize.JPG" />
+      <image
+         y="2123.5"
+         x="969"
+         id="image3066"
+         height="225"
+         width="300"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/P1090005.JPG"
+         xlink:href="ACM Poster 2010/P1090005.JPG" />
+      <image
+         y="2437.5"
+         x="1185"
+         id="image3133"
+         height="205"
+         width="320"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/amber_small.jpg"
+         xlink:href="ACM Poster 2010/amber_small.jpg" />
+      <image
+         y="1792"
+         x="410.5"
+         id="image3200"
+         height="300"
+         width="201"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/iodine.jpg"
+         xlink:href="ACM Poster 2010/iodine.jpg" />
+      <image
+         y="1732"
+         x="657"
+         id="image4532"
+         height="212"
+         width="300"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/team1 small.jpg"
+         xlink:href="ACM Poster 2010/team1 small.jpg" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#8000ba;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="107"
+         y="2123.1738"
+         id="text4600"><tspan
+           sodipodi:role="line"
+           id="tspan4602"
+           x="107"
+           y="2123.1738"
+           style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#8000ba;fill-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS">The Lab</tspan></text>
+      <image
+         y="2407.5"
+         x="810"
+         id="image5950"
+         height="225"
+         width="300"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/aarons-lab.jpg"
+         xlink:href="ACM Poster 2010/aarons-lab.jpg" />
+      <image
+         y="1775"
+         x="998.5"
+         id="image6017"
+         height="298"
+         width="159"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/jeff.jpg"
+         xlink:href="ACM Poster 2010/jeff.jpg" />
+      <image
+         y="2085"
+         x="1324.5"
+         id="image6084"
+         height="298"
+         width="223"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/rob.jpg"
+         xlink:href="ACM Poster 2010/rob.jpg" />
+      <image
+         y="1800"
+         x="1224"
+         id="image6188"
+         height="228"
+         width="285"
+         sodipodi:absref="/Users/buy-ppham/Pictures/Pulse Programming/david-working.JPG"
+         xlink:href="/Users/buy-ppham/Pictures/Pulse Programming/david-working.JPG" />
+    </g>
+    <text
+       id="text6218"
+       y="3004.7778"
+       x="1720"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#8000ba;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#8000ba;fill-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+         y="3004.7778"
+         x="1720"
+         id="tspan6220"
+         sodipodi:role="line">and You</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="698"
+       y="1502"
+       id="text4914"><tspan
+         sodipodi:role="line"
+         id="tspan4916"
+         x="698"
+         y="1502" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="930"
+       y="1100"
+       id="text4930"><tspan
+         sodipodi:role="line"
+         id="tspan4932"></tspan></text>
+    <g
+       id="g6244">
+      <image
+         y="1149.5322"
+         x="2360.3735"
+         id="image3267"
+         height="346"
+         width="500"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/raman_small.jpg"
+         xlink:href="ACM Poster 2010/raman_small.jpg" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="1719.3311"
+         y="1096"
+         id="text5018"><tspan
+           sodipodi:role="line"
+           id="tspan5020"
+           x="1719.3311"
+           y="1096"
+           style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#8d00b2;fill-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS">The Problem</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+         x="1719.6631"
+         y="1562.1924"
+         id="text5022"><tspan
+           id="tspan5064"
+           sodipodi:role="line"
+           x="1719.6631"
+           y="1562.1924">We are still investigating what makes a good <tspan
+   id="tspan5349"
+   style="font-weight:bold;-inkscape-font-specification:Euphemia UCAS Bold">quantum bit</tspan>.</tspan><tspan
+           id="tspan5054"
+           sodipodi:role="line"
+           x="1719.6631"
+           y="1607.1924" /><tspan
+           id="tspan5066"
+           sodipodi:role="line"
+           x="1719.6631"
+           y="1652.1924">Ion traps, superconducting loops, nuclear spins, quantum dots,</tspan><tspan
+           id="tspan5068"
+           sodipodi:role="line"
+           x="1719.6631"
+           y="1697.1924">even diamond impurities are all possibilities.</tspan><tspan
+           id="tspan5058"
+           sodipodi:role="line"
+           x="1719.6631"
+           y="1742.1924" /><tspan
+           id="tspan5256"
+           sodipodi:role="line"
+           x="1719.6631"
+           y="1787.1924">One thing they all need, however, is</tspan><tspan
+           id="tspan5343"
+           sodipodi:role="line"
+           x="1719.6631"
+           y="1832.1924"><tspan
+   id="tspan5345"
+   style="font-weight:bold;-inkscape-font-specification:Euphemia UCAS Bold">precise control systems</tspan> and <tspan
+   id="tspan5347"
+   style="font-weight:bold;-inkscape-font-specification:Euphemia UCAS Bold">programmable waveforms</tspan>.</tspan></text>
+      <image
+         xlink:href="ACM Poster 2010/pulse-waveforms.jpg"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/pulse-waveforms.jpg"
+         width="623.61243"
+         height="352"
+         id="image5172"
+         x="1720.3311"
+         y="1140.7969" />
+    </g>
+    <g
+       transform="matrix(0.5693714,0,0,0.5693714,1026.5554,-540.44663)"
+       id="g2505">
+      <path
+         sodipodi:type="arc"
+         style="opacity:1;fill:url(#radialGradient6214);fill-opacity:1;stroke:url(#linearGradient6216)"
+         id="path2467"
+         sodipodi:cx="798.57141"
+         sodipodi:cy="1647.1428"
+         sodipodi:rx="278.57144"
+         sodipodi:ry="278.57144"
+         d="M 1077.1429,1647.1428 A 278.57144,278.57144 0 1 1 519.99997,1647.1428 A 278.57144,278.57144 0 1 1 1077.1429,1647.1428 z" />
+      <path
+         sodipodi:type="arc"
+         style="opacity:1;fill:#8000b6;fill-opacity:1"
+         id="path3471"
+         sodipodi:cx="797.14288"
+         sodipodi:cy="1648.5714"
+         sodipodi:rx="280"
+         sodipodi:ry="40"
+         d="M 1077.1429,1648.5714 A 280,40 0 1 1 517.14288,1648.5714 A 280,40 0 1 1 1077.1429,1648.5714 z" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 801.42857,1931.4286 L 801.42857,1365.7143"
+         id="path3475" />
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="745.71429"
+         y="1342.8572"
+         id="text3477"><tspan
+           sodipodi:role="line"
+           id="tspan3479"
+           x="745.71429"
+           y="1342.8572"
+           dx="0 -25.714289 -1.4285715"
+           style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           dy="0 0 -8.5714283">⎢1〉</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="738.75848"
+         y="1994.3199"
+         id="text2429"><tspan
+           sodipodi:role="line"
+           id="tspan2431"
+           x="738.75848"
+           y="1994.3199"
+           dx="0 -24.285717 -1.4285715"
+           style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           dy="0 0 -8.5714283">⎢0〉</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+       x="1132"
+       y="1944"
+       id="text5231"><tspan
+         sodipodi:role="line"
+         id="tspan5233"></tspan></text>
+    <g
+       id="g5479"
+       transform="translate(39.875,-14)">
+      <rect
+         style="fill:#e2cfea;fill-opacity:1"
+         id="rect5253"
+         width="1129.0664"
+         height="968"
+         x="1637"
+         y="1928" />
+      <g
+         transform="translate(12,0)"
+         id="g5463">
+        <text
+           id="text2620"
+           y="2488"
+           x="1667.6855"
+           style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+           xml:space="preserve"><tspan
+             id="tspan2644"
+             y="2488"
+             x="1667.6855"
+             sodipodi:role="line">Humans are too big to use quantum computers directly</tspan><tspan
+             y="2533"
+             x="1667.6855"
+             sodipodi:role="line"
+             id="tspan5390">without causing decoherence.</tspan><tspan
+             id="tspan2646"
+             y="2578"
+             x="1667.6855"
+             sodipodi:role="line">So we have to be sneaky and come at them from the side.</tspan><tspan
+             id="tspan2626"
+             y="2623"
+             x="1667.6855"
+             sodipodi:role="line" /><tspan
+             id="tspan2628"
+             y="2668"
+             x="1667.6855"
+             sodipodi:role="line">Using high-speed digital electronics,</tspan><tspan
+             id="tspan2630"
+             y="2713"
+             x="1667.6855"
+             sodipodi:role="line">field-programmable gate arrays (FPGAs),</tspan><tspan
+             id="tspan2632"
+             y="2758"
+             x="1667.6855"
+             sodipodi:role="line">and modern hardware description languages,</tspan><tspan
+             id="tspan2634"
+             y="2803"
+             x="1667.6855"
+             sodipodi:role="line">we hire the computers of today to babysit and raise</tspan><tspan
+             id="tspan2638"
+             y="2848"
+             x="1667.6855"
+             sodipodi:role="line">the computers of tomorrow.</tspan></text>
+        <text
+           id="text5227"
+           y="2016.2031"
+           x="1667.125"
+           style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+           xml:space="preserve"><tspan
+             style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#8d00b2;fill-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+             y="2016.2031"
+             x="1667.125"
+             id="tspan5229"
+             sodipodi:role="line">The Solution</tspan></text>
+        <image
+           xlink:href="/Users/buy-ppham/sequencer/sequencer-assembly-c/sequencer-assembled-pcb-top.jpg"
+           sodipodi:absref="/Users/buy-ppham/sequencer/sequencer-assembly-c/sequencer-assembled-pcb-top.jpg"
+           width="453.33334"
+           height="340"
+           id="image3578"
+           x="1668.125"
+           y="2070" />
+        <image
+           y="2070"
+           x="2176.1907"
+           id="image5459"
+           height="333"
+           width="444"
+           sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/yellow-box.jpg"
+           xlink:href="ACM Poster 2010/yellow-box.jpg" />
+      </g>
+    </g>
+    <g
+       id="g5791"
+       transform="translate(40.18969,940)">
+      <text
+         xml:space="preserve"
+         style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+         x="67.370857"
+         y="2424.804"
+         id="text2602"><tspan
+           sodipodi:role="line"
+           x="67.370857"
+           y="2424.804"
+           id="tspan2606"><tspan
+   id="tspan5785"
+   style="font-weight:bold;-inkscape-font-specification:Euphemia UCAS Bold">Ion traps</tspan> are one of the leading candidates for a quantum bit,</tspan><tspan
+           sodipodi:role="line"
+           x="67.370857"
+           y="2469.804"
+           id="tspan2608">and research groups are springing up all over the world.</tspan><tspan
+           sodipodi:role="line"
+           x="67.370857"
+           y="2514.804"
+           id="tspan2618" /><tspan
+           sodipodi:role="line"
+           x="67.370857"
+           y="2559.804"
+           id="tspan2616"><tspan
+   id="tspan5817"
+   dy="-20">Join an <tspan
+   id="tspan5787"
+   style="font-weight:bold;-inkscape-font-specification:Euphemia UCAS Bold">international research community </tspan></tspan>working on <tspan
+   id="tspan5789"
+   style="font-weight:bold;-inkscape-font-specification:Euphemia UCAS Bold">real experiments</tspan>.</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
+         x="66.81031"
+         y="1880.8722"
+         id="text5235"><tspan
+           sodipodi:role="line"
+           id="tspan5237"
+           x="66.81031"
+           y="1880.8722"
+           style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#8d00b2;fill-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS">The Community</tspan></text>
+      <image
+         xlink:href="ACM Poster 2010/ion-trap-map.png"
+         sodipodi:absref="/Users/buy-ppham/Documents/CSE Pulse Programming/ACM Poster 2010/ion-trap-map.png"
+         width="1417.1859"
+         height="405.26544"
+         id="image5779"
+         x="67.81031"
+         y="1937.9336" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Euphemia UCAS;-inkscape-font-specification:Euphemia UCAS"
+       x="1720"
+       y="3082.3979"
+       id="text6303"><tspan
+         sodipodi:role="line"
+         id="tspan6305"
+         x="1720"
+         y="3082.3979">I know what you're thinking.</tspan><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3127.3979"
+         id="tspan6307">That's great and all, but I'm not a physicist.</tspan><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3172.3979"
+         id="tspan6309">But we need <tspan
+   style="font-weight:bold;-inkscape-font-specification:Euphemia UCAS Bold"
+   id="tspan6323">tons of engineering</tspan></tspan><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3217.3979"
+         id="tspan6317">to make quantum computing a reality.</tspan><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3262.3979"
+         id="tspan6311" /><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3307.3979"
+         id="tspan6313">We're looking for <tspan
+   style="font-weight:bold;-inkscape-font-specification:Euphemia UCAS Bold"
+   id="tspan6337">CS and EE undergrads</tspan> who are interested</tspan><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3352.3979"
+         id="tspan6315">in FPGA programming, printed circuit board design,</tspan><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3397.3979"
+         id="tspan6327">and would be willing to visit labs in Europe for several months.</tspan><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3442.3979"
+         id="tspan6329" /><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3487.3979"
+         id="tspan6331">E-mail <tspan
+   style="fill:#8000b6;fill-opacity:1"
+   id="tspan6333">ppham@cs.washington.edu</tspan> for more information.</tspan><tspan
+         sodipodi:role="line"
+         x="1720"
+         y="3532.3979"
+         id="tspan6325" /></text>
+  </g>
+</svg>
