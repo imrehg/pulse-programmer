@@ -25,6 +25,8 @@ elementdir = "connector"		# where to put generated files
 part "QSE-040-01-x-D-EM2"
         pins = 20
 part "QSE-020-01-x-D-EM2"
+        pins = 80
+part "QSE-080-01-x-D-EM2"
 
 # Female parts
         pins = 40
@@ -36,6 +38,8 @@ part "QSE-020-01-x-D-EM2"
 part "QTE-040-01-x-D-EM2"
         pins = 20
 part "QTE-020-01-x-D-EM2"
+        pins = 80
+part "QTE-080-01-x-D-EM2"
 
         series = "qxss"
         bankwidth = 840 mils
