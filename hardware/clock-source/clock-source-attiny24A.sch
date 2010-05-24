@@ -1,4 +1,4 @@
-v 20100214 2
+v 20081231 1
 C 40000 40000 0 0 0 title-B.sym
 C 49100 45500 1 90 0 gnd-1.sym
 N 48800 45600 48600 45600 4
@@ -12,7 +12,7 @@ C 50200 47000 1 90 0 header6-small.sym
 T 50450 47250 5 10 0 1 90 0 1
 device=HEADER10
 T 49100 47600 5 10 1 1 90 0 1
-refdes=J?
+refdes=J31
 }
 N 49700 48200 49700 48600 4
 N 50000 48200 50000 48400 4
@@ -31,7 +31,7 @@ C 44900 44600 1 0 0 resistor-1.sym
 T 45200 45000 5 10 0 0 0 0 1
 device=RESISTOR
 T 45100 44900 5 10 1 1 0 0 1
-refdes=R?
+refdes=R65
 }
 N 44900 44700 44700 44700 4
 {
@@ -43,7 +43,7 @@ C 46600 43400 1 0 0 attiny24A.sym
 T 47295 43400 5 8 1 1 0 0 1
 device=ATtiny24A
 T 47495 45900 5 10 1 1 0 0 1
-refdes=U?
+refdes=U4
 }
 N 48600 45300 49100 45300 4
 {
@@ -71,14 +71,14 @@ N 56500 48400 56500 48600 4
 C 57000 48400 1 180 0 Transistor_PNP-2.sym
 {
 T 56550 47600 5 10 1 1 180 6 1
-refdes=Q?
+refdes=Q3
 T 56900 46350 5 10 0 0 180 0 1
 device=Transistor PNP
 }
 C 57000 48600 1 0 1 Transistor_NPN-2.sym
 {
 T 56550 49400 5 10 1 1 0 0 1
-refdes=Q?
+refdes=Q1
 T 56900 50650 5 10 0 0 0 6 1
 device=Transistor NPN
 }
@@ -88,7 +88,7 @@ C 58200 46400 1 270 0 jumper-1.sym
 T 58700 46100 5 8 0 0 270 0 1
 device=JUMPER
 T 58700 46100 5 10 1 1 270 0 1
-refdes=J?
+refdes=J32
 }
 N 59200 46300 59500 46300 4
 {
@@ -100,7 +100,7 @@ C 58100 45300 1 90 0 resistor-1.sym
 T 57700 45600 5 10 0 0 90 0 1
 device=RESISTOR
 T 57800 45500 5 10 1 1 90 0 1
-refdes=R?
+refdes=R69
 }
 C 57900 44900 1 0 0 gnd-1.sym
 N 58000 45200 58000 45300 4
@@ -121,14 +121,14 @@ N 55700 46200 55700 46400 4
 C 56200 46200 1 180 0 Transistor_PNP-2.sym
 {
 T 55750 45400 5 10 1 1 180 6 1
-refdes=Q?
+refdes=Q4
 T 56100 44150 5 10 0 0 180 0 1
 device=Transistor PNP
 }
 C 56200 46400 1 0 1 Transistor_NPN-2.sym
 {
 T 55750 47200 5 10 1 1 0 0 1
-refdes=Q?
+refdes=Q2
 T 56100 48450 5 10 0 0 0 6 1
 device=Transistor NPN
 }
@@ -149,14 +149,14 @@ N 56500 42900 56500 43100 4
 C 57000 42900 1 180 0 Transistor_PNP-2.sym
 {
 T 56550 42100 5 10 1 1 180 6 1
-refdes=Q?
+refdes=Q6
 T 56900 40850 5 10 0 0 180 0 1
 device=Transistor PNP
 }
 C 57000 43100 1 0 1 Transistor_NPN-2.sym
 {
 T 56550 43900 5 10 1 1 0 0 1
-refdes=Q?
+refdes=Q5
 T 56900 45150 5 10 0 0 0 6 1
 device=Transistor NPN
 }
@@ -177,21 +177,21 @@ C 51200 43000 1 0 0 resistor-1.sym
 T 51500 43400 5 10 0 0 0 0 1
 device=RESISTOR
 T 51400 42800 5 10 1 1 0 0 1
-refdes=R?
+refdes=R68
 }
 C 51200 43500 1 0 0 resistor-1.sym
 {
 T 51500 43900 5 10 0 0 0 0 1
 device=RESISTOR
 T 51200 43400 5 10 1 1 0 0 1
-refdes=R?
+refdes=R67
 }
 C 51200 44000 1 0 0 resistor-1.sym
 {
 T 51500 44400 5 10 0 0 0 0 1
 device=RESISTOR
 T 51400 44300 5 10 1 1 0 0 1
-refdes=R?
+refdes=R66
 }
 N 50600 48400 50600 43600 4
 N 50900 48600 50900 44100 4
