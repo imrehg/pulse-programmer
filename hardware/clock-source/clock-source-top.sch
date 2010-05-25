@@ -15,3 +15,11 @@ C 47700 45600 1 0 0 clock-source-attiny44A.sym
 T 47700 45600 5 10 1 1 0 0 1
 source=clock-source-attiny44A.sch
 }
+T 54000 40100 9 10 1 0 0 0 1
+David Nufer & Paul Pham
+T 50100 40400 9 10 1 0 0 0 1
+clock-source-top.sch
+T 50000 40700 9 10 1 0 0 0 1
+Pulse Programmer Clock Board
+T 53900 40400 9 10 1 0 0 0 1
+0
