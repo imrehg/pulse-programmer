@@ -53,6 +53,10 @@ part "HEADER5x2"
         pins = 34
         silkboxheight = 1.988 in
 part "HEADER17x2"
+        
+        pins = 6
+        silkboxheight = 591 mils
+part "HEADER3x2"
 
         type = "sip"
         silkboxheight = 0 mils

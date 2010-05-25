@@ -118,3 +118,11 @@ part "H1260NL"
 	silkboxwidth = 3.81 mm
 	silkboxheight = 3.81 mm
 part "SM-22"
+
+    pins = 14
+    width = 4.0 mm
+    height = 8.65 mm
+    padheight = 0.5 mm
+    padwidth = 1.06 mm
+    pitch = 1.27 mm
+part "14S1"
