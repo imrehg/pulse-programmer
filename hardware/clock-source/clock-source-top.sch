@@ -10,8 +10,8 @@ C 51500 45300 1 0 0 clock-source.sym
 T 52000 45300 5 10 1 1 0 0 1
 source=clock-source.sch
 }
-C 47700 45500 1 0 0 clock-source-attiny24A.sym
+C 47700 45600 1 0 0 clock-source-attiny44A.sym
 {
-T 47700 45500 5 10 1 1 0 0 1
-source=clock-source-attiny24A.sch
+T 47700 45600 5 10 1 1 0 0 1
+source=clock-source-attiny44A.sch
 }
