@@ -76,24 +76,35 @@ part "LQFP-32"
 part "QFN-32"
 
 	pins = 24
-    lccnum = "no"
+	lccnum = "no"
 	pitch = 0.5 mm
 	width = 2.95 mm	# distance inside pins
 	height = 2.95 mm
 	padwidth = 0.72 mm
 	padheight = 0.30 mm
-    silkoffset 0.75 mm
+	silkoffset 0.75 mm
 part "LFCSP-24"
 
 	pins = 32
-    lccnum = "no"
+	lccnum = "no"
 	pitch = 0.5 mm
 	width = 3.10 mm	# distance inside pins
 	height = 3.10 mm
 	padwidth = 0.6 mm
 	padheight = 0.28 mm
-    silkoffset 0.75 mm
+	silkoffset 0.75 mm
 part "LFCSP-32_VQ"
+
+	pins = 64 
+    	lccnum = "no"
+	pitch = 0.5 mm
+	width = 320 mils # distance inside pins, from AD9516 gerbers
+	height = 320 mils 
+	padwidth = 0.96 mm
+	padheight = 0.29 mm
+	silkoffset 0.75 mm
+	ep = 4.84 mm 
+part "LFCSP_VQ-64"
 
     type "so"
         silkboxwidth = 1.6 mm
