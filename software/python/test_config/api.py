@@ -165,6 +165,7 @@ def send_i2c(slave_address, write_data):
 def broadcast_status():
   status_request = sequencer.ptp.requests.STATUS_REQUEST
   reply_list = test_config.all_sequencers.send_frame(status_request)
+  print(str(reply_list[0]))
   return reply_list[0].payload
 
 # Generic DDS functions that accept a device index

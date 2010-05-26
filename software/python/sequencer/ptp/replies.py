@@ -53,6 +53,12 @@ class Reply_Frame(Frame):
   def get_payload(self):
     return self.payload
 
+  def __str__(self):
+    return "Reply Frame: src=" + str(self.src_id) + \
+           ", dst=" + str(self.dest_id) + \
+           ", major=" + str(self.major_version) + \
+           ", minor=" + str(self.minor_version)
+
 ###############################################################################
 class Status_Reply_Frame(Reply_Frame):
   "A Pulse Transfer Protocol frame in response to a status request."

@@ -6,7 +6,8 @@ print("Dummy option = " + str(sequencer.params.dummy))
 
 setup()
 
-broadcast_status()
+reply = broadcast_status()
+print(str(reply))
 
 teardown()
 
