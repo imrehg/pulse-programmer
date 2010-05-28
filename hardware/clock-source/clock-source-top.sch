@@ -23,3 +23,8 @@ T 50000 40700 9 10 1 0 0 0 1
 Pulse Programmer Clock Board
 T 53900 40400 9 10 1 0 0 0 1
 0
+C 48000 42700 1 0 0 clock-source-power.sym
+{
+T 47800 42700 5 10 1 1 0 0 1
+source=clock-source-power.sch
+}
