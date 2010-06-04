@@ -1,0 +1,6 @@
+schematics clock-source-top.sch
+output-name clock-source-top
+elements-dir ../footprints
+use-files
+m4-pcbdir /
+
